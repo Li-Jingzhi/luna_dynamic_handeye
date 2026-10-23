@@ -1,0 +1,8 @@
+{
+  "robot": "gento_luna",
+  "mode": "stationary_crossed",
+  "head_feedback_order": ["controller_yaw", "controller_pitch"],
+  "head_angles_deg": [[-10,-25],[0,-25],[10,-25],[-10,-20],[0,-20],[10,-20],[-10,-15],[0,-15],[10,-15]],
+  "observations_per_position": 50,
+  "note": "Recorded MDH limits only. Existing SDK preflight checks live limits and taught arm trajectory before motion."
+}

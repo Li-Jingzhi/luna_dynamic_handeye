@@ -1,0 +1,94 @@
+{
+  "schema": "luna_four_ball_orientation_v1",
+  "image_size": [
+    1280,
+    992
+  ],
+  "pixel_domain": "ideal_pinhole",
+  "stereo_model": "orin_6_6_7_100_20261014/luna_rectified_stereo.json",
+  "yellow_diameter_m": 0.04,
+  "ball_diameter_m": {
+    "red": null,
+    "blue": null,
+    "green": null
+  },
+  "marker_search_radius_px": 260,
+  "color_candidate_area_px": [30, 3000],
+  "color_min_edge_count": 16,
+  "color_min_edge_coverage_deg": 180,
+  "color_max_ellipse_rms_px": 0.8,
+  "color_max_ellipse_axis_ratio": 1.6,
+  "hsv_ranges": {
+    "red": [
+      [
+        [
+          0,
+          95,
+          50
+        ],
+        [
+          8,
+          255,
+          255
+        ]
+      ],
+      [
+        [
+          170,
+          95,
+          50
+        ],
+        [
+          179,
+          255,
+          255
+        ]
+      ]
+    ],
+    "blue": [
+      [
+        [
+          90,
+          85,
+          50
+        ],
+        [
+          135,
+          255,
+          255
+        ]
+      ]
+    ],
+    "green": [
+      [
+        [
+          39,
+          80,
+          45
+        ],
+        [
+          89,
+          255,
+          255
+        ]
+      ]
+    ]
+  },
+  "max_epipolar_dv_px": 0.8,
+  "disparity_range_px": [
+    2,
+    576
+  ],
+  "max_pairs_per_color": 4,
+  "min_axis_length_m": 0.025,
+  "max_axis_length_m": 0.2,
+  "max_axis_length_ratio": 1.6,
+  "max_abs_axis_dot": 0.4,
+  "min_green_alignment_cos": 0.7,
+  "pair_score_weight": 0.05,
+  "ambiguity_score_margin": 0.05,
+  "target_pose_fps": 8,
+  "max_pose_age_ms": 250,
+  "geometry_note": "No legacy 28mm/94mm geometry assumed. Rotation uses red/blue/green directions from yellow; exact marker-to-flange transform is absorbed by visual9d consistency calibration.",
+  "hsv_note": "Initial colour ranges ported only as detection priors from legacy Luna marker code; must be verified on current exposure before formal 9D acceptance."
+}

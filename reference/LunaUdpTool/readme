@@ -1,0 +1,185 @@
+# LunaUdp - 双足机器人 MuJoCo 可视化 + UDP 关节控制
+
+## 项目简介
+
+通过 UDP 网络协议实时控制双足机器人（Gento Luna）的关节角度，并在 MuJoCo 3D 界面中可视化运动。
+
+- **Python 端**：加载 MuJoCo 模型，启动 UDP 服务端接收关节角度，实时渲染
+- **C++ 端**：轻量 UDP 客户端类 `CNetClnUdp`，不依赖 C++ 标准库，通过 `sendsvr()` 发送关节数据
+
+```
+┌─────────────────────────┐        UDP :9999        ┌──────────────────────────────┐
+│  C++ 客户端              │  ──── 20×float32 ────▶  │  Python MuJoCo 可视化        │
+│  CNetClnUdp::sendsvr()  │                          │  data.qpos[joint] = angle   │
+│  (你的控制程序)          │                          │  mj_forward() + sync()      │
+└─────────────────────────┘                          └──────────────────────────────┘
+```
+
+---
+
+## 目录结构
+
+```
+LunaUdp/
+├── mujoco_viewer.py          # MuJoCo 可视化 + UDP 服务端
+├── net_cln_udp.h             # CNetClnUdp 类声明（无 C++ std 库依赖）
+├── net_cln_udp.cpp           # CNetClnUdp 类实现
+├── demo.cpp                  # 使用示例：发送正弦波关节角度
+├── build.ps1                 # 编译脚本（自动检测 VS 路径）
+├── LunaUdp.sln               # Visual Studio 解决方案
+├── LunaUdp.vcxproj           # Visual Studio 项目文件
+├── readme                    # 本文件
+└── model/
+    └── gento_luna/
+        ├── gento_luna_contact_filtered.xml   # MuJoCo 模型定义
+        └── meshes/                           # STL 网格文件
+            ├── Underpan_Base_link.STL
+            ├── Gento Luna_Leg_J1_Link.STL ~ J6_Link.STL  (6 个)
+            ├── Arm_R1_Link.STL ~ R7_Link.STL              (7 个)
+            ├── Arm_L1_Link.STL ~ L7_Link.STL              (7 个)
+            └── Head_J1_Link.STL, Head_J2_Link.STL         (2 个)
+```
+
+---
+
+## 机器人关节结构
+
+模型为双足机器人，共 22 个关节，其中 20 个可控关节通过 UDP 下发：
+
+| 组别 | 关节名 | 数量 | 说明 |
+|------|--------|------|------|
+| 腿部 | Leg_J1 ~ Leg_J6 | 6 | 单腿 6 自由度，从底板延伸到末端 |
+| 右臂 | Arm_R1 ~ Arm_R7 | 7 | 挂在 Leg_J6 末端右侧 |
+| 左臂 | Arm_L1 ~ Arm_L7 | 7 | 挂在 Leg_J6 末端左侧 |
+| 头部 | Head_J1, Head_J2 | 2 | 不受 UDP 控制（保持默认角度） |
+
+所有关节旋转轴均为 `axis="0 0 1"`，角度单位为**弧度（rad）**。
+
+---
+
+## UDP 数据包格式
+
+- **端口**：`9999`
+- **协议**：UDP
+- **数据**：20 个 `float32`（小端字节序），共 80 字节
+
+| 字节偏移 | 索引 | 关节 | 数量 |
+|----------|------|------|------|
+| 0 ~ 23   | [0:6]   | Leg_J1 ~ Leg_J6 | 6 × float |
+| 24 ~ 51  | [6:13]  | Arm_R1 ~ Arm_R7 | 7 × float |
+| 52 ~ 79  | [13:20] | Arm_L1 ~ Arm_L7 | 7 × float |
+
+**C 语言示例**：
+```c
+float angles[20];
+// 设置腿部
+angles[0] = 0.3f;   // Leg_J1
+angles[1] = -0.2f;  // Leg_J2
+// ...
+// 设置右臂
+angles[6] = 0.5f;   // Arm_R1
+// ...
+// 设置左臂
+angles[13] = -0.5f; // Arm_L1
+// ...
+
+client.sendsvr(angles, sizeof(angles));  // 80 bytes
+```
+
+---
+
+## 环境依赖
+
+### Python 端（MuJoCo 可视化）
+| 依赖 | 安装命令 |
+|------|----------|
+| Python 3.8+ | https://www.python.org/ |
+| mujoco | `pip install mujoco` |
+| numpy | `pip install numpy` |
+
+### C++ 端（UDP 客户端）
+| 依赖 | 说明 |
+|------|------|
+| Visual Studio 2022+ | 需勾选"使用 C++ 的桌面开发"工作负载 |
+| Windows SDK | VS 自带 |
+
+---
+
+## 快速开始
+
+### 第一步：启动 MuJoCo 可视化
+
+在**系统终端**（PowerShell 或 CMD）中运行，不要使用 IDE 内置终端（沙箱不支持 GUI）：
+
+```powershell
+cd d:\Trae\LunaUdp             #实例路径，需要替换到自己电脑存放mujoco_viewer.py的文件路径
+pip install mujoco numpy       # 首次运行需安装依赖
+python mujoco_viewer.py
+```
+
+此时会弹出 MuJoCo 3D 窗口，显示机器人初始姿态，UDP 服务端已在 `0.0.0.0:9999` 监听。
+
+### 第二步：编译并运行 C++ Demo
+
+**方式 A：命令行编译**
+
+```powershell
+.\build.ps1          # 编译生成 demo.exe（自动检测VS安装路径）
+.\demo.exe           # 运行 demo，发送正弦波关节角度
+```
+
+**方式 B：Visual Studio**
+
+1. 双击 `LunaUdp.sln` 打开项目     #实例项目名称
+2. 选择 `Debug | x64` 配置
+3. 按 `F5` 编译并调试运行
+
+运行后，MuJoCo 窗口中会看到机器人的腿部、左臂和右臂按正弦波规律运动，持续约 20 秒后复位。
+
+---
+
+## 在你的项目中使用 CNetClnUdp
+
+只需将 `net_cln_udp.h` 和 `net_cln_udp.cpp` 加入你的项目，然后：
+
+```cpp
+#include "net_cln_udp.h"
+
+int main() {
+    // 1. 创建客户端，连接到本机 MuJoCo 可视化
+    CNetClnUdp client("127.0.0.1", 9999);
+    if (!client.is_valid()) return -1;
+
+    // 2. 准备关节角度数据（20 个 float，顺序：腿→右臂→左臂）
+    float angles[20];
+
+    // 3. 设置关节角度（弧度）
+    // 腿: angles[0] ~ angles[5]
+    // 右臂: angles[6] ~ angles[12]
+    // 左臂: angles[13] ~ angles[19]
+    for (int i = 0; i < 20; i++) angles[i] = 0.0f;
+
+    // 4. 发送
+    client.sendsvr(angles, sizeof(angles));  // 80 bytes
+
+    return 0;
+}
+```
+
+**注意事项**：
+- `CNetClnUdp` 不依赖任何 C++ 标准库，仅使用 `<winsock2.h>`（Windows Socket API）
+- 角度单位为**弧度**，各关节角度范围见模型 XML 中的 `range` 属性
+- 发送频率建议不超过 100Hz，避免 UDP 丢包
+
+---
+
+## 故障排查
+
+| 问题 | 解决方法 |
+|------|----------|
+| MuJoCo 窗口未弹出 | 确认在系统终端运行，不是在 IDE 内置终端 |
+| `ModuleNotFoundError: mujoco` | 运行 `pip install mujoco` |
+| 编译报错 `winsock2.h` 找不到 | 确认安装了 VS 2022+ 的 C++ 桌面开发工作负载 |
+| `build.ps1` 找不到 VS | 手动打开 VS 的 "Developer Command Prompt"，执行 `cl /EHsc demo.cpp net_cln_udp.cpp /Fe:demo.exe` |
+| 可视化无反应 | 确认先启动 `mujoco_viewer.py`，再运行 C++ demo |
+| 防火墙拦截 | 允许 Python 和 demo.exe 通过防火墙，或关闭防火墙测试 |

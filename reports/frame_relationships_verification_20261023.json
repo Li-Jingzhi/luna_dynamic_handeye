@@ -1,0 +1,10 @@
+{
+  "tests": 12,
+  "passed": true,
+  "source_model_modified": false,
+  "hardware_access": false,
+  "image": "frame_relationships_cn_20261023.png",
+  "reference_origin": "STL bottom plane +182 mm, display reference only",
+  "diagnostic_head_camera_visible_by_default": false,
+  "head_cad_origins_coincident": true
+}

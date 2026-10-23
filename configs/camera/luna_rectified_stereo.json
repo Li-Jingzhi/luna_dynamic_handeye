@@ -1,0 +1,17 @@
+{
+  "schema": "luna_rectified_stereo_v1",
+  "source_calibration": "luna_raw_fisheye_stereo.json",
+  "source_calibration_sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+  "pixel_domain": "ideal_pinhole",
+  "image_size": [1280, 992],
+  "sensor_ids": ["head_left:csi://0", "head_right:csi://1"],
+  "valid_pairs": 37,
+  "left_K": [[399.7864132123239, 0.0, 633.8557677691762], [0.0, 399.7864132123239, 485.2826037330614], [0.0, 0.0, 1.0]],
+  "right_K": [[399.7864132123239, 0.0, 633.8557677691762], [0.0, 399.7864132123239, 485.2826037330614], [0.0, 0.0, 1.0]],
+  "left_D": [0.0, 0.0, 0.0, 0.0],
+  "right_D": [0.0, 0.0, 0.0, 0.0],
+  "right_from_left_R": [[1.0, 0.0, 0.0], [0.0, 1.0, 0.0], [0.0, 0.0, 1.0]],
+  "right_from_left_T_m": [-0.05953835532631367, 0.0, 0.0],
+  "stereo_rms_px": 0.11832219912611008,
+  "epipolar_p95_px": 0.18880046460645872
+}

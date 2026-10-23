@@ -1,0 +1,12 @@
+{
+  "viewer_pid": 13114,
+  "tests_passed": 11,
+  "frame_compilation_passed": true,
+  "screenshot": "frame_view_light_20261023.png",
+  "hardware_access": false,
+  "arm_roots": "nominal_first_joint_alignment",
+  "head_and_camera": "unapproved_diagnostic_fit",
+  "background": "light_blue_gray",
+  "axis_endpoints_checked": true,
+  "all_seven_arm_joint_geometry_checked": true
+}

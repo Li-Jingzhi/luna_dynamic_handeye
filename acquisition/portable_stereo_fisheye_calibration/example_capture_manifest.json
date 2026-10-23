@@ -1,0 +1,11 @@
+{
+  "pixel_domain": "raw",
+  "distortion_model": "opencv_fisheye",
+  "sensor_ids": ["left", "right"],
+  "source_topics": [
+    "/camera/left_eye/image_nv12",
+    "/camera/right_eye/image_nv12"
+  ],
+  "board_inner_corners": [11, 8],
+  "square_size_m": 0.035
+}
