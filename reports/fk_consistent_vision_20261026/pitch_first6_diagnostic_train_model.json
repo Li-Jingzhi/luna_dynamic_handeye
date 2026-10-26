@@ -1,0 +1,70 @@
+{
+  "kind": "pitch_first",
+  "root_T": [
+    [
+      1.0,
+      0.0,
+      0.0,
+      -0.013496
+    ],
+    [
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0,
+      0.49898
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "mount": [
+    -1.2318085158027856,
+    1.2021344949630144,
+    -1.2051959499562412,
+    0.10857049260001239,
+    0.030474715758896397,
+    0.11968656745561124
+  ],
+  "rank": {
+    "rank": 6,
+    "singular_values": [
+      34041.71923147502,
+      33476.70338719637,
+      31559.467676112443,
+      3134.583634245628,
+      2250.2011713385104,
+      2164.676392008146
+    ],
+    "objective_normalized_gradient": 5.327884000857656e-06,
+    "optimizer_stationary": true
+  },
+  "approved": false,
+  "frame_id": "S_MODEL",
+  "camera_assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+    "stereo": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+    "ball": "5acdae0581dbb1861a66f2a1fdf4094fa17fe9fc4305b5e57e31ceaebe3316da",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "fixed_geometry_hashes": {
+    "head_mount_v2": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "torso_mounts": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+  },
+  "pf_reference_training_only": [
+    -0.003053775920433722,
+    0.005007027473965837,
+    0.10157156442305272
+  ],
+  "input": "rectified [uL,vL,uR,vR] and [yaw,pitch] degrees",
+  "reference": "nominal fixed arm FK"
+}

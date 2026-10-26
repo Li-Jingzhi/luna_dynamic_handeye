@@ -2,6 +2,30 @@
 
 本目录将 Luna 的真实相机/MDH/采集数据、LunaUdpTool 模型与 Marvin_pro 的通用标定方法集中到一个独立工程。离线拟合只需 NumPy 和 OpenCV，不依赖原项目路径、SciPy、MuJoCo 或机器人SDK。仅显式执行采集的 `--run` 时才调用机器人SDK。
 
+## 当前保留的算法
+
+按2026-10-26确认，保留以下两条路线；主研究方案为**有效运动链＋躯干补偿**，固定名义几何＋条件RBF作为对照。两者均使用旧版Luna V2.0的Yaw→Pitch，输入校正双目四维像素和头角，输出S_MODEL中的目标位置；运行预测不输入机械臂q7或黄球pF。
+
+| 路线 | 已保存的模型 |
+|---|---|
+| 固定名义几何＋条件RBF | [fixed6_conditional_train_model.json](reports/fk_consistent_vision_20261026/fixed6_conditional_train_model.json) |
+| 有效运动链＋躯干补偿 | [learned12_torso_rbf_train_model.json](reports/fk_consistent_vision_20261026/learned12_torso_rbf_train_model.json) |
+
+同一训练侧冻结pF及FK参考、同一分组划分的整头姿留出P95（mm）：
+
+| 未参与训练的头姿 | 固定名义几何＋条件RBF | 有效运动链＋躯干补偿 |
+|---|---:|---:|
+| −10°，−25° | 20.119 | 2.569 |
+| 0°，−20° | 4.503 | 4.810* |
+| 0°，−25° | 2.769 | 1.976 |
+| +10°，−25° | 19.917 | 2.720 |
+
+*留出唯一−20°组后，训练数据全部pitch=−25°，有效12参数的数值秩为10，俯仰响应不可完整辨识。各行是独立重新拟合的留出折，不是上述单个保存模型的四项独立验收。
+
+实现及四维像素接口见[analyze.py](reports/fk_consistent_vision_20261026/analyze.py)，完整协议见[研究报告](reports/fk_consistent_vision_20261026/README.md)。[25°参数解释与俯仰可辨识性](reports/fk_consistent_vision_20261026/pitch25_analysis.md)、[RA=Ry(q1)约束试验](reports/constrained_root_pitch_20261026/README.md)仅作诊断记录，不改变上述两条保留路线。其余候选归为研究对照，不自动按更低测试分数替换模型。
+
+保存模型均`approved=false`，像素推理须显式`diagnostic=True`；保留算法不等于通过任意头姿或运动中验收，正式运行的审批/质量门槛保持有效。
+
 ## 机型与数据来源
 
 | 内容 | 来源 | 用途 |
@@ -126,3 +150,7 @@ python3 -m dynamic_handeye capture \
 已实现连续几何、空间RBF、头角条件RBF与加性RBF共64候选的训练分块选型、嵌套整头姿和头姿/球位双留出验证，见[完整研究报告](reports/continuous_free_pf_20261026/README.md)。合成未见头姿验证可低于1mm，现有实机数据未达标；研究接口默认拒绝正式推理，不替换当前六参数运行模型。
 
 补入第四头姿`[0,-25]`的318条固定视角有效观测后，四头姿共1202条、321个物理球位，比较结果见[四头姿验证](reports/four_head_free_pf_20261026/README.md)。跨会话相同球位按已核对的共同轨迹及q7绑定，防止训练/测试泄漏；尚未达到P95<1mm。
+
+## 名义几何不准时的FK一致性研究
+
+新增[有效运动链与躯干空间补偿比较](reports/fk_consistent_vision_20261026/README.md)：每折冻结同一训练侧pF和FK参考，比较固定6参数、有效12参数、一般双转轴POE及直接回归；推理仅输入四维校正像素和头角。有效链12+躯干空间核两端整头姿留出P95约2.57/2.72mm，仍未达到1mm，且独立俯仰激励不足。该研究不修改默认模型，也不把名义MDH/URDF当作物理真值。
