@@ -241,6 +241,18 @@ class DynamicHeadTests(unittest.TestCase):
             write_json(Path(temp)/'model.json', {'ok': True})
             with self.assertRaises(FileExistsError): write_json(Path(temp)/'model.json', {'ok': False})
 
+    def test_archived_fourth_fixed_head_contract(self):
+        path=ROOT/'datasets/raw/ball_auto_20261018_visible_v1.jsonl'
+        dataset=load_capture([path],self.assets)
+        self.assertEqual(len(dataset['rows']),318)
+        self.assertEqual({r['head_key'] for r in dataset['rows']},{'0,-25'})
+        self.assertTrue(all(r['capture_kind']=='interactive_ball_auto' for r in dataset['rows']))
+        with tempfile.TemporaryDirectory() as temp:
+            r=next(json.loads(x) for x in path.read_text().splitlines() if json.loads(x).get('capture_valid'))
+            r['head_angles_deg']=[0.,-20.]
+            bad=Path(temp)/'wrong_fixed_head.jsonl';bad.write_text(json.dumps(r)+'\n')
+            with self.assertRaisesRegex(ValueError,'target'):load_capture([bad],self.assets)
+
     def test_grouped_validation_keeps_entire_ball_positions_together(self):
         rows = []
         for i, (camera, target, angle) in enumerate(zip(self.camera, self.target, self.angles)):

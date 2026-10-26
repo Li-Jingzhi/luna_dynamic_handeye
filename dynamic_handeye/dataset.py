@@ -42,7 +42,8 @@ def load_capture(paths, assets, *, left_ball_offset=None):
             for k, v in expected.items():
                 if r.get(k) != v:
                     raise ValueError(f'Wrong Luna contract {k} at {path}:{line_number}')
-            if r.get('capture_kind') != 'interactive_ball_point_head':
+            kind = r.get('capture_kind')
+            if kind not in ('interactive_ball_point_head', 'interactive_ball_auto'):
                 raise ValueError('Expected stationary point/head capture')
             arm = r.get('arm_side')
             if arm not in ('left', 'right'):
@@ -54,7 +55,7 @@ def load_capture(paths, assets, *, left_ball_offset=None):
             if not isinstance(count, int) or count < assets.contract['valid_frames_per_point']:
                 raise ValueError('Insufficient unique fused frames')
             head = vector(r['head_angles_deg'], (2,), 'head feedback')
-            target = vector(r['target_head_deg'], (2,), 'target head')
+            target = vector(r.get('target_head_deg', [0., -25.] if kind == 'interactive_ball_auto' else None), (2,), 'target head')
             q = vector(r['q7_deg'], (7,), 'arm feedback')
             body = vector(r['body_q_deg'], (6,), 'body feedback')
             xyz = vector(r['sphere_center_left_camera_m'], (3,), 'sphere center')
@@ -91,7 +92,7 @@ def load_capture(paths, assets, *, left_ball_offset=None):
                 group_id=f'{session}:{arm}:{r["waypoint_index"]}', head_key=key, head_angles_deg=head.tolist(),
                 camera_xyz_m=xyz.tolist(), corrected_pixels=pixels.tolist(), q7_deg=q.tolist(),
                 target_m=point_mr.tolist(), target_s_m=point_s.tolist(), arm_side=arm, flange_to_ball_center_m=pf.tolist(), body_q_deg=body.tolist(),
-                source_line=line_number, source_sha256=source_hash,
+                source_line=line_number, source_sha256=source_hash, capture_kind=kind, taught_path=r.get('taught_path'),
                 measurement_mode='stationary_fused_with_window' if has_window else 'legacy_stationary_fused',
                 exposure_time_valid=r.get('exposure_time_valid') is True,
                 reprojection_px=reprojection, fused_vs_triangulated_mm=float(1000*np.linalg.norm(xyz-triangulated))))

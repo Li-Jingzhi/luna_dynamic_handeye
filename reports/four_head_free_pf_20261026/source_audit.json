@@ -1,0 +1,26 @@
+{
+  "valid_observations": 1202,
+  "per_head": {
+    "-10,-25": 281,
+    "10,-25": 304,
+    "0,-20": 299,
+    "0,-25": 318
+  },
+  "unique_physical_waypoints": 321,
+  "all_four_valid_waypoints": 273,
+  "sources": [
+    {
+      "file": "datasets/raw/ball_point_head_20261018_v1.jsonl",
+      "sha256": "0f93631ffb10484c71a4178a97af792e607f94e3a7a55ed2d29caef3f8270ac5"
+    },
+    {
+      "file": "datasets/raw/ball_auto_20261018_visible_v1.jsonl",
+      "sha256": "f9145361c5d8213d401d3ffe41d04b6c67d1eda4a9387f7402d1851caf53449d"
+    }
+  ],
+  "basis": "Common trajectory and matching q7 at each waypoint checked by compare.py; all heads grouped across sessions",
+  "limitations": [
+    "Equal hashes do not independently verify unchanged mounting or illumination across sessions.",
+    "Fourth head is from a different acquisition session."
+  ]
+}

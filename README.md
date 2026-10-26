@@ -13,7 +13,7 @@
 | 完整MJCF、mesh及UDP示例 | `LunaUdpTool` | 提供名义安装位置；不执行其Pitch→Yaw头链 |
 | 刚体注册、联合pF与补偿方法 | `head_eye_pro`（Marvin_pro） | 复用数学方法，不复用其机型配置、相机参数或权重 |
 
-143个复制文件的原路径、用途和SHA256均记录在 `sources.json`。`reference/marvin_methods` 是方法快照，其中其它项目依赖和历史数字只供阅读，不作为本工程入口；实际复用的无设备依赖 `registration.py` 位于 `dynamic_handeye/`。
+144个复制文件的原路径、用途和SHA256均记录在 `sources.json`。`reference/marvin_methods` 是方法快照，其中其它项目依赖和历史数字只供阅读，不作为本工程入口；实际复用的无设备依赖 `registration.py` 位于 `dynamic_handeye/`。
 
 本项目Luna臂MDH相关长度为264/264mm，首段158.6mm、固定法兰87mm。此前分析中的287/314mm来自Marvin_pro，不能用于判断Luna模型。当前相机为**左CSI0、右CSI1**，原图2560×1984、测量图1280×992，基线59.538mm。Marvin_pro的CSI配置、59.742mm基线和共享pF均不用于这里。
 
@@ -124,3 +124,5 @@ python3 -m dynamic_handeye capture \
 ## 连续头姿＋自由pF研究验证
 
 已实现连续几何、空间RBF、头角条件RBF与加性RBF共64候选的训练分块选型、嵌套整头姿和头姿/球位双留出验证，见[完整研究报告](reports/continuous_free_pf_20261026/README.md)。合成未见头姿验证可低于1mm，现有实机数据未达标；研究接口默认拒绝正式推理，不替换当前六参数运行模型。
+
+补入第四头姿`[0,-25]`的318条固定视角有效观测后，四头姿共1202条、321个物理球位，比较结果见[四头姿验证](reports/four_head_free_pf_20261026/README.md)。跨会话相同球位按已核对的共同轨迹及q7绑定，防止训练/测试泄漏；尚未达到P95<1mm。

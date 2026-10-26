@@ -859,6 +859,12 @@
       "destination": "acquisition/configs/orin_6_6_7_100_20261014/README.md",
       "sha256": "6220e5d97563f08f3770a0972efd31c62c3d617774e9d0617829b49451e731ac",
       "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "/home/lijingzhi/Project/Learned_IK/head_2dof_capt/data/ball_auto_20261018_visible_v1.jsonl",
+      "destination": "datasets/raw/ball_auto_20261018_visible_v1.jsonl",
+      "sha256": "f9145361c5d8213d401d3ffe41d04b6c67d1eda4a9387f7402d1851caf53449d",
+      "purpose": "Additional fourth head [0,-25] stationary sphere-center capture; byte-identical archive"
     }
   ],
   "adapted_sources": [
