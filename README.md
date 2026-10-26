@@ -120,3 +120,7 @@ python3 -m dynamic_handeye capture \
 ## 旧版 Luna V2.0 实现（2026-10-26）
 
 当前可执行链明确采用旧版Yaw→Pitch。支持双臂躯干系FK、左右臂日志联合标定，以及双目躯干系推理；详见[旧版运行与标定说明](docs/luna_v2_pipeline.md)。新版Pitch→Yaw方案尚未部署，不能复用旧外参。
+
+## 连续头姿＋自由pF研究验证
+
+已实现连续几何、空间RBF、头角条件RBF与加性RBF共64候选的训练分块选型、嵌套整头姿和头姿/球位双留出验证，见[完整研究报告](reports/continuous_free_pf_20261026/README.md)。合成未见头姿验证可低于1mm，现有实机数据未达标；研究接口默认拒绝正式推理，不替换当前六参数运行模型。

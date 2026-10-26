@@ -1,0 +1,102 @@
+{
+  "schema": "proposed_continuous_head_acceptance_plan_v1",
+  "hardware_execution_enabled": false,
+  "robot_version": "luna_v2_0",
+  "target_xyz_p95_mm": 1.0,
+  "initial_validation_domain_deg": {
+    "yaw": [
+      -30,
+      30
+    ],
+    "pitch": [
+      -25,
+      25
+    ]
+  },
+  "training_heads_deg": [
+    [
+      -30,
+      -25
+    ],
+    [
+      -30,
+      0
+    ],
+    [
+      -30,
+      25
+    ],
+    [
+      -10,
+      -25
+    ],
+    [
+      -10,
+      0
+    ],
+    [
+      -10,
+      25
+    ],
+    [
+      10,
+      -25
+    ],
+    [
+      10,
+      0
+    ],
+    [
+      10,
+      25
+    ],
+    [
+      30,
+      -25
+    ],
+    [
+      30,
+      0
+    ],
+    [
+      30,
+      25
+    ]
+  ],
+  "untouched_test_heads_deg": [
+    [
+      -20,
+      -12.5
+    ],
+    [
+      -20,
+      12.5
+    ],
+    [
+      0,
+      -12.5
+    ],
+    [
+      0,
+      12.5
+    ],
+    [
+      20,
+      -12.5
+    ],
+    [
+      20,
+      12.5
+    ]
+  ],
+  "recommended_training_arm_positions_per_head": 30,
+  "recommended_test_new_arm_positions_per_head": 15,
+  "requirements": [
+    "Measured feedback and corrected stereo ball center at stopped poses; retain original frame evidence.",
+    "Same physical ball positions across heads and different flange orientations to identify pF.",
+    "New test arm configurations and independently dated second session.",
+    "Head A-B-C-A repeatability checks; verified exposure/feedback clocks for moving-head acceptance.",
+    "All joint trajectories and head visibility require on-site verification; this file sends no commands.",
+    "Certification applies only inside the independently validated head/spatial domain; widen coverage before claiming full limits."
+  ]
+}
