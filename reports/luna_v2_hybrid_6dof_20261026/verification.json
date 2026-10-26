@@ -1,0 +1,16 @@
+{
+  "robot_version": "luna_v2_0",
+  "chain": "luna_v2_hybrid",
+  "parameter_count": 6,
+  "tests_passed": 16,
+  "head_controller_D_used": false,
+  "head_rotation": "Rz(yaw) @ Ry(-pitch)",
+  "fixed_geometry_hashes": {
+    "head_mount_v2": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "torso_mounts": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+  },
+  "fit_p95_mm": 13.598290029710586,
+  "trajectory_holdout_p95_mm": 8.085592612960642,
+  "hardware_access": false,
+  "approved": false
+}

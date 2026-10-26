@@ -1,3 +1,9 @@
+# 躯干坐标输出（当前6参数）
+
+当前fit入口只拟合相机安装6参数，输出`P_S=F_fixed K(q) X P_C`，S为S_MODEL，见[六参数说明](six_parameter_calibration.md)。旧v1模型按以下历史公式兼容推理，文件不覆盖。
+
+## 历史十二参数输出说明
+
 # 躯干坐标输出
 
 推理的stationary、moving及CLI diagnostic均输出`frame_id=S_MODEL`，即`Gento Luna_Leg_J6_Link`模型原点；不是上移182mm的CAD接口参考。

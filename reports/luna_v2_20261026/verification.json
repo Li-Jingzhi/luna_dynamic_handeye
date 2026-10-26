@@ -1,0 +1,13 @@
+{
+  "robot_version": "luna_v2_0",
+  "head_order": "yaw_then_pitch",
+  "tests_passed": 13,
+  "source_hash_check_passed": true,
+  "hardware_access": false,
+  "calibration_arms": [
+    "right"
+  ],
+  "fit_p95_mm": 5.2502545691421085,
+  "trajectory_holdout_p95_mm": 3.3880684696826076,
+  "approved": false
+}

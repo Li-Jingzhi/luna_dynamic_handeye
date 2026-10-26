@@ -3,7 +3,7 @@ from collections import Counter
 import json
 from pathlib import Path
 import numpy as np
-from .geometry import apply, digest, vector
+from .geometry import apply, digest, vector, torso_from_arm
 
 
 def write_json(path, value):
@@ -14,7 +14,7 @@ def write_json(path, value):
         f.write('\n')
 
 
-def load_capture(paths, assets):
+def load_capture(paths, assets, *, left_ball_offset=None):
     rows, rejected, seen, sources = [], Counter(), set(), []
     for filename in paths:
         path = Path(filename)
@@ -30,18 +30,26 @@ def load_capture(paths, assets):
             if not line.strip():
                 continue
             r = json.loads(line)
+            if r.get('robot_version', 'luna_v2_0') != 'luna_v2_0':
+                raise ValueError('Capture belongs to another Luna version')
             if r.get('capture_valid') is not True:
                 rejected[r.get('rejection_reason', 'capture_valid_false')] += 1
                 continue
             expected = dict(mdh_sha256=assets.hashes['mdh'], stereo_model_sha256=assets.hashes['stereo'],
                 source_calibration_sha256=assets.hashes['raw'], sensor_ids=assets.stereo['sensor_ids'],
-                image_size=assets.stereo['image_size'], pixel_domain='ideal_pinhole', arm_side='right',
+                image_size=assets.stereo['image_size'], pixel_domain='ideal_pinhole',
                 sphere_center_method='sphere_center_projection_stereo_v1')
             for k, v in expected.items():
                 if r.get(k) != v:
                     raise ValueError(f'Wrong Luna contract {k} at {path}:{line_number}')
             if r.get('capture_kind') != 'interactive_ball_point_head':
                 raise ValueError('Expected stationary point/head capture')
+            arm = r.get('arm_side')
+            if arm not in ('left', 'right'):
+                raise ValueError('Expected left or right arm_side')
+            if arm == 'left' and left_ball_offset is None:
+                raise ValueError('Left arm needs explicitly measured left_ball_offset in metres')
+            pf = assets.pf if arm == 'right' else vector(left_ball_offset, (3,), 'left ball offset')
             count = r.get('valid_frames', 0)
             if not isinstance(count, int) or count < assets.contract['valid_frames_per_point']:
                 raise ValueError('Insufficient unique fused frames')
@@ -72,15 +80,17 @@ def load_capture(paths, assets):
             reprojection = assets.reprojection(xyz, pixels)
             triangulated = assets.triangulate(pixels)
             key = ','.join(f'{x:g}' for x in target)
-            identity = (session, r['waypoint_index'], key)
+            identity = (session, arm, r['waypoint_index'], key)
             if identity in seen:
                 raise ValueError('Duplicate session/waypoint/head observation')
             seen.add(identity)
-            fk = assets.flange(q)[0]
+            fk = assets.flange(q, arm)[0]
+            point_s = apply(torso_from_arm(assets, arm), apply(fk, pf))
+            point_mr = apply(np.linalg.inv(torso_from_arm(assets)), point_s)
             rows.append(dict(session_id=session, waypoint_id=r['waypoint_index'],
-                group_id=f'{session}:{r["waypoint_index"]}', head_key=key, head_angles_deg=head.tolist(),
+                group_id=f'{session}:{arm}:{r["waypoint_index"]}', head_key=key, head_angles_deg=head.tolist(),
                 camera_xyz_m=xyz.tolist(), corrected_pixels=pixels.tolist(), q7_deg=q.tolist(),
-                target_m=apply(fk, assets.pf).tolist(), body_q_deg=body.tolist(),
+                target_m=point_mr.tolist(), target_s_m=point_s.tolist(), arm_side=arm, flange_to_ball_center_m=pf.tolist(), body_q_deg=body.tolist(),
                 source_line=line_number, source_sha256=source_hash,
                 measurement_mode='stationary_fused_with_window' if has_window else 'legacy_stationary_fused',
                 exposure_time_valid=r.get('exposure_time_valid') is True,
@@ -92,6 +102,7 @@ def load_capture(paths, assets):
         if np.ptp(body, axis=0).max() > .3:
             raise ValueError('Body moved during legacy stationary session')
     return dict(schema='luna_dynamic_dataset_v1', assets=assets.hashes, sources=sources,
+                robot_version='luna_v2_0', target_frame='right_arm_mdh_parent',
                 provenance='legacy_stationary_fused_without_complete_per_frame_evidence',
                 rejected=dict(rejected), rows=rows)
 

@@ -1,6 +1,6 @@
-"""Variable projection: two fixed SE(3) mounts, fixed encoder-zero gauge."""
+"""Six-parameter camera mounting calibration with fixed nominal head geometry."""
 import numpy as np
-from .geometry import apply, parameters, pose, torso_from_arm
+from .geometry import apply, parameters, pose, torso_from_arm, fixed_head_root, fixed_geometry_hashes, torso_camera_poses
 from .optimizer import robust_optimize
 from .registration import rigid_fit
 from .dataset import arrays
@@ -15,75 +15,65 @@ def metrics(delta):
 
 
 def predict(model, assets, camera, angles, *, output_frame="S_MODEL"):
-    h = assets.head(angles, model['chain'], model.get('mjcf_mapping'))
-    t = np.array(model['mdh_from_head_root_T']) @ h @ np.array(model['head_tip_from_rectified_camera_T'])
-    if output_frame == 'S_MODEL':
-        t = torso_from_arm(assets) @ t
-    elif output_frame != 'right_arm_mdh_parent':
+    t = torso_camera_poses(model, assets, angles)
+    if output_frame == 'right_arm_mdh_parent':
+        t = np.linalg.inv(torso_from_arm(assets)) @ t
+    elif output_frame != 'S_MODEL':
         raise ValueError('Unknown output frame')
     return apply(t, camera)
 
 
-def fit_geometry(camera, target, angles, assets, *, chain='controller_mdh', mapping=None):
+def fit_geometry(camera, target, angles, assets, *, chain='luna_v2_hybrid', mapping=None):
+    """Fit only X; target remains in the dataset's right-arm MDH reference."""
     camera, target, angles = np.asarray(camera), np.asarray(target), np.asarray(angles)
     if (camera.shape != target.shape or camera.shape != (len(angles), 3) or len(camera) < 36 or
             not np.isfinite(camera).all() or not np.isfinite(target).all()):
         raise ValueError('Need at least 36 finite paired points')
-    if np.linalg.matrix_rank(angles-angles.mean(0), tol=1e-5) < 2:
-        raise ValueError('Two-dimensional head excitation required')
     if np.linalg.matrix_rank(target-target.mean(0), tol=1e-5) < 3:
         raise ValueError('Spatially distributed non-coplanar sphere positions required')
-    h = assets.head(angles, chain, mapping)
+    if chain != 'luna_v2_hybrid' or mapping is not None:
+        raise ValueError('Six-parameter fit requires the fixed V2 hybrid head chain')
+    base = fixed_head_root(assets)
+    head = base @ assets.head(angles, chain, mapping)
+    target_s = apply(torso_from_arm(assets), target)
+    local_target = apply(np.linalg.inv(head), target_s)
+    r, t = rigid_fit(camera, local_target)
+    initial = np.eye(4); initial[:3, :3] = r; initial[:3, 3] = t
 
-    def eliminate(x):
-        head_points = apply(h @ pose(x), camera)
-        r, t = rigid_fit(head_points, target)
-        a = np.eye(4); a[:3, :3] = r; a[:3, 3] = t
-        return (apply(a, head_points)-target)*1000, a
+    def residual(x):
+        return (apply(head @ pose(x), camera)-target_s).ravel()*1000
 
-    best = None
-    for rotation in ([0, 0, 0], [np.pi/2, 0, 0], [-np.pi/2, 0, 0],
-                     [0, np.pi/2, 0], [0, -np.pi/2, 0], [0, 0, np.pi]):
-        x = robust_optimize(lambda v: eliminate(v)[0].ravel(), np.r_[rotation, np.zeros(3)], iterations=100)
-        error, a = eliminate(x)
-        absolute = np.abs(error)
-        cost = np.sum(np.where(absolute <= 3, .5*error**2, 3*(absolute-1.5)))
-        if best is None or cost < best[0]:
-            best = (cost, x, a)
-    _, x, a = best
-    v = np.r_[parameters(a), x]
-
-    def residual(p):
-        return (apply(pose(p[:6]) @ h @ pose(p[6:]), camera)-target).ravel()*1000
-
-    # Joint refinement makes both mounts minimize the same Huber objective.
-    v = robust_optimize(residual, v, iterations=150)
-    a, x = pose(v[:6]), v[6:]
-    step = np.eye(12)*1e-5
-    jac = np.column_stack([(residual(v+d)-residual(v-d))/2e-5 for d in step])
+    x = robust_optimize(residual, parameters(initial), iterations=150)
+    step = np.eye(6)*1e-5
+    jac = np.column_stack([(residual(x+d)-residual(x-d))/2e-5 for d in step])
     singular = np.linalg.svd(jac, compute_uv=False)
     rank = int(np.sum(singular > singular[0]*1e-7))
-    if rank < 12:
-        raise ValueError(f'Unobservable two-mount geometry: rank {rank}/12')
+    if rank < 6:
+        raise ValueError(f'Unobservable camera mounting: rank {rank}/6')
     if np.linalg.norm(x[3:]) > 1:
-        raise ValueError('Camera mount exceeds 1m; check chain and frame convention')
-    r = residual(v)
+        raise ValueError('Camera mount exceeds 1m; check fixed geometry')
+    r = residual(x)
     weights = np.minimum(1., 3/np.maximum(abs(r), 1e-12))
     gradient = jac.T @ (weights*r)
     normalized_gradient = float(np.max(abs(gradient)/np.maximum(np.linalg.norm(jac, axis=0), 1)))
     if normalized_gradient > .01:
-        raise ValueError('Joint mount optimization did not converge')
-    return dict(schema='luna_dynamic_head_model_v1', robot='gento_luna', chain=chain, mjcf_mapping=mapping,
-                assets=assets.hashes, frame_id='S_MODEL', calibration_reference_frame='right_arm_mdh_parent',
-                mdh_from_head_root_T=a.tolist(), head_tip_from_rectified_camera_T=pose(x).tolist(),
-                encoder_zero_offsets_deg=[0., 0.], parameter_count=12,
+        raise ValueError('Camera mount optimization did not converge')
+    return dict(schema='luna_dynamic_head_model_v2', robot='gento_luna', robot_version='luna_v2_0',
+                chain=chain, mjcf_mapping=mapping, assets=assets.hashes, frame_id='S_MODEL',
+                calibration_reference_frame='right_arm_mdh_parent',
+                fixed_geometry_hashes=fixed_geometry_hashes(assets),
+                fixed_geometry_status='nominal_not_independently_measured',
+                torso_from_head_root_T=base.tolist(),
+                head_tip_from_rectified_camera_T=pose(x).tolist(),
+                encoder_zero_offsets_deg=[0., 0.], parameter_count=6,
                 jacobian_rank=rank, jacobian_singular_values=singular.tolist(),
                 normalized_mount_gradient=normalized_gradient,
-                fit_metrics=metrics(residual(v).reshape(-1, 3)/1000),
+                fit_error_axes_frame='S_MODEL',
+                fit_metrics=metrics(residual(x).reshape(-1, 3)/1000),
                 approved=False, independently_verified=False, moving_head_validated=False)
 
 
-def evaluate(dataset, assets, *, chain='controller_mdh', mapping=None):
+def evaluate(dataset, assets, *, chain='luna_v2_hybrid', mapping=None):
     camera, target, angles = arrays(dataset)
     rows = dataset['rows']
     groups = np.array([r['group_id'] for r in rows])
@@ -128,14 +118,21 @@ def evaluate(dataset, assets, *, chain='controller_mdh', mapping=None):
     model.update(head_support_deg=unique.tolist(), camera_support_m=camera.tolist(),
                  source_capture_hashes=[s['sha256'] for s in dataset['sources']],
                  head_coverage_qualified=coverage)
-    report = dict(schema='luna_dynamic_validation_v1', robot='gento_luna', chain=chain,
+    arms = np.array([r.get('arm_side', 'right') for r in rows])
+    model['calibration_arms'] = sorted(set(arms))
+    arm_metrics = {arm: metrics(predict(model, assets, camera[arms == arm], angles[arms == arm],
+                         output_frame='right_arm_mdh_parent')-target[arms == arm]) for arm in sorted(set(arms))}
+    report = dict(calibration_arms=model['calibration_arms'], fitted_error_by_arm=arm_metrics, schema='luna_dynamic_validation_v1', robot='gento_luna', robot_version='luna_v2_0', chain=chain,
                   valid_observations=len(rows), independent_waypoints=len(group_list), head_settings=unique.tolist(),
                   source_rejections=dataset['rejected'], fit_metrics=model['fit_metrics'],
                   trajectory_holdout=trajectory, spatial_holdouts=spatial, leave_one_head_out=unseen,
                   leave_one_session_out=session_scores, fitted_error_by_head=by_head,
                   fitted_cross_head_drift=metrics(drifts) if drifts else None,
                   head_coverage_qualified=coverage, approved=False,
-                  limitations=['Internal FK consistency only; no external absolute metrology.',
+                  parameter_count=6, fixed_geometry_status=model['fixed_geometry_status'],
+                  error_axes_frame='right_arm_mdh_parent', fit_error_axes_frame='S_MODEL',
+                  limitations=['Fixed head mounting uses nominal geometry, not independently measured axes.',
+                      'Internal FK consistency only; no external absolute metrology.',
                       'Cross-head drift uses fitted data and is diagnostic only.',
                       'Legacy fused logs lack complete per-frame stationarity evidence.',
                       'No verified exposure synchronization or moving-head validation.',

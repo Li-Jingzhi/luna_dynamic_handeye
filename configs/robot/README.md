@@ -25,3 +25,7 @@
 躯干到控制器头MDH父系、头末端到左相机的外参尚未确认，以`null`明确保留；没有混入未批准的诊断拟合结果。
 
 详细出处见[固定偏置来源说明](../../docs/frame_offset_sources_20261023.md)。
+
+## 当前头部混合六参数配置
+
+`head_mount_v2.json`定义固定公共旋转中心与零位轴向，主头链为`Rz(yaw) @ Ry(-pitch)`。位置来自MJCF头中心；D=640mm不进入计算，也不做逆变换抵消。只标定H1到校正左眼的6参数X。配置、假设及结果见[六参数说明](../../docs/six_parameter_calibration.md)。torso_mounts.json中的历史unresolved字段只描述旧controller_mdh父系，不能与新H_ref混淆。

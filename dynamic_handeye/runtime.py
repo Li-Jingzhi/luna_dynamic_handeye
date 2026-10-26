@@ -1,16 +1,16 @@
 """Continuous head-angle inference; moving mode requires separate acceptance."""
 import cv2
 import numpy as np
-from .geometry import apply, transform, vector, torso_from_arm
+from .geometry import apply, transform, vector, torso_camera_poses, check_version
 
 
 def camera_pose(model, assets, angles):
-    return (torso_from_arm(assets) @ transform(model['mdh_from_head_root_T']) @ assets.head(np.array([angles]), model['chain'], model.get('mjcf_mapping'))[0]
-            @ transform(model['head_tip_from_rectified_camera_T']))
+    return torso_camera_poses(model, assets, np.array([angles]))[0]
 
 
 def check_model(model, assets, moving=False):
-    if model.get('schema') != 'luna_dynamic_head_model_v1' or model.get('robot') != 'gento_luna':
+    check_version(model)
+    if model.get('schema') not in ('luna_dynamic_head_model_v1', 'luna_dynamic_head_model_v2') or model.get('robot') != 'gento_luna':
         raise ValueError('Wrong model schema or robot')
     if model.get('assets') != assets.hashes:
         raise ValueError('Model uses different camera/MDH/MJCF assets')

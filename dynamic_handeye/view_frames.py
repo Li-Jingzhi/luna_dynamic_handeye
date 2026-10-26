@@ -9,7 +9,7 @@ import numpy as np
 from .geometry import Assets, ROOT, body_fixed, mdh_poses, transform, vector
 
 MODEL = ROOT/'reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml'
-DIAGNOSTIC = ROOT/'reports/real_capture_joint_refined_20261023/model.json'
+DIAGNOSTIC = ROOT/'reports/luna_v2_hybrid_6dof_20261026/model.json'
 # Lowest planar surface of Leg_J6_Link.STL; a display reference, not a controller frame.
 CAD_BOTTOM_Z = .182
 DEFAULT_VISIBLE = {1: True, 2: True, 3: False, 4: False, 5: False, 6: True}
@@ -50,10 +50,13 @@ def frames(assets, model, data, angles):
         sm = installed @ np.linalg.inv(offset)
         out.append(dict(name=f'M_{side} [NOMINAL]', kind='nominal_first_joint_alignment', group=2, size=.085, T=s@sm, parent='S_TORSO'))
     fitted = json.loads(DIAGNOSTIC.read_text())
-    if fitted['assets'] != assets.hashes or fitted['chain'] != 'controller_mdh':
+    if fitted['assets'] != assets.hashes or fitted['chain'] not in ('luna_v2_hybrid', 'controller_mdh'):
         raise ValueError('Diagnostic model does not match controller/camera assets')
-    h0 = out[1]['T'] @ transform(fitted['mdh_from_head_root_T'])
-    h2 = h0 @ assets.head(np.array([angles]))[0]
+    if fitted['schema'] == 'luna_dynamic_head_model_v2':
+        h0 = s @ transform(fitted['torso_from_head_root_T'])
+    else:
+        h0 = out[1]['T'] @ transform(fitted['mdh_from_head_root_T'])
+    h2 = h0 @ assets.head(np.array([angles]), fitted['chain'])[0]
     left = h2 @ transform(fitted['head_tip_from_rectified_camera_T'])
     right_from_left = np.eye(4)
     right_from_left[:3, :3] = assets.stereo['right_from_left_R']
@@ -103,7 +106,7 @@ def draw(scene, entries, visible):
                          'C_R [FIT]': [0, .19, .16], 'S_INTERFACE [CAD REF]': [0, -.25, .0],
                          'JH1 [CAD]': [0, -.23, .13], 'JH2 [CAD]': [0, .23, .18]}
         label_pos = origin+label_offsets[item['name']]
-        display_name = item['name'].replace('S_TORSO', 'S_MODEL (Leg_J6)').replace('H0_CTRL [FIT]', 'H0 [FIT ONLY]').replace('H2_CTRL [FIT]', 'H2 [FIT ONLY]')
+        display_name = item['name'].replace('S_TORSO', 'S_MODEL (Leg_J6)').replace('H0_CTRL [FIT]', 'H_REF [FIXED NOMINAL]').replace('H2_CTRL [FIT]', 'H1 [FIXED FK]')
         geom(mujoco.mjtGeom.mjGEOM_LABEL, [0, 0, 0], label_pos, [.1, .1, .1, 1], display_name)
         leader = geom(mujoco.mjtGeom.mjGEOM_LINE, [1.5, 0, 0], origin, [.25, .28, .33, .85])
         mujoco.mjv_connector(leader, mujoco.mjtGeom.mjGEOM_LINE, 1.5, origin, label_pos)
@@ -215,7 +218,7 @@ def main():
                                np.linalg.norm(assets.stereo['right_from_left_T_m']), atol=1e-10)
     report = dict(head_angles_deg=angles.tolist(), hardware_access=False,
                   notes=['M_L/M_R are nominal first-joint alignments, not measured installation transforms.',
-                         'H0/H2 and cameras come from the existing unapproved fitted model.',
+                         'Head root is fixed nominal geometry; cameras use the unapproved six-parameter model.',
                          'JH1/JH2 are coincident MJCF origins, not controller head frames.',
                          'S_INTERFACE is a CAD bottom-surface reference at +182 mm, not a verified controller frame.'],
                   frames=[dict(name=e['name'], kind=e['kind'], parent=e.get('parent'), world_from_frame_T=e['T'].tolist()) for e in entries])

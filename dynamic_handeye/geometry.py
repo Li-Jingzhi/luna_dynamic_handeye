@@ -1,7 +1,8 @@
-"""Luna controller MDH is authoritative; MJCF assets are structural references."""
+"""Old V2 hybrid head rotation and controller arm MDH; legacy head MDH is read-only compatibility."""
 import configparser
 import hashlib
 import json
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 import cv2
@@ -122,12 +123,25 @@ class Assets:
             raise ValueError('Unknown arm')
         return mdh_poses(self.rows('R.A1' if arm == 'right' else 'R.A0', 7), np.atleast_2d(q))
 
-    def head(self, angles, chain='controller_mdh', mapping=None):
+    def head(self, angles, chain='luna_v2_hybrid', mapping=None):
         q = np.asarray(angles, float)
         if q.ndim != 2 or q.shape[1] != 2 or not np.isfinite(q).all():
             raise ValueError('Expected Nx2 measured head angles in degrees')
+        if chain == 'luna_v2_hybrid':
+            if mapping is not None:
+                raise ValueError('Hybrid feedback mapping is fixed in the mounting configuration')
+            if np.any(np.abs(q) > np.array([90., 25.])):
+                raise ValueError('Hybrid head feedback exceeds yaw/pitch limits')
+            y, p = np.deg2rad(q[:, 0]), -np.deg2rad(q[:, 1])
+            rz = np.broadcast_to(np.eye(4), (len(q), 4, 4)).copy()
+            ry = rz.copy()
+            rz[:, 0, 0] = np.cos(y); rz[:, 0, 1] = -np.sin(y)
+            rz[:, 1, 0] = np.sin(y); rz[:, 1, 1] = np.cos(y)
+            ry[:, 0, 0] = np.cos(p); ry[:, 0, 2] = np.sin(p)
+            ry[:, 2, 0] = -np.sin(p); ry[:, 2, 2] = np.cos(p)
+            return rz @ ry
         if chain != 'controller_mdh':
-            raise ValueError('Controller MDH is authoritative; MJCF is reference only')
+            raise ValueError('Unsupported head chain; MJCF raw pitch-first chain is not authoritative')
         return mdh_poses(self.head_rows, q)
 
     def triangulate(self, pixels, pixel_domain='ideal_pinhole'):
@@ -162,13 +176,72 @@ class Assets:
         return float(max(errors))
 
 
-def torso_from_arm(assets):
-    """Nominal CAD torso output; does not assert controller head-root alignment."""
+def torso_from_arm(assets, arm="right"):
+    """Nominal CAD torso output; does not assert measured installation accuracy."""
+    if arm not in ("left", "right"):
+        raise ValueError("Unknown arm")
     mounts = json.loads((assets.root/'configs/robot/torso_mounts.json').read_text())
     if digest(assets.root/mounts['source_model']) != mounts['source_model_sha256']:
         raise ValueError('Torso mounting source model changed')
     rows = [r for r in mounts['relations'] if r['parent'] == 'S_MODEL'
-            and r['child'] == 'right_arm_mdh_parent']
+            and r['child'] == f'{arm}_arm_mdh_parent']
     if len(rows) != 1:
-        raise ValueError('Expected one torso-to-right-arm mounting transform')
+        raise ValueError('Expected one torso-to-arm mounting transform')
     return transform(rows[0]['parent_from_child_T'])
+
+
+def torso_flange(assets, q, arm='right'):
+    return torso_from_arm(assets, arm) @ assets.flange(q, arm)
+
+
+def check_version(model):
+    expected = 'luna_v2_hybrid' if model.get('schema') == 'luna_dynamic_head_model_v2' else 'controller_mdh'
+    if model.get('robot_version', 'luna_v2_0') != 'luna_v2_0' or model.get('chain') != expected:
+        raise ValueError('This pipeline requires old Luna V2.0 Yaw->Pitch and a matching model chain')
+
+
+def fixed_geometry_hashes(assets):
+    return {name: digest(assets.root/f'configs/robot/{name}.json')
+            for name in ('head_mount_v2', 'torso_mounts')}
+
+
+def fixed_head_root(assets):
+    """Fixed nominal V2 yaw mounting, without borrowing a fitted A."""
+    config = json.loads((assets.root/'configs/robot/head_mount_v2.json').read_text())
+    if (config.get('schema') != 'luna_v2_hybrid_head_mount_v1' or
+            config.get('robot_version') != 'luna_v2_0' or
+            config.get('joint_order') != ['yaw', 'pitch'] or
+            config.get('controller_chain') != 'luna_v2_hybrid' or
+            config.get('encoder_zero_offsets_deg') != [0, 0] or
+            config.get('rotation_order') != 'Rz(yaw) @ Ry(-pitch)' or
+            config.get('feedback_indices') != [0, 1] or
+            config.get('limits_deg') != [[-90, 90], [-25, 25]]):
+        raise ValueError('Incompatible fixed V2 head mounting configuration')
+    # Validate the mounting source before reading its local head-center position.
+    torso_from_arm(assets)
+    mounts = json.loads((assets.root/'configs/robot/torso_mounts.json').read_text())
+    node = ET.parse(assets.root/mounts['source_model']).getroot().find(
+        ".//body[@name='Gento Luna_Leg_J6_Link']/body[@name='Head_J1_Link']")
+    if node is None:
+        raise ValueError('Missing nominal head center in source model')
+    zero = np.eye(4)
+    zero[:3, 3] = body_fixed(node)[:3, 3]
+    zero[:3, :3] = vector(config['yaw_zero_rotation_in_S'], (3, 3), 'yaw mounting rotation')
+    transform(zero)
+    return zero
+
+
+def torso_camera_poses(model, assets, angles):
+    check_version(model)
+    h = assets.head(angles, model['chain'], model.get('mjcf_mapping'))
+    if model.get('schema') == 'luna_dynamic_head_model_v2':
+        if model.get('parameter_count') != 6 or model.get('fixed_geometry_hashes') != fixed_geometry_hashes(assets):
+            raise ValueError('Six-parameter model fixed geometry changed')
+        base = transform(model['torso_from_head_root_T'])
+        if not np.allclose(base, fixed_head_root(assets), atol=1e-12, rtol=0):
+            raise ValueError('Model head root differs from fixed mounting')
+    elif model.get('schema') == 'luna_dynamic_head_model_v1':
+        base = torso_from_arm(assets) @ transform(model['mdh_from_head_root_T'])
+    else:
+        raise ValueError('Unknown hand-eye model schema')
+    return base @ h @ transform(model['head_tip_from_rectified_camera_T'])
