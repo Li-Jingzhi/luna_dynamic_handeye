@@ -1,0 +1,49 @@
+{
+  "source_project": "/media/ljz/LJZ/Project/head_eye_capt",
+  "source_commit": "0605bb1f92760cc2b66cb680bc975c01e258db3a",
+  "files": [
+    {
+      "source": "portable_stereo_fisheye_calibration/calibrate.py",
+      "source_sha256": "010cde3a9a04b2728f056fdd93715a3a55d2c1bec084f2f44e816ab9860e5df7",
+      "destination": "calibrate.py"
+    },
+    {
+      "source": "portable_stereo_fisheye_calibration/rectify_preview.py",
+      "source_sha256": "4748d71c763299b9767db343317acbe9c26086463b93ebf345edb19a2364bff9",
+      "destination": "rectify_preview.py"
+    },
+    {
+      "source": "camera_calibration/fit.py",
+      "source_sha256": "588f0a157b9917a4f99d407d652d23970cd170d8965396c07fe8fdc81e85e02b",
+      "destination": "calibrate_pinhole.py"
+    },
+    {
+      "source": "portable_stereo_fisheye_calibration/orin_pro_capture_server.py",
+      "source_sha256": "7a1d94a3e0c956eb51a85edbda0b18e58c056268c4157e3c05491335a7d05b69",
+      "destination": "orin_pro_capture_server.py"
+    },
+    {
+      "source": "portable_stereo_fisheye_calibration/orin_pro_calibration_gui.py",
+      "source_sha256": "d46f54820978f0353811342b5eeef89eff97f1b77ef888b07fd04814d7b028d9",
+      "destination": "orin_pro_calibration_gui.py"
+    },
+    {
+      "source": "portable_stereo_fisheye_calibration/auto_capture_orin_pro.py",
+      "source_sha256": "2a498e9397f86e3b22195e8e6870733eda3331e4888d997b99e04ed297c4e386",
+      "destination": "auto_capture_orin_pro.py"
+    },
+    {
+      "source": "orin_rectified_stream/stereo_pairing.py",
+      "source_sha256": "59f3f7ece6ee83ceb709dcf8932ea9fbc609e5d648113a1719bb8d8c63d9b5e0",
+      "destination": "stereo_pairing.py",
+      "note": "Pairing and VPI mapping adapted; no reference-machine calibration imported"
+    },
+    {
+      "source": "orin_rectified_stream/pro_sender.py",
+      "source_sha256": "906a1218656bc72eca2c4db2e4257cfcbd6810fb57cdb7f38b14a82a1f33660d",
+      "destination": "capture_realtime.py",
+      "note": "Pairing and VPI mapping adapted; no reference-machine calibration imported"
+    }
+  ],
+  "note": "Vendored source with local validation/provenance additions. No runtime source-project dependency; no source camera parameters imported."
+}

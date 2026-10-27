@@ -1,0 +1,14 @@
+{
+  "host": "6.6.7.100",
+  "username": "nvidia",
+  "sensors": [
+    0,
+    1
+  ],
+  "port": 8766,
+  "board_inner_corners": [
+    11,
+    8
+  ],
+  "square_mm": 35
+}

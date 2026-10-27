@@ -1,0 +1,20 @@
+{
+  "pixel_domain": "raw",
+  "distortion_model": "opencv_fisheye",
+  "sensor_ids": [
+    "left:csi://0",
+    "right:csi://1"
+  ],
+  "image_size": [
+    2560,
+    1984
+  ],
+  "board_inner_corners": [
+    11,
+    8
+  ],
+  "square_size_m": 0.035,
+  "source_device": "nvidia@6.6.7.100",
+  "imaging_policy": "50Hz; automatic 5s then AE/AWB locked",
+  "timestamp_basis": "common_gst_clock_and_arrival_not_verified_exposure"
+}

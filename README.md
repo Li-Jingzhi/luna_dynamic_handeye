@@ -154,3 +154,7 @@ python3 -m dynamic_handeye capture \
 ## 名义几何不准时的FK一致性研究
 
 新增[有效运动链与躯干空间补偿比较](reports/fk_consistent_vision_20261026/README.md)：每折冻结同一训练侧pF和FK参考，比较固定6参数、有效12参数、一般双转轴POE及直接回归；推理仅输入四维校正像素和头角。有效链12+躯干空间核两端整头姿留出P95约2.57/2.72mm，仍未达到1mm，且独立俯仰激励不足。该研究不修改默认模型，也不把名义MDH/URDF当作物理真值。
+
+## 独立棋盘格双目标定与重采
+
+从 `head_eye_capt` 移植的独立工具位于 [stereo_calibration](stereo_calibration/README.md)，包含原始鱼眼K/D/R/T标定、GStreamer/Argus直连CSI图像采集、校正预览和独立板形/尺度评估，不依赖源项目。重新标定后的数据清单、交叉头姿与独立验收划分见 [重采计划](stereo_calibration/RECAPTURE_PLAN.md)。新相机参数须同步更新测量契约并重新拟合手眼模型。
