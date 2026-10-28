@@ -127,6 +127,8 @@ python3 -m dynamic_handeye predict \
 
 ## 新数据采集
 
+2026-10-27下一批使用**pitch=0、yaw=-10/0/+10°、每组合50帧**，操作流程见[零俯仰左右偏转采集](docs/pitch0_yaw_capture.md)。务必显式指定`--plan configs/capture_pitch0_yaw_plan.json`；以下旧九姿示例保留供后续使用。
+
 先做无硬件计划检查：
 
 ```bash

@@ -14,7 +14,8 @@ def write_json(path, value):
         f.write('\n')
 
 
-def load_capture(paths, assets, *, left_ball_offset=None):
+def load_capture(paths, assets, *, left_ball_offset=None, fixed_head_target=None):
+    fixed_head = [0., -25.] if fixed_head_target is None else vector(fixed_head_target, (2,), 'fixed head target').tolist()
     rows, rejected, seen, sources = [], Counter(), set(), []
     for filename in paths:
         path = Path(filename)
@@ -55,7 +56,7 @@ def load_capture(paths, assets, *, left_ball_offset=None):
             if not isinstance(count, int) or count < assets.contract['valid_frames_per_point']:
                 raise ValueError('Insufficient unique fused frames')
             head = vector(r['head_angles_deg'], (2,), 'head feedback')
-            target = vector(r.get('target_head_deg', [0., -25.] if kind == 'interactive_ball_auto' else None), (2,), 'target head')
+            target = vector(r.get('target_head_deg', fixed_head if kind == 'interactive_ball_auto' else None), (2,), 'target head')
             q = vector(r['q7_deg'], (7,), 'arm feedback')
             body = vector(r['body_q_deg'], (6,), 'body feedback')
             xyz = vector(r['sphere_center_left_camera_m'], (3,), 'sphere center')

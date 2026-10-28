@@ -1,0 +1,10 @@
+{
+  "robot": "gento_luna",
+  "robot_version": "luna_v2_0",
+  "mode": "stationary_yaw_sweep",
+  "head_feedback_order": ["controller_yaw", "controller_pitch"],
+  "reference_head_deg": [0, 0],
+  "head_angles_deg": [[-10,0],[0,0],[10,0]],
+  "observations_per_position": 50,
+  "note": "Pitch stays zero during planned head approach and capture; right-arm taught trajectory,5% replay,50 unique source frames per eye. Partial single-axis data do not independently calibrate arbitrary pitch."
+}

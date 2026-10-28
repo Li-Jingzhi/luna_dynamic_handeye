@@ -1,0 +1,10 @@
+{
+  "robot": "gento_luna",
+  "robot_version": "luna_v2_0",
+  "mode": "stationary_crossed",
+  "purpose": "Independent unseen-head and new-arm-position validation; freeze model before inspecting results",
+  "head_feedback_order": ["controller_yaw", "controller_pitch"],
+  "head_angles_deg": [[-5,-22.5],[0,-22.5],[5,-22.5],[-5,-17.5],[0,-17.5],[5,-17.5]],
+  "observations_per_position": 50,
+  "note": "Use a separate new taught trajectory and session. Only validates interpolation inside the training grid, not full head limits or moving exposure. Live limits and visibility require on-site verification."
+}

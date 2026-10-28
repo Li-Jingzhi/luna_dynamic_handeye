@@ -13,6 +13,7 @@ def main():
     sub = parser.add_subparsers(dest='command', required=True)
     sub.add_parser('inspect', help='Verify source hashes, Luna assets and head-chain definitions')
     imp = sub.add_parser('import', help='Validate original stationary capture JSONL')
+    imp.add_argument('--fixed-head-target', type=float, nargs=2, metavar=('YAW','PITCH'), help='Explicit target for fixed-head replay logs without target_head_deg; legacy default0,-25')
     imp.add_argument('--left-ball-offset', type=float, nargs=3, metavar=('X','Y','Z'), help='Measured left flange-to-ball offset in metres')
     imp.add_argument('--capture', nargs='+', required=True); imp.add_argument('--output', required=True)
     fk = sub.add_parser('fk', help='Old V2.0 arm flange poses in S_MODEL, no hardware access')
@@ -27,7 +28,7 @@ def main():
     query.add_argument('--head-speed', type=float, nargs=2, required=True)
     query.add_argument('--head-window-range', type=float, nargs=2, required=True)
     query.add_argument('--diagnostic', action='store_true')
-    cap = sub.add_parser('capture', help='Check crossed plan; --run explicitly enables existing SDK motion')
+    cap = sub.add_parser('capture', help='Check stationary head plan; --run explicitly enables existing SDK motion')
     cap.add_argument('--plan', default=str(ROOT/'configs/capture_plan.json'))
     cap.add_argument('--path', required=True); cap.add_argument('--output', required=True)
     cap.add_argument('--sdk-root', default=str(ROOT.parent/'00040701'))
@@ -56,7 +57,7 @@ def main():
                       left_flange_T=torso_flange(assets, args.left, 'left')[0].tolist(),
                       right_flange_T=torso_flange(assets, args.right, 'right')[0].tolist())
     elif args.command == 'import':
-        dataset = load_capture(args.capture, assets, left_ball_offset=args.left_ball_offset); write_json(args.output, dataset)
+        dataset = load_capture(args.capture, assets, left_ball_offset=args.left_ball_offset, fixed_head_target=args.fixed_head_target); write_json(args.output, dataset)
         output = dict(output=args.output, valid_rows=len(dataset['rows']), rejected_rows=sum(dataset['rejected'].values()))
     elif args.command == 'fit':
         dataset = json.loads(Path(args.dataset).read_text())
