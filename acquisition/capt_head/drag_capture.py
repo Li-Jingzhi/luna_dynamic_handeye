@@ -66,6 +66,11 @@ def yellow_pixels(frame, now_ns, max_age_ms=200.0):
     age_ms = (now_ns - stamp) / 1e6
     if not 0 <= age_ms <= max_age_ms:
         raise ValueError("stale camera frame")
+    if (frame.get("pairing_policy") != "shared_pipeline_source_and_arrival_10ms" or
+            frame.get("epipolar_check_domain") != "sphere_corrected_projection" or
+            not np.isfinite(frame.get("pair_source_clock_skew_ms", float("nan"))) or
+            not 0 <= frame.get("pair_source_clock_skew_ms", 1e9) <= 10):
+        raise ValueError("Expected Pro-style shared-clock pairing and corrected sphere gate")
     if frame.get("pair_dequeue_skew_ms", 1e9) > 10:
         raise ValueError("stereo pair dequeue skew exceeds 10 ms")
     if frame.get("timestamp_basis") not in ("orin_host_dequeue_not_exposure",

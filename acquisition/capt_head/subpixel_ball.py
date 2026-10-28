@@ -115,7 +115,10 @@ def candidates(frame, config, previous=None):
     return result
 
 
-def stereo_measure(frames, config, previous=None):
+def stereo_measure(frames, config, previous=None, stereo=None):
+    from interactive_ball_calibration.geometry import stereo_sphere_center
+    if stereo is None:
+        raise ValueError("Sphere-corrected stereo model required")
     previous = previous or [None, None]
     options = [candidates(frame, config, old) for frame, old in zip(frames, previous)]
     pairs = []
@@ -123,8 +126,7 @@ def stereo_measure(frames, config, previous=None):
         for right in options[1]:
             disparity = left["center"][0]-right["center"][0]
             dv = left["center"][1]-right["center"][1]
-            if (abs(dv) <= config["max_epipolar_dv_px"] and
-                    config["disparity_range_px"][0] <= disparity <= config["disparity_range_px"][1]):
+            if config["disparity_range_px"][0] <= disparity <= config["disparity_range_px"][1]:
                 score = (left["ellipse_rms_px"]+right["ellipse_rms_px"]+abs(dv) if
                          any(old is None for old in previous) else
                          sum(np.linalg.norm(np.asarray(candidate["center"])-old)
@@ -133,5 +135,14 @@ def stereo_measure(frames, config, previous=None):
     if not pairs:
         return None
     _, left, right, disparity, dv = min(pairs, key=lambda item: item[0])
-    return {"left": left, "right": right, "disparity_px": float(disparity),
-            "epipolar_dv_px": float(dv), "quality": "PASS"}
+    try:
+        sphere = stereo_sphere_center(left, right, stereo)
+    except ValueError:
+        return None
+    uv = sphere["corrected_stereo_pixels"]
+    corrected_dv = uv[1]-uv[3]
+    return {"left": left, "right": right, "raw_stereo_pixels": left["center"]+right["center"],
+            "raw_epipolar_dv_px": float(dv), "raw_disparity_px": float(disparity),
+            "corrected_stereo_pixels": uv, "center_left_camera_m": sphere["center_left_camera_m"],
+            "disparity_px": float(uv[0]-uv[2]), "epipolar_dv_px": float(corrected_dv),
+            "quality": "PASS" if abs(corrected_dv) <= config["max_epipolar_dv_px"] else "REJECT"}

@@ -19,19 +19,25 @@ from capt_head.four_ball_pose import estimate_pose9
 from capt_head.measurement_contract import DEFAULT_CONTRACT, load_contract
 from capt_head.subpixel_ball import stereo_measure
 from capt_head.camera_controls import controls, pipeline_properties, validate_profile
+from stereo_pairing import StereoPairer
 
 gi.require_version("Gst", "1.0")
 from gi.repository import Gst
 
 
-def capture_pipeline(sensor, profile=None):
-    return Gst.parse_launch(
+def capture_description(sensor, profile=None):
+    return (
         f"nvarguscamerasrc name=argus_{sensor} sensor-id={sensor} sensor-mode=0 "
         f"{pipeline_properties(profile, sensor)} ! "
         "video/x-raw(memory:NVMM),width=2560,height=1984,framerate=30/1,format=NV12 ! "
         "nvvidconv ! video/x-raw,format=BGRx,width=1280,height=992 ! "
         "videoconvert ! video/x-raw,format=BGR,width=1280,height=992 ! "
-        "appsink name=sink emit-signals=true sync=false max-buffers=1 drop=true")
+        f"appsink name=sink{sensor} emit-signals=true sync=false max-buffers=1 drop=true")
+
+
+def capture_pipeline(sensor, profile=None):
+    """Single-camera pipeline for the standalone tuning tool."""
+    return Gst.parse_launch(capture_description(sensor, profile).replace(f"name=sink{sensor} ", "name=sink "))
 
 
 def preview_pipeline(host, port, fps):
@@ -75,11 +81,16 @@ def run(args):
         Kout=(S @ np.asarray(calibration[f"rectify_P{i}"])[:, :3])[:2],
         coeffs=np.asarray(calibration[f"{eye}_D"]), mapping=vpi.FisheyeMapping.EQUIDISTANT)
         for i, eye in enumerate(("left", "right"), 1)]
-    cameras = [capture_pipeline(i, config.get("camera_controls")) for i in range(2)]
+    capture = Gst.parse_launch(" ".join(capture_description(i, config.get("camera_controls")) for i in range(2)))
+    capture.use_clock(Gst.SystemClock.obtain())
+    cameras = [capture]
+    pairer = StereoPairer(max_skew_ms=config["max_pair_skew_ms"])
+    stereo = json.loads((Path(args.contract).resolve().parent / "orin_6_6_7_100_20261014/luna_rectified_stereo.json").read_text())
+    if stereo["source_calibration_sha256"] != config["calibration_sha256"]:
+        raise ValueError("Sphere model calibration mismatch")
     encoders = [preview_pipeline(args.host, port, config["preview_fps"]) for port in args.ports]
     sources = [pipe.get_by_name("src") for pipe in encoders]
     preview_enabled = [True, True]
-    latest = [None, None]
     preview_latest = [None, None]
     pose_input = [None]
     pose_result = [None]
@@ -97,6 +108,7 @@ def run(args):
     metadata = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 
     def receive(sink, eye):
+        arrival = time.monotonic_ns()
         sample = sink.emit("pull-sample")
         buffer = sample.get_buffer()
         ok, mapped = buffer.map(Gst.MapFlags.READ)
@@ -108,11 +120,15 @@ def run(args):
             buffer.unmap(mapped)
         with lock:
             serials[eye] += 1
-            latest[eye] = (frame, serials[eye], time.monotonic_ns(), int(buffer.pts))
+            pts = int(buffer.pts)
+            if pts == Gst.CLOCK_TIME_NONE:
+                return Gst.FlowReturn.OK
+            source_clock = int(capture.get_base_time()) + pts
+            pairer.push(eye, (frame, serials[eye], arrival, source_clock, pts))
         return Gst.FlowReturn.OK
 
-    for eye, pipe in enumerate(cameras):
-        pipe.get_by_name("sink").connect("new-sample", receive, eye)
+    for eye in range(2):
+        capture.get_by_name(f"sink{eye}").connect("new-sample", receive, eye)
     for pipe in cameras + encoders:
         if pipe.set_state(Gst.State.PLAYING) == Gst.StateChangeReturn.FAILURE:
             raise RuntimeError("Camera or preview pipeline failed to start")
@@ -124,7 +140,8 @@ def run(args):
         luma = [deque(maxlen=config["brightness_window_frames"]) for _ in range(2)]
         while running.is_set():
             with lock:
-                pair = list(latest) if all(latest) and all(latest[i][1] != processed[i] for i in range(2)) else None
+                pair = pairer.take_latest()
+                pairing_stats = {k: v.copy() if isinstance(v, list) else v for k, v in pairer.stats.items()}
             if pair is None:
                 time.sleep(.001)
                 continue
@@ -134,7 +151,7 @@ def run(args):
                              for i, item in enumerate(pair)]
             with lock:
                 preview_latest[:] = [(rectified[i], pair[i][1]) for i in range(2)]
-            observation = stereo_measure(rectified, config, previous)
+            observation = stereo_measure(rectified, config, previous, stereo=stereo)
             if observation:
                 previous[:] = [observation[eye]["center"] for eye in ("left", "right")]
                 if pose_config is not None:
@@ -150,12 +167,14 @@ def run(args):
             times.append(time.monotonic())
             fps = (len(times)-1)/(times[-1]-times[0]) if len(times) > 1 else 0.
             skew_ms = abs(pair[0][2]-pair[1][2])/1e6
-            quality = ("PASS" if observation and exposure_locked.is_set() and stable and
+            quality = ("PASS" if observation and observation["quality"] == "PASS" and exposure_locked.is_set() and stable and
                        time.monotonic()-locked_at[0] >= config["post_lock_settle_s"] and
                        skew_ms <= config["max_pair_skew_ms"] else "REJECT")
             reasons = []
             if not observation:
                 reasons.append("yellow_pair_not_detected")
+            if observation and observation["quality"] != "PASS":
+                reasons.append("corrected_epipolar_error")
             if not exposure_locked.is_set():
                 reasons.append("imaging_controls_not_locked")
             if not stable:
@@ -169,7 +188,12 @@ def run(args):
                 "rejection_reasons": reasons,
                 "frame_number": processed.copy(),
                 "timestamp_basis": "orin_host_dequeue_not_exposure",
-                "source_timestamp_ns": [item[3] for item in pair],
+                "source_timestamp_ns": [item[4] for item in pair],
+                "source_clock_ns": [item[3] for item in pair],
+                "pair_source_clock_skew_ms": abs(pair[0][3]-pair[1][3])/1e6,
+                "pairing_stats": pairing_stats,
+                "pairing_policy": "shared_pipeline_source_and_arrival_10ms",
+                "epipolar_check_domain": "sphere_corrected_projection",
                 "capture_dequeue_timestamp_ns": [item[2] for item in pair],
                 "exposure_time_valid": False, "pair_capture_skew_ms": skew_ms,
                 "processing_latency_ms": (time.monotonic_ns()-max(item[2] for item in pair))/1e6,
@@ -282,17 +306,17 @@ def run(args):
                     pipe.set_state(Gst.State.NULL)
             if not exposure_locked.is_set() and time.monotonic()-started >= config["ae_awb_lock_delay_s"]:
                 locked = []
-                for i, pipe in enumerate(cameras):
-                    camera = pipe.get_by_name(f"argus_{i}")
+                for i in range(2):
+                    camera = capture.get_by_name(f"argus_{i}")
                     camera.set_property("aelock", True)
                     camera.set_property("awblock", True)
                     locked.append(bool(camera.get_property("aelock") and camera.get_property("awblock") and
                                        int(camera.get_property("aeantibanding")) == 2))
                 if all(locked):
                     if config.get("camera_controls"):
-                        control_readback[:] = [{key: pipe.get_by_name(f"argus_{i}").get_property(key)
+                        control_readback[:] = [{key: capture.get_by_name(f"argus_{i}").get_property(key)
                                                for key in controls(config["camera_controls"]["eyes"][i])}
-                                              for i, pipe in enumerate(cameras)]
+                                              for i in range(2)]
                     locked_at[0] = time.monotonic()
                     exposure_locked.set()
             time.sleep(.01)

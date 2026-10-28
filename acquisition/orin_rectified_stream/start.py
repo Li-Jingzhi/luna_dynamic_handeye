@@ -110,6 +110,7 @@ def main():
                            f"{REMOTE_ROOT}/interactive_ball_calibration "
                            f"{REMOTE_ROOT}/configs/orin_6_6_7_100_20261014")
             sftp.put(str(SENDER), REMOTE_SENDER)
+            sftp.put(str(SENDER.with_name("stereo_pairing.py")), REMOTE_ROOT + "/orin_rectified_stream/stereo_pairing.py")
             sftp.put(str(DETECTOR), REMOTE_ROOT + "/capt_head/subpixel_ball.py")
             sftp.put(str(FOUR_BALL), REMOTE_ROOT + "/capt_head/four_ball_pose.py")
             sftp.put(str(CONTRACT_CODE), REMOTE_ROOT + "/capt_head/measurement_contract.py")

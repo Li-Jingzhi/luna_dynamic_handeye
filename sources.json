@@ -437,8 +437,10 @@
     {
       "source": "head_2dof_capt/capt_head/drag_capture.py",
       "destination": "acquisition/capt_head/drag_capture.py",
-      "sha256": "4c267aa0fad2730b120b40d9fbf309576221038978a7932cd1266d5c078e63cb",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "297bd865c4530b15d88831fe155cdc0e9c6c25ec123e4f5a12327ef8a5cae062",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "4c267aa0fad2730b120b40d9fbf309576221038978a7932cd1266d5c078e63cb",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/capt_head/records.py",
@@ -485,8 +487,10 @@
     {
       "source": "head_2dof_capt/capt_head/subpixel_ball.py",
       "destination": "acquisition/capt_head/subpixel_ball.py",
-      "sha256": "adf22fa9822dbabddc6f255eeb8df2d6db0d001a2aaa0e58a51eb04fc442cde7",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "8cfe17f3fe90078f5ca080043cca50bc312712bfb345029026acbda52cb9a48a",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "adf22fa9822dbabddc6f255eeb8df2d6db0d001a2aaa0e58a51eb04fc442cde7",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/capt_head/camera_controls.py",
@@ -503,8 +507,10 @@
     {
       "source": "head_2dof_capt/capt_head/measurement_contract.py",
       "destination": "acquisition/capt_head/measurement_contract.py",
-      "sha256": "0d4bb2f6d2fdd64a458221584f14838165e9f9838710c7b5d9f9246918f89e36",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "d7a9a92d77b2950937b1b57f6874a542b7a3bb8cdac7269a5b0c0b89239fba91",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "0d4bb2f6d2fdd64a458221584f14838165e9f9838710c7b5d9f9246918f89e36",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/capt_head/geometry.py",
@@ -569,8 +575,10 @@
     {
       "source": "head_2dof_capt/interactive_ball_calibration/capture.py",
       "destination": "acquisition/interactive_ball_calibration/capture.py",
-      "sha256": "cb01e52b277b813b25ded54fd49783aa152cc645ca1d6a0f4e7b7f6a8a316bb5",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "fd7474073cf886203178554b54693cdad34aedfd1089508c848cd3a8d724a569",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "cb01e52b277b813b25ded54fd49783aa152cc645ca1d6a0f4e7b7f6a8a316bb5",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/interactive_ball_calibration/fit_yellow_xyz_consistency.py",
@@ -689,20 +697,26 @@
     {
       "source": "head_2dof_capt/orin_rectified_stream/tune_camera.py",
       "destination": "acquisition/orin_rectified_stream/tune_camera.py",
-      "sha256": "6ad1cf142f762e922926d550ef6a648c16ffe6452419771d861403c0718a49e6",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "4b4dba76822c2cdc37b3ccf2d28400d90ba9a315dd15081f22bb1b94a4f94556",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "6ad1cf142f762e922926d550ef6a648c16ffe6452419771d861403c0718a49e6",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/start.py",
       "destination": "acquisition/orin_rectified_stream/start.py",
-      "sha256": "f77db779fc256d36f29762067979b160ebc2c2b4c0e2c76216086360d1146b57",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "edf146aeaafe3cd47839392e4e414a3718d1a33e07bf0f057e98b91315d304dd",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "f77db779fc256d36f29762067979b160ebc2c2b4c0e2c76216086360d1146b57",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/viewer.py",
       "destination": "acquisition/orin_rectified_stream/viewer.py",
-      "sha256": "3d0f95be6fd6b1d01548e85dcc2e89744c71cc45f4c0d02b71fc3a6fed6a95e2",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "747796ac99a33ea6eda661b025b1593a9a27d7ae44caffe3ef909be1a9a8e368",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "3d0f95be6fd6b1d01548e85dcc2e89744c71cc45f4c0d02b71fc3a6fed6a95e2",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/manual_camera.py",
@@ -719,8 +733,10 @@
     {
       "source": "head_2dof_capt/orin_rectified_stream/sender.py",
       "destination": "acquisition/orin_rectified_stream/sender.py",
-      "sha256": "ef19f87c593d40ea92975e778faf09185bff0d114c49f21fae2e3e8fdb0b4a7f",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "36821f705d7d399275f4a909fac96e2289e55470af321f1206ad6fe9800bc8b0",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "ef19f87c593d40ea92975e778faf09185bff0d114c49f21fae2e3e8fdb0b4a7f",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/yellow_cuda.cu",

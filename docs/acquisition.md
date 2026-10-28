@@ -57,3 +57,13 @@ python3 -m dynamic_handeye capture \
 运动中采集需要真实左右曝光时间、反馈历史、共享时钟或已校验映射、时间不确定度、运动速度与读出/模糊信息。现有SH5日志的出队/接收时间不具备这些含义；本版交叉采集仍是**换姿后停稳**，不将其标为运动中曝光同步数据。
 
 2026-10-27核对的示教→固定头姿逆序回放→交叉采集操作顺序，以及独立验证六头姿计划，见[下一轮采集指南](下一轮拖动示教与交叉头姿采集_20261027.md)。
+
+## 2026-10-28：正式采集采用Pro式双目配对和球心门限
+
+正式发送器 `acquisition/orin_rectified_stream/sender.py` 已改为同一GStreamer管线、共享SystemClock；使用有界队列按绝对源时钟（base_time+PTS）和到达时间双10ms门限配对。每帧仅消费一次；未消费的旧配对覆盖计数保留。原始PTS仍作为逐眼源身份，新增source_clock_ns、pair_source_clock_skew_ms和pairing_stats。该时间不是已验证曝光时间。
+
+黄球检测仍用Luna参数与同一亚像素椭圆检测器。先按视差挑选候选，再执行40mm球体投影修正，最后检查修正后纵向差≤0.5px；不会把修正前纵向差作为0.5px硬门限。保留原椭圆中心与raw_stereo_pixels、raw_epipolar_dv_px、raw_disparity_px，同时输出corrected_stereo_pixels。下游原椭圆中心仍供原球体几何函数使用，避免重复修正同一组像素。
+
+接收器和实机采集入口均检查新pairing_policy、修正像素域和源时间门限，旧发送器记录不能混充新版PASS。启用时须同时部署sender、stereo_pairing.py、subpixel_ball.py、measurement_contract.py、drag_capture.py和viewer更新；start.py已增加配对模块上传，远端球体几何继续复用Lunageometry.py。sources.json保留上游哈希并记录本地修改后的哈希。
+
+本次为本地实现及离线验证，未重启现场相机、未下发机器人运动、未推送仓库。改变配对方式和球体修正门限不保证消除新机约5.85px的几何偏差；仍需现场极线质量验收。

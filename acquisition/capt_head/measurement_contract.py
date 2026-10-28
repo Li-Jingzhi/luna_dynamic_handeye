@@ -50,8 +50,17 @@ def valid_measurement(record, config):
         skew = float(record["pair_capture_skew_ms"])
         dv = float(record["epipolar_dv_px"])
         disparity = float(record["disparity_px"])
-        centers = [record[eye]["center"] for eye in ("left", "right")]
-        values = [fps, skew, dv, disparity, *centers[0], *centers[1]]
+        raw_centers = [record[eye]["center"] for eye in ("left", "right")]
+        uv = record["corrected_stereo_pixels"]
+        if len(uv) != 4:
+            raise ValueError("Four corrected pixels required")
+        centers = [uv[:2], uv[2:]]
+        source_skew = float(record["pair_source_clock_skew_ms"])
+        if (record.get("pairing_policy") != "shared_pipeline_source_and_arrival_10ms" or
+                record.get("epipolar_check_domain") != "sphere_corrected_projection" or
+                not math.isfinite(source_skew) or not 0 <= source_skew <= config["max_pair_skew_ms"]):
+            raise ValueError("Shared-clock source pairing failed")
+        values = [fps, skew, dv, disparity, *centers[0], *centers[1], *raw_centers[0], *raw_centers[1]]
         for eye in ("left", "right"):
             item = record[eye]
             ellipse = item["ellipse"]

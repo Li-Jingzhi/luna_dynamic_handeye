@@ -185,6 +185,10 @@ def fuse_camera_observations(observations, require_visual_pose=False):
         "camera_window_frames": [dict(
             frame_number=item[3].get("frame_number"),
             source_timestamp_ns=item[3].get("source_timestamp_ns"),
+            source_clock_ns=item[3].get("source_clock_ns"),
+            pair_source_clock_skew_ms=item[3].get("pair_source_clock_skew_ms"),
+            pairing_policy=item[3].get("pairing_policy"),
+            epipolar_check_domain=item[3].get("epipolar_check_domain"),
             capture_dequeue_timestamp_ns=item[3].get("capture_dequeue_timestamp_ns"),
             camera_timestamp_monotonic_ns=int(item[1]),
             pair_dequeue_skew_ms=item[3].get("pair_dequeue_skew_ms"),

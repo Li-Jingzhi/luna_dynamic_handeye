@@ -126,7 +126,7 @@ def main():
                     buf.fill(0, payload)
                     encoders[i].get_by_name("src").emit("push-buffer", buf)
                 preview_at = time.monotonic()
-            observation = stereo_measure(frames, config, previous)
+            observation = stereo_measure(frames, config, previous, stereo=stereo)
             if not observation:
                 continue
             observation["pair_dequeue_skew_ms"] = abs(pair[0][2]-pair[1][2])/1e6
