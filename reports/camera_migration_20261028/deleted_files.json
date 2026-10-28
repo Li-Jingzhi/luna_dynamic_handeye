@@ -1,0 +1,37 @@
+[
+  {
+    "path": "datasets/raw/ball_auto_20261018_visible_v1.jsonl",
+    "sha256": "f9145361c5d8213d401d3ffe41d04b6c67d1eda4a9387f7402d1851caf53449d",
+    "bytes": 859570
+  },
+  {
+    "path": "datasets/raw/ball_point_head_20261018_v1.jsonl",
+    "sha256": "0f93631ffb10484c71a4178a97af792e607f94e3a7a55ed2d29caef3f8270ac5",
+    "bytes": 2551330
+  },
+  {
+    "path": "datasets/raw/ball_point_head_20261018_v1.completed.json",
+    "sha256": "582ebed1ccd502d474ca39c2521440df0abd1eebdce478c9f1f8b98ffe225d3c",
+    "bytes": 3070
+  },
+  {
+    "path": "datasets/processed/point_head_20261018.json",
+    "sha256": "02dc83a2d2fd50d08c064190d818d179c0bac0cc7203a6a9f98515cdc0f93175",
+    "bytes": 1046265
+  },
+  {
+    "path": "acquisition/configs/orin_6_6_7_100_20261014/sh5.yaml",
+    "sha256": "736b14441f5e0097841762d2637223acf4d32881c7ee71f11b348e183739aba6",
+    "bytes": 753
+  },
+  {
+    "path": "acquisition/configs/orin_6_6_7_100_20261014/luna_stereo_raw.yaml",
+    "sha256": "c4e20fd19431758e365b724a6e4a128b1613860b4b9aec9f1cbc448711da1516",
+    "bytes": 2849
+  },
+  {
+    "path": "acquisition/configs/orin_6_6_7_100_20261014/luna_stereo_undistorted.yaml",
+    "sha256": "279e942c20148acf0cd1902bf100de24757f73f24d912a6d8c48b69615698149",
+    "bytes": 2849
+  }
+]

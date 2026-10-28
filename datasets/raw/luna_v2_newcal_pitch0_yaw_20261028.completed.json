@@ -1,0 +1,16 @@
+{
+  "complete": false,
+  "expected_combinations": 324,
+  "observations": 74,
+  "valid": 49,
+  "invalid": 25,
+  "sha256": "34ff5eb718f3db3fbe1115d3bb09a888063d841a9b4925d08677b4223e2051f0",
+  "rejection_reasons": {
+    "Disparity jitter 0.112 px exceeds contract": 1,
+    "Disparity jitter 0.101 px exceeds contract": 1,
+    "Disparity jitter 0.115 px exceeds contract": 1,
+    "Exactly 50 unique source frames required": 21,
+    "Disparity jitter 0.146 px exceeds contract": 1
+  },
+  "source_calibration_sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b"
+}

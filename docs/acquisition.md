@@ -67,3 +67,9 @@ python3 -m dynamic_handeye capture \
 接收器和实机采集入口均检查新pairing_policy、修正像素域和源时间门限，旧发送器记录不能混充新版PASS。启用时须同时部署sender、stereo_pairing.py、subpixel_ball.py、measurement_contract.py、drag_capture.py和viewer更新；start.py已增加配对模块上传，远端球体几何继续复用Lunageometry.py。sources.json保留上游哈希并记录本地修改后的哈希。
 
 本次为本地实现及离线验证，未重启现场相机、未下发机器人运动、未推送仓库。改变配对方式和球体修正门限不保证消除新机约5.85px的几何偏差；仍需现场极线质量验收。
+
+### 双目窗口显示固定头姿采集进度（2026-10-28）
+
+在viewer命令追加 `--capture-log datasets/raw/当前固定头姿采集.jsonl`。窗口底部每秒显示已写盘点数/轨迹总数、百分比、有效/无效数和最后完成索引，并标明日志文件名；尚未写盘的50帧窗口不计入完成点数。此选项不启动机器人运动。原始Marvin360点的离线候选与检查见 `reports/marvin360_luna_offline_20261028/README.md`，候选不可直接交给Luna实机入口。
+
+固定头姿replay追加 `--direct-approach` 可直接在关节空间插值到逆序起点，不再沿示教轨迹返回；仍为5%速度、单步≤5°，路径与原示教路径不同，执行前需检查新的接近路径。2026-10-28用户选择本模式，后续重复回放沿用此偏好。

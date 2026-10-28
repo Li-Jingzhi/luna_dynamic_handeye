@@ -18,7 +18,7 @@ sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from capt_head.four_ball_pose import estimate_pose9
 from capt_head.measurement_contract import DEFAULT_CONTRACT, load_contract
 from capt_head.subpixel_ball import stereo_measure
-from capt_head.camera_controls import controls, pipeline_properties, validate_profile
+from capt_head.camera_controls import controls, pipeline_properties, validate_profile, verify_readback
 from stereo_pairing import StereoPairer
 
 gi.require_version("Gst", "1.0")
@@ -135,6 +135,7 @@ def run(args):
 
     def measure():
         previous = [None, None]
+        missed = 0
         processed = [0, 0]
         times = deque(maxlen=60)
         luma = [deque(maxlen=config["brightness_window_frames"]) for _ in range(2)]
@@ -153,11 +154,16 @@ def run(args):
                 preview_latest[:] = [(rectified[i], pair[i][1]) for i in range(2)]
             observation = stereo_measure(rectified, config, previous, stereo=stereo)
             if observation:
+                missed = 0
                 previous[:] = [observation[eye]["center"] for eye in ("left", "right")]
                 if pose_config is not None:
                     with lock:
                         pose_input[0] = ([rectified[0], rectified[1]], processed.copy(),
                                          observation, time.monotonic_ns())
+            else:
+                missed += 1
+                if missed >= 5:
+                    previous[:] = [None, None]
             for i, frame in enumerate(rectified):
                 if exposure_locked.is_set():
                     luma[i].append(float(cv2.mean(cv2.cvtColor(frame[::8, ::8], cv2.COLOR_BGR2GRAY))[0]))
@@ -317,6 +323,7 @@ def run(args):
                         control_readback[:] = [{key: capture.get_by_name(f"argus_{i}").get_property(key)
                                                for key in controls(config["camera_controls"]["eyes"][i])}
                                               for i in range(2)]
+                        verify_readback(config['camera_controls'], control_readback)
                     locked_at[0] = time.monotonic()
                     exposure_locked.set()
             time.sleep(.01)

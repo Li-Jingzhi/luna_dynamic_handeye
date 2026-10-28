@@ -4,7 +4,7 @@
   "arm_side": "right",
   "sdk_version": "00040701",
   "mdh_sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
-  "stereo_model_sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+  "stereo_model_sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
   "head_angles_deg": [
     -0.0,
     -0.001
@@ -2512,5 +2512,10 @@
         -0.049
       ]
     }
-  ]
+  ],
+  "original_stereo_model_sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+  "camera_rebinding": {
+    "reason": "Joint-only path reused with 20261028 new camera; no old visual observations reused",
+    "capture_preflight_required": true
+  }
 }

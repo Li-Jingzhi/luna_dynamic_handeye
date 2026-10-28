@@ -377,14 +377,18 @@
     {
       "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
       "destination": "configs/camera/luna_raw_fisheye_stereo.json",
-      "sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
-      "role": "Active Luna SH5 camera calibration"
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+      "role": "Active Luna SH5 camera calibration",
+      "upstream_sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
     },
     {
       "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
       "destination": "configs/camera/luna_rectified_stereo.json",
-      "sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
-      "role": "Active Luna SH5 camera calibration"
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+      "role": "Active Luna SH5 camera calibration",
+      "upstream_sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
     },
     {
       "source": "head_2dof_capt/configs/luna_new.ini",
@@ -395,26 +399,18 @@
     {
       "source": "head_2dof_capt/configs/yellow_measurement_v1.json",
       "destination": "configs/camera/yellow_measurement_source.json",
-      "sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
-      "role": "Original capture contract; unchanged provenance"
+      "sha256": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f",
+      "role": "Original capture contract; unchanged provenance",
+      "upstream_sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
     },
     {
       "source": "head_2dof_capt/data/ball_fixed_pf_rectified_1280x992_20261018.json",
       "destination": "configs/robot/ball_offset.json",
-      "sha256": "5acdae0581dbb1861a66f2a1fdf4094fa17fe9fc4305b5e57e31ceaebe3316da",
-      "role": "Luna measured right flange sphere offset"
-    },
-    {
-      "source": "head_2dof_capt/data/ball_point_head_20261018_v1.jsonl",
-      "destination": "datasets/raw/ball_point_head_20261018_v1.jsonl",
-      "sha256": "0f93631ffb10484c71a4178a97af792e607f94e3a7a55ed2d29caef3f8270ac5",
-      "role": "Luna real capture and trajectory; unchanged"
-    },
-    {
-      "source": "head_2dof_capt/data/ball_point_head_20261018_v1.completed.json",
-      "destination": "datasets/raw/ball_point_head_20261018_v1.completed.json",
-      "sha256": "582ebed1ccd502d474ca39c2521440df0abd1eebdce478c9f1f8b98ffe225d3c",
-      "role": "Luna real capture and trajectory; unchanged"
+      "sha256": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+      "role": "Luna measured right flange sphere offset",
+      "upstream_sha256": "5acdae0581dbb1861a66f2a1fdf4094fa17fe9fc4305b5e57e31ceaebe3316da",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
     },
     {
       "source": "head_2dof_capt/data/ball_taught_20261018_visible_v1.json",
@@ -487,16 +483,18 @@
     {
       "source": "head_2dof_capt/capt_head/subpixel_ball.py",
       "destination": "acquisition/capt_head/subpixel_ball.py",
-      "sha256": "8cfe17f3fe90078f5ca080043cca50bc312712bfb345029026acbda52cb9a48a",
+      "sha256": "74cccd4e0a7cd2584ac1e06c09f2ac9beecacf4d33e2cd34a2905d01cb385057",
       "role": "Unchanged Luna acquisition source and its contracts",
       "upstream_sha256": "adf22fa9822dbabddc6f255eeb8df2d6db0d001a2aaa0e58a51eb04fc442cde7",
-      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
     },
     {
       "source": "head_2dof_capt/capt_head/camera_controls.py",
       "destination": "acquisition/capt_head/camera_controls.py",
-      "sha256": "15d2869f658d5554b62b289bfe8594a0ea9e66fdc6a5d1cf02dd350c37e9f465",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "36f7dbc09a95b7de12407576295439f29df4c588f0de79a0159720cd8f18c88b",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "15d2869f658d5554b62b289bfe8594a0ea9e66fdc6a5d1cf02dd350c37e9f465",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
     },
     {
       "source": "head_2dof_capt/capt_head/fixed_head_points.py",
@@ -575,10 +573,10 @@
     {
       "source": "head_2dof_capt/interactive_ball_calibration/capture.py",
       "destination": "acquisition/interactive_ball_calibration/capture.py",
-      "sha256": "fd7474073cf886203178554b54693cdad34aedfd1089508c848cd3a8d724a569",
+      "sha256": "0ca3e9d88b3a8c3f36a269e8eb6226b1efcc743571ce82e04674f5edad00ea12",
       "role": "Unchanged Luna acquisition source and its contracts",
       "upstream_sha256": "cb01e52b277b813b25ded54fd49783aa152cc645ca1d6a0f4e7b7f6a8a316bb5",
-      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+      "local_modification": "Fixed head target provenance and explicit direct approach mode"
     },
     {
       "source": "head_2dof_capt/interactive_ball_calibration/fit_yellow_xyz_consistency.py",
@@ -697,10 +695,10 @@
     {
       "source": "head_2dof_capt/orin_rectified_stream/tune_camera.py",
       "destination": "acquisition/orin_rectified_stream/tune_camera.py",
-      "sha256": "4b4dba76822c2cdc37b3ccf2d28400d90ba9a315dd15081f22bb1b94a4f94556",
+      "sha256": "26e706dff407d11b67a7ebda922941b9d84b8371b27419524a4ec2839123faed",
       "role": "Unchanged Luna acquisition source and its contracts",
       "upstream_sha256": "6ad1cf142f762e922926d550ef6a648c16ffe6452419771d861403c0718a49e6",
-      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/start.py",
@@ -713,10 +711,10 @@
     {
       "source": "head_2dof_capt/orin_rectified_stream/viewer.py",
       "destination": "acquisition/orin_rectified_stream/viewer.py",
-      "sha256": "747796ac99a33ea6eda661b025b1593a9a27d7ae44caffe3ef909be1a9a8e368",
+      "sha256": "49fb2adf9a4ac1c4a9fb1f7b1b6ef748f015e9ea594fcaf4f7423b62efcef66a",
       "role": "Unchanged Luna acquisition source and its contracts",
       "upstream_sha256": "3d0f95be6fd6b1d01548e85dcc2e89744c71cc45f4c0d02b71fc3a6fed6a95e2",
-      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+      "local_modification": "20261028 fixed-head collection progress overlay"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/manual_camera.py",
@@ -733,10 +731,10 @@
     {
       "source": "head_2dof_capt/orin_rectified_stream/sender.py",
       "destination": "acquisition/orin_rectified_stream/sender.py",
-      "sha256": "36821f705d7d399275f4a909fac96e2289e55470af321f1206ad6fe9800bc8b0",
+      "sha256": "37275deb86e4a88c56a616859b0a47f85b703ca6efe9065653206845a92b3aa2",
       "role": "Unchanged Luna acquisition source and its contracts",
       "upstream_sha256": "ef19f87c593d40ea92975e778faf09185bff0d114c49f21fae2e3e8fdb0b4a7f",
-      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
     },
     {
       "source": "head_2dof_capt/orin_rectified_stream/yellow_cuda.cu",
@@ -831,20 +829,18 @@
     {
       "source": "head_2dof_capt/configs/yellow_measurement_v1.json",
       "destination": "acquisition/configs/yellow_measurement_v1.json",
-      "sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "9b20e82955bff562c2173cd35aa83353fb93aed49b4124a607f1c18f63d61131",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
     },
     {
       "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
       "destination": "acquisition/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
-      "sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
-      "role": "Unchanged Luna acquisition source and its contracts"
-    },
-    {
-      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_stereo_raw.yaml",
-      "destination": "acquisition/configs/orin_6_6_7_100_20261014/luna_stereo_raw.yaml",
-      "sha256": "c4e20fd19431758e365b724a6e4a128b1613860b4b9aec9f1cbc448711da1516",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
     },
     {
       "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/start_luna_stereo.sh",
@@ -855,32 +851,24 @@
     {
       "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
       "destination": "acquisition/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
-      "sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
-      "role": "Unchanged Luna acquisition source and its contracts"
-    },
-    {
-      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_stereo_undistorted.yaml",
-      "destination": "acquisition/configs/orin_6_6_7_100_20261014/luna_stereo_undistorted.yaml",
-      "sha256": "279e942c20148acf0cd1902bf100de24757f73f24d912a6d8c48b69615698149",
-      "role": "Unchanged Luna acquisition source and its contracts"
-    },
-    {
-      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/sh5.yaml",
-      "destination": "acquisition/configs/orin_6_6_7_100_20261014/sh5.yaml",
-      "sha256": "736b14441f5e0097841762d2637223acf4d32881c7ee71f11b348e183739aba6",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
     },
     {
       "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/README.md",
       "destination": "acquisition/configs/orin_6_6_7_100_20261014/README.md",
-      "sha256": "6220e5d97563f08f3770a0972efd31c62c3d617774e9d0617829b49451e731ac",
-      "role": "Unchanged Luna acquisition source and its contracts"
+      "sha256": "67ea0a12e93f139f94fbb2e3db1ed0c3906a8c2811faed769b5f3d58c1366228",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "6220e5d97563f08f3770a0972efd31c62c3d617774e9d0617829b49451e731ac",
+      "local_modification": "20261028 new camera migration and obsolete-data cleanup"
     },
     {
-      "source": "/home/lijingzhi/Project/Learned_IK/head_2dof_capt/data/ball_auto_20261018_visible_v1.jsonl",
-      "destination": "datasets/raw/ball_auto_20261018_visible_v1.jsonl",
-      "sha256": "f9145361c5d8213d401d3ffe41d04b6c67d1eda4a9387f7402d1851caf53449d",
-      "purpose": "Additional fourth head [0,-25] stationary sphere-center capture; byte-identical archive"
+      "source": "local",
+      "destination": "acquisition/orin_rectified_stream/capture_progress.py",
+      "sha256": "374ea9f8ef5081598c3ea758b10cdd60b36fbd6c06f299cef6cc8a1ac31d91a4",
+      "role": "Fixed-head capture progress overlay reader"
     }
   ],
   "adapted_sources": [

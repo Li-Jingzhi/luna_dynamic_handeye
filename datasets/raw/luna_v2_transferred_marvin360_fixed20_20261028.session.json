@@ -1,0 +1,17 @@
+{
+  "robot_version": "luna_v2_0",
+  "head_target_deg": [
+    0,
+    -20
+  ],
+  "trajectory": "datasets/raw/luna_v2_transferred_marvin360_20261028.json",
+  "total_waypoints": 360,
+  "frames_per_point": 50,
+  "sdk_speed_percent": 5,
+  "source_calibration_sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+  "camera_contract_sha256": "9b20e82955bff562c2173cd35aa83353fb93aed49b4124a607f1c18f63d61131",
+  "collector_pid": 1555982,
+  "log": "/tmp/luna_marvin360_fixed20_direct_20261028.log",
+  "approach_mode": "direct_joint_interpolation_max5deg",
+  "approach_steps": 11
+}

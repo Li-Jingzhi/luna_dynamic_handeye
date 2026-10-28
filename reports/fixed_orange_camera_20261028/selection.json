@@ -1,0 +1,243 @@
+{
+  "schema": "luna_fixed_camera_profile_selection_v1",
+  "chosen_profile": {
+    "mode": "fixed",
+    "eyes": [
+      {
+        "exposure_ns": 5000000,
+        "analog_gain": 1.0,
+        "digital_gain": 1.0,
+        "wbmode": 0,
+        "tnr_mode": 1,
+        "ee_mode": 1,
+        "saturation": 1.0,
+        "tnr_strength": 0.5,
+        "ee_strength": 0.5
+      },
+      {
+        "exposure_ns": 5000000,
+        "analog_gain": 1.0,
+        "digital_gain": 1.0,
+        "wbmode": 0,
+        "tnr_mode": 1,
+        "ee_mode": 1,
+        "saturation": 1.0,
+        "tnr_strength": 0.5,
+        "ee_strength": 0.5
+      }
+    ]
+  },
+  "selected_trial": "coarse_wb0_e5_g1",
+  "selected_metrics": {
+    "eligible": true,
+    "valid_frames": 60,
+    "attempted": 60,
+    "valid_fraction": 1.0,
+    "disparity_jitter_p95_px": 0.043742131592608736,
+    "ellipse_rms_mean_px": 0.14289024309746168,
+    "minimum_coverage_deg": 290.0,
+    "mean_luma": [
+      122.62100793821672,
+      119.82486023865091
+    ],
+    "luma_std": [
+      0.07263053240509627,
+      0.06603693439818203
+    ],
+    "clipped_any_channel_fraction": 0.0,
+    "score": 0.08170871316788417,
+    "sphere_center_median_camera_m": [
+      0.04148383363385705,
+      -0.2140968657758593,
+      0.37866559453986576
+    ],
+    "pair_skew_p95_ms": 10.394404349999999,
+    "timing_valid_fraction": 0.9166666666666666,
+    "sphere_center_jitter_p95_mm": 0.302739476169741
+  },
+  "tested_profiles": [
+    {
+      "name": "baseline_auto_then_lock",
+      "profile": null,
+      "metrics": {
+        "eligible": false,
+        "valid_frames": 60,
+        "attempted": 60,
+        "valid_fraction": 1.0,
+        "disparity_jitter_p95_px": 0.06215073604632834,
+        "ellipse_rms_mean_px": 0.14860537861934456,
+        "minimum_coverage_deg": 280.0,
+        "mean_luma": [
+          166.9117513781922,
+          164.02257397245924
+        ],
+        "luma_std": [
+          0.08135886436508971,
+          0.06525081442437367
+        ],
+        "clipped_any_channel_fraction": 0.9996180418060419,
+        "score": 0.15458629519816222,
+        "sphere_center_median_camera_m": [
+          0.04146631084309697,
+          -0.21416671418520672,
+          0.37878211381137183
+        ],
+        "pair_skew_p95_ms": 9.564861049999996,
+        "timing_valid_fraction": 0.95,
+        "sphere_center_jitter_p95_mm": 0.4269379756811349
+      }
+    },
+    {
+      "name": "coarse_wb0_e5_g1",
+      "profile": {
+        "mode": "fixed",
+        "eyes": [
+          {
+            "exposure_ns": 5000000,
+            "analog_gain": 1.0,
+            "digital_gain": 1.0,
+            "wbmode": 0,
+            "tnr_mode": 1,
+            "ee_mode": 1,
+            "saturation": 1.0,
+            "tnr_strength": 0.5,
+            "ee_strength": 0.5
+          },
+          {
+            "exposure_ns": 5000000,
+            "analog_gain": 1.0,
+            "digital_gain": 1.0,
+            "wbmode": 0,
+            "tnr_mode": 1,
+            "ee_mode": 1,
+            "saturation": 1.0,
+            "tnr_strength": 0.5,
+            "ee_strength": 0.5
+          }
+        ]
+      },
+      "metrics": {
+        "eligible": true,
+        "valid_frames": 60,
+        "attempted": 60,
+        "valid_fraction": 1.0,
+        "disparity_jitter_p95_px": 0.043742131592608736,
+        "ellipse_rms_mean_px": 0.14289024309746168,
+        "minimum_coverage_deg": 290.0,
+        "mean_luma": [
+          122.62100793821672,
+          119.82486023865091
+        ],
+        "luma_std": [
+          0.07263053240509627,
+          0.06603693439818203
+        ],
+        "clipped_any_channel_fraction": 0.0,
+        "score": 0.08170871316788417,
+        "sphere_center_median_camera_m": [
+          0.04148383363385705,
+          -0.2140968657758593,
+          0.37866559453986576
+        ],
+        "pair_skew_p95_ms": 10.394404349999999,
+        "timing_valid_fraction": 0.9166666666666666,
+        "sphere_center_jitter_p95_mm": 0.302739476169741
+      }
+    }
+  ],
+  "restart_trials": [
+    {
+      "name": "restart0",
+      "metrics": {
+        "eligible": true,
+        "valid_frames": 90,
+        "attempted": 90,
+        "valid_fraction": 1.0,
+        "disparity_jitter_p95_px": 0.04972387698203988,
+        "ellipse_rms_mean_px": 0.1423304743934518,
+        "minimum_coverage_deg": 280.0,
+        "mean_luma": [
+          122.66701670306472,
+          119.86093110207382
+        ],
+        "luma_std": [
+          0.06145841901354514,
+          0.07860045783413414
+        ],
+        "clipped_any_channel_fraction": 0.0,
+        "score": 0.08755798490944561,
+        "sphere_center_median_camera_m": [
+          0.04148623904371941,
+          -0.2140994162023375,
+          0.37867001960762664
+        ],
+        "pair_skew_p95_ms": 8.418452199999997,
+        "timing_valid_fraction": 0.9888888888888889,
+        "sphere_center_jitter_p95_mm": 0.33052072753960465
+      }
+    },
+    {
+      "name": "restart1",
+      "metrics": {
+        "eligible": true,
+        "valid_frames": 90,
+        "attempted": 90,
+        "valid_fraction": 1.0,
+        "disparity_jitter_p95_px": 0.044624628503510164,
+        "ellipse_rms_mean_px": 0.14256002675430868,
+        "minimum_coverage_deg": 280.0,
+        "mean_luma": [
+          122.66450181330885,
+          119.83285277411332
+        ],
+        "luma_std": [
+          0.05995348826660698,
+          0.09046470550672968
+        ],
+        "clipped_any_channel_fraction": 0.0,
+        "score": 0.08251229520751635,
+        "sphere_center_median_camera_m": [
+          0.041490617554808124,
+          -0.21410242243848895,
+          0.3786791348857014
+        ],
+        "pair_skew_p95_ms": 6.579068399999999,
+        "timing_valid_fraction": 0.9777777777777777,
+        "sphere_center_jitter_p95_mm": 0.30289396325307544
+      }
+    },
+    {
+      "name": "restart2",
+      "metrics": {
+        "eligible": true,
+        "valid_frames": 90,
+        "attempted": 90,
+        "valid_fraction": 1.0,
+        "disparity_jitter_p95_px": 0.0425699834126135,
+        "ellipse_rms_mean_px": 0.1420115696200683,
+        "minimum_coverage_deg": 270.0,
+        "mean_luma": [
+          122.7198286883971,
+          119.94097543141858
+        ],
+        "luma_std": [
+          0.0645535581339539,
+          0.07705298548202116
+        ],
+        "clipped_any_channel_fraction": 0.0,
+        "score": 0.08030709630667324,
+        "sphere_center_median_camera_m": [
+          0.041483410966918176,
+          -0.21410332956564698,
+          0.3786764047382657
+        ],
+        "pair_skew_p95_ms": 9.99331475,
+        "timing_valid_fraction": 0.9555555555555556,
+        "sphere_center_jitter_p95_mm": 0.28993501524180115
+      }
+    }
+  ],
+  "restart_sphere_center_max_difference_mm": 0.01054974452449169,
+  "calibration_sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+  "qualification": "Best among tested profiles at this fixed ball pose; confirm across selected workspace points."
+}

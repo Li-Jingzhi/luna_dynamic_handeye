@@ -94,7 +94,7 @@ def main():
             pipe.get_by_name(f"argus_{i}").set_property("awblock", True)
         time.sleep(.5)
         used = [0, 0]
-        previous = np.array(args.seed_centers).reshape(2, 2).tolist()
+        previous = None  # Reacquire after each restart; stale tracking seeds can hide valid candidates.
         records, attempted, preview_at = [], 0, 0.
         seed_metrics = None
         deadline = time.monotonic()+12
@@ -170,7 +170,7 @@ def main():
         results.append(collect("baseline_auto_then_lock", None))
         coarse = []
         for wb in (2, 3, 4, 5, 6, 7, 8, 0):
-            for exposure, gain in ((10, 1), (5, 2)):
+            for exposure, gain in ((2.5, 1), (5, 1), (10, 1), (5, 2)):
                 settings = profile(exposure, gain, wb=wb, isp=1)
                 stop()
                 time.sleep(1)

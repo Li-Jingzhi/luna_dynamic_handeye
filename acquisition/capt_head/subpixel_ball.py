@@ -26,7 +26,8 @@ def _edge_points(edge_image, contour, seed):
                     out=np.zeros_like(curvature), where=np.abs(curvature) > 1e-5)
     sub = np.clip(sub, -.5, .5)
     refined = points + (offsets[peaks]+sub)[:, None]*direction
-    return refined[middle >= max(float(np.percentile(middle, 20)), 5.)]
+    # Do not discard a fixed fraction of a valid shaded silhouette; ellipse fitting rejects outliers.
+    return refined[middle >= 5.]
 
 
 def _ellipse_residual(points, fit):
@@ -93,12 +94,16 @@ def candidates(frame, config, previous=None):
     mask = cv2.morphologyEx(mask, cv2.MORPH_OPEN, np.ones((3, 3), np.uint8))
     contours, _ = cv2.findContours(mask, cv2.RETR_EXTERNAL, cv2.CHAIN_APPROX_NONE)
     result = []
-    for contour in sorted(contours, key=cv2.contourArea, reverse=True)[:8]:
+    considered = 0
+    for contour in sorted(contours, key=cv2.contourArea, reverse=True):
         area = cv2.contourArea(contour)
         x, y, w, h = cv2.boundingRect(contour)
         if (not config["candidate_area_px"][0] <= area <= config["candidate_area_px"][1] or
                 not .72 <= w/max(h, 1) <= 1.39):
             continue
+        considered += 1
+        if considered > 8:
+            break
         pad = 4
         crop_x, crop_y = max(0, x-pad), max(0, y-pad)
         crop = image[crop_y:min(image.shape[0], y+h+pad),

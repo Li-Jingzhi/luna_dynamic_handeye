@@ -1,0 +1,139 @@
+{
+  "points": 360,
+  "angle_definitions_equal": true,
+  "mdh_rows_source_mm_deg": [
+    [
+      0.0,
+      0.0,
+      174.5,
+      0.0
+    ],
+    [
+      0.0,
+      90.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -90.0,
+      287.0,
+      0.0
+    ],
+    [
+      18.0,
+      90.0,
+      0.0,
+      180.0
+    ],
+    [
+      18.0,
+      90.0,
+      314.0,
+      180.0
+    ],
+    [
+      0.0,
+      90.0,
+      0.0,
+      90.0
+    ],
+    [
+      0.0,
+      90.0,
+      0.0,
+      90.0
+    ],
+    [
+      0.0,
+      90.0,
+      95.0,
+      90.0
+    ]
+  ],
+  "mdh_rows_luna_mm_deg": [
+    [
+      0.0,
+      0.0,
+      158.6,
+      0.0
+    ],
+    [
+      0.0,
+      90.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      -90.0,
+      264.0,
+      0.0
+    ],
+    [
+      18.0,
+      90.0,
+      0.0,
+      180.0
+    ],
+    [
+      18.0,
+      90.0,
+      264.0,
+      180.0
+    ],
+    [
+      0.0,
+      90.0,
+      0.0,
+      90.0
+    ],
+    [
+      0.0,
+      90.0,
+      0.0,
+      90.0
+    ],
+    [
+      0.0,
+      90.0,
+      87.0,
+      90.0
+    ]
+  ],
+  "limit_violations": [],
+  "minimum_joint_limit_margin_deg": 9.669724000000002,
+  "maximum_adjacent_joint_step_deg": 3.2256679999999998,
+  "fk_difference_under_numerically_aligned_mdh_parents_mm": {
+    "mean": 48.058980269935766,
+    "p95": 60.12626335526668,
+    "maximum": 63.602851895946
+  },
+  "approach_to_reverse_start": {
+    "samples": 52,
+    "colliding_samples": 0,
+    "maximum_penetration_mm": -0.0,
+    "pairs_min_distance_mm": {},
+    "first_collision_samples": []
+  },
+  "reverse_replay": {
+    "samples": 1436,
+    "colliding_samples": 0,
+    "maximum_penetration_mm": -0.0,
+    "pairs_min_distance_mm": {},
+    "first_collision_samples": []
+  },
+  "collision_positive_control": {
+    "samples": 1794,
+    "colliding_samples": 31
+  },
+  "source_sha256": "3dfe989b0007c52ea189c58d2251f2fce92fc74465c4f76eb276e4b7be4e1e6e",
+  "model_sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076",
+  "executable": false,
+  "limitations": [
+    "MDH parent frames numerically aligned for FK comparison; physical base registration is not measured.",
+    "CAD/controller head-chain mapping is unverified; head collision geometry is approximate.",
+    "Convex mesh contacts can be conservative; missing attachments, ball rod, table and people are not represented.",
+    "No physical replay authorization is derived from this offline check."
+  ]
+}

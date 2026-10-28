@@ -13,6 +13,7 @@ import cv2
 import numpy as np
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
 from capt_head.measurement_contract import DEFAULT_CONTRACT, load_contract, valid_measurement
+from orin_rectified_stream.capture_progress import read_progress
 
 
 def measurement_record(observation, config, receive_ns, drop_count=0):
@@ -93,6 +94,7 @@ def main():
                         help="draw detections from --latest without binding the metadata UDP port")
     parser.add_argument("--snapshot-dir",
                         help="optionally save the latest decoded left/right preview frames")
+    parser.add_argument('--capture-log', help='Fixed-head capture JSONL to show saved/valid/rejected progress')
     args = parser.parse_args()
     config, _ = load_contract(args.contract)
     expected_size = tuple(config["image_size"])
@@ -102,6 +104,8 @@ def main():
     if snapshot_dir:
         snapshot_dir.mkdir(parents=True, exist_ok=True)
     snapshot_at = 0.
+    progress_at = 0.
+    progress_text = 'CAPTURE: waiting'
     if latest:
         latest.parent.mkdir(parents=True, exist_ok=True)
     running = True
@@ -320,6 +324,19 @@ def main():
                                 cv2.FONT_HERSHEY_SIMPLEX, .75, (0, 255, 255), 2)
             except (OSError, json.JSONDecodeError, KeyError, TypeError, ValueError):
                 pass
+            if args.capture_log:
+                if time.monotonic()-progress_at >= 1:
+                    try:
+                        progress_text = read_progress(args.capture_log)
+                    except json.JSONDecodeError:
+                        pass  # Writer may be midway through appending a record.
+                    except (OSError, ValueError, KeyError, TypeError) as error:
+                        progress_text = f'CAPTURE progress unavailable: {error}'
+                    progress_at = time.monotonic()
+                footer = np.zeros((56, display.shape[1], 3), np.uint8)
+                cv2.putText(footer, progress_text, (10, 22), cv2.FONT_HERSHEY_SIMPLEX, .55, (0,255,255), 1)
+                cv2.putText(footer, Path(args.capture_log).name, (10, 45), cv2.FONT_HERSHEY_SIMPLEX, .45, (200,200,200), 1)
+                display = np.vstack([display, footer])
             cv2.imshow("Luna Orin measurement preview", display)
             if cv2.waitKey(1) & 255 == ord("q"):
                 break

@@ -111,11 +111,11 @@ def validate_path(waypoints, limits):
         raise ValueError("Adjacent taught waypoints too similar for an independent sample")
 
 
-def replay_position_waypoints(current, waypoints):
+def replay_position_waypoints(current, waypoints, direct=False):
     current = np.asarray(current, float)
     taught = np.asarray([waypoint["q7_deg"] for waypoint in waypoints], float)
     nearest = int(np.argmin(np.max(np.abs(taught - current), axis=1)))
-    if np.max(np.abs(taught[nearest] - current)) <= .3:
+    if not direct and np.max(np.abs(taught[nearest] - current)) <= .3:
         return waypoints[nearest + 1:]
     target = np.asarray(waypoints[-1]["q7_deg"], float)
     delta = target - current
@@ -437,7 +437,7 @@ def teach(robot, sdk, latest, stereo, stereo_hash, output, mdh_hash, limits):
     print(f"Saved {len(waypoints)} taught waypoints to {output}")
 
 
-def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limits, head_ref, motion_confirmed=False, require_visual_pose=False):
+def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limits, head_ref, motion_confirmed=False, require_visual_pose=False, direct_approach=False):
     manifest = json.loads(path.read_text(encoding="utf-8"))
     waypoints = manifest["waypoints"]
     validate_path(waypoints, limits)
@@ -449,7 +449,7 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
     rt = read_rt(robot)
     body_ref = np.asarray(manifest["body_q_deg"], float)
     assert_fixed(rt, head_ref, body_ref)
-    position_waypoints = replay_position_waypoints(q7(rt), waypoints)
+    position_waypoints = replay_position_waypoints(q7(rt), waypoints, direct=direct_approach)
     arm = sdk.FXObjType.OBJ_ARM1
     if sdk.state_map.get(robot.current_state(arm)) != "IDLE":
         raise RuntimeError("Right arm must be IDLE before automatic replay")
@@ -509,6 +509,7 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
                    "taught_path_stereo_model_sha256": manifest.get("stereo_model_sha256"),
                    "q7_deg": q7(rt).tolist(),
                    "head_angles_deg": head_angles(rt)[:2].tolist(), "body_q_deg": rt["body"]["fb_pos"],
+                   "target_head_deg": np.asarray(head_ref, float).tolist(),
                    "head_q_deg": head_angles(rt).tolist(),
                    "pixel_domain": PIXEL_DOMAIN, "sensor_ids": CAMERA_IDS, "image_size": CAMERA_SIZE,
                    "source_calibration_sha256": stereo.get("source_calibration_sha256"),
@@ -564,6 +565,8 @@ def main():
     parser.add_argument("--latest", default=str(ROOT / "runtime/new_sh5_yellow/latest_pose.json"))
     parser.add_argument("--path", help="Taught path JSON (replay only)")
     parser.add_argument("--run", action="store_true", help="Explicitly authorize replay motion without typing RUN")
+    parser.add_argument('--direct-approach', action='store_true',
+                        help='Interpolate directly to reverse start in <=5 deg joint steps at 5%% speed')
     parser.add_argument("--require-visual-pose9", action="store_true",
                         help="reject stopped points without stable four-ball Rotation6D")
     parser.add_argument("--output", required=True)
@@ -628,7 +631,7 @@ def main():
             teach(robot, sdk, latest, stereo, stereo_hash, output, mdh_hash, limits)
         else:
             replay(robot, sdk, latest, stereo, stereo_hash, Path(args.path), output,
-                   mdh_hash, limits, target, args.run, args.require_visual_pose9)
+                   mdh_hash, limits, target, args.run, args.require_visual_pose9, args.direct_approach)
     finally:
         if robot._connected:
             arm, head = sdk.FXObjType.OBJ_ARM1, sdk.FXObjType.OBJ_HEAD

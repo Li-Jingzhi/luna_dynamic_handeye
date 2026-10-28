@@ -1,0 +1,11 @@
+{
+  "complete": true,
+  "observations": 360,
+  "valid": 353,
+  "invalid": 7,
+  "head_target_deg": [
+    0,
+    -25
+  ],
+  "sha256": "76ad4de8cb1749c98619402cf0eaae20cb334a30816639da1bf4ec2a6f2a361f"
+}

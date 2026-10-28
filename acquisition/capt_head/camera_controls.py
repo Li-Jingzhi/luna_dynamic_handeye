@@ -32,6 +32,20 @@ def controls(eye):
             "ee-strength": eye["ee_strength"], "saturation": eye["saturation"]}
 
 
+def verify_readback(profile, readback):
+    """Check configured Argus properties, not unavailable sensor exposure metadata."""
+    validate_profile(profile)
+    if len(readback) != 2:
+        raise ValueError("Both camera control readbacks required")
+    for eye, actual in zip(profile['eyes'], readback):
+        for key, expected in controls(eye).items():
+            want = np.asarray(str(expected).split(), dtype=float)
+            got = np.asarray(str(actual[key]).split() if isinstance(expected, str)
+                             else [float(actual[key])], dtype=float)
+            if want.shape != got.shape or not np.allclose(want, got, rtol=1e-5, atol=1e-6):
+                raise ValueError(f"Camera control readback mismatch: {key}: {actual[key]} != {expected}")
+
+
 def pipeline_properties(profile, sensor):
     if profile is None:
         return "aeantibanding=2 aelock=false awblock=false"

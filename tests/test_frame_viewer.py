@@ -1,4 +1,6 @@
 """MuJoCo compilation checks; skipped when optional viewer dependency is absent."""
+import json
+from dynamic_handeye.view_frames import DIAGNOSTIC
 import importlib.util
 import unittest
 import numpy as np
@@ -7,6 +9,7 @@ from dynamic_handeye.view_frames import frames, load_scene, draw, COLORS, MODEL,
 import xml.etree.ElementTree as ET
 
 
+@unittest.skipUnless(json.loads(DIAGNOSTIC.read_text())['assets'] == Assets().hashes, 'Archived frame fit belongs to retired camera; refit required')
 @unittest.skipUnless(importlib.util.find_spec('mujoco'), 'Optional MuJoCo viewer environment required')
 class FrameViewerTests(unittest.TestCase):
     def test_nominal_bases_close_first_mdh_and_stereo_baseline(self):

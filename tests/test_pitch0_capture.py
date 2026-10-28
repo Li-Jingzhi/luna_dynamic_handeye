@@ -1,5 +1,6 @@
 """Pitch-zero plan, fifty fresh per-eye frames and adapter wiring without a robot."""
 import copy
+from capture_fixture import capture_row
 import json
 from pathlib import Path
 from types import ModuleType,SimpleNamespace
@@ -66,7 +67,7 @@ class PitchZeroCaptureTests(unittest.TestCase):
         with self.assertRaises(ValueError):yaw_reference_waypoints(fn,[0,0],[10,-25],[[-90,90],[-25,25]])
 
     def test_zero_pitch_fixed_replay_requires_explicit_import_target(self):
-        row=json.loads((ROOT/'datasets/raw/ball_auto_20261018_visible_v1.jsonl').read_text().splitlines()[0])
+        row=capture_row(self.assets, 'interactive_ball_auto')
         row['head_angles_deg']=[0.,0.];row['head_q_deg']=[0.,0.,0.];row.pop('target_head_deg',None)
         with tempfile.TemporaryDirectory() as t:
             p=Path(t)/'pitch0.jsonl';p.write_text(json.dumps(row)+'\n')
@@ -92,7 +93,7 @@ class PitchZeroCaptureTests(unittest.TestCase):
         cap=ModuleType('interactive_ball_calibration.capture');cap.confirm_automatic_motion=lambda:True
         modules={'interactive_ball_calibration':package,'interactive_ball_calibration.capture_point_head':original,'interactive_ball_calibration.capture':cap}
         with tempfile.TemporaryDirectory() as t,patch.dict(sys.modules,modules):
-            args=SimpleNamespace(plan=ROOT/'configs/capture_pitch0_yaw_plan.json',path=ROOT/'datasets/raw/ball_taught_20261018_visible_v1.json',
+            args=SimpleNamespace(plan=ROOT/'configs/capture_pitch0_yaw_plan.json',path=ROOT/'datasets/raw/luna_v2_new_robot_taught_20261027_170349.json',
                 output=Path(t)/'capture.jsonl',stop_after=12,run=False,sdk_root=Path(t)/'NO_SDK',latest=Path(t)/'NO_CAMERA',robot_ip='invalid')
             self.assertEqual(run_capture(args,self.assets)['status'],'plan_checked_no_hardware_access')
             self.assertFalse(list(Path(t).iterdir()))

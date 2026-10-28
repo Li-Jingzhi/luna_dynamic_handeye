@@ -1,0 +1,8 @@
+{
+  "complete": true,
+  "observations": 108,
+  "valid": 72,
+  "invalid": 36,
+  "sha256": "9e27f81203036b885e8f0fd41fce0fc880175621626af10314f888fd2b4b770e",
+  "source_calibration_sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b"
+}

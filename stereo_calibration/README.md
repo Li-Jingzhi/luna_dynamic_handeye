@@ -1,5 +1,7 @@
 # 独立棋盘格双目标定
 
+当前实机取图、SSH传输、依赖来源和实时性说明见 [双目实时画面与传输简述](REALTIME_STEREO_OVERVIEW.md)。
+
 移植来源为 `head_eye_capt/portable_stereo_fisheye_calibration`，有效针孔备用入口来源为该项目的 `camera_calibration/fit.py`。来源提交和文件 SHA256 见 `SOURCE.json`。算法代码已包含在本目录，不导入其他项目，不读取其他机器的标定参数。原始鱼眼算法与原项目一致：SB角点检测 → 左右单目鱼眼标定 → 固定内参的双目标定 → 极线校正。
 
 输出左右 K/D、右眼相对左眼 R/T（平移单位米）、R1/R2/P1/P2/Q、基线、训练重投影及纵向误差。局部增加数据哈希、参数检查和独立评估，不自动替换项目现有参数。
@@ -55,6 +57,19 @@ bash stereo_calibration/run.sh start_capture --config stereo_calibration/capture
 只接受 raw 原始鱼眼图像；不能输入已去畸变或已极线校正的图像。建议30–50对训练图，包含画面中央、边缘、近中远距离和倾斜板姿。标定文件独占创建，重复实验使用新文件名。检测失败记录保留在 rejected_pairs 中。
 
 ## 3. 独立评估
+
+### 2026-10-28 本机重标定与实时预览
+
+本机新采集 `data/raw_chessboard_20261028_101409` 共60对，57对用于拟合；0048–0050在离线SB完整角点检测时失败，原图保留。输出为 `output/luna_current_20261028_fisheye_60.json`，含左右K/D、右眼相对左眼R/T及校正矩阵。训练单目RMS左0.08454 / 右0.13822 px，双目RMS 0.20465 px，校正纵向差P95 0.30923 px，均为2560×1984尺度；基线60.47672 mm。尚未采集独立验证集，`approved=false`。
+
+当前预览已切换H.264/UDP，在同一入口附加 `--udp`，依赖与端口见 [实时传输说明](REALTIME_STEREO_OVERVIEW.md)。以下为保留的旧SSH/JPEG方式：保留已启动的棋盘格相机服务，在项目根目录运行以下命令，SSH密码通过环境变量 `LUNA_CAPTURE_PASSWORD` 提供（或使用密钥）：
+
+```bash
+/usr/bin/python3 stereo_calibration/live_rectified_preview.py \
+  --calibration stereo_calibration/output/luna_current_20261028_fisheye_60.json
+```
+
+窗口每眼640×496，按对应缩放的K/P进行去畸变和极线校正；Q退出。读取现有服务的最新JPEG预览，不代表同步测量配对，不保存训练数据。新参数仅在此预览使用，现有手眼测量配置尚未替换。
 
 ```bash
 .venv/bin/python evaluate.py --calibration output/stereo_fisheye.json \
