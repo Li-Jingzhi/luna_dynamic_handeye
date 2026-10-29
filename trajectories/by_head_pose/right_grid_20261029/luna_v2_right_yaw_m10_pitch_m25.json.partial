@@ -1,0 +1,133 @@
+{
+  "schema": "luna_sh5_taught_path_v1",
+  "complete": false,
+  "robot_version": "luna_v2_0",
+  "robot_identity": {
+    "robot_type": "GentoLuna",
+    "submodel": "V2.0FSK_M6SLC-615-B-V1.0",
+    "sdk_version": "00040701"
+  },
+  "trajectory_id": "47356f0001dd468b89f50eb730a24b66",
+  "arm_side": "right",
+  "sdk_version": "00040701",
+  "mdh_sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+  "stereo_model_sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+  "source_calibration_sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+  "head_angles_deg": [
+    -10.0,
+    -25.001
+  ],
+  "target_head_deg": [
+    -10,
+    -25
+  ],
+  "body_q_deg": [
+    -0.0,
+    -0.0,
+    -2.25,
+    -0.0,
+    -0.003,
+    0.001
+  ],
+  "opposite_arm_q_deg": [
+    -0.201,
+    0.303,
+    0.006,
+    0.308,
+    0.537,
+    0.97,
+    -1.71
+  ],
+  "image_size": [
+    1280,
+    992
+  ],
+  "sensor_ids": [
+    "head_left:csi://0",
+    "head_right:csi://1"
+  ],
+  "pixel_domain": "ideal_pinhole",
+  "recording_mode": "head_specific_continuous_drag_3deg",
+  "waypoints": [
+    {
+      "q7_deg": [
+        1.167,
+        -47.848,
+        -7.658,
+        -84.067,
+        -1.927,
+        -2.227,
+        -17.979
+      ],
+      "head_angles_deg": [
+        -10.0,
+        -25.001
+      ],
+      "body_q_deg": [
+        -0.0,
+        -0.0,
+        -2.25,
+        -0.0,
+        -0.003,
+        0.001
+      ],
+      "visibility": {
+        "pass_detected": false
+      }
+    },
+    {
+      "q7_deg": [
+        1.443,
+        -45.558,
+        -7.498,
+        -81.0,
+        -1.921,
+        -1.687,
+        -17.718
+      ],
+      "head_angles_deg": [
+        -10.0,
+        -25.001
+      ],
+      "body_q_deg": [
+        -0.0,
+        -0.0,
+        -2.25,
+        -0.0,
+        -0.003,
+        0.001
+      ],
+      "visibility": {
+        "pass_detected": false
+      }
+    },
+    {
+      "q7_deg": [
+        0.959,
+        -47.494,
+        -7.931,
+        -84.01,
+        -1.912,
+        -1.782,
+        -18.14
+      ],
+      "head_angles_deg": [
+        -10.0,
+        -25.001
+      ],
+      "body_q_deg": [
+        -0.0,
+        -0.0,
+        -2.25,
+        -0.0,
+        -0.003,
+        0.001
+      ],
+      "visibility": {
+        "pass_detected": false
+      }
+    }
+  ],
+  "visible_waypoints": 0,
+  "physical_group_rule": "trajectory_id + waypoint_index; never match indices across independent trajectories"
+}

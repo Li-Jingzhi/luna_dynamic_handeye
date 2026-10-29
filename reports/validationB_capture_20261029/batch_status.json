@@ -1,0 +1,9 @@
+{
+  "phase": "complete",
+  "outputs": [
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_yaw0_pitchm25_20261029.jsonl",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_yaw0_pitchm20_20261029.jsonl",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_yaw10_pitchm25_20261029.jsonl",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_yaw10_pitchm20_20261029.jsonl"
+  ]
+}

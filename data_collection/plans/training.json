@@ -1,0 +1,6 @@
+{
+  "purpose": "development_crossed_heads",
+  "robot_version": "luna_v2_0",
+  "head_angles_deg": [[0,-25],[0,-20],[10,-25],[10,-20],[-10,-25],[-10,-20],[0,-15],[10,-15],[-10,-15]],
+  "observations_per_position": 50
+}

@@ -1,0 +1,60 @@
+{
+  "kind": "learned12",
+  "x": [
+    -0.030389552141920333,
+    0.5158453109655337,
+    -0.0907992127888013,
+    -0.0020723156129147553,
+    -0.0030623793911327612,
+    0.49776225461524065,
+    -0.9933240840624075,
+    0.8446474472906548,
+    -1.3177008543101874,
+    0.05491788485617051,
+    0.04373573686878932,
+    0.15287982097542716
+  ],
+  "jacobian_rank": 12,
+  "jacobian_singular_values": [
+    53790.70259834469,
+    53625.13389236979,
+    50138.112979711856,
+    4037.93879723185,
+    3724.767485446462,
+    2904.329712270571,
+    2423.5362178889745,
+    2089.4579692404673,
+    1100.1692539891058,
+    1008.6321277618383,
+    149.51112621478995,
+    94.72112968913956
+  ],
+  "approved": false,
+  "independently_verified": false,
+  "frame_id": "S_MODEL",
+  "camera_assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "fixed_geometry_hashes": {
+    "head_mount_v2": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "torso_mounts": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+  },
+  "input": "rectified [uL,vL,uR,vR] and measured [yaw,pitch] degrees",
+  "reference": "current nominal right-arm FK",
+  "flange_to_ball_center_m": [
+    0.0,
+    0.0,
+    0.101
+  ],
+  "flange_to_ball_source": "user-confirmed precision measurement, 2026-10-29",
+  "source_capture_hashes": [
+    "76ad4de8cb1749c98619402cf0eaae20cb334a30816639da1bf4ec2a6f2a361f",
+    "645e072d7216415651a735fb43af6c11a33fc8cea086338c2d84ebe1bd5655cb",
+    "2b67677348c74e7d85582b7ea2550d5d26156d8dc6a2bbebf71327cf5579e35b",
+    "43bd3cd68a9d492a777ac85863106122298ccf7666cac646b087fcece5b1abc3"
+  ]
+}

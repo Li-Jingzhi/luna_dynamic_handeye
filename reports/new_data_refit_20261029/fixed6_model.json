@@ -1,0 +1,140 @@
+{
+  "kind": "fixed6",
+  "model": {
+    "schema": "luna_dynamic_head_model_v2",
+    "robot": "gento_luna",
+    "robot_version": "luna_v2_0",
+    "chain": "luna_v2_hybrid",
+    "mjcf_mapping": null,
+    "assets": {
+      "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+      "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+      "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+      "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+      "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+    },
+    "frame_id": "S_MODEL",
+    "calibration_reference_frame": "right_arm_mdh_parent",
+    "fixed_geometry_hashes": {
+      "head_mount_v2": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+      "torso_mounts": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+    },
+    "fixed_geometry_status": "nominal_not_independently_measured",
+    "torso_from_head_root_T": [
+      [
+        1.0,
+        0.0,
+        0.0,
+        -0.013496
+      ],
+      [
+        0.0,
+        1.0,
+        0.0,
+        0.0
+      ],
+      [
+        0.0,
+        0.0,
+        1.0,
+        0.49898
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "head_tip_from_rectified_camera_T": [
+      [
+        0.01390868882323304,
+        -0.12903167928982978,
+        0.9915429260071724,
+        0.1363880864408295
+      ],
+      [
+        -0.9985906682271148,
+        0.04900163315728201,
+        0.020384240914081364,
+        0.022826048966255005
+      ],
+      [
+        -0.05121743555609387,
+        -0.990429031121143,
+        -0.12816828237708305,
+        0.10998621035549577
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "encoder_zero_offsets_deg": [
+      0.0,
+      0.0
+    ],
+    "parameter_count": 6,
+    "jacobian_rank": 6,
+    "jacobian_singular_values": [
+      37534.64951687868,
+      36969.6641902079,
+      35411.8624192702,
+      2922.4398560202353,
+      2515.935670305981,
+      2039.701266641963
+    ],
+    "normalized_mount_gradient": 5.435517787906016e-05,
+    "fit_error_axes_frame": "S_MODEL",
+    "fit_metrics": {
+      "samples": 1254,
+      "mean_mm": 6.186055714740626,
+      "rms_mm": 7.09874503110762,
+      "p95_mm": 12.733856639461505,
+      "max_mm": 19.83644267387586,
+      "axis_bias_mm": [
+        0.26952101905148584,
+        0.23598786094204152,
+        -0.15406935154026427
+      ],
+      "axis_rms_mm": [
+        2.0849646768855092,
+        5.730267902537064,
+        3.634437106068593
+      ]
+    },
+    "approved": false,
+    "independently_verified": false,
+    "moving_head_validated": false
+  },
+  "approved": false,
+  "independently_verified": false,
+  "frame_id": "S_MODEL",
+  "camera_assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "fixed_geometry_hashes": {
+    "head_mount_v2": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "torso_mounts": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+  },
+  "input": "rectified [uL,vL,uR,vR] and measured [yaw,pitch] degrees",
+  "reference": "current nominal right-arm FK",
+  "flange_to_ball_center_m": [
+    0.0,
+    0.0,
+    0.101
+  ],
+  "flange_to_ball_source": "user-confirmed precision measurement, 2026-10-29",
+  "source_capture_hashes": [
+    "76ad4de8cb1749c98619402cf0eaae20cb334a30816639da1bf4ec2a6f2a361f",
+    "645e072d7216415651a735fb43af6c11a33fc8cea086338c2d84ebe1bd5655cb",
+    "2b67677348c74e7d85582b7ea2550d5d26156d8dc6a2bbebf71327cf5579e35b",
+    "43bd3cd68a9d492a777ac85863106122298ccf7666cac646b087fcece5b1abc3"
+  ]
+}

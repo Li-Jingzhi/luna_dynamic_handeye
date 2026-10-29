@@ -1,0 +1,977 @@
+{
+  "pf_m": [
+    0,
+    0,
+    0.101
+  ],
+  "note": "Fixed-pF single-arm restriction of Pro camera-domain variable projection, not its full free-pF dual-arm model. Pro101 is a sensitivity assumption, not a precision measurement. No residual-based filtering; original quality rejects excluded.",
+  "datasets": {
+    "Pro_right_288_fixed101_diagnostic": {
+      "n": 288,
+      "depth_range_m": [
+        0.2863616246665093,
+        0.6159329669908555
+      ],
+      "source_sha256": "092e555fc9883f060dbda5b19aa1353b021f5d0f4f92e0c768191b7fef4f6010",
+      "scores": {
+        "rigid": {
+          "training": {
+            "samples": 288,
+            "mean_mm": 0.8270013996318895,
+            "rms_mm": 0.9377088984661247,
+            "p95_mm": 1.7533488699564486,
+            "max_mm": 2.552775120562885,
+            "axis_bias_mm": [
+              -1.9752101189220007e-13,
+              -1.8823985580161838e-13,
+              2.6903633641871415e-14
+            ],
+            "axis_rms_mm": [
+              0.7005348095205682,
+              0.5573969761939459,
+              0.2790296934779166
+            ]
+          },
+          "blocked_cv": {
+            "samples": 288,
+            "mean_mm": 0.9225841194483624,
+            "rms_mm": 1.0233239500008116,
+            "p95_mm": 1.79578135332503,
+            "max_mm": 2.545515230457711,
+            "axis_bias_mm": [
+              -0.03158231094216741,
+              -0.0045468591246712285,
+              0.008723123683481042
+            ],
+            "axis_rms_mm": [
+              0.7474376080937469,
+              0.6236559584713682,
+              0.3155664337592347
+            ]
+          },
+          "training_map": {},
+          "fold_maps": [
+            {},
+            {},
+            {},
+            {},
+            {}
+          ]
+        },
+        "affine": {
+          "training": {
+            "samples": 288,
+            "mean_mm": 0.7515747156428518,
+            "rms_mm": 0.8637081631590933,
+            "p95_mm": 1.581292195026141,
+            "max_mm": 2.781784478090623,
+            "axis_bias_mm": [
+              3.5189135556063574e-13,
+              6.157111857400348e-14,
+              -1.1508541033735912e-14
+            ],
+            "axis_rms_mm": [
+              0.6674465451901507,
+              0.4954562347481431,
+              0.23458478183927398
+            ]
+          },
+          "blocked_cv": {
+            "samples": 288,
+            "mean_mm": 0.8479484319095459,
+            "rms_mm": 0.9542261011576851,
+            "p95_mm": 1.6970288813036662,
+            "max_mm": 2.9799139291956704,
+            "axis_bias_mm": [
+              -0.015072883183298568,
+              0.004339899565862494,
+              -0.0180201488109049
+            ],
+            "axis_rms_mm": [
+              0.7045671975767958,
+              0.5561525699687178,
+              0.3237697254941663
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0059423424289615,
+              1.0012664999638,
+              0.9957825230048888
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0060181911886865,
+                1.0019109323525366,
+                0.9965242948121737
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0060005208100513,
+                1.0017755874525516,
+                0.9956124591950709
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.007481651513534,
+                1.0004102607565317,
+                0.996808252575569
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0053189203581914,
+                1.0010015767709464,
+                0.9958401645935028
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0050234192050342,
+                1.0010660000049443,
+                0.994714180610422
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        },
+        "joint_camera_gaussian_l60_a3": {
+          "training": {
+            "samples": 288,
+            "mean_mm": 0.618190309854333,
+            "rms_mm": 0.7237635105334652,
+            "p95_mm": 1.2944518686814785,
+            "max_mm": 2.243263585865232,
+            "axis_bias_mm": [
+              -2.6003890398998112e-14,
+              1.893392849912819e-14,
+              -1.0628072496151237e-15
+            ],
+            "axis_rms_mm": [
+              0.5705676550105129,
+              0.41089558688411343,
+              0.17161289845081346
+            ]
+          },
+          "blocked_cv": {
+            "samples": 288,
+            "mean_mm": 0.8893741694877976,
+            "rms_mm": 0.9842348283184359,
+            "p95_mm": 1.6878825657071987,
+            "max_mm": 2.6847500016883274,
+            "axis_bias_mm": [
+              0.0033004241179137106,
+              -0.05831784925392309,
+              -0.0026480068843795237
+            ],
+            "axis_rms_mm": [
+              0.7082168916433541,
+              0.601747578560986,
+              0.32410936944500135
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.004279626142669,
+              1.0018975286352527,
+              0.9973968349387912
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0041606753339483,
+                1.0021192913298442,
+                0.9983824631522713
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0051482551376858,
+                1.0020660219125737,
+                0.9971977627816497
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0048524587847243,
+                1.0017178516800505,
+                0.9979469879568392
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0041022339192418,
+                1.0026068650523223,
+                0.9971269107394327
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0033320569057744,
+                1.0014485814387106,
+                0.9958033658649198
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        }
+      }
+    },
+    "Luna_A_0m25": {
+      "n": 353,
+      "depth_range_m": [
+        0.2023252979228959,
+        0.4823765952866671
+      ],
+      "sources": [
+        {
+          "file": "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_transferred_marvin360_fixed25_20261028.jsonl",
+          "sha256": "76ad4de8cb1749c98619402cf0eaae20cb334a30816639da1bf4ec2a6f2a361f"
+        }
+      ],
+      "scores": {
+        "rigid": {
+          "training": {
+            "samples": 353,
+            "mean_mm": 3.5739244150464637,
+            "rms_mm": 3.9881316893875924,
+            "p95_mm": 6.383516633085786,
+            "max_mm": 8.72368318754874,
+            "axis_bias_mm": [
+              7.247586226476518e-14,
+              -7.352632824273912e-14,
+              2.837119900044514e-13
+            ],
+            "axis_rms_mm": [
+              1.5328508523529563,
+              3.429215412401273,
+              1.3401657702269194
+            ]
+          },
+          "blocked_cv": {
+            "samples": 353,
+            "mean_mm": 4.50767474985821,
+            "rms_mm": 5.0827532118818946,
+            "p95_mm": 8.590865488533115,
+            "max_mm": 9.50114004857558,
+            "axis_bias_mm": [
+              0.012372456202718783,
+              0.06355233908988334,
+              -0.053601554916728224
+            ],
+            "axis_rms_mm": [
+              1.9194108808003842,
+              4.36517043168326,
+              1.7594116021894874
+            ]
+          },
+          "training_map": {},
+          "fold_maps": [
+            {},
+            {},
+            {},
+            {},
+            {}
+          ]
+        },
+        "affine": {
+          "training": {
+            "samples": 353,
+            "mean_mm": 2.906175100275088,
+            "rms_mm": 3.4150267737384383,
+            "p95_mm": 6.674419329298268,
+            "max_mm": 9.954357605482961,
+            "axis_bias_mm": [
+              -1.4637834539063508e-13,
+              -7.185313093650517e-14,
+              -3.5583748726937735e-13
+            ],
+            "axis_rms_mm": [
+              1.3610272399148997,
+              2.931482382784379,
+              1.102916024448292
+            ]
+          },
+          "blocked_cv": {
+            "samples": 353,
+            "mean_mm": 3.94118819442782,
+            "rms_mm": 4.76160467152084,
+            "p95_mm": 10.156078465443652,
+            "max_mm": 13.481409054848928,
+            "axis_bias_mm": [
+              0.003004503719874295,
+              0.1363770334044326,
+              -0.054880290303088934
+            ],
+            "axis_rms_mm": [
+              1.7617285462525052,
+              4.195129070965451,
+              1.4035966853440014
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0160119221823858,
+              0.9851589554227228,
+              0.9615167973207595
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0146534157503257,
+                0.9841473715828186,
+                0.964006243886568
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0114213817906135,
+                0.9840279107524995,
+                0.9638484939558374
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0257813962753468,
+                0.9870779293859626,
+                0.9632678539950026
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0142691445386995,
+                0.9884182541276793,
+                0.9501609062324615
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.014794358422346,
+                0.9860599988974276,
+                0.9644806300540258
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        },
+        "joint_camera_gaussian_l60_a3": {
+          "training": {
+            "samples": 353,
+            "mean_mm": 1.9114841015863548,
+            "rms_mm": 2.3425934928792485,
+            "p95_mm": 4.663966288785517,
+            "max_mm": 6.735561921986051,
+            "axis_bias_mm": [
+              1.617969214697353e-14,
+              1.671939263146553e-15,
+              2.479351316635987e-14
+            ],
+            "axis_rms_mm": [
+              0.9461737774830928,
+              2.001534478114773,
+              0.765740940920227
+            ]
+          },
+          "blocked_cv": {
+            "samples": 353,
+            "mean_mm": 3.8277071318128613,
+            "rms_mm": 4.672509360026284,
+            "p95_mm": 9.886126668784222,
+            "max_mm": 12.63430267177887,
+            "axis_bias_mm": [
+              -0.0663429573528421,
+              0.30907320140761263,
+              -0.14604274600917586
+            ],
+            "axis_rms_mm": [
+              1.567050416017858,
+              4.155388883420242,
+              1.4523911114913097
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0049690987384234,
+              0.9854390905991594,
+              0.9660490204069181
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0048390716874143,
+                0.986036892017936,
+                0.9682396779857427
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0055111146595614,
+                0.9845782689870248,
+                0.9665500630993115
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0106334380464554,
+                0.9848395862177644,
+                0.977211812544437
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0051646281272515,
+                0.987866340922883,
+                0.9536259437491121
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0049268167461654,
+                0.9849608772544913,
+                0.9651370750711508
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        }
+      }
+    },
+    "Luna_B_0m25": {
+      "n": 103,
+      "depth_range_m": [
+        0.21078812527279864,
+        0.4194341049174902
+      ],
+      "sources": [
+        {
+          "file": "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_yaw0_pitchm25_20261029.jsonl",
+          "sha256": "2d83b7ba427a351624601a75ef0594bd914e4104b2b618c8eefc17d59d549c15"
+        }
+      ],
+      "scores": {
+        "rigid": {
+          "training": {
+            "samples": 103,
+            "mean_mm": 2.5563944671308074,
+            "rms_mm": 2.687957443499347,
+            "p95_mm": 3.8908881885107762,
+            "max_mm": 5.004569054596542,
+            "axis_bias_mm": [
+              3.126301806429907e-14,
+              3.857971116250835e-14,
+              -2.7598204196604375e-14
+            ],
+            "axis_rms_mm": [
+              1.3367770453781154,
+              1.8378949365029273,
+              1.4353691341918293
+            ]
+          },
+          "blocked_cv": {
+            "samples": 103,
+            "mean_mm": 3.2539438105350267,
+            "rms_mm": 3.4047709137262343,
+            "p95_mm": 5.019425615814486,
+            "max_mm": 6.145227178833589,
+            "axis_bias_mm": [
+              0.08938058523695888,
+              0.11151482204316447,
+              -0.11147358884999511
+            ],
+            "axis_rms_mm": [
+              1.6022539418253854,
+              2.2889266306919396,
+              1.9457806043257895
+            ]
+          },
+          "training_map": {},
+          "fold_maps": [
+            {},
+            {},
+            {},
+            {},
+            {}
+          ]
+        },
+        "affine": {
+          "training": {
+            "samples": 103,
+            "mean_mm": 0.9824613949205815,
+            "rms_mm": 1.0933229843656804,
+            "p95_mm": 1.6202214809598174,
+            "max_mm": 3.061003412470372,
+            "axis_bias_mm": [
+              3.0728817548760985e-13,
+              -3.259938166228962e-13,
+              1.5846224009339175e-13
+            ],
+            "axis_rms_mm": [
+              0.5173366627806284,
+              0.7589556133738145,
+              0.5930466275206844
+            ]
+          },
+          "blocked_cv": {
+            "samples": 103,
+            "mean_mm": 2.066877918399902,
+            "rms_mm": 2.1624733158525644,
+            "p95_mm": 2.9869402218758103,
+            "max_mm": 4.3590730985102,
+            "axis_bias_mm": [
+              -0.06320778986141654,
+              0.1093215333578721,
+              0.07291077682996887
+            ],
+            "axis_rms_mm": [
+              1.0656567149945724,
+              1.2098642614986586,
+              1.4411436695588917
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0094093415438192,
+              0.9801476781152949,
+              0.9716569777352477
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0087011684144789,
+                0.9844751470652182,
+                0.9703673165145579
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0086011612986414,
+                0.9784977788290258,
+                0.9744130123109197
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.012281133392522,
+                0.9721877397844928,
+                0.9701656689492698
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0115252283124998,
+                0.9795773351388884,
+                0.974508768104377
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0126392758039806,
+                0.9797886478846652,
+                0.9690040002758594
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        },
+        "joint_camera_gaussian_l60_a3": {
+          "training": {
+            "samples": 103,
+            "mean_mm": 0.4711340309590161,
+            "rms_mm": 0.543941993315852,
+            "p95_mm": 0.9851544248520738,
+            "max_mm": 1.622880657870893,
+            "axis_bias_mm": [
+              -2.1540482450591386e-14,
+              -7.4234038549451e-15,
+              -1.9496809776135758e-14
+            ],
+            "axis_rms_mm": [
+              0.3034921261323253,
+              0.33646733571470205,
+              0.3009238333285572
+            ]
+          },
+          "blocked_cv": {
+            "samples": 103,
+            "mean_mm": 1.8768392626451131,
+            "rms_mm": 1.9816003618800004,
+            "p95_mm": 2.711333200200802,
+            "max_mm": 4.348861691787948,
+            "axis_bias_mm": [
+              -0.07281792094137457,
+              0.20055006921030552,
+              0.06682653151045295
+            ],
+            "axis_rms_mm": [
+              1.0023679636469884,
+              1.0905684153265305,
+              1.316305052466684
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0104001940051242,
+              0.9789081317848211,
+              0.9727877993990549
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0085404072601118,
+                0.9843122822534389,
+                0.9713132675657723
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.009265604202756,
+                0.9768330602544344,
+                0.9742371353571553
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.012201030663817,
+                0.9745291458553085,
+                0.9696858469026253
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.011703919188852,
+                0.9793812156897318,
+                0.9745714637769238
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0121081552099338,
+                0.979125655949688,
+                0.97009857435228
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        }
+      }
+    },
+    "Luna_new_0m25": {
+      "n": 159,
+      "depth_range_m": [
+        0.1943483308446598,
+        0.5444657943643847
+      ],
+      "sources": [
+        {
+          "file": "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/new_capture_20261029/shared_fast_grid_20261029/head_00.jsonl",
+          "sha256": "f646d27a12c53eb40d4c159e93b4637e82a67e8e59d6eead2392c90c0e674e30"
+        }
+      ],
+      "scores": {
+        "rigid": {
+          "training": {
+            "samples": 159,
+            "mean_mm": 2.6944217294277886,
+            "rms_mm": 3.1138040667397267,
+            "p95_mm": 5.012480772968811,
+            "max_mm": 9.206953893539582,
+            "axis_bias_mm": [
+              1.784177278315849e-13,
+              -3.5774318518015895e-14,
+              -1.3278825977296557e-13
+            ],
+            "axis_rms_mm": [
+              1.189462310221735,
+              2.143211634741021,
+              1.9203122317262773
+            ]
+          },
+          "blocked_cv": {
+            "samples": 159,
+            "mean_mm": 2.7966763663548697,
+            "rms_mm": 3.237204898413277,
+            "p95_mm": 5.144288487529823,
+            "max_mm": 9.616795199967127,
+            "axis_bias_mm": [
+              0.04224485767328327,
+              -0.0221544444976117,
+              -0.007261010168776476
+            ],
+            "axis_rms_mm": [
+              1.2362361858807924,
+              2.1815616331193257,
+              2.0474385187183435
+            ]
+          },
+          "training_map": {},
+          "fold_maps": [
+            {},
+            {},
+            {},
+            {},
+            {}
+          ]
+        },
+        "affine": {
+          "training": {
+            "samples": 159,
+            "mean_mm": 2.40290519358818,
+            "rms_mm": 2.856766902357356,
+            "p95_mm": 4.81330214183402,
+            "max_mm": 8.477607940600484,
+            "axis_bias_mm": [
+              1.3124372308713485e-13,
+              -1.0365433179846242e-13,
+              -8.097226592932809e-14
+            ],
+            "axis_rms_mm": [
+              0.9458464209684531,
+              2.087082976456771,
+              1.7060411283817138
+            ]
+          },
+          "blocked_cv": {
+            "samples": 159,
+            "mean_mm": 2.663114654641879,
+            "rms_mm": 3.1926882549269933,
+            "p95_mm": 5.425412963874449,
+            "max_mm": 9.670544393782684,
+            "axis_bias_mm": [
+              0.06385338229114546,
+              -0.04509589988126932,
+              0.08726185525515508
+            ],
+            "axis_rms_mm": [
+              1.065318894373509,
+              2.234456834061794,
+              2.016322544424409
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0156863805674596,
+              1.0029878451335492,
+              0.984384138519919
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0158700716473628,
+                0.9995396729405741,
+                0.9829254313052623
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0185435962759755,
+                1.0048791028664485,
+                0.9857416276884634
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0176481251570446,
+                1.0079203284526512,
+                0.9837120686700828
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0157142978650868,
+                1.0039561441298477,
+                0.9845463334124216
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0143846431057086,
+                0.9974112140672879,
+                0.9834892235878102
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        },
+        "joint_camera_gaussian_l60_a3": {
+          "training": {
+            "samples": 159,
+            "mean_mm": 2.1691042576086805,
+            "rms_mm": 2.586501051818794,
+            "p95_mm": 4.675915594837423,
+            "max_mm": 7.3774517097119165,
+            "axis_bias_mm": [
+              1.7428406726191137e-15,
+              2.1869298824691763e-15,
+              8.59494166963269e-14
+            ],
+            "axis_rms_mm": [
+              0.7886704450436037,
+              1.9104646085167847,
+              1.5550278453388724
+            ]
+          },
+          "blocked_cv": {
+            "samples": 159,
+            "mean_mm": 2.726698939478142,
+            "rms_mm": 3.278475476933847,
+            "p95_mm": 5.733619311231262,
+            "max_mm": 10.382922774196008,
+            "axis_bias_mm": [
+              0.05397553709146177,
+              -0.02102551559709986,
+              0.07804563772947674
+            ],
+            "axis_rms_mm": [
+              1.0499009001781363,
+              2.2841017981402425,
+              2.1045162219365916
+            ]
+          },
+          "training_map": {
+            "singular_values": [
+              1.0151864653730585,
+              0.9948412491817595,
+              0.9828118130110008
+            ],
+            "within_Pro_scale_bounds": true,
+            "within_Pro_element_seed_bounds": true
+          },
+          "fold_maps": [
+            {
+              "singular_values": [
+                1.0153403482366767,
+                0.9943176130943555,
+                0.9825135254540379
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0211643908397665,
+                0.9974141064294808,
+                0.9840416263675865
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0167143402640346,
+                0.9992171591272128,
+                0.9823356707566363
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0143166260539154,
+                0.9971319968309099,
+                0.9840877866625457
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            },
+            {
+              "singular_values": [
+                1.0138567376770966,
+                0.9944915658486994,
+                0.9818681305777178
+              ],
+              "within_Pro_scale_bounds": true,
+              "within_Pro_element_seed_bounds": true
+            }
+          ]
+        }
+      }
+    }
+  }
+}

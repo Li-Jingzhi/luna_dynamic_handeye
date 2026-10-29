@@ -1,0 +1,5 @@
+[ WARN:0@1040.013] global ./modules/videoio/src/cap_gstreamer.cpp (1405) open OpenCV | GStreamer warning: Cannot query video position: status=1, value=0, duration=-1
+[ WARN:0@1061.360] global ./modules/videoio/src/cap_gstreamer.cpp (1405) open OpenCV | GStreamer warning: Cannot query video position: status=1, value=0, duration=-1
+preview=6.0 FPS; metadata_packets=31.2/s; RTP pair skew=87.1 ms
+preview=9.6 FPS; metadata_packets=0.8/s; RTP pair skew=4.0 ms
+preview=12.0 FPS; metadata_packets=1.4/s; Orin_measurement=29.0 FPS RTP pair skew=3.3 ms

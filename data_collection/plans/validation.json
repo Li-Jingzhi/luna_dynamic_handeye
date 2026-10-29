@@ -1,0 +1,6 @@
+{
+  "purpose": "untouched_trajectory_C_validation",
+  "robot_version": "luna_v2_0",
+  "head_angles_deg": [[0,-25],[0,-20],[10,-25],[10,-20],[-5,-22.5],[5,-22.5],[-5,-17.5],[5,-17.5]],
+  "observations_per_position": 50
+}

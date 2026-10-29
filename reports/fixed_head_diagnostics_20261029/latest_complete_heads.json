@@ -1,0 +1,29 @@
+{
+  "head_00.jsonl": {
+    "head": "0,-25",
+    "source": [
+      {
+        "file": "datasets/new_capture_20261029/shared_fast_grid_20261029/head_00.jsonl",
+        "sha256": "f646d27a12c53eb40d4c159e93b4637e82a67e8e59d6eead2392c90c0e674e30"
+      }
+    ],
+    "method": "single-head six-parameter rigid fit; same samples used to fit and evaluate; no compensation",
+    "metrics": {
+      "samples": 159,
+      "mean_mm": 2.694421729427777,
+      "rms_mm": 3.113804066739731,
+      "p95_mm": 5.0124807729689085,
+      "max_mm": 9.206953893539689,
+      "axis_bias_mm": [
+        -1.805767275750698e-13,
+        2.670121286897232e-15,
+        -2.775697212257813e-14
+      ],
+      "axis_rms_mm": [
+        1.1894623102217388,
+        2.1432116347410206,
+        1.9203122317262815
+      ]
+    }
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "trajectory_sha256": "904e599e5d80bd07072bc5435292574f747cff56cb80f5100ed8ff688babd0d8",
+  "checks": [
+    {
+      "head": [
+        0,
+        -25
+      ],
+      "direction": "reverse",
+      "passed": true
+    },
+    {
+      "head": [
+        10,
+        -25
+      ],
+      "direction": "forward",
+      "passed": true
+    },
+    {
+      "head": [
+        -10,
+        -25
+      ],
+      "direction": "reverse",
+      "passed": true
+    },
+    {
+      "head": [
+        -10,
+        -20
+      ],
+      "direction": "forward",
+      "passed": true
+    },
+    {
+      "head": [
+        0,
+        -20
+      ],
+      "direction": "reverse",
+      "passed": true
+    },
+    {
+      "head": [
+        10,
+        -20
+      ],
+      "direction": "forward",
+      "passed": true
+    },
+    {
+      "head": [
+        10,
+        -15
+      ],
+      "direction": "reverse",
+      "passed": true
+    },
+    {
+      "head": [
+        0,
+        -15
+      ],
+      "direction": "forward",
+      "passed": true
+    },
+    {
+      "head": [
+        -10,
+        -15
+      ],
+      "direction": "reverse",
+      "passed": true
+    }
+  ],
+  "note": "Offline: initial pose is taught final waypoint, not live feedback. No robot motion. Nominal CAD only."
+}

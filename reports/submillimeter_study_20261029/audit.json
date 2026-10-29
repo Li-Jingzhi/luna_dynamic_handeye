@@ -1,0 +1,303 @@
+{
+  "approved": false,
+  "pf_m": [
+    0,
+    0,
+    0.101
+  ],
+  "selected": "relative:kind=matern32,length=0.1,ridge=1.0",
+  "full_AB_training_fit": {
+    "samples": 1661,
+    "mean_mm": 1.4251030732996506,
+    "rms_mm": 1.8031847271345787,
+    "p95_mm": 3.677749554398246,
+    "max_mm": 6.663011678076978,
+    "axis_bias_mm": [
+      0.0001726429918514543,
+      0.0002826237226472894,
+      0.0013400717654468398
+    ],
+    "axis_rms_mm": [
+      0.7608135978511037,
+      1.5211936251754026,
+      0.5988386963298105
+    ]
+  },
+  "snapshot_file": "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/new_capture_20261029/analysis_snapshot_head00/head_00.jsonl",
+  "snapshot_sha256": "dbc27fed542ce40b02c5cb47bfa3c7cba3416d3688f930a9f2ca5c2b94a07029",
+  "snapshot_records": 124,
+  "snapshot_valid": 104,
+  "snapshot_head": [
+    0,
+    -25
+  ],
+  "snapshot_complete": false,
+  "prefix_scores": {
+    "previous_AB_selected": {
+      "samples": 104,
+      "mean_mm": 4.306220084259561,
+      "rms_mm": 5.181090717829982,
+      "p95_mm": 9.560369167437972,
+      "max_mm": 15.374370617179132,
+      "axis_bias_mm": [
+        -2.258105991860698,
+        2.1984430890870468,
+        -1.606343952834497
+      ],
+      "axis_rms_mm": [
+        2.615948046009012,
+        3.392712941799766,
+        2.913763158101566
+      ]
+    },
+    "new_AB_selected": {
+      "samples": 104,
+      "mean_mm": 4.325355948646237,
+      "rms_mm": 5.21332052037106,
+      "p95_mm": 9.915559299224585,
+      "max_mm": 15.267604891843717,
+      "axis_bias_mm": [
+        -2.3200647188779935,
+        2.132326656980612,
+        -1.55259466685389
+      ],
+      "axis_rms_mm": [
+        2.6701111053155406,
+        3.422781195755169,
+        2.8868298216863106
+      ]
+    },
+    "frozen_A_fixed6": {
+      "samples": 104,
+      "mean_mm": 13.970386392072099,
+      "rms_mm": 14.72620379311422,
+      "p95_mm": 21.33946056757808,
+      "max_mm": 23.944719517311558,
+      "axis_bias_mm": [
+        -0.04826379858083159,
+        -9.905360634226598,
+        -7.658066295878175
+      ],
+      "axis_rms_mm": [
+        1.7048379898804693,
+        11.996216777042076,
+        8.369312314808557
+      ]
+    },
+    "frozen_A_learned12": {
+      "samples": 104,
+      "mean_mm": 8.41072100971515,
+      "rms_mm": 8.606106771691271,
+      "p95_mm": 11.07802889663786,
+      "max_mm": 15.107851230356058,
+      "axis_bias_mm": [
+        1.5452210030103888,
+        -0.5097342336079186,
+        -7.597537161328097
+      ],
+      "axis_rms_mm": [
+        2.5808597551057604,
+        2.5774825222598263,
+        7.794922740968696
+      ]
+    },
+    "frozen_A_selected": {
+      "samples": 104,
+      "mean_mm": 8.035119159106499,
+      "rms_mm": 8.310103748455397,
+      "p95_mm": 10.981490810640453,
+      "max_mm": 14.43582069265167,
+      "axis_bias_mm": [
+        1.3065821587039297,
+        -0.006808190698072514,
+        -7.0834641664159514
+      ],
+      "axis_rms_mm": [
+        2.6662853574214345,
+        2.909203111252798,
+        7.3133633822181645
+      ]
+    }
+  },
+  "body_feedback": {
+    "A": {
+      "mean_deg": [
+        0.31799999999999756,
+        22.718000000000508,
+        -34.20500000000106,
+        11.198000000000214,
+        0.40010925039873013,
+        -0.04899760765550197
+      ],
+      "range_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0040000000000000036,
+        0.0010000000000000009
+      ]
+    },
+    "B": {
+      "mean_deg": [
+        0.3179999999999986,
+        22.717999999999993,
+        -34.204999999999934,
+        11.19799999999999,
+        0.39848894348894415,
+        -0.04899999999999976
+      ],
+      "range_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0040000000000000036,
+        0.0
+      ]
+    },
+    "new_prefix": {
+      "mean_deg": [
+        0.0,
+        0.0,
+        -2.25,
+        0.0,
+        -0.0030000000000000022,
+        0.0010000000000000007
+      ],
+      "range_deg": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "nominal_body_gravity_diagnostic": {
+    "A": {
+      "world_position_m": [
+        -0.05611211756946411,
+        -0.004083297476921313,
+        0.8357049110143409
+      ],
+      "gravity_direction_in_torso": [
+        0.005058665069455113,
+        -0.012524633847251998,
+        -0.9999087675656754
+      ]
+    },
+    "new_prefix": {
+      "world_position_m": [
+        0.011781003802469478,
+        -2.8517102182221585e-09,
+        0.8647686637543198
+      ],
+      "gravity_direction_in_torso": [
+        0.03926381343438697,
+        5.562161634891311e-05,
+        -0.999228877615547
+      ]
+    },
+    "relative_torso_rotation_deg": 2.0896285780136754
+  },
+  "nearest_training_base_distance_mm": {
+    "median": 40.10133502990348,
+    "p95": 76.36824186271652,
+    "max": 137.21653055216385
+  },
+  "static_window_3d_p95_jitter_mm": {
+    "median": 0.2595613077026704,
+    "p95": 0.5372523019312138,
+    "max": 0.7527155543728208
+  },
+  "half_window_shift_mm": {
+    "median": 0.03086226967133887,
+    "p95": 0.14216331503554697,
+    "max": 0.26576428018188153
+  },
+  "disparity_jitter_px": {
+    "median": 0.04939336776733398,
+    "p95": 0.07987586021423339,
+    "max": 0.09093503952026367
+  },
+  "corrected_epipolar_abs_px": {
+    "median": 0.048124226187269414,
+    "p95": 0.2375452709607472,
+    "max": 0.3105048498292149
+  },
+  "depths_m": {
+    "median": 0.33805636713749404,
+    "p95": 0.45678861091232253,
+    "max": 0.5444657943643847
+  },
+  "sphere_diameter_m": 0.04,
+  "exposure_time_valid_count": 0,
+  "controls": {
+    "mode": "fixed",
+    "eyes": [
+      {
+        "exposure_ns": 5000000,
+        "analog_gain": 1.0,
+        "digital_gain": 1.0,
+        "wbmode": 0,
+        "tnr_mode": 1,
+        "ee_mode": 1,
+        "saturation": 1.0,
+        "tnr_strength": 0.5,
+        "ee_strength": 0.5
+      },
+      {
+        "exposure_ns": 5000000,
+        "analog_gain": 1.0,
+        "digital_gain": 1.0,
+        "wbmode": 0,
+        "tnr_mode": 1,
+        "ee_mode": 1,
+        "saturation": 1.0,
+        "tnr_strength": 0.5,
+        "ee_strength": 0.5
+      }
+    ]
+  },
+  "image_evidence_present": 0,
+  "focal_px": 400.4580219150072,
+  "baseline_m": 0.06047672137666818,
+  "depth_error_budget": [
+    {
+      "depth_m": 0.4,
+      "disparity_px": 60.54597053601392,
+      "depth_error_mm_per_01px": 0.6606550303162987,
+      "disparity_bias_for_1mm_px": 0.1513649263400348
+    },
+    {
+      "depth_m": 0.6,
+      "disparity_px": 40.36398035734261,
+      "depth_error_mm_per_01px": 1.486473818211672,
+      "disparity_bias_for_1mm_px": 0.06727330059557103
+    },
+    {
+      "depth_m": 0.8,
+      "disparity_px": 30.27298526800696,
+      "depth_error_mm_per_01px": 2.6426201212651947,
+      "disparity_bias_for_1mm_px": 0.0378412315850087
+    },
+    {
+      "depth_m": 1.0,
+      "disparity_px": 24.218388214405568,
+      "depth_error_mm_per_01px": 4.129093939476866,
+      "disparity_bias_for_1mm_px": 0.02421838821440557
+    }
+  ],
+  "effective_A_vs_nominal": {
+    "translation_delta_mm": [
+      11.423684387085244,
+      -3.0623793911327613,
+      -1.2177453847593278
+    ],
+    "translation_norm_mm": 11.889559972222372,
+    "rotation_deg": 30.06060116612489
+  },
+  "note": "Snapshot prefix never used for fitting or hyperparameter selection. One incomplete head and changed body pose do not prove arbitrary-head performance."
+}

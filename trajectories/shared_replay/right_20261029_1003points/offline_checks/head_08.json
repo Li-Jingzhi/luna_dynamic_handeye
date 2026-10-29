@@ -1,0 +1,50 @@
+{
+  "samples": 5003,
+  "head_target_deg": [
+    -10,
+    -15
+  ],
+  "replay_direction": "reverse",
+  "model_sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076",
+  "feedback": {
+    "body": {
+      "fb_pos": [
+        -0.0,
+        -0.0,
+        -2.25,
+        -0.0,
+        -0.003,
+        0.0
+      ]
+    },
+    "arms": [
+      {
+        "fb": {
+          "fb_pos": [
+            -0.201,
+            0.303,
+            0.006,
+            0.308,
+            0.537,
+            0.97,
+            -1.71
+          ]
+        }
+      },
+      {
+        "fb": {
+          "fb_pos": [
+            -24.63,
+            -67.646,
+            40.382,
+            -91.055,
+            -75.821,
+            8.123,
+            -19.8
+          ]
+        }
+      }
+    ]
+  },
+  "note": "Nominal CAD only; table, ball rod and people are not modeled."
+}

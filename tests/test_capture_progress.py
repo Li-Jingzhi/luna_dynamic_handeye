@@ -17,5 +17,9 @@ class CaptureProgressTests(unittest.TestCase):
                   dict(taught_path=str(trajectory),waypoint_index=1,capture_valid=False)]
             path.write_text('\n'.join(map(json.dumps,rows))+'\n')
             self.assertIn('2/3 (66.7%) | valid 1 | rejected 1',read_progress(path))
+            (root/'status.json').write_text(json.dumps(dict(phase='stopped',reason='Less than 80% valid; fix visibility/quality before further rounds')))
+            self.assertIn('STOPPED: valid ratio <80%',read_progress(path))
+            (root/'status.json').write_text(json.dumps(dict(phase='paused',completed_rounds=4)))
+            self.assertIn('PAUSED after head 4/9',read_progress(path))
             path.write_text('\n'.join(map(json.dumps,rows+[rows[0]])))
             with self.assertRaises(ValueError):read_progress(path)

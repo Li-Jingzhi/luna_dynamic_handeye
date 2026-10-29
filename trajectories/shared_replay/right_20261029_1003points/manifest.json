@@ -1,0 +1,55 @@
+{
+  "source": "trajectories/by_head_pose/shared_right_zero_20261029/luna_v2_right_yaw_z0_pitch_z0.json",
+  "trajectory_sha256": "904e599e5d80bd07072bc5435292574f747cff56cb80f5100ed8ff688babd0d8",
+  "trajectory_id": "39bbe2c5130640cfac6d10b988a1855c",
+  "waypoints": 1003,
+  "valid_at_teaching": 997,
+  "head_at_teaching_deg": [
+    0,
+    0
+  ],
+  "capture_heads": [
+    [
+      0,
+      -25
+    ],
+    [
+      10,
+      -25
+    ],
+    [
+      -10,
+      -25
+    ],
+    [
+      -10,
+      -20
+    ],
+    [
+      0,
+      -20
+    ],
+    [
+      10,
+      -20
+    ],
+    [
+      10,
+      -15
+    ],
+    [
+      0,
+      -15
+    ],
+    [
+      -10,
+      -15
+    ]
+  ],
+  "total_positions": 1818,
+  "frames_per_position": 50,
+  "total_required_valid_stereo_pairs": 90900,
+  "all_waypoints_retained": true,
+  "capture_stride": 5,
+  "measurement_stops_per_head": 202
+}

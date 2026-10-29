@@ -16,6 +16,7 @@ from capt_head.drag_capture import (CAMERA_CONTRACT, CAMERA_IDS, CAMERA_SIZE, EX
                                     JOINT_D, JOINT_K, PIXEL_DOMAIN, YELLOW_BALL_DIAMETER_M,
                                     load_sdk, mdh_provenance, yellow_pixels)
 from gq_calibration.capture import checked, head_angles, read_limits, wait_head
+from orin_rectified_stream.capture_progress import capture_indices
 from .geometry import (arm_mdh, flange_pose, stereo_sphere_center, triangulate,
                        validate_stereo)
 from .fit_pose9d_consistency import matrix_to_rotation6d, rotation6d_to_matrix
@@ -437,9 +438,12 @@ def teach(robot, sdk, latest, stereo, stereo_hash, output, mdh_hash, limits):
     print(f"Saved {len(waypoints)} taught waypoints to {output}")
 
 
-def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limits, head_ref, motion_confirmed=False, require_visual_pose=False, direct_approach=False):
+def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limits, head_ref, motion_confirmed=False, require_visual_pose=False, direct_approach=False, direction='reverse', capture_stride=1):
+    if direction not in ('forward', 'reverse'):
+        raise ValueError('Unknown replay direction')
     manifest = json.loads(path.read_text(encoding="utf-8"))
     waypoints = manifest["waypoints"]
+    selected = set(capture_indices(len(waypoints),capture_stride))
     validate_path(waypoints, limits)
     if (manifest.get("schema") != "luna_sh5_taught_path_v1" or manifest.get("complete") is not True or
             manifest.get("mdh_sha256") != mdh_hash or
@@ -449,12 +453,14 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
     rt = read_rt(robot)
     body_ref = np.asarray(manifest["body_q_deg"], float)
     assert_fixed(rt, head_ref, body_ref)
-    position_waypoints = replay_position_waypoints(q7(rt), waypoints, direct=direct_approach)
+    # Existing approach/check helpers target the last entry; reverse the view for forward runs.
+    approach_path = waypoints if direction == 'reverse' else waypoints[::-1]
+    position_waypoints = replay_position_waypoints(q7(rt), approach_path, direct=direct_approach)
     arm = sdk.FXObjType.OBJ_ARM1
     if sdk.state_map.get(robot.current_state(arm)) != "IDLE":
         raise RuntimeError("Right arm must be IDLE before automatic replay")
-    print(f"Ready to position in <=5 deg joint steps to the reverse replay start without capture, then capture "
-          f"{len(waypoints)} waypoints backward to the start at 5% SDK speed. "
+    print(f"Ready to position in <=5 deg joint steps to the {direction} replay start without capture, then capture "
+          f"{len(selected)} measurement stops over all {len(waypoints)} path points at 5% SDK speed. "
           "Keep the terminal and emergency stop in reach.")
     if not motion_confirmed and not confirm_automatic_motion():
         raise RuntimeError("Automatic replay cancelled")
@@ -467,10 +473,11 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
         wait_arm(robot, sdk, start, target, head_ref, body_ref)
         print(f"Positioned toward reverse replay start {index + 1}/{len(position_waypoints)}; not captured",
               flush=True)
-    return_waypoints = replay_return_waypoints(q7(read_rt(robot)), waypoints)
+    return_waypoints = replay_return_waypoints(q7(read_rt(robot)), approach_path)
+    collected = 0
     with output.open("x", encoding="utf-8") as out:
         for reverse_index, waypoint in enumerate(return_waypoints):
-            waypoint_index = len(waypoints) - 1 - reverse_index
+            waypoint_index = len(waypoints) - 1 - reverse_index if direction == 'reverse' else reverse_index
             target = np.asarray(waypoint["q7_deg"], float)
             start = q7(read_rt(robot))
             if np.max(np.abs(start - target)) > MAX_STEP_DEG + .5:
@@ -478,6 +485,8 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
             checked(robot.runtime_set_joint_pos_cmd(arm, target.tolist()),
                     f"Reverse waypoint {waypoint_index} motion")
             wait_arm(robot, sdk, start, target, head_ref, body_ref)
+            if waypoint_index not in selected:
+                continue
             observations = []
             required_frames = CAMERA_CONTRACT["valid_frames_per_point"]
             deadline = time.monotonic() + 8
@@ -503,6 +512,9 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
             robot_after_ns = time.monotonic_ns()
             row = {"schema_version": 2, "capture_kind": "interactive_ball_auto",
                    "waypoint_index": waypoint_index, "sdk_version": EXPECTED_VERSION, "arm_side": "right",
+                   "trajectory_id": manifest.get("trajectory_id"),
+                   "replay_direction": direction,
+                   "capture_stride": capture_stride,
                    "control_mode": "Position", "mdh_source": "luna_new.ini:R.A1", "mdh_sha256": mdh_hash,
                    "stereo_model_sha256": stereo_hash,
                    "taught_path": str(path),
@@ -553,9 +565,10 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
                     status = "valid"
             out.write(json.dumps(row, allow_nan=False) + "\n")
             out.flush()
-            print(f"Collected reverse waypoint {reverse_index + 1}/{len(waypoints)} "
+            collected += 1
+            print(f"Collected {direction} waypoint {collected}/{len(selected)} "
                   f"(taught index {waypoint_index}): {status}", flush=True)
-    print(f"Saved {len(waypoints)} observations to {output}")
+    print(f"Saved {len(selected)} observations to {output}")
 
 
 def main():
@@ -567,6 +580,9 @@ def main():
     parser.add_argument("--run", action="store_true", help="Explicitly authorize replay motion without typing RUN")
     parser.add_argument('--direct-approach', action='store_true',
                         help='Interpolate directly to reverse start in <=5 deg joint steps at 5%% speed')
+    parser.add_argument('--direction', choices=('forward','reverse'), default='reverse')
+    parser.add_argument('--capture-stride',type=int,default=1,
+                        help='Measure every Nth point plus endpoints, traversing the complete path')
     parser.add_argument("--require-visual-pose9", action="store_true",
                         help="reject stopped points without stable four-ball Rotation6D")
     parser.add_argument("--output", required=True)
@@ -576,6 +592,8 @@ def main():
     parser.add_argument("--head-target", nargs=2, type=float, default=HEAD_TARGET.tolist(),
                         metavar=("YAW_DEG", "PITCH_DEG"))
     args = parser.parse_args()
+    if args.capture_stride < 1:
+        parser.error('--capture-stride must be positive')
     if not sys.stdin.isatty() or (args.mode == "replay" and not args.path):
         parser.error("Interactive terminal required; replay also requires --path")
     stereo = json.loads(Path(args.stereo).read_text(encoding="utf-8"))
@@ -631,7 +649,7 @@ def main():
             teach(robot, sdk, latest, stereo, stereo_hash, output, mdh_hash, limits)
         else:
             replay(robot, sdk, latest, stereo, stereo_hash, Path(args.path), output,
-                   mdh_hash, limits, target, args.run, args.require_visual_pose9, args.direct_approach)
+                   mdh_hash, limits, target, args.run, args.require_visual_pose9, args.direct_approach, args.direction, args.capture_stride)
     finally:
         if robot._connected:
             arm, head = sdk.FXObjType.OBJ_ARM1, sdk.FXObjType.OBJ_HEAD
