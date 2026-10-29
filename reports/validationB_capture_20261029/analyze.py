@@ -115,7 +115,7 @@ def main():
     report['frozen_model_passed_1mm'] = report['models']['learned12_torso_rbf']['overall']['p95_mm'] <= 1
     with (OUT / 'predictions.csv').open('w') as f:
         fields = ['head', 'waypoint', 'model', 'x_s_m', 'y_s_m', 'z_s_m', 'dx_mm', 'dy_mm', 'dz_mm', 'error_mm']
-        writer = csv.DictWriter(f, fieldnames=fields)
+        writer = csv.DictWriter(f, fieldnames=fields, lineterminator='\n')
         writer.writeheader()
         for name, prediction in predictions.items():
             for row, point, target in zip(rows, prediction, labels):
