@@ -11,3 +11,6 @@ reports/*.log
 acquisition/runtime/
 reports/**/*.log
 reports/**/live_preview/
+
+# Preview diagnostic logs continue to change while collection is paused.
+**/viewer.log
