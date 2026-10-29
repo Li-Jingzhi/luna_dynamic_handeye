@@ -1,0 +1,7 @@
+{
+  "source": "datasets/raw/shared_fast_grid_20261029/head_00.jsonl",
+  "sha256": "dbc27fed542ce40b02c5cb47bfa3c7cba3416d3688f930a9f2ca5c2b94a07029",
+  "lines": 124,
+  "complete": false,
+  "purpose": "Frozen prefix for diagnostic only, excluded from candidate selection and fitting"
+}

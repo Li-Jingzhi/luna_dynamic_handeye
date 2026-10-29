@@ -1,0 +1,17 @@
+{
+  "phase": "paused",
+  "reason": "User requested pause after completing current head",
+  "completed_rounds": 4,
+  "total_rounds": 9,
+  "last_head": [
+    -10,
+    -20
+  ],
+  "next_head": [
+    0,
+    -20
+  ],
+  "next_round": 5,
+  "robot_idle_evidence": "capture_03.log normal SDK idle exit",
+  "resume_requires": "--resume --continue-low-valid --run"
+}

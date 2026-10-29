@@ -1,0 +1,76 @@
+{
+  "paused": true,
+  "completed_rounds": 4,
+  "total_rounds": 9,
+  "positions": 808,
+  "valid": 586,
+  "invalid": 222,
+  "rounds": [
+    {
+      "complete": true,
+      "observations": 202,
+      "valid": 159,
+      "planned_observations": 202,
+      "trajectory_waypoints": 1003,
+      "capture_stride": 5,
+      "invalid": 43,
+      "head_target_deg": [
+        0,
+        -25
+      ],
+      "sha256": "f646d27a12c53eb40d4c159e93b4637e82a67e8e59d6eead2392c90c0e674e30",
+      "process_exit_code": 0
+    },
+    {
+      "complete": true,
+      "observations": 202,
+      "valid": 130,
+      "planned_observations": 202,
+      "trajectory_waypoints": 1003,
+      "capture_stride": 5,
+      "invalid": 72,
+      "head_target_deg": [
+        10,
+        -25
+      ],
+      "sha256": "d5f8ffb940c9cb6bc553264d79a95ead4c88c3ee3740e71e8bec102188241156",
+      "process_exit_code": 0
+    },
+    {
+      "complete": true,
+      "observations": 202,
+      "valid": 150,
+      "planned_observations": 202,
+      "trajectory_waypoints": 1003,
+      "capture_stride": 5,
+      "invalid": 52,
+      "head_target_deg": [
+        -10,
+        -25
+      ],
+      "sha256": "27215ab528562bcf6a9c3a009bd2b7792c097f089ff342ab248a7b1bfa6276ed",
+      "process_exit_code": 0
+    },
+    {
+      "complete": true,
+      "observations": 202,
+      "valid": 147,
+      "planned_observations": 202,
+      "trajectory_waypoints": 1003,
+      "capture_stride": 5,
+      "invalid": 55,
+      "head_target_deg": [
+        -10,
+        -20
+      ],
+      "sha256": "a1aa33c93c4f1d55d96f45e431df7c70412128eedbf1b2928580c951d8ba95de",
+      "process_exit_code": 0
+    }
+  ],
+  "next_head": [
+    0,
+    -20
+  ],
+  "next_direction": "reverse",
+  "formal_calibration_unchanged": true
+}

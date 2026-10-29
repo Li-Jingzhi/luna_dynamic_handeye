@@ -1,0 +1,15 @@
+{
+  "complete": true,
+  "observations": 202,
+  "valid": 130,
+  "planned_observations": 202,
+  "trajectory_waypoints": 1003,
+  "capture_stride": 5,
+  "invalid": 72,
+  "head_target_deg": [
+    10.0,
+    -25.0
+  ],
+  "sha256": "d5f8ffb940c9cb6bc553264d79a95ead4c88c3ee3740e71e8bec102188241156",
+  "process_exit_code": 0
+}

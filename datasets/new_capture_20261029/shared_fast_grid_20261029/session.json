@@ -1,0 +1,61 @@
+{
+  "plan": {
+    "purpose": "development_crossed_heads",
+    "robot_version": "luna_v2_0",
+    "head_angles_deg": [
+      [
+        0,
+        -25
+      ],
+      [
+        10,
+        -25
+      ],
+      [
+        -10,
+        -25
+      ],
+      [
+        -10,
+        -20
+      ],
+      [
+        0,
+        -20
+      ],
+      [
+        10,
+        -20
+      ],
+      [
+        10,
+        -15
+      ],
+      [
+        0,
+        -15
+      ],
+      [
+        -10,
+        -15
+      ]
+    ],
+    "observations_per_position": 50,
+    "alternate_direction": true,
+    "capture_stride": 5
+  },
+  "asset_hashes": {
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/trajectories/shared_replay/right_20261029_1003points/capture_plan.json": "767ce94db11b4e693cd7deb5e75cf436d5ee93619345fe8c228059552550c894",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/configs/camera/luna_rectified_stereo.json": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/configs/robot/luna_new.ini": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/acquisition/configs/yellow_measurement_v1.json": "9b20e82955bff562c2173cd35aa83353fb93aed49b4124a607f1c18f63d61131"
+  },
+  "measured_pf_m": [
+    0,
+    0,
+    0.101
+  ],
+  "sdk_speed_percent": 5,
+  "trajectory": "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/trajectories/shared_replay/right_20261029_1003points/trajectory.json",
+  "robot_ip": "6.6.7.190"
+}

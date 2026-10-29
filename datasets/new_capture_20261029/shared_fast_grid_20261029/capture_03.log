@@ -1,0 +1,213 @@
+[INFO][L1] FX_L1_System_Link: Link success, communication delay is 2ms
+[INFO][L1] FX_L1_System_Link: DOF of [GentoLuna.V2.0FSK_M6SLC-615-B-V1.0]: arm0=7, arm1=7, head=2, body=6, lift=0
+[INFO][L1] FX_L1_System_GetSDKVersion: SDK version is 0x00040701
+[INFO][L1] FX_L1_System_GetControllerVersion: Controller version is 0x00040701
+Head already within 0.05 deg of reference; no head motion commanded.
+Ready to position in <=5 deg joint steps to the forward replay start without capture, then capture 202 measurement stops over all 1003 path points at 5% SDK speed. Keep the terminal and emergency stop in reach.
+[INFO][L1] FX_L1_State_SwitchToPositionMode: Arm1 transfer to STATE_POSITION success [block]
+Positioned toward reverse replay start 1/1; not captured
+Collected forward waypoint 1/202 (taught index 0): valid
+Collected forward waypoint 2/202 (taught index 5): INVALID: Disparity jitter 0.177 px exceeds contract
+Collected forward waypoint 3/202 (taught index 10): INVALID: Disparity jitter 0.307 px exceeds contract
+Collected forward waypoint 4/202 (taught index 15): INVALID: Disparity jitter 0.131 px exceeds contract
+Collected forward waypoint 5/202 (taught index 20): valid
+Collected forward waypoint 6/202 (taught index 25): valid
+Collected forward waypoint 7/202 (taught index 30): valid
+Collected forward waypoint 8/202 (taught index 35): valid
+Collected forward waypoint 9/202 (taught index 40): valid
+Collected forward waypoint 10/202 (taught index 45): valid
+Collected forward waypoint 11/202 (taught index 50): INVALID: Disparity jitter 0.203 px exceeds contract
+Collected forward waypoint 12/202 (taught index 55): valid
+Collected forward waypoint 13/202 (taught index 60): INVALID: Disparity jitter 0.131 px exceeds contract
+Collected forward waypoint 14/202 (taught index 65): INVALID: Disparity jitter 0.159 px exceeds contract
+Collected forward waypoint 15/202 (taught index 70): INVALID: Disparity jitter 0.112 px exceeds contract
+Collected forward waypoint 16/202 (taught index 75): valid
+Collected forward waypoint 17/202 (taught index 80): valid
+Collected forward waypoint 18/202 (taught index 85): INVALID: Disparity jitter 0.157 px exceeds contract
+Collected forward waypoint 19/202 (taught index 90): valid
+Collected forward waypoint 20/202 (taught index 95): valid
+Collected forward waypoint 21/202 (taught index 100): valid
+Collected forward waypoint 22/202 (taught index 105): valid
+Collected forward waypoint 23/202 (taught index 110): INVALID: Disparity jitter 0.175 px exceeds contract
+Collected forward waypoint 24/202 (taught index 115): valid
+Collected forward waypoint 25/202 (taught index 120): valid
+Collected forward waypoint 26/202 (taught index 125): INVALID: Disparity jitter 0.124 px exceeds contract
+Collected forward waypoint 27/202 (taught index 130): INVALID: Disparity jitter 0.140 px exceeds contract
+Collected forward waypoint 28/202 (taught index 135): INVALID: Disparity jitter 0.141 px exceeds contract
+Collected forward waypoint 29/202 (taught index 140): INVALID: Disparity jitter 0.102 px exceeds contract
+Collected forward waypoint 30/202 (taught index 145): valid
+Collected forward waypoint 31/202 (taught index 150): valid
+Collected forward waypoint 32/202 (taught index 155): valid
+Collected forward waypoint 33/202 (taught index 160): valid
+Collected forward waypoint 34/202 (taught index 165): valid
+Collected forward waypoint 35/202 (taught index 170): INVALID: Only 2 fresh camera frames; need 50
+Collected forward waypoint 36/202 (taught index 175): valid
+Collected forward waypoint 37/202 (taught index 180): valid
+Collected forward waypoint 38/202 (taught index 185): valid
+Collected forward waypoint 39/202 (taught index 190): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 40/202 (taught index 195): INVALID: Disparity jitter 0.208 px exceeds contract
+Collected forward waypoint 41/202 (taught index 200): valid
+Collected forward waypoint 42/202 (taught index 205): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 43/202 (taught index 210): INVALID: Only 10 fresh camera frames; need 50
+Collected forward waypoint 44/202 (taught index 215): valid
+Collected forward waypoint 45/202 (taught index 220): valid
+Collected forward waypoint 46/202 (taught index 225): valid
+Collected forward waypoint 47/202 (taught index 230): valid
+Collected forward waypoint 48/202 (taught index 235): valid
+Collected forward waypoint 49/202 (taught index 240): valid
+Collected forward waypoint 50/202 (taught index 245): valid
+Collected forward waypoint 51/202 (taught index 250): valid
+Collected forward waypoint 52/202 (taught index 255): valid
+Collected forward waypoint 53/202 (taught index 260): valid
+Collected forward waypoint 54/202 (taught index 265): INVALID: Disparity jitter 0.365 px exceeds contract
+Collected forward waypoint 55/202 (taught index 270): INVALID: Disparity jitter 0.131 px exceeds contract
+Collected forward waypoint 56/202 (taught index 275): valid
+Collected forward waypoint 57/202 (taught index 280): INVALID: Only 14 fresh camera frames; need 50
+Collected forward waypoint 58/202 (taught index 285): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 59/202 (taught index 290): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 60/202 (taught index 295): valid
+Collected forward waypoint 61/202 (taught index 300): valid
+Collected forward waypoint 62/202 (taught index 305): valid
+Collected forward waypoint 63/202 (taught index 310): valid
+Collected forward waypoint 64/202 (taught index 315): valid
+Collected forward waypoint 65/202 (taught index 320): valid
+Collected forward waypoint 66/202 (taught index 325): valid
+Collected forward waypoint 67/202 (taught index 330): valid
+Collected forward waypoint 68/202 (taught index 335): valid
+Collected forward waypoint 69/202 (taught index 340): valid
+Collected forward waypoint 70/202 (taught index 345): valid
+Collected forward waypoint 71/202 (taught index 350): valid
+Collected forward waypoint 72/202 (taught index 355): valid
+Collected forward waypoint 73/202 (taught index 360): valid
+Collected forward waypoint 74/202 (taught index 365): valid
+Collected forward waypoint 75/202 (taught index 370): valid
+Collected forward waypoint 76/202 (taught index 375): valid
+Collected forward waypoint 77/202 (taught index 380): valid
+Collected forward waypoint 78/202 (taught index 385): valid
+Collected forward waypoint 79/202 (taught index 390): valid
+Collected forward waypoint 80/202 (taught index 395): valid
+Collected forward waypoint 81/202 (taught index 400): valid
+Collected forward waypoint 82/202 (taught index 405): valid
+Collected forward waypoint 83/202 (taught index 410): valid
+Collected forward waypoint 84/202 (taught index 415): valid
+Collected forward waypoint 85/202 (taught index 420): valid
+Collected forward waypoint 86/202 (taught index 425): INVALID: Disparity jitter 0.121 px exceeds contract
+Collected forward waypoint 87/202 (taught index 430): valid
+Collected forward waypoint 88/202 (taught index 435): INVALID: Disparity jitter 0.153 px exceeds contract
+Collected forward waypoint 89/202 (taught index 440): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 90/202 (taught index 445): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 91/202 (taught index 450): valid
+Collected forward waypoint 92/202 (taught index 455): valid
+Collected forward waypoint 93/202 (taught index 460): valid
+Collected forward waypoint 94/202 (taught index 465): valid
+Collected forward waypoint 95/202 (taught index 470): valid
+Collected forward waypoint 96/202 (taught index 475): valid
+Collected forward waypoint 97/202 (taught index 480): valid
+Collected forward waypoint 98/202 (taught index 485): valid
+Collected forward waypoint 99/202 (taught index 490): valid
+Collected forward waypoint 100/202 (taught index 495): valid
+Collected forward waypoint 101/202 (taught index 500): valid
+Collected forward waypoint 102/202 (taught index 505): valid
+Collected forward waypoint 103/202 (taught index 510): valid
+Collected forward waypoint 104/202 (taught index 515): INVALID: Only 21 fresh camera frames; need 50
+Collected forward waypoint 105/202 (taught index 520): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 106/202 (taught index 525): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 107/202 (taught index 530): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 108/202 (taught index 535): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 109/202 (taught index 540): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 110/202 (taught index 545): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 111/202 (taught index 550): INVALID: Only 0 fresh camera frames; need 50
+Collected forward waypoint 112/202 (taught index 555): valid
+Collected forward waypoint 113/202 (taught index 560): valid
+Collected forward waypoint 114/202 (taught index 565): valid
+Collected forward waypoint 115/202 (taught index 570): valid
+Collected forward waypoint 116/202 (taught index 575): valid
+Collected forward waypoint 117/202 (taught index 580): valid
+Collected forward waypoint 118/202 (taught index 585): valid
+Collected forward waypoint 119/202 (taught index 590): valid
+Collected forward waypoint 120/202 (taught index 595): valid
+Collected forward waypoint 121/202 (taught index 600): valid
+Collected forward waypoint 122/202 (taught index 605): valid
+Collected forward waypoint 123/202 (taught index 610): valid
+Collected forward waypoint 124/202 (taught index 615): valid
+Collected forward waypoint 125/202 (taught index 620): valid
+Collected forward waypoint 126/202 (taught index 625): valid
+Collected forward waypoint 127/202 (taught index 630): valid
+Collected forward waypoint 128/202 (taught index 635): valid
+Collected forward waypoint 129/202 (taught index 640): valid
+Collected forward waypoint 130/202 (taught index 645): valid
+Collected forward waypoint 131/202 (taught index 650): valid
+Collected forward waypoint 132/202 (taught index 655): valid
+Collected forward waypoint 133/202 (taught index 660): valid
+Collected forward waypoint 134/202 (taught index 665): INVALID: Disparity jitter 0.140 px exceeds contract
+Collected forward waypoint 135/202 (taught index 670): valid
+Collected forward waypoint 136/202 (taught index 675): valid
+Collected forward waypoint 137/202 (taught index 680): valid
+Collected forward waypoint 138/202 (taught index 685): valid
+Collected forward waypoint 139/202 (taught index 690): valid
+Collected forward waypoint 140/202 (taught index 695): valid
+Collected forward waypoint 141/202 (taught index 700): valid
+Collected forward waypoint 142/202 (taught index 705): valid
+Collected forward waypoint 143/202 (taught index 710): INVALID: Disparity jitter 0.110 px exceeds contract
+Collected forward waypoint 144/202 (taught index 715): valid
+Collected forward waypoint 145/202 (taught index 720): INVALID: Disparity jitter 0.105 px exceeds contract
+Collected forward waypoint 146/202 (taught index 725): INVALID: Disparity jitter 0.130 px exceeds contract
+Collected forward waypoint 147/202 (taught index 730): valid
+Collected forward waypoint 148/202 (taught index 735): INVALID: Disparity jitter 0.209 px exceeds contract
+Collected forward waypoint 149/202 (taught index 740): INVALID: Disparity jitter 0.109 px exceeds contract
+Collected forward waypoint 150/202 (taught index 745): INVALID: Disparity jitter 0.102 px exceeds contract
+Collected forward waypoint 151/202 (taught index 750): valid
+Collected forward waypoint 152/202 (taught index 755): valid
+Collected forward waypoint 153/202 (taught index 760): valid
+Collected forward waypoint 154/202 (taught index 765): INVALID: Disparity jitter 0.122 px exceeds contract
+Collected forward waypoint 155/202 (taught index 770): valid
+Collected forward waypoint 156/202 (taught index 775): valid
+Collected forward waypoint 157/202 (taught index 780): valid
+Collected forward waypoint 158/202 (taught index 785): valid
+Collected forward waypoint 159/202 (taught index 790): valid
+Collected forward waypoint 160/202 (taught index 795): valid
+Collected forward waypoint 161/202 (taught index 800): valid
+Collected forward waypoint 162/202 (taught index 805): valid
+Collected forward waypoint 163/202 (taught index 810): valid
+Collected forward waypoint 164/202 (taught index 815): valid
+Collected forward waypoint 165/202 (taught index 820): INVALID: Disparity jitter 0.143 px exceeds contract
+Collected forward waypoint 166/202 (taught index 825): valid
+Collected forward waypoint 167/202 (taught index 830): valid
+Collected forward waypoint 168/202 (taught index 835): valid
+Collected forward waypoint 169/202 (taught index 840): INVALID: Disparity jitter 0.147 px exceeds contract
+Collected forward waypoint 170/202 (taught index 845): valid
+Collected forward waypoint 171/202 (taught index 850): INVALID: Disparity jitter 0.107 px exceeds contract
+Collected forward waypoint 172/202 (taught index 855): valid
+Collected forward waypoint 173/202 (taught index 860): INVALID: Disparity jitter 0.167 px exceeds contract
+Collected forward waypoint 174/202 (taught index 865): valid
+Collected forward waypoint 175/202 (taught index 870): INVALID: Disparity jitter 0.277 px exceeds contract
+Collected forward waypoint 176/202 (taught index 875): valid
+Collected forward waypoint 177/202 (taught index 880): valid
+Collected forward waypoint 178/202 (taught index 885): valid
+Collected forward waypoint 179/202 (taught index 890): INVALID: Disparity jitter 0.114 px exceeds contract
+Collected forward waypoint 180/202 (taught index 895): INVALID: Disparity jitter 0.162 px exceeds contract
+Collected forward waypoint 181/202 (taught index 900): INVALID: Disparity jitter 0.132 px exceeds contract
+Collected forward waypoint 182/202 (taught index 905): valid
+Collected forward waypoint 183/202 (taught index 910): valid
+Collected forward waypoint 184/202 (taught index 915): valid
+Collected forward waypoint 185/202 (taught index 920): valid
+Collected forward waypoint 186/202 (taught index 925): INVALID: Disparity jitter 0.204 px exceeds contract
+Collected forward waypoint 187/202 (taught index 930): valid
+Collected forward waypoint 188/202 (taught index 935): valid
+Collected forward waypoint 189/202 (taught index 940): valid
+Collected forward waypoint 190/202 (taught index 945): valid
+Collected forward waypoint 191/202 (taught index 950): valid
+Collected forward waypoint 192/202 (taught index 955): INVALID: Disparity jitter 0.181 px exceeds contract
+Collected forward waypoint 193/202 (taught index 960): valid
+Collected forward waypoint 194/202 (taught index 965): INVALID: Disparity jitter 0.133 px exceeds contract
+Collected forward waypoint 195/202 (taught index 970): INVALID: Disparity jitter 0.124 px exceeds contract
+Collected forward waypoint 196/202 (taught index 975): valid
+Collected forward waypoint 197/202 (taught index 980): valid
+Collected forward waypoint 198/202 (taught index 985): valid
+Collected forward waypoint 199/202 (taught index 990): valid
+Collected forward waypoint 200/202 (taught index 995): valid
+Collected forward waypoint 201/202 (taught index 1000): valid
+Collected forward waypoint 202/202 (taught index 1002): valid
+Saved 202 observations to /home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/shared_fast_grid_20261029/head_03.jsonl
+[INFO][L1] FX_L1_State_SwitchToIdle: Arm1 transfer to STATE_IDLE success [block]
+[INFO][L1] FX_L1_State_SwitchToIdle: Head state is already in STATE_IDLE
