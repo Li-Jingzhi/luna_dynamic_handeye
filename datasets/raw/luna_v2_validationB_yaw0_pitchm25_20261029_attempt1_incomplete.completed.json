@@ -1,0 +1,12 @@
+{
+  "complete": false,
+  "observations": 0,
+  "valid": 0,
+  "invalid": 0,
+  "head_target_deg": [
+    0,
+    -25
+  ],
+  "purpose": "independent_validation_only",
+  "sha256": null
+}

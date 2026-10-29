@@ -1,0 +1,23 @@
+{
+  "purpose": "independent_validation_only",
+  "head_target_deg": [
+    0,
+    -20
+  ],
+  "trajectory": "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_taught_20261029.json",
+  "total_waypoints": 110,
+  "frames_per_point": 50,
+  "sdk_speed_percent": 5,
+  "measured_flange_to_ball_center_m": [
+    0,
+    0,
+    0.101
+  ],
+  "asset_hashes": {
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/datasets/raw/luna_v2_validationB_taught_20261029.json": "f3cbadf5cbd1c8fc5db6cc57c1b0e9f63c3b6ce033eafac213ca3850ba714b1c",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/acquisition/configs/yellow_measurement_v1.json": "9b20e82955bff562c2173cd35aa83353fb93aed49b4124a607f1c18f63d61131",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/configs/camera/luna_rectified_stereo.json": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "/home/lijingzhi/Project/Learned_IK/luna_dynamic_handeye/configs/robot/luna_new.ini": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586"
+  },
+  "approach_mode": "direct_joint_interpolation_max5deg"
+}
