@@ -15,6 +15,13 @@ from orin_rectified_stream.capture_progress import capture_indices, read_progres
 
 
 class FastReplayTests(unittest.TestCase):
+    def test_partial_prefix_preserves_original_forward_and_reverse_indices(self):
+        path=[dict(q7_deg=[i]*7) for i in range(18)]
+        self.assertEqual(c.remaining_capture_path(path,[dict(waypoint_index=i) for i in [0,5]],'forward',5),list(range(6,18)))
+        self.assertEqual(c.remaining_capture_path(path,[dict(waypoint_index=i) for i in [17,15]],'reverse',5),list(range(14,-1,-1)))
+        for indices in ([],[5],[0,10],[0,5,10,15,17]):
+            with self.assertRaises(ValueError):c.remaining_capture_path(path,[dict(waypoint_index=i) for i in indices],'forward',5)
+
     def test_stop_selection_and_invalid_strides(self):
         selected=capture_indices(1003,5)
         self.assertEqual(len(selected),202)

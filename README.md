@@ -171,7 +171,11 @@ python3 -m dynamic_handeye capture \
 
 从 `head_eye_capt` 移植的独立工具位于 [stereo_calibration](stereo_calibration/README.md)，包含原始鱼眼K/D/R/T标定、GStreamer/Argus直连CSI图像采集、校正预览和独立板形/尺度评估，不依赖源项目。重新标定后的数据清单、交叉头姿与独立验收划分见 [重采计划](stereo_calibration/RECAPTURE_PLAN.md)。新相机参数须同步更新测量契约并重新拟合手眼模型。
 
-## 2026-10-29采集暂停记录
+## 2026-10-30九头姿采集已完成
+
+九轮均已完成：1818个位置、1514有效、304拒绝，每个有效位置50帧。第6轮停稳超时后保留原182条记录并补齐。数据、参数哈希及完整性核验见[datasets/new_capture_20261029](datasets/new_capture_20261029/README.md)。快照和恢复备份不要重复导入训练。当前尚未使用完整九头姿重新标定，1mm目标未验证通过。
+
+### 2026-10-29暂停记录（历史）
 
 已完成九姿计划前4轮：[0,-25]、[10,-25]、[-10,-25]、[-10,-20]，共808位置，586有效、222无效，原始拒绝记录保留。当前右臂和头IDLE，后5轮未采，下一头姿[0,-20]。数据见[datasets/new_capture_20261029](datasets/new_capture_20261029/)，核验摘要见[PAUSED_SUMMARY.json](datasets/new_capture_20261029/shared_fast_grid_20261029/PAUSED_SUMMARY.json)，后续启动见[RESUME.md](datasets/new_capture_20261029/RESUME.md)。暂停不等于标定验收通过；正式相机、MDH、pF未修改。
 

@@ -438,7 +438,18 @@ def teach(robot, sdk, latest, stereo, stereo_hash, output, mdh_hash, limits):
     print(f"Saved {len(waypoints)} taught waypoints to {output}")
 
 
-def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limits, head_ref, motion_confirmed=False, require_visual_pose=False, direct_approach=False, direction='reverse', capture_stride=1):
+def remaining_capture_path(waypoints, rows, direction, stride):
+    order=list(range(len(waypoints)))
+    if direction=='reverse':order.reverse()
+    selected=set(capture_indices(len(waypoints),stride))
+    expected=[i for i in order if i in selected]
+    actual=[r['waypoint_index'] for r in rows]
+    if not actual or actual!=expected[:len(actual)] or len(actual)>=len(expected):
+        raise ValueError('Partial capture is not a proper ordered measurement prefix')
+    return order[order.index(actual[-1])+1:]
+
+
+def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limits, head_ref, motion_confirmed=False, require_visual_pose=False, direct_approach=False, direction='reverse', capture_stride=1, resume_existing=False):
     if direction not in ('forward', 'reverse'):
         raise ValueError('Unknown replay direction')
     manifest = json.loads(path.read_text(encoding="utf-8"))
@@ -453,8 +464,23 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
     rt = read_rt(robot)
     body_ref = np.asarray(manifest["body_q_deg"], float)
     assert_fixed(rt, head_ref, body_ref)
+    order=list(range(len(waypoints))) if direction=='forward' else list(range(len(waypoints)-1,-1,-1))
+    completed=0
+    if resume_existing:
+        rows=[json.loads(line) for line in output.read_text().splitlines() if line.strip()]
+        for row in rows:
+            if (row.get('mdh_sha256')!=mdh_hash or row.get('stereo_model_sha256')!=stereo_hash
+                    or row.get('target_head_deg')!=list(head_ref) or row.get('capture_stride',1)!=capture_stride
+                    or row.get('replay_direction','reverse')!=direction or row.get('taught_path')!=str(path)):
+                raise ValueError('Partial capture asset/head/path mismatch')
+        order=remaining_capture_path(waypoints,rows,direction,capture_stride)
+        completed=len(rows)
+        # Require the live arm to remain on the recorded boundary segment.
+        allowed=[rows[-1]['waypoint_index'],*order[:capture_stride]]
+        if min(np.max(abs(q7(rt)-np.asarray(waypoints[i]['q7_deg']))) for i in allowed)>.3:
+            raise RuntimeError('Arm not at partial capture boundary')
     # Existing approach/check helpers target the last entry; reverse the view for forward runs.
-    approach_path = waypoints if direction == 'reverse' else waypoints[::-1]
+    approach_path = [waypoints[i] for i in reversed(order)]
     position_waypoints = replay_position_waypoints(q7(rt), approach_path, direct=direct_approach)
     arm = sdk.FXObjType.OBJ_ARM1
     if sdk.state_map.get(robot.current_state(arm)) != "IDLE":
@@ -474,10 +500,10 @@ def replay(robot, sdk, latest, stereo, stereo_hash, path, output, mdh_hash, limi
         print(f"Positioned toward reverse replay start {index + 1}/{len(position_waypoints)}; not captured",
               flush=True)
     return_waypoints = replay_return_waypoints(q7(read_rt(robot)), approach_path)
-    collected = 0
-    with output.open("x", encoding="utf-8") as out:
+    collected = completed
+    with output.open("a" if resume_existing else "x", encoding="utf-8") as out:
         for reverse_index, waypoint in enumerate(return_waypoints):
-            waypoint_index = len(waypoints) - 1 - reverse_index if direction == 'reverse' else reverse_index
+            waypoint_index = order[reverse_index]
             target = np.asarray(waypoint["q7_deg"], float)
             start = q7(read_rt(robot))
             if np.max(np.abs(start - target)) > MAX_STEP_DEG + .5:

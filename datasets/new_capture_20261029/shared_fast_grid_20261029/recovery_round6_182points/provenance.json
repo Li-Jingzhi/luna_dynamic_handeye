@@ -1,0 +1,6 @@
+{
+  "reason": "35s arm settle timeout; no source records removed",
+  "source_sha256": "022a3813b833280a0b94561d61121cbbe23caef75e40f65bfe2f5331cc0216f3",
+  "last_measurement_index": 905,
+  "resume_motion_index": 906
+}
