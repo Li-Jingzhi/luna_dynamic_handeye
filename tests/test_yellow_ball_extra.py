@@ -28,4 +28,23 @@ class ExtraCaptureTests(unittest.TestCase):
             move_head(robot,[1,-25])
         self.assertTrue(raw.runtime_set_joint_pos_cmd.called)
         self.assertTrue(all(c.args[0]==2 for c in raw.runtime_set_joint_pos_cmd.call_args_list))
-        self.assertFalse(robot.position)
+        self.assertTrue(robot.position)
+        self.assertTrue(all(c.args[0]==2 for c in raw.switch_to_idle.call_args_list))
+
+    def test_twenty_frame_window_and_summary(self):
+        import contextlib,io,json,tempfile
+        from pathlib import Path
+        from dynamic_handeye.geometry import Assets
+        from data_collection.diagnostics.cli import MODEL
+        from data_collection.diagnostics.core import default_plan,validate_plan
+        from data_collection.diagnostics.collect import run_session
+        from data_collection.diagnostics.simulation import SimRobot,SimCamera
+        assets=Assets();model=json.loads(MODEL.read_text());plan=default_plan();plan['samples_per_window']=20
+        validate_plan(plan)
+        with tempfile.TemporaryDirectory() as temp,contextlib.redirect_stdout(io.StringIO()):
+            folder=Path(temp)/'capture'
+            result=run_session(assets,MODEL,plan,'optical',folder,lambda:SimRobot(assets,model,plan),
+                lambda robot:SimCamera(robot,assets),simulated=True,limit=1)
+            row=json.loads((folder/'observations.jsonl').read_text())
+            self.assertTrue(result['complete']);self.assertEqual(len(row['frames']),20)
+            self.assertTrue(row['capture_valid'])

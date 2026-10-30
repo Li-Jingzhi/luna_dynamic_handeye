@@ -1,0 +1,6 @@
+{
+  "phase": "stopped",
+  "saved": 30,
+  "planned": 129,
+  "reason": "Same-q site constraint violated"
+}

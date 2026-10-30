@@ -21,7 +21,7 @@ def append(path,row):
 
 def skippable_window_error(error):
     return (isinstance(error,ValueError) and str(error)=='Corrected disparity jitter exceeds 0.1px') or (
-        isinstance(error,RuntimeError) and str(error).startswith('Only ') and str(error).endswith(' of 50 unique qualified frames; window preserved'))
+        isinstance(error,RuntimeError) and str(error).startswith('Only ') and str(error).endswith((' of 20 unique qualified frames; window preserved',' of 50 unique qualified frames; window preserved')))
 
 
 def development_joints(model):
@@ -138,14 +138,14 @@ class Collector:
 
     def window(self,task):
         self.robot.settle();barrier=self.camera.barrier();frames=[];deadline=time.monotonic()+self.p['window_timeout_s']
-        while len(frames)<50 and time.monotonic()<deadline:
+        while len(frames)<self.p['samples_per_window'] and time.monotonic()<deadline:
             try:
                 frame=self.measure(barrier);frames.append(frame)
                 append(self.dir/'frames.jsonl',dict(task_id=task['id'],accepted=True,**frame))
             except (ValueError,OSError) as error:
                 append(self.dir/'events.jsonl',dict(kind='window_reject',task_id=task['id'],reason=str(error)))
                 time.sleep(.02)
-        if len(frames)!=50:raise RuntimeError(f'Only {len(frames)} of 50 unique qualified frames; window preserved')
+        if len(frames)!=self.p['samples_per_window']:raise RuntimeError(f"Only {len(frames)} of {self.p['samples_per_window']} unique qualified frames; window preserved")
         return window_summary(frames,self.p)
 
 

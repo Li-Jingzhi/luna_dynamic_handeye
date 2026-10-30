@@ -1,0 +1,8 @@
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "head_site0_round2_visit2", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "head_site1_round0_visit1", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "head_site1_round0_visit3", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}

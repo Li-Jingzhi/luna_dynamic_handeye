@@ -15,6 +15,7 @@ class RejectedWindowTests(unittest.TestCase):
     def test_only_optical_quality_failures_can_be_skipped(self):
         self.assertTrue(skippable_window_error(ValueError('Corrected disparity jitter exceeds 0.1px')))
         self.assertTrue(skippable_window_error(RuntimeError('Only 12 of 50 unique qualified frames; window preserved')))
+        self.assertTrue(skippable_window_error(RuntimeError('Only 12 of 20 unique qualified frames; window preserved')))
         for message in ('Robot moved within fusion window','Measured ball left local camera workspace','Visual servo diverged','Joint limit exceeded'):
             self.assertFalse(skippable_window_error(RuntimeError(message)))
 

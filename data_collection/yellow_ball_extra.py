@@ -33,8 +33,8 @@ def move_head(robot,target):
     from interactive_ball_calibration.capture import head_reference_waypoints
     from gq_calibration.capture import read_limits,wait_head,checked
     target=np.asarray(target,float);obj=robot.sdk.FXObjType.OBJ_HEAD
-    checked(robot.robot.switch_to_idle(robot.arm,2000),'Right arm IDLE before head-only experiment')
-    robot.position=False;rt=robot.w.read_rt(robot.robot);anchor=np.array(rt['arms'][1]['fb']['fb_pos'])
+    if not robot.position:raise RuntimeError('Right arm must hold its position during head-only experiment')
+    rt=robot.w.read_rt(robot.robot);anchor=np.array(rt['arms'][1]['fb']['fb_pos'])
     limits=np.array(read_limits(robot.robot))
     try:
         for point in head_reference_waypoints(rt['head']['fb_pos'][:2],target,limits):
@@ -57,12 +57,15 @@ def main():
     parser.add_argument('--output',type=Path,required=True)
     parser.add_argument('--after-suite',type=Path,required=True)
     parser.add_argument('--wait-pid',type=int)
+    parser.add_argument('--frames',type=int,choices=(20,50),default=50)
+    parser.add_argument('--head-only',action='store_true')
     parser.add_argument('--run',action='store_true');args=parser.parse_args()
-    plan=default_plan();plan['image_gamma']=1.6;plan['continue_measurement_rejects']=True
+    planned=99 if args.head_only else 129
+    plan=default_plan();plan['samples_per_window']=args.frames;plan['image_gamma']=1.6;plan['continue_measurement_rejects']=True
     assets,model,summary=preflight(plan,MODEL,'all')
     if not args.run:
-        print(json.dumps(dict(static_windows=30,head_windows=99,head_grid_unique=81,reference_extra_windows=18,
-            head_order=HEADS,frames_per_window=50,independent_absolute_scale=False,motion=False)));return
+        print(json.dumps(dict(static_windows=0 if args.head_only else 30,head_windows=99,head_grid_unique=81,reference_extra_windows=18,
+            head_order=HEADS,frames_per_window=args.frames,independent_absolute_scale=False,motion=False)));return
     if args.wait_pid:
         while Path(f'/proc/{args.wait_pid}/cmdline').exists():
             command=Path(f'/proc/{args.wait_pid}/cmdline').read_bytes()
@@ -78,7 +81,7 @@ def main():
         fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
         args.output.mkdir(parents=True)
         write_json(args.output/'manifest.json',dict(schema='luna_ball_extra_v1',plan=plan,model_sha256=digest(MODEL),
-            assets=assets.hashes,after_suite=str(args.after_suite),static_windows=30,head_windows=99,
+            assets=assets.hashes,after_suite=str(args.after_suite),static_windows=0 if args.head_only else 30,head_windows=99,
             note='Fixed q within site; camera head changes only in head experiment. No independent size target.'))
         (args.output/'frozen_model.json').write_bytes(MODEL.read_bytes())
         asset_source=next((p for p in args.after_suite.glob('*/assets') if p.is_dir()),None)
@@ -92,11 +95,14 @@ def main():
             collector.origin_camera=collector.control()
             write_json(args.output/'initial.json',dict(feedback=robot.sample(),camera_m=collector.origin_camera.tolist()))
             origin=collector.origin_camera.copy()
-            for kind in ('static','head'):
+            for kind in (('head',) if args.head_only else ('static','head')):
                 for site,z in enumerate((-.02,0.,.02)):
-                    if kind=='head':move_head(robot,[0,-25])
+                    if kind=='head' and plan['head_deg']!=[0,-25]:move_head(robot,[0,-25])
                     collector=Collector(assets,model,plan,robot,camera,args.output)
                     collector.origin_camera=origin.copy();collector.servo(origin+[0,0,z],robot.origin)
+                    if kind=='head' and not robot.position:
+                        robot.move(np.array(robot.sample()['q7_deg']))
+                    robot.settle()
                     anchor=np.array(robot.sample()['q7_deg'])
                     tasks=[dict(id=f'static_site{site}_repeat{r}',kind='static',site=site,repeat=r,head_deg=[0,-25]) for r in range(10)] if kind=='static' else head_tasks(site)
                     for task in tasks:
@@ -107,27 +113,27 @@ def main():
                         feedback=robot.sample()
                         if np.max(abs(np.array(feedback['q7_deg'])-anchor))>.02:
                             raise RuntimeError('Same-q site constraint violated')
-                        print(task['id'],f'{total}/129',flush=True)
+                        print(task['id'],f'{total}/{planned}',flush=True)
                         try:sample=collector.window(task)
                         except (ValueError,RuntimeError) as error:
                             if not skippable_window_error(error):raise
                             append(args.output/'observations.jsonl',dict(task=task,capture_valid=False,simulated=False,
                                 rejection_reason=str(error),fixed_site_q7_deg=anchor.tolist(),feedback=robot.sample()))
-                            total+=1;write_json(args.output/'status.json',dict(phase='collecting',attempted=total,planned=129,last_task=task))
+                            total+=1;write_json(args.output/'status.json',dict(phase='collecting',attempted=total,planned=planned,last_task=task))
                             continue
                         if np.max(abs(np.array(sample['q7_deg'])-anchor))>.02:
                             raise RuntimeError('Same-q capture constraint violated')
                         append(args.output/'observations.jsonl',dict(task=task,capture_valid=True,simulated=False,
                             fixed_site_q7_deg=anchor.tolist(),**sample))
-                        total+=1;write_json(args.output/'status.json',dict(phase='collecting',saved=total,planned=129,last_task=task))
+                        total+=1;write_json(args.output/'status.json',dict(phase='collecting',saved=total,planned=planned,last_task=task))
                     if kind=='head':move_head(robot,[0,-25])
             recorded=[json.loads(line) for line in (args.output/'observations.jsonl').read_text().splitlines() if line.strip()]
             valid=sum(row.get('capture_valid') is True for row in recorded)
             write_json(args.output/'completed.json',dict(complete=True,simulated=False,observations=total,
                 valid_windows=valid,rejected_windows=total-valid,sha256=digest(args.output/'observations.jsonl')))
-            write_json(args.output/'status.json',dict(phase='complete',saved=total,planned=129))
+            write_json(args.output/'status.json',dict(phase='complete',saved=total,planned=planned))
         except BaseException as error:
-            write_json(args.output/'status.json',dict(phase='stopped',saved=total,planned=129,reason=str(error)));raise
+            write_json(args.output/'status.json',dict(phase='stopped',saved=total,planned=planned,reason=str(error)));raise
         finally:
             if robot is not None:
                 try:

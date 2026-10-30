@@ -1,0 +1,296 @@
+{
+  "schema_version": 1,
+  "description": "躯干到双臂及头部安装关系；结构参考，不自动启用为实机标定参数",
+  "transform_convention": "p_parent = parent_from_child_T @ p_child; homogeneous column vectors",
+  "length_unit": "m",
+  "rotation_convention": "right-handed; source quaternion order w,x,y,z; normalized in matrices",
+  "torso_frame": {
+    "name": "S_MODEL",
+    "source_body": "Gento Luna_Leg_J6_Link",
+    "source_line": 57,
+    "description": "模型第六躯干关节body原点；未确认等于实机机械接口或控制器输出基准"
+  },
+  "source_model": "reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+  "source_model_sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076",
+  "controller_config": "configs/robot/luna_new.ini",
+  "relations": [
+    {
+      "parent": "S_MODEL",
+      "child": "right_first_joint_zero",
+      "status": "model_zero_pose_installation",
+      "source_body": "Arm_R1_Link",
+      "source_line": 62,
+      "translation_m": [
+        0.0,
+        -0.2146,
+        0.3915
+      ],
+      "quaternion_wxyz_source": [
+        0.707105,
+        0.707108,
+        0.0,
+        0.0
+      ],
+      "parent_from_child_T": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -4.242642374308048e-06,
+          -0.9999999999910001,
+          -0.2146
+        ],
+        [
+          0.0,
+          0.9999999999910001,
+          -4.242642374308048e-06,
+          0.3915
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "parent": "S_MODEL",
+      "child": "left_first_joint_zero",
+      "status": "model_zero_pose_installation",
+      "source_body": "Arm_L1_Link",
+      "source_line": 104,
+      "translation_m": [
+        0.0,
+        0.2146,
+        0.3915
+      ],
+      "quaternion_wxyz_source": [
+        0.707105,
+        -0.707108,
+        0.0,
+        0.0
+      ],
+      "parent_from_child_T": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -4.242642374308048e-06,
+          0.9999999999910001,
+          0.2146
+        ],
+        [
+          -0.0,
+          -0.9999999999910001,
+          -4.242642374308048e-06,
+          0.3915
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "parent": "S_MODEL",
+      "child": "head_first_joint_zero",
+      "status": "model_zero_pose_installation",
+      "source_body": "Head_J1_Link",
+      "source_line": 146,
+      "translation_m": [
+        -0.013496,
+        0.0,
+        0.49898
+      ],
+      "quaternion_wxyz_source": [
+        0.707105,
+        0.707108,
+        0.0,
+        0.0
+      ],
+      "parent_from_child_T": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          -0.013496
+        ],
+        [
+          0.0,
+          -4.242642374308048e-06,
+          -0.9999999999910001,
+          0.0
+        ],
+        [
+          0.0,
+          0.9999999999910001,
+          -4.242642374308048e-06,
+          0.49898
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "parent": "S_MODEL",
+      "child": "right_arm_mdh_parent",
+      "status": "nominal_cad_mdh_alignment_not_measured",
+      "derivation": "T_S_first_zero @ inverse(T_M_first_MDH(q=0))",
+      "controller_section": "R.A1",
+      "translation_m": [
+        0.0,
+        -0.05600000000142741,
+        0.3915006728830806
+      ],
+      "parent_from_child_T": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -4.242642374308048e-06,
+          -0.9999999999910001,
+          -0.05600000000142741
+        ],
+        [
+          0.0,
+          0.9999999999910001,
+          -4.242642374308048e-06,
+          0.3915006728830806
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "parent": "S_MODEL",
+      "child": "left_arm_mdh_parent",
+      "status": "nominal_cad_mdh_alignment_not_measured",
+      "derivation": "T_S_first_zero @ inverse(T_M_first_MDH(q=0))",
+      "controller_section": "R.A0",
+      "translation_m": [
+        0.0,
+        0.05600000000142741,
+        0.3915006728830806
+      ],
+      "parent_from_child_T": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -4.242642374308048e-06,
+          0.9999999999910001,
+          0.05600000000142741
+        ],
+        [
+          0.0,
+          -0.9999999999910001,
+          -4.242642374308048e-06,
+          0.3915006728830806
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "parent": "head_first_joint_zero",
+      "child": "head_second_joint_zero",
+      "status": "model_zero_pose_installation",
+      "source_line": 151,
+      "parent_from_child_T": [
+        [
+          1.0,
+          -0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          -4.242642374308048e-06,
+          0.9999999999910001,
+          0.0
+        ],
+        [
+          -0.0,
+          -0.9999999999910001,
+          -4.242642374308048e-06,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    },
+    {
+      "parent": "S_MODEL",
+      "child": "S_INTERFACE_CAD_REF",
+      "status": "display_reference_only_not_controller_frame",
+      "source": "Gento Luna_Leg_J6_Link.STL minimum vertex Z = 0.182 m; XY=0 and R=I chosen for display",
+      "parent_from_child_T": [
+        [
+          1.0,
+          0.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0,
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0,
+          1.0,
+          0.182
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ]
+    }
+  ],
+  "unresolved": {
+    "torso_from_controller_head_mdh_parent_T": null,
+    "head_tip_from_left_camera_T": null,
+    "reason": "MJCF头链不能直接替代控制器yaw→pitch链；模型未定义相机安装系。未写入诊断拟合值。"
+  },
+  "runtime_enabled": false
+}

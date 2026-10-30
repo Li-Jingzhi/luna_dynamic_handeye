@@ -33,8 +33,8 @@ def validate_plan(p):
     if type(p.get('continue_measurement_rejects',False)) is not bool:raise ValueError('Invalid measurement rejection policy')
     gamma=p.get('image_gamma',1.)
     if type(gamma) not in (int,float) or not np.isfinite(gamma) or not 1<=gamma<=2:raise ValueError('Invalid image_gamma')
-    if p.get('schema')!='luna_auto_diagnostics_v1' or p.get('samples_per_window')!=50:
-        raise ValueError('Expected diagnostic plan and exactly fifty frames')
+    if p.get('schema')!='luna_auto_diagnostics_v1' or type(p.get('samples_per_window')) is not int or p['samples_per_window'] not in (20,50):
+        raise ValueError('Expected diagnostic plan and twenty or fifty frames')
     if p.get('ball_diameter_m')!=.04:raise ValueError('Current detector contract assumes a nominal40mm sphere')
     if not np.allclose(p['head_deg'],[0,-25],atol=0,rtol=0):raise ValueError('Stage one requires fixed head [0,-25]')
     for key in ('window_timeout_s','settle_s','max_camera_excursion_m','servo_tolerance_m','hold_tolerance_m',
@@ -110,7 +110,7 @@ def validate_metadata(m,expected,after_ns=0):
 
 
 def window_summary(frames,plan):
-    if len(frames)!=50:raise ValueError('Exactly fifty accepted frames required')
+    if len(frames)!=plan['samples_per_window']:raise ValueError(f"Exactly {plan['samples_per_window']} accepted frames required")
     c=np.array([f['measurement']['center_left_camera_m'] for f in frames])
     pixels=np.array([f['measurement']['corrected_stereo_pixels'] for f in frames])
     q=np.array([f['feedback']['q7_deg'] for f in frames])

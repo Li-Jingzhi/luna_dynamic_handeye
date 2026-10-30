@@ -1,0 +1,6 @@
+{
+  "phase": "stopped",
+  "saved": 0,
+  "planned": 129,
+  "reason": "No fresh valid ball feedback for visual servo"
+}

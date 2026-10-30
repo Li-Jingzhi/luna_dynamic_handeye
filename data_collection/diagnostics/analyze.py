@@ -40,7 +40,7 @@ def analyze(directory):
     if len({r['task']['id'] for r in accepted})!=len(accepted):raise ValueError('Repeated completed physical task')
     all_sources=[set(),set()]
     for row in accepted:
-        if len(row['frames'])!=50 or row['model_sha256']!=manifest['model_sha256']:raise ValueError('Frame/model contract mismatch')
+        if len(row['frames'])!=manifest['plan']['samples_per_window'] or row['model_sha256']!=manifest['model_sha256']:raise ValueError('Frame/model contract mismatch')
         for frame in row['frames']:
             m=frame['metadata']
             for eye in (0,1):

@@ -1,0 +1,6 @@
+{
+  "phase": "stopped",
+  "saved": 0,
+  "planned": 129,
+  "reason": "ChannelException(2, 'Connect failed')"
+}

@@ -116,3 +116,16 @@ Collector将上一合格球心用于局部候选追踪，拒绝相邻静止反�
 ```
 
 Gamma方案下213窗口图像可能占约80GB，需监控实际磁盘使用。单独预览相机模式会消费帧，采集期间应使用上述saved-images模式。B键仅影响显示，不改变已保存或检测图像；初始显示不重复叠加Gamma。
+
+## 补充实验20帧模式（2026-10-30）
+
+按用户要求，本轮静止重复30窗口、只动头99窗口使用 `--frames 20`，共2580组正式双目对；原50帧会话不改写。通用窗口采集及分析按计划中的 `samples_per_window` 校验，只支持20或50，默认仍为50。停稳、同步、视差抖动≤0.1px和运动边界保持原值。20帧窗口的统计置信度低于50帧，不应直接当作相同重复次数的精度证据。
+
+```bash
+.venv/bin/python -m data_collection.yellow_ball_extra \
+ --output datasets/orin_diagnostic_storage/ball_extra_20frames_20261030_03 \
+ --after-suite datasets/diagnostics/frozen_acceptance_gamma16_20261030_01 \
+ --frames 20 --run
+```
+
+首次01会话因诊断相机服务未运行而停止，0窗口；恢复服务后02会话仍因Argus不出帧停止，0窗口。按用户要求重启Orin、从 `/home/nvidia/cam_geac` 执行厂家 `./demo/init_demo 3` 后，固定控制核验与配对图像正常，另建03会话。原失败记录保留。运行前确认挂载可用，并使用新输出目录。
