@@ -11,6 +11,7 @@ import signal
 import subprocess
 import sys
 import time
+from functools import lru_cache
 
 import numpy as np
 
@@ -208,13 +209,19 @@ def capture_command(mode, trajectory, output, head, args):
     return cmd
 
 
-def model_check(trajectory, rt, head, destination, direction='reverse'):
+@lru_cache(maxsize=1)
+def collision_model(path,source_hash):
     import mujoco
     import xml.etree.ElementTree as ET
-    path = ROOT/'reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml'
     tree = ET.parse(path)
     tree.getroot().find('compiler').set('meshdir', str(path.parent/'meshes'))
-    model = mujoco.MjModel.from_xml_string(ET.tostring(tree.getroot(), encoding='unicode'))
+    return mujoco.MjModel.from_xml_string(ET.tostring(tree.getroot(), encoding='unicode'))
+
+
+def model_check(trajectory, rt, head, destination, direction='reverse'):
+    import mujoco
+    path = ROOT/'reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml'
+    model = collision_model(path,digest(path))
     data = mujoco.MjData(model)
     def set_joints(names, values):
         for name, v in zip(names, values):
@@ -241,7 +248,7 @@ def model_check(trajectory, rt, head, destination, direction='reverse'):
                          for g in (contact.geom1,contact.geom2)]
                 if contact.dist < 0 and any(name.startswith('Arm_R') for name in names):
                     raise RuntimeError('Nominal model right-arm collision: '+str(names))
-    write_json(destination, dict(samples=samples, head_target_deg=list(head), replay_direction=direction, model_sha256=digest(path),
+    write_json(destination, dict(samples=samples, head_target_deg=np.asarray(head,dtype=float).tolist(), replay_direction=direction, model_sha256=digest(path),
                feedback=rt, note='Nominal CAD only; table, ball rod and people are not modeled.'))
 
 

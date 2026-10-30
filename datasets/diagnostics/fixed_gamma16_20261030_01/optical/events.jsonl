@@ -1,0 +1,12 @@
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "optical_08", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "session_abort", "task": {"id": "optical_13", "kind": "optical", "offset_m": [-0.015, 0.01, 0.02]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "session_abort", "task": {"id": "optical_13", "kind": "optical", "offset_m": [-0.015, 0.01, 0.02]}, "reason": "Corrected disparity jitter exceeds 0.1px"}

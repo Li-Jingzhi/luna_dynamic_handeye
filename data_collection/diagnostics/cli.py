@@ -21,7 +21,7 @@ def execute(a,model,plan,args,simulated=False):
         from .robot import Robot
         from .camera import Camera
         def factory(folder):return lambda:Robot(args.sdk_root,args.robot_ip,plan,folder)
-        camera_factory=lambda robot:Camera(args.host,args.user,args.port)
+        camera_factory=lambda robot:Camera(args.host,args.user,args.port,image_gamma=plan.get('image_gamma',1.),evidence_directory=robot.directory)
     if args.experiment!='all':
         return run_session(a,args.model,plan,args.experiment,args.output,factory(args.output),camera_factory,
             simulated=simulated,resume=getattr(args,'resume',False),limit=getattr(args,'limit',None))
@@ -29,11 +29,20 @@ def execute(a,model,plan,args,simulated=False):
     if directory.exists() and not resume:raise FileExistsError('Suite directory exists')
     directory.mkdir(parents=True,exist_ok=resume)
     spec=dict(plan=plan,model_sha256=digest(args.model),simulated=simulated,limit=getattr(args,'limit',None))
+    if getattr(args,'reference_session',None):spec['reference_manifest_sha256']=digest(args.reference_session/'manifest.json')
     spec_path=directory/'suite.json'
     if resume and json.loads(spec_path.read_text())!=spec:raise ValueError('Suite configuration changed')
     if not resume:write_json(spec_path,spec)
     reference=None;results={}
+    if getattr(args,'reference_session',None):
+        manifest=json.loads((args.reference_session/'manifest.json').read_text())
+        if manifest['assets']!=a.hashes or manifest['model_sha256']!=digest(args.model):raise ValueError('Reference source assets/model mismatch')
+        reference=dict(q7_deg=manifest['guard_origin_q7_deg'],camera_m=manifest['origin_camera_m'],
+            body_deg=manifest['initial_feedback']['body_deg'],opposite_arm_deg=manifest['initial_feedback']['opposite_arm_deg'])
+        write_json(directory/'reference_source.json',dict(path=str(args.reference_session),manifest_sha256=digest(args.reference_session/'manifest.json')))
     for name in ('optical','hold','return','acceptance'):
+        if not tasks(plan,name):
+            results[name]=dict(complete=True,observations=0,note='Previously captured tasks excluded by plan');continue
         folder=directory/name
         results[name]=run_session(a,args.model,plan,name,folder,factory(folder),camera_factory,
             simulated=simulated,resume=resume and folder.exists(),limit=getattr(args,'limit',None),reference=reference)
@@ -69,6 +78,7 @@ def main(argv=None):
         command.add_argument('--experiment',choices=['optical','hold','return','acceptance','all'],default='all')
         if name!='check':command.add_argument('--output',required=True,type=Path)
         if name=='collect':
+            command.add_argument('--reference-session',type=Path,help='Use a previous fixed-view origin, body and opposite-arm reference without changing source data')
             command.add_argument('--run',action='store_true');command.add_argument('--resume',action='store_true')
             command.add_argument('--sdk-root',type=Path,default=ROOT.parent/'00040701');command.add_argument('--robot-ip',default='6.6.7.190')
             command.add_argument('--host',default='6.6.7.100');command.add_argument('--user',default='nvidia');command.add_argument('--port',type=int,default=8768)

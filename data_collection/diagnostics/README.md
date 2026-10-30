@@ -97,3 +97,22 @@ SDK停稳后在Orin设置到达时间屏障，仅接收屏障之后且新鲜度�
 ```
 
 分析同时报告`visual_vs_original_fk`和`visual_vs_calibrated_fk`，避免把改变FK参考后的低误差误写成原始FK精度。验收分别给两种参考的P95、最大误差、超过1mm比例和全部点<1mm标志。仅实采、完成完整计划且最大误差<1mm时，相应固定视角一致性标志才可能通过；即使通过也只覆盖本次局部采样，不代表任意头姿或绝对物理精度。模型仍为诊断用途，采集不自动升级其审批状态。
+
+## 2026-10-30亮度诊断会话
+
+用户要求把预览Gamma1.6用于检测和保存的测量图。新计划为plan_gamma16.json（image_gamma=1.6），新会话datasets/diagnostics/fixed_gamma16_20261030_01/。相机曝光5ms、模拟/数字增益1不变；软件映射round(255*(pixel/255)**(1/1.6))作用于校正图。
+
+left/right_rectified.png为实际增强后检测输入，left/right_rectified_unenhanced.png保留增强前校正图，left/right_input.png保留相机ISP未校正输入（不是BayerRAW）。每对图像保存6张PNG；metadata.image_processing及会话计划记录增强方案，已有数据不覆盖、不混入。实际用增强图作亚像素边缘及椭圆拟合，不能将此变化描述为只改变显示。
+
+首次12对静止图对照，原始及增强均12/12通过；左中心变化约0.13–0.18px，三维球心差0.08–0.62mm。只说明算法对亮度敏感，不证明哪组更接近真值。对照存于reports/brightness_diagnosis_20261030/stationary_comparison.json。当前冻结模型来自未增强数据，此会话正是检查成像变化对其一致性的影响，不在线重拟合。
+
+Collector将上一合格球心用于局部候选追踪，拒绝相邻静止反馈样本间超过10mm的球心跳变；持续拒绝仍会超时停止，50mm整体范围及机械限位不放宽。新会话计数与之前失败会话分开。
+
+预览使用以下命令读取已保存的实际检测图，不竞争相机服务的take_latest帧；伺服未保存图像时可能暂不更新，不应误认为实时视频流：
+
+```bash
+.venv/bin/python -m data_collection.diagnostic_saved_preview \
+ --session datasets/diagnostics/fixed_gamma16_20261030_01 --saved-images
+```
+
+Gamma方案下213窗口图像可能占约80GB，需监控实际磁盘使用。单独预览相机模式会消费帧，采集期间应使用上述saved-images模式。B键仅影响显示，不改变已保存或检测图像；初始显示不重复叠加Gamma。

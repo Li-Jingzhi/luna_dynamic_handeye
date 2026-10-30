@@ -14,7 +14,7 @@ class Robot:
         from gq_calibration.capture import checked,read_limits,wait_head
         self.w=w;self.plan=plan;self.directory=directory;self.ctx=w.connected(sdk_root,ip)
         self.robot,self.sdk=self.ctx.__enter__();self.arm=self.sdk.FXObjType.OBJ_ARM1
-        self.position=False
+        self.position=False;self.last_settled=None
         try:
             verify_live_mdh(self.robot,1);self.identity=robot_identity(self.robot)
             initial=read_rt(self.robot);self.body=np.array(initial['body']['fb_pos']);self.left=np.array(initial['arms'][0]['fb']['fb_pos'])
@@ -58,7 +58,8 @@ class Robot:
         from gq_calibration.capture import checked
         from interactive_ball_calibration.capture import wait_arm
         q=np.array(self.sample()['q7_deg']);target=np.array(target,float);guard_q(target,self.origin,self.limits,self.plan)
-        if np.max(abs(target-q))>self.plan['max_joint_step_deg']+1e-9:raise ValueError('Joint step guard exceeded')
+        if np.max(abs(target-q))>self.plan['max_joint_step_deg']+1e-9:
+            raise ValueError(f"Joint step guard exceeded: {np.max(abs(target-q)):.6f}deg > {self.plan['max_joint_step_deg']}deg")
         rt=self.w.read_rt(self.robot);self.model_check(rt,target,self.plan['head_deg'])
         if not self.position:
             checked(self.robot.switch_to_position_mode(self.arm,2000,5,5),'Right arm Position');self.position=True
@@ -67,12 +68,17 @@ class Robot:
         deadline=time.monotonic()+5
         while time.monotonic()<deadline:
             fb=self.sample()
-            if np.max(abs(np.array(fb['q7_deg'])-target))<=self.plan['joint_target_tolerance_deg']:return
+            if np.max(abs(np.array(fb['q7_deg'])-target))<=self.plan['joint_target_tolerance_deg']:
+                self.last_settled=(time.monotonic(),np.array(fb['q7_deg']));return
             time.sleep(.05)
         raise RuntimeError('Joint return did not reach precise feedback tolerance')
 
     def settle(self):
-        start=time.monotonic();anchor=np.array(self.sample()['q7_deg'])
+        sample=self.sample();start=time.monotonic();anchor=np.array(sample['q7_deg'])
+        # move() already required0.7s stability; reuse only fresh, unchanged low-velocity feedback.
+        if (self.last_settled is not None and start-self.last_settled[0]<2
+                and np.max(abs(anchor-self.last_settled[1]))<=self.plan['max_window_joint_span_deg']
+                and np.max(abs(np.array(sample['velocity_deg_s'])))<=.5):return
         while time.monotonic()-start<self.plan['settle_s']:
             sample=self.sample()
             if np.max(abs(np.array(sample['q7_deg'])-anchor))>self.plan['max_window_joint_span_deg']:

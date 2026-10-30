@@ -1,0 +1,273 @@
+{
+  "schema": "luna_auto_diagnostics_v1",
+  "head_deg": [
+    0,
+    -25
+  ],
+  "samples_per_window": 50,
+  "control_samples": 3,
+  "window_timeout_s": 90.0,
+  "head_tolerance_deg": 0.02,
+  "max_joint_step_deg": 0.3,
+  "max_total_joint_excursion_deg": 12.0,
+  "joint_limit_margin_deg": 2.0,
+  "max_camera_excursion_m": 0.05,
+  "servo_tolerance_m": 0.0003,
+  "servo_max_iterations": 80,
+  "joint_target_tolerance_deg": 0.01,
+  "approach_deg": 1.5,
+  "settle_s": 0.7,
+  "max_window_joint_span_deg": 0.02,
+  "hold_tolerance_m": 0.0006,
+  "optical_offsets_m": [
+    [
+      -0.015,
+      0.01,
+      0.02
+    ],
+    [
+      0.015,
+      0.01,
+      0.02
+    ]
+  ],
+  "hold_offsets_m": [
+    [
+      0,
+      0,
+      0
+    ],
+    [
+      0.015,
+      0,
+      0
+    ],
+    [
+      -0.015,
+      0.01,
+      0
+    ]
+  ],
+  "posture_axes_0based": [
+    2,
+    3,
+    5,
+    6
+  ],
+  "posture_delta_deg": 4.0,
+  "hold_posture_deltas_deg": [
+    2.0,
+    4.0
+  ],
+  "return_repeats": 5,
+  "acceptance_offsets_m": [
+    [
+      -0.012,
+      -0.006,
+      -0.015
+    ],
+    [
+      0.008,
+      -0.006,
+      -0.015
+    ],
+    [
+      -0.012,
+      0.012,
+      -0.015
+    ],
+    [
+      0.008,
+      0.012,
+      -0.015
+    ],
+    [
+      -0.02,
+      0,
+      -0.015
+    ],
+    [
+      0.02,
+      0,
+      -0.015
+    ],
+    [
+      0,
+      -0.015,
+      -0.015
+    ],
+    [
+      0,
+      0.015,
+      -0.015
+    ],
+    [
+      -0.008,
+      0.002,
+      -0.015
+    ],
+    [
+      0.015,
+      0.005,
+      -0.015
+    ],
+    [
+      -0.012,
+      -0.006,
+      0.005
+    ],
+    [
+      0.008,
+      -0.006,
+      0.005
+    ],
+    [
+      -0.012,
+      0.012,
+      0.005
+    ],
+    [
+      0.008,
+      0.012,
+      0.005
+    ],
+    [
+      -0.02,
+      0,
+      0.005
+    ],
+    [
+      0.02,
+      0,
+      0.005
+    ],
+    [
+      0,
+      -0.015,
+      0.005
+    ],
+    [
+      0,
+      0.015,
+      0.005
+    ],
+    [
+      -0.008,
+      0.002,
+      0.005
+    ],
+    [
+      0.015,
+      0.005,
+      0.005
+    ],
+    [
+      -0.012,
+      -0.006,
+      0.025
+    ],
+    [
+      0.008,
+      -0.006,
+      0.025
+    ],
+    [
+      -0.012,
+      0.012,
+      0.025
+    ],
+    [
+      0.008,
+      0.012,
+      0.025
+    ],
+    [
+      -0.02,
+      0,
+      0.025
+    ],
+    [
+      0.02,
+      0,
+      0.025
+    ],
+    [
+      0,
+      -0.015,
+      0.025
+    ],
+    [
+      0,
+      0.015,
+      0.025
+    ],
+    [
+      -0.008,
+      0.002,
+      0.025
+    ],
+    [
+      0.015,
+      0.005,
+      0.025
+    ]
+  ],
+  "acceptance_min_joint_novelty_deg": 1.0,
+  "ball_diameter_m": 0.04,
+  "ball_diameter_independently_measured": false,
+  "note": "Only an existing yellow ball. Optical audit is consistency, not known-distance ground truth. Visual hold is not a mechanical pivot fixture. Remaining optical13/14 use exact prior origin; first13 valid windows remain in fixed_gamma16_20261030_01. Window quality failures recorded as rejected, never accepted. User explicitly skips remaining hold experiment; continue return120,acceptance30 and then static/head-only supplementary.",
+  "image_gamma": 1.6,
+  "continue_measurement_rejects": true,
+  "skip_task_ids": [
+    "optical_00",
+    "optical_01",
+    "hold_00_2_-1_a2",
+    "hold_00_2_+1_a2",
+    "hold_00_3_-1_a2",
+    "hold_00_3_+1_a2",
+    "hold_00_5_-1_a2",
+    "hold_00_5_+1_a2",
+    "hold_00_6_-1_a2",
+    "hold_00_6_+1_a2",
+    "hold_00_2_-1_a4",
+    "hold_00_2_+1_a4",
+    "hold_00_3_-1_a4",
+    "hold_00_3_+1_a4",
+    "hold_00_5_-1_a4",
+    "hold_00_5_+1_a4",
+    "hold_00_6_-1_a4",
+    "hold_00_6_+1_a4",
+    "hold_01_2_-1_a2",
+    "hold_01_2_+1_a2",
+    "hold_01_3_-1_a2",
+    "hold_01_3_+1_a2",
+    "hold_01_5_-1_a2",
+    "hold_01_5_+1_a2",
+    "hold_01_6_-1_a2",
+    "hold_01_6_+1_a2",
+    "hold_01_2_-1_a4",
+    "hold_01_2_+1_a4",
+    "hold_01_3_-1_a4",
+    "hold_01_3_+1_a4",
+    "hold_01_5_-1_a4",
+    "hold_01_5_+1_a4",
+    "hold_01_6_-1_a4",
+    "hold_01_6_+1_a4",
+    "hold_02_2_-1_a2",
+    "hold_02_2_+1_a2",
+    "hold_02_3_-1_a2",
+    "hold_02_3_+1_a2",
+    "hold_02_5_-1_a2",
+    "hold_02_5_+1_a2",
+    "hold_02_6_-1_a2",
+    "hold_02_6_+1_a2",
+    "hold_02_2_-1_a4",
+    "hold_02_2_+1_a4",
+    "hold_02_3_-1_a4",
+    "hold_02_3_+1_a4",
+    "hold_02_5_-1_a4",
+    "hold_02_5_+1_a4",
+    "hold_02_6_-1_a4",
+    "hold_02_6_+1_a4"
+  ]
+}

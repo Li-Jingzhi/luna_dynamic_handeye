@@ -1,0 +1,1705 @@
+{
+  "checked_at": "2026-10-30T10:27:14.197177+00:00",
+  "local_metadata_files": 338,
+  "local_metadata_bytes": 15168839,
+  "files": [
+    {
+      "path": "datasets/diagnostics/FAST_TRANSPORT_20261030.md",
+      "bytes": 2437,
+      "sha256": "3ec2d2bb5d01b625e948544beef2059355710701b472375b386a1f21e4fe6deb"
+    },
+    {
+      "path": "datasets/diagnostics/REMAINING_20261030.md",
+      "bytes": 2216,
+      "sha256": "fd2525e5fe477a3414ff94b8274d954fd9c20d49a63dd2e647eaa8720dad06e7"
+    },
+    {
+      "path": "datasets/diagnostics/RETURN_ONLY_20261030.md",
+      "bytes": 1379,
+      "sha256": "583a701f897cb667f9b96a4ea9f90c6f0e2cdeb507fa4f001e45c5052cb09f81"
+    },
+    {
+      "path": "datasets/diagnostics/SUPPLEMENTARY_20261030.md",
+      "bytes": 2044,
+      "sha256": "c422aca0c2f3e93448248ae63bbc0bb5e917471ab298b0fae1968eed14c61766"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/camera/luna_raw_fisheye_stereo.json",
+      "bytes": 15367,
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/camera/luna_rectified_stereo.json",
+      "bytes": 1276,
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/camera/luna_v2_fixed_controls.json",
+      "bytes": 504,
+      "sha256": "ad4df3561adee1c08b544b61966d6f5c25eb3fd1e8005621f16e90109f444613"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/camera/yellow_measurement_source.json",
+      "bytes": 1889,
+      "sha256": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/robot/ball_offset.json",
+      "bytes": 674,
+      "sha256": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/robot/head_mount_v2.json",
+      "bytes": 1164,
+      "sha256": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/robot/luna_new.ini",
+      "bytes": 18703,
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/configs/robot/torso_mounts.json",
+      "bytes": 6360,
+      "sha256": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "bytes": 16500,
+      "sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/assets/sources.json",
+      "bytes": 47887,
+      "sha256": "b9dd455991bd65273382f169881359dc4c85dc0dfe911f681dcdf5f636dab87d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/events.jsonl",
+      "bytes": 34575,
+      "sha256": "5b5ae30e4800456b593b64ad062509ef1d1fc487796016f2f6153e8a07e99d11"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/frozen_model.json",
+      "bytes": 151648,
+      "sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/manifest.json",
+      "bytes": 9171,
+      "sha256": "c2f29c2fa8cdf3688738bf0393a566a80303e2f36746bb75543b10ea5476904c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/0c59664222064805815ca56e3db1b4ab.json",
+      "bytes": 7276,
+      "sha256": "7c7f89694b942585530410c8460f81dec985e645efdb202321dac9c076b33e0f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/1f9f5feff4dc445291bc06ac224d78db.json",
+      "bytes": 7280,
+      "sha256": "0d259932eda6c382d71445a8e320109b447ef830434d2ce1bc9a5e46509b0e2c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/2a9dc934197e48dfb5c52a8621303c99.json",
+      "bytes": 7261,
+      "sha256": "9b9085e0a4e8b1d8acc9a6b88e2c887073c8a7cb37e10120ac06a102f53b2cee"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/4265bd7985584b08a4ce9ca1bc3f4968.json",
+      "bytes": 7280,
+      "sha256": "8a3f1e3d84b2996fc50ef0dbfe8a2e533bb3b9f82ed939a0b5bbef4512fc747d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/437d656691494575aa54298c0b868c09.json",
+      "bytes": 7282,
+      "sha256": "07ee15c1d7578bc32edccf837a5c63d7db7e502e441f0d3e9fff87c7ca1f027f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/6f2a15627cde42d79f24ea6514507a4f.json",
+      "bytes": 7279,
+      "sha256": "2067467db5fc0bb0670e045b625fa68647c9244b20f237cc3e58a7ff57aeb99b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/88190347246a4121902ea26111c02e8e.json",
+      "bytes": 7250,
+      "sha256": "890b69655f8fbb63e3598313eac0008980f9f828cbc0a9b28f05d007add4ce52"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/a19a84ebdede42bab09f902fa86f9005.json",
+      "bytes": 7278,
+      "sha256": "e0656ef23057715223b1ff651dbb2e4927c414969722f087c5fe15f563e8a364"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/d99516f6b95f4e2e9d9714fb60d980c5.json",
+      "bytes": 7281,
+      "sha256": "e0a9d34427316b6b8bbaf8456273c5b0deec2062569cd337944a73d4ad5f9254"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/de85c1aa3de140e68634a2fa6e27fd8b.json",
+      "bytes": 7280,
+      "sha256": "7827b01b92c337581ca3118266bae6f9e50add431368ba6839e75454193e5604"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/f0f0f626866c4465b7ab2b1f7383099e.json",
+      "bytes": 7287,
+      "sha256": "4aa3861d701fb0ba15aad82a38b42c37e7a3be1fd2e4806fac571ca518b75688"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/model_checks/f943e5d5b66e4f6f84be836c10fc6d3b.json",
+      "bytes": 7276,
+      "sha256": "93ac6ca1982dc9f41f930e63b527a209dc8157ea17d24ca3d4c4807b3d25557e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/optical/status.json",
+      "bytes": 77,
+      "sha256": "d8877d72e1f54e99aa50f21c0f72f480c7e13b8b8aa955c8a3c738cc3c7560f9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_01/suite.json",
+      "bytes": 4123,
+      "sha256": "c35c2751cca662ad81543bcb0b650d449de9fa44ae7305d3678e55561d26d263"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/camera/luna_raw_fisheye_stereo.json",
+      "bytes": 15367,
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/camera/luna_rectified_stereo.json",
+      "bytes": 1276,
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/camera/luna_v2_fixed_controls.json",
+      "bytes": 504,
+      "sha256": "ad4df3561adee1c08b544b61966d6f5c25eb3fd1e8005621f16e90109f444613"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/camera/yellow_measurement_source.json",
+      "bytes": 1889,
+      "sha256": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/robot/ball_offset.json",
+      "bytes": 674,
+      "sha256": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/robot/head_mount_v2.json",
+      "bytes": 1164,
+      "sha256": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/robot/luna_new.ini",
+      "bytes": 18703,
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/configs/robot/torso_mounts.json",
+      "bytes": 6360,
+      "sha256": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "bytes": 16500,
+      "sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/assets/sources.json",
+      "bytes": 47887,
+      "sha256": "b9dd455991bd65273382f169881359dc4c85dc0dfe911f681dcdf5f636dab87d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/events.jsonl",
+      "bytes": 161,
+      "sha256": "1001417db486c03356d77a04babbb5d9df36c073cbcd90c11c1b0fa8f00097c6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/frozen_model.json",
+      "bytes": 151648,
+      "sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/manifest.json",
+      "bytes": 10141,
+      "sha256": "dfef1c9bf4b80718b0cf4ed44fb752069bd58ae5ef0eff99006c9ad7a595288c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/source_identities.jsonl",
+      "bytes": 654,
+      "sha256": "fc42186aa438f865834af5818b084eded482b09808f87c4d1234dca9a38116ed"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/optical/status.json",
+      "bytes": 77,
+      "sha256": "d8877d72e1f54e99aa50f21c0f72f480c7e13b8b8aa955c8a3c738cc3c7560f9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_02/suite.json",
+      "bytes": 4123,
+      "sha256": "c35c2751cca662ad81543bcb0b650d449de9fa44ae7305d3678e55561d26d263"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/OPERATOR_NOTE.md",
+      "bytes": 1108,
+      "sha256": "e68172593e8cad49a4b0643dac640633f6eddb76a4c3cd48289f2fad78b49b37"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/camera/luna_raw_fisheye_stereo.json",
+      "bytes": 15367,
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/camera/luna_rectified_stereo.json",
+      "bytes": 1276,
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/camera/luna_v2_fixed_controls.json",
+      "bytes": 504,
+      "sha256": "ad4df3561adee1c08b544b61966d6f5c25eb3fd1e8005621f16e90109f444613"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/camera/yellow_measurement_source.json",
+      "bytes": 1889,
+      "sha256": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/robot/ball_offset.json",
+      "bytes": 674,
+      "sha256": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/robot/head_mount_v2.json",
+      "bytes": 1164,
+      "sha256": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/robot/luna_new.ini",
+      "bytes": 18703,
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/configs/robot/torso_mounts.json",
+      "bytes": 6360,
+      "sha256": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "bytes": 16500,
+      "sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/assets/sources.json",
+      "bytes": 47887,
+      "sha256": "b9dd455991bd65273382f169881359dc4c85dc0dfe911f681dcdf5f636dab87d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/camera_evidence.jsonl",
+      "bytes": 550326,
+      "sha256": "6361ca517cd7f734dc03a91f7879b4e45eb909faf8ef7336fc385766dcf6342f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/events.jsonl",
+      "bytes": 17057,
+      "sha256": "f33f58ea89683da215dc446392e43b7b77f71608d9ede62f6c6d7c28838afb06"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/frames.jsonl",
+      "bytes": 715823,
+      "sha256": "484186ed329d9514dbdb57ec40225bfa6411370bd3b4a0e279ddcc8da02e2118"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/frozen_model.json",
+      "bytes": 151648,
+      "sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/manifest.json",
+      "bytes": 10141,
+      "sha256": "2b4ee3678ebc3a6004a347cdce9eed38869c720df3c8c2d3558a621a793296a3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/05a9bc8bcfa2483081f2a27e711f46da.json",
+      "bytes": 7271,
+      "sha256": "6ac47be142da54f355836c7aa4a5ba0f37c0d66748cd3c73e0758458570b4e13"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/0727ba461b3e452e8db578cc3f26d3be.json",
+      "bytes": 7264,
+      "sha256": "eac166d6b2411640548f27277d700ff36c49a620ab40d1617c49d1d26d331017"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/08c8270c32474503ac8bd21ef4c5088f.json",
+      "bytes": 7261,
+      "sha256": "47d31e027e61d8024a042b9f443bb8d9aa51219d9fcee4d26396216f06e3c4d8"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/0a0b77be7f184f6d873435996f7ceef1.json",
+      "bytes": 7271,
+      "sha256": "bcd124137cc081e8d3105123421915814c728a02c33634b00249461e48f9e636"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/1255ee863f524dab9586c9148f81dbb7.json",
+      "bytes": 7252,
+      "sha256": "2340abeedd1bbda22411b0c14b5136df9384f91ed9d16b314883c5c33300781d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/13b284db54b640d79860d6197a152898.json",
+      "bytes": 7269,
+      "sha256": "467dbc955208c0ce9c2009b9aceecbdc13d0458876bc00158df145959713040f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/24d611a0b80a4efe90cf6409a34727e0.json",
+      "bytes": 7267,
+      "sha256": "500e020fed60d05caa3270efc4dc7019684084d02eefe5c828d0f3c58b0eb5c1"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/2d8f873c891f46769b12c83ba60f53d4.json",
+      "bytes": 7262,
+      "sha256": "250d43c2cbc40dd2501fa71e43ed98aaf1cdf58a8278a162279d960490110f84"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/345d4ea1708c4b8e95935ee3609e95e4.json",
+      "bytes": 7259,
+      "sha256": "6c8d2a5f91f4074e1b52390ac28ed9d663dc193690ddb2d4afdfcdbdf9629223"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/36d959ed72c34357a14da3a933528740.json",
+      "bytes": 7272,
+      "sha256": "f8ec898e98a5f1e94ef8aa1b1ff7c47c252b6cbc7f4ec46c810a6cd1d0b6d406"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/3750b35705044ce898a2de3f881bfc6f.json",
+      "bytes": 7266,
+      "sha256": "cd6c0701e812421a340bb4ff868d0832b67231ffd7b877c044852269d99cbed4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/3d62b5c655d44093b3187217cf5e9dc0.json",
+      "bytes": 7267,
+      "sha256": "45c386fc9c60be098ca60e5234328e7501287c657da491ec726ef0094f81236c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/4294a2adf9444f78a2ac022f084e37a3.json",
+      "bytes": 7249,
+      "sha256": "22d99535c559176283344aa34e4e7ea50a7d67173805c9a65b37848f15136e17"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/43924cafef18417b91f394c867624aac.json",
+      "bytes": 7259,
+      "sha256": "3209cd7f974b0367ac7b5cfa5fecb60579c41b397c0ad87d420ff77cfbdc418c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/49cdf8644c044d2e9f96e77423220703.json",
+      "bytes": 7264,
+      "sha256": "3bbf34d0d4cfcb4978a840b620e7c00a221f999fec36135e9ed34e9f77b09e0b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/4a9e3dd345814556a8ed72d06c3e7e66.json",
+      "bytes": 7274,
+      "sha256": "5d62089dda2cf04abe77f10b541e05c95138ceea29436e1d391251b805cc8528"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/5a0dc5ad05c344ba901cfa5925f8a07d.json",
+      "bytes": 7266,
+      "sha256": "b89e2897187ac53fc8fee610b6d36631bba5ad53fd65f3793cf386513a02cb4a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/6662711205314df29c7c9264eb7a1d05.json",
+      "bytes": 7266,
+      "sha256": "b3b4ed8b2f1802baae6db81c33d9f70fa433151213feb4170ccea1c3d45ccdf2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/6b55fec8d3d04b7e9be4d417d77ebd54.json",
+      "bytes": 7269,
+      "sha256": "dd9e4c7ef59303d4434f042afb4174c4e6cf98dd933183ac3efccb5c64a91f2e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/6b864c89ea714b2a933289f86426e088.json",
+      "bytes": 7257,
+      "sha256": "160cf4d50e49ee97f2425736750c8f90d725250a03c95e77fafb570ba9f7f108"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/6be2046978054e528e650073f92c5c2a.json",
+      "bytes": 7265,
+      "sha256": "90ebf21aa6763e0a5c07da06414d69620e888d160da8518016c40c97200305a3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/70cf38ba962c4d65b9efd07b2b47c23e.json",
+      "bytes": 7262,
+      "sha256": "520bcddebdd66dbd842752aa5bc73f9ef867afba5fe0da8f0f60dd9c54c79044"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/7838ffa1cb0f4cf7a7bfa493cc7a6ca5.json",
+      "bytes": 7262,
+      "sha256": "8bcfbefd6aaca28133a173b35b754172904151f987a007dc42f77bbf0e1483e6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/7f244c64dc924024a8d018df6581451a.json",
+      "bytes": 7260,
+      "sha256": "0571e4ec2a47400b3b395b1e3dfdfef24d5fbd47762095d86f38b154db0ceb44"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/839d7a4caba84738b6b0f8167de77a8f.json",
+      "bytes": 7259,
+      "sha256": "39c82a2a30c3c25a21485d2df631a0ab7bad9f5009926f84ccdb328aa0ff7920"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/8808c89f78c94460b5b6278fa448e059.json",
+      "bytes": 7257,
+      "sha256": "915e60e79c51c3aae94e06282c076e1ffe0fd1b8303e4adce0fe11cd3e8a78b2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/88fd5c45aab341d6a521c552c3ecc0d5.json",
+      "bytes": 7275,
+      "sha256": "ab971d001d5faf1f763dde99f65926e278e3ff0094b2221832f4927df5aa0b8d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/8a81ecf89b9844509839331e0440459a.json",
+      "bytes": 7269,
+      "sha256": "87052c72583f3f307c729136d51c0d687aa714a04ea2da580f2579423856f529"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/94326b2a0a6b4cf0b46cfe5e93cdbf6e.json",
+      "bytes": 7254,
+      "sha256": "ae4c2554bc4697d6310094b2bd5765304840a0553f5e7023457ffcb554e61c92"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/957fda8481ec4e3f8e98bd043e56f340.json",
+      "bytes": 7270,
+      "sha256": "523f70e2a17b41aa3086197a49cb355249bd373b0732c30bc8f80f03c6bd4c2e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/9841b299552149b18e4d67198fced5e0.json",
+      "bytes": 7263,
+      "sha256": "3ba0cd1e0f25635088dbe81069fd528a6ff55971b1804c78f7d6baac1f56ba52"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/995ad17b009a4e528bec25299e3bd9bf.json",
+      "bytes": 7266,
+      "sha256": "c96d10be14a4448798d95eae28bfba418b68921a017add35406e191a389a5961"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/9979d2a05c6d45219c8904c37945ab85.json",
+      "bytes": 7276,
+      "sha256": "28c47833c538218c810a7fef9c37d1f799133872e65d29fd220f73ddb81870c7"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/a48b7c940ce74e1a918c515080a453ec.json",
+      "bytes": 7252,
+      "sha256": "fb8bb32cc33a5f5189fd487c025043afcd42173232712e81e9c949a6b78af64e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/a996e2c61e1b4418abca841808256a36.json",
+      "bytes": 7265,
+      "sha256": "fdd6ccf0b5b7610d26b66adb0f011f04b17201ea5c945328eb5894202f695dfb"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/b6d74eb5dc4c489daa595d91ec3547a4.json",
+      "bytes": 7265,
+      "sha256": "11be3fd5e2dd39fd8994ea4dda506349c2793dbeae14fdff134074f8cced313b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/bfee8c533b624b7b89593d14d4d3ae68.json",
+      "bytes": 7271,
+      "sha256": "ca595b7ed2e261112fa571694ea995a2a9087e90dc5fa91d5b1dce1eeebe8973"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/c0213c389f1848dc80e528d764487cba.json",
+      "bytes": 7254,
+      "sha256": "2b6966f1276f2312657597b7e3fd13027d7ecd66a48ed0afa57e7c078bc62b80"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/d037116ba9f247b0a95b27be696cb3f8.json",
+      "bytes": 7261,
+      "sha256": "2e7eaddeec2016f51ecc17bff008dcc028925a2f59a9f7475c8e84d5e837a0ab"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/d82b0987260c487d9c299ab58656fc27.json",
+      "bytes": 7259,
+      "sha256": "214f4c28637948feffae15775e7c0a8979977c3827bfc487d448dc5172705a37"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/d9f6fb837fe64e22ada833a9016c9f32.json",
+      "bytes": 7267,
+      "sha256": "377dc8d76b1614313a6c26e0e6344c1a688de2ddca38a00c60c795c7139c777e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/e7ad933ac0cc47e1acc51fc662202f03.json",
+      "bytes": 7257,
+      "sha256": "82be9be4bacc4ef0adef5fbb83277579b0fbd2a6f74278582d3a595fa428e8b0"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/eb89e87d7ac443ffa5f4b93be8f40594.json",
+      "bytes": 7256,
+      "sha256": "eb305e0bd80978b8eb7c2153b0612e83d997e6621f921b24564810ff68186bc9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/f20f91eca4264c79b2c71a79b46cd8e0.json",
+      "bytes": 7258,
+      "sha256": "7f1395303747d05e2d413b9a15885d4e1d50722a8f705505bb0c5ffa601a5b5c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/fa89e82e2aff49f0a46f24055ad5d1fa.json",
+      "bytes": 7261,
+      "sha256": "0d3000e22c7674eab782625a55b4020e6c57b98e01c355c12ab728b719e5bd8a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/fb24c3379a9146e084652653462d2183.json",
+      "bytes": 7265,
+      "sha256": "1e3bd1f73b76ceca0ee11491d141e72bb970a8c0836d7303fdd27f7a10bd6930"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/model_checks/ff879c8d4a5e4707ab803290d1100c51.json",
+      "bytes": 7268,
+      "sha256": "38db9f89cfbfed83dac70c5e9bea0b9c3249e5443c0f8232033e4e8c6f30e373"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/observations.jsonl",
+      "bytes": 689314,
+      "sha256": "821947123c25d602925a1bc3a9aaa6d220589ad69b8a92d8fef010277c39cb96"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/source_identities.jsonl",
+      "bytes": 55808,
+      "sha256": "2af429bab026f6d33668bc77f514b054ffd58b8ddb31ace60ea16669d31cc311"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/optical/status.json",
+      "bytes": 77,
+      "sha256": "21236b7968085f8bce630bbf4b0e3524ffaa0380342bc5df38c27bee2bc27931"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_20261030_03/suite.json",
+      "bytes": 4123,
+      "sha256": "c35c2751cca662ad81543bcb0b650d449de9fa44ae7305d3678e55561d26d263"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/camera/luna_raw_fisheye_stereo.json",
+      "bytes": 15367,
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/camera/luna_rectified_stereo.json",
+      "bytes": 1276,
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/camera/luna_v2_fixed_controls.json",
+      "bytes": 504,
+      "sha256": "ad4df3561adee1c08b544b61966d6f5c25eb3fd1e8005621f16e90109f444613"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/camera/yellow_measurement_source.json",
+      "bytes": 1889,
+      "sha256": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/robot/ball_offset.json",
+      "bytes": 674,
+      "sha256": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/robot/head_mount_v2.json",
+      "bytes": 1164,
+      "sha256": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/robot/luna_new.ini",
+      "bytes": 18703,
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/configs/robot/torso_mounts.json",
+      "bytes": 6360,
+      "sha256": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "bytes": 16500,
+      "sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/assets/sources.json",
+      "bytes": 47887,
+      "sha256": "b9dd455991bd65273382f169881359dc4c85dc0dfe911f681dcdf5f636dab87d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/camera_evidence.jsonl",
+      "bytes": 2662232,
+      "sha256": "c82720c89c92aa7793d20e9f4be3a3e4cbb8ee1cec209f2d12a46d4e3ff1120e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/events.jsonl",
+      "bytes": 1340,
+      "sha256": "dd5a5a57984ce04d4cab5fcacbf2fb6e0c09210e9127861a05959ee5e96b9644"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/frames.jsonl",
+      "bytes": 3895433,
+      "sha256": "dc70318b004dc2468261e9f8c4eb2b2ab130adfaf664f1c3b0947f963bc1edda"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/frozen_model.json",
+      "bytes": 151648,
+      "sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/manifest.json",
+      "bytes": 10280,
+      "sha256": "3aa180a820061d31ef8c51cab57014664e1e837ae37bc55c5e53d241f54050ea"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/05f42a595cb14bb7b7ecde2b190ba8c9.json",
+      "bytes": 7263,
+      "sha256": "0c4c5840f88603c7ffd74529f2e0aaea787070337f26ffc2998a265dd9243ba6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/0676e99a07bc4041a905bf5caf1a55a9.json",
+      "bytes": 7265,
+      "sha256": "e39a540fbaa0efcca74ecf5265f992eb9169f81b5bfb0f28365ed17105dc7818"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/074fdc18f7db4af0b3cc1e3a7410dc16.json",
+      "bytes": 7263,
+      "sha256": "fd43ef083d41a5463855a2c581ae8dc926e812a9368696a294eebde031c0dcea"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/092218deeffa4426ba3f5ecca01c7397.json",
+      "bytes": 7256,
+      "sha256": "c60e720e32f3a41d3970f392d0656410030638d15adf413e1692ba8fb109ec02"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/0a15e7da144f424c8023e904e7660f45.json",
+      "bytes": 7257,
+      "sha256": "ca946a23f6670f160f93a85e7f3cb39a12dd6519e26e5a0d2eac652505d45184"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/0ae701579e614a54b134a01ee6318fbf.json",
+      "bytes": 7260,
+      "sha256": "2e08ea433a35faa578756ee81bc55614a8207990a0cd021ea124f514d87b2ade"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/0bfe9c6e03b743c4b5880855e5efde61.json",
+      "bytes": 7268,
+      "sha256": "0f4eb66d77d67b07221624cb4a2bcd0ab28d7a80115c4042c838f2aff859554f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/0dfbc46441df43218f0e37b80a66de0c.json",
+      "bytes": 7255,
+      "sha256": "08f723d758196da60024cad386a4a664e2dbe000f16280cfdb4b1088e58e07ce"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/10099b9c6a5245f9901b27c3b48ea14a.json",
+      "bytes": 7268,
+      "sha256": "366cee757f02e2178cea12dfab2779c526a6b5793b5c63b0b79d056fff166743"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/109abd9b1b804c73a335a64531b42cb8.json",
+      "bytes": 7259,
+      "sha256": "02628cbd71470689c197f9855653f43a7d34990536e9d37ba9bb44ba59b5eca5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/11e3db8a1d7d4a01b1cf329d52f00e4d.json",
+      "bytes": 7251,
+      "sha256": "b5c3eeabd20e550ddf1620152a88d515596546936fb4df4ac2b9819b3c6f1085"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/125ac189adae4e4aa3c953b262cbf0e7.json",
+      "bytes": 7258,
+      "sha256": "03de11638836935ac30ee2771f5e69647c907b61f0bc65f1cc7ae93021df4c2b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/133259bf9c054d848cca426ced63e7bf.json",
+      "bytes": 7262,
+      "sha256": "b4a616461261b45ead00b42b08c2f8c9700d8fd606b66fbb7e419edf2cbf2acb"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/13b3e2fd67d84c1285e4facda0059872.json",
+      "bytes": 7271,
+      "sha256": "fe3993714ce7d12df42104f8f1df0c8dfa9718c0068ef67a7dc179bb318aeba6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/15ea5ab54f6848f0878a77e43a3ee13e.json",
+      "bytes": 7264,
+      "sha256": "e60a179956b41f8453ab626560c49900596d96c61cb1ec295cc0c59d5de2fda9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1697ab5a03474f52a3137f5d326627c2.json",
+      "bytes": 7266,
+      "sha256": "50dd997bf8804f4f36ae271fce81e9f64a6aff93dac0e09aa16d2ab7094fab8c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/169b7ab884f64158930fa1ec5daffcb3.json",
+      "bytes": 7262,
+      "sha256": "a37caf88f3f07c69cd056fb6a55daed14d9f674b7586c85a312a0fb309730d62"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/171076a19ef24357ba789ccf7e801add.json",
+      "bytes": 7268,
+      "sha256": "323a118ea807214a86eca964e1fb095198d6e443343f1493c5689ea330f1e830"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1815c1be762940e48603855b9ec17ed1.json",
+      "bytes": 7263,
+      "sha256": "ae5a0deaefc46d3f31161e73850af3c8aa3e8ec4076f8f0677629a7572eeb11e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/18ee495ffba7496bb7b57ac44ba011ec.json",
+      "bytes": 7273,
+      "sha256": "5a6c61a308c0e58b6c34bff35b12a86568977ab2c68095f29420dac25f568aa5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/19b923069baf4faa810414714ede5c8c.json",
+      "bytes": 7260,
+      "sha256": "3ba4b482876351253132f90e6055cec7ee52345940148f1e43c1c6047b0be983"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1a41c1a8bd56420b8ad85ad07210c11c.json",
+      "bytes": 7250,
+      "sha256": "ee4868947e394cf7c4e43d34135402f44a9e741ea6556da5960b4c5ea32d7d90"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1a75cce1f8cd465285ae4688f87fa840.json",
+      "bytes": 7258,
+      "sha256": "865b3f375f83995bde83a2982604c081b1f6619451a418ea5a01092dd25e130b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1a962f81bc2f496cad55b316467825ff.json",
+      "bytes": 7272,
+      "sha256": "ec53566e1a5a3d289e650b01f6e95a99abdadb01bd0dc8d461b945b72cdd8fed"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1b48a2cebb1946438ea5f62f0876fee4.json",
+      "bytes": 7264,
+      "sha256": "9afb564fe08376538289ff6e7ec4b3468fba1aa6f3373288f8d9693ae421b08c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1c0e3b9173a34c32ab8fc3308bda95fe.json",
+      "bytes": 7265,
+      "sha256": "0de3a5632b36a5ae44acf00ce2c9e66151cf5df2add6dd4d726e67350cffdf0a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/1d9cff8fe5a64e2fb4c170a984e42562.json",
+      "bytes": 7271,
+      "sha256": "fd87c994f7752524612c28241643ec6453ec86672a73e8a0fca8f3a8eec9aae6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/20913cd0fb5048a1bbbaab80edff88c7.json",
+      "bytes": 7264,
+      "sha256": "84f617420c716eace9300fb55c303c105f0bc7dd477ec488bd14138ad2b13257"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/219fd858a5c44517a5a7188c3f9f8ea3.json",
+      "bytes": 7267,
+      "sha256": "1d0be3c40ea53ea48053ac6a09475ff992642b496216d2a07e0ba982df161fbb"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/21ec29ca738342c7a2bb28d40886bde5.json",
+      "bytes": 7257,
+      "sha256": "f695fee7b675b0bede086ee4829744e44bfb461a50db91ad5f54fd29b049d28b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/23f8b2cd98394184a9151cb7c55f450c.json",
+      "bytes": 7256,
+      "sha256": "52b6d0e4a7743eaa69d2dcc347c2a5ecf693c4e19d7f2387cb6154e73ab86f4d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/2480289e2f8443a6a0ce2c9e96737369.json",
+      "bytes": 7260,
+      "sha256": "08fad4f5339a5f312b249a09480150b448a3c9f0618f631671db85d94e219a19"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/264af878536049d380327bff912a9a76.json",
+      "bytes": 7267,
+      "sha256": "f6bbd408f8fadaf1d36c39f09ab49640182af365df57eccc261b468af90c6b02"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/271edfbdbea04fb1a0d10ede3d18b248.json",
+      "bytes": 7267,
+      "sha256": "cec299c6087e1b53d1cd1f828bcc93d2b68fae59c4f00f9c150b6f22a137c5fd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/29a90ccd03f74875967cb2e374a85649.json",
+      "bytes": 7257,
+      "sha256": "ffb81ff1bb996dc437f3c54d2037c3e3cd391fc4d2af4360fe037e5a6a8c5b6b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/2b94f2992ca2431d8de079e70af0e142.json",
+      "bytes": 7266,
+      "sha256": "8ad7bf90655f58cce338bdabeaf8f2382d80496a5f58e0bcf974904b6187b86e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/2cc4e6715d8b4391abb8213ac40eefc8.json",
+      "bytes": 7265,
+      "sha256": "bef407d16b2629ba919c82b2750a35d78d2934142f93a83e1f46858a6ed00ebe"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/2e5cf3c6a208461398126910194bf3ef.json",
+      "bytes": 7258,
+      "sha256": "6105e2e3672dc4106105d97a82048287dd79f43f734fa46e4eba045dc0d94b8d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3233f31cfd4443128cfb1f0afbf2b23a.json",
+      "bytes": 7261,
+      "sha256": "5fa85cbd42923460672f4816eec715e248e3df4b8992dc6356f8f686cdffb3a8"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/32c9e91082864b298e37e7b1fa913cd7.json",
+      "bytes": 7258,
+      "sha256": "86165aee72b42e7219c35e5ba60b8d818539c975cf6529c7b13c27e9380f73e6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/32fd549ff2e54476a3b21ac0fc287c73.json",
+      "bytes": 7264,
+      "sha256": "07d4f8d7c41e8063a7055e8f191ec1b2b81a21f10bdaa3021e9c5d4917f0be8f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3504fcc75f2e4ea88447be5467ebe690.json",
+      "bytes": 7263,
+      "sha256": "ee415655d519db53c42186dca9d9dfe8ea2387aa7c5a7f16ef1db7fd1a66d993"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3577479b957f4081906cdc1e5dab8c19.json",
+      "bytes": 7270,
+      "sha256": "ea00a9f803440dc39180580cc6daf948ab249540afcf399ca2e21e290dd6b331"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/37dde73b326e49fc9f267a618f9e89e0.json",
+      "bytes": 7259,
+      "sha256": "8d790089ecfe21f6aabce193c8a3a5da30d3d2723544e1c68157e19803933025"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/386e830342e64c488c9bb3bafd3fe447.json",
+      "bytes": 7250,
+      "sha256": "b6d7052b6b9fa12837a65ebab0e086a9b9053266c272eb5856be2aa7fd86f09e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3890df4457974354afbb1c215d52337f.json",
+      "bytes": 7272,
+      "sha256": "b1b8f24541209471aa5ac5b6a52fe4589fad26213fdc1729b143c3d908f53928"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/39a50931471d48febe85cf11ee83f7cd.json",
+      "bytes": 7271,
+      "sha256": "84e1158d931b2afdb38571197d4713cc498f0109895a675453aaa96a948a0de3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/39e952f6e6f14c4da65cbef3af62da80.json",
+      "bytes": 7264,
+      "sha256": "4ed0a7dfa7c61a0407e328e5a225b813833a9a5c659ae9d6024ec31928d2acdd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/39edce8a21634948a4334b66eb5c9180.json",
+      "bytes": 7263,
+      "sha256": "754dd4b732d91bfd4077e8536557afbd3a3d4cc5ab9e32f64030b64236af0929"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3b3206161cd04dcaad357d89e2137996.json",
+      "bytes": 7265,
+      "sha256": "07433201371863891062bdf5011fb111a9033abc9563b82a6cc0b9bb6d0426b3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3bcb653696324d4cb2a9f9759443f40c.json",
+      "bytes": 7253,
+      "sha256": "c9474b90d8b7dc9f4ea8e39b632036a3781bd52f315539d9f2f3120a80696606"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3bd4e7b46e9e48238443064507c0278b.json",
+      "bytes": 7255,
+      "sha256": "4ac7db76bda3e28cca4b14bb7d138b8314393934d4998940f970d7bdb83b5102"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3c9d0f40f916465e9c6fb13eb11b322d.json",
+      "bytes": 7256,
+      "sha256": "73e025ae12ba23482e2a017dcb0ce1d35c9f1dc9d397d302ffab9ad8aba32dd1"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3d9bf3b1dfed416f8a52a361c0802cba.json",
+      "bytes": 7267,
+      "sha256": "22492837fffa9f16b647b32e7c22cd608dbcfaf9c697613246682ccda923044a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/3f014f6ff0c8475c81d8da4ba80537ac.json",
+      "bytes": 7266,
+      "sha256": "2ed301caf892f7872ae62a06a0f1961dbcd3626ef71cb0bc468fafc5c3443269"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/40e6351803a6453983a5a0cb70793eaf.json",
+      "bytes": 7270,
+      "sha256": "54fceefebb078916d88de3d1b5caac7e9bc84bd72a754091755f446bac6d9d7e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/43a2f8c5e3ce48c38cf0fb682222c522.json",
+      "bytes": 7268,
+      "sha256": "e2119af1fb1425a6b7f125264d4008ddda5677d9691bb33262364307ee664357"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/462ea725ce9840bba98c3fa36972600f.json",
+      "bytes": 7261,
+      "sha256": "3647694a226812d2b4a96ff11954b739dc56a8e917700a786910e5d29cad2ab9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/47e151d2615344ad9e572f4ba5f3340f.json",
+      "bytes": 7257,
+      "sha256": "d2caac17ee13b0f22f21df16de18dd977d40b6b6bafd3e802ae3a44d216fe752"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/47f321446cde46d98cd342a630156c54.json",
+      "bytes": 7265,
+      "sha256": "97e20bb08a218a684517990ea06bcbc5fbca25cc0422a5655b97f3620ed7ab97"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/491263e813ef4252ad927cec48d7d5e4.json",
+      "bytes": 7269,
+      "sha256": "cb6b63456856be7e1b4ba58fd56c65928fa4405ffd220e173598f11afbe5052f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/49def622424f42b489634e84c0b44653.json",
+      "bytes": 7273,
+      "sha256": "a418296a65ac2d2bbf68e093d482ed16e77a5c43b848d5c1ddf070bd18a8850a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/4ca19f811899498ca8783097435b5956.json",
+      "bytes": 7261,
+      "sha256": "9cbea528b6a8230cfd7668331920b3fa04e288b80c44a27e0d3a7cb2eb65e3b5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/4de400fbe8cc4a158fd62c1d9449ed32.json",
+      "bytes": 7258,
+      "sha256": "078cf49fbde285b011be993bff83ffb058b96453f8f09f0f102b8ab456c7532b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/4e8739135e8f4963a1e00ea7387e7c5d.json",
+      "bytes": 7263,
+      "sha256": "81aa0a8082fd1d94f38eba00037c51259e79f984e5cab92d9d5ff86dcc904156"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/4eca661d1d2544f09b612939283c88a5.json",
+      "bytes": 7270,
+      "sha256": "6741a6aad34c0e20e834e2dbb7ea869e514961c854496a1266f1356a1cd4a189"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/4ee1cb4d267542488f1a39089ac9bf58.json",
+      "bytes": 7271,
+      "sha256": "94be57606fcaf9bdebf2168ebb9c260d0e73fffe2076f4a153171e363d035aa3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/4f8519ac281e4836932a9911b665063b.json",
+      "bytes": 7266,
+      "sha256": "d7947affbfe0a4739857cea58bb9a5092360254620d771238c4c7572ee6a12a7"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/535c2fb4008c4e0d84660431f254940f.json",
+      "bytes": 7258,
+      "sha256": "a9fc56ad96d6b77e9cf9ab18920a0787ff14750b66db40b4e050a04c0bb0fce9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/5443c02879274019b9cda5ec6cdf53c4.json",
+      "bytes": 7265,
+      "sha256": "dc14d602f9d0c9fb9a8f96c52e3f173a40bbc65f2a3dd98aacee447ad179ade8"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/548273d7d42a4ec39b61c13f7dab248a.json",
+      "bytes": 7273,
+      "sha256": "6051977ec3d66c63a520991b712cdaf21926fb3c8e80064aa94520bea19d2448"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/54fbf2baa3f741d4bde639f2b6d4053d.json",
+      "bytes": 7258,
+      "sha256": "24f406b28a81e240eae36b530c6075320f651e1e1796ef66977be0bda0c1fc17"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/55cc3fa358ce47718d86a213ffbaeea0.json",
+      "bytes": 7269,
+      "sha256": "e3699104eaf1f097c985a0761ed48c809ac7ef3272e4dd88c1643a526f9aa15d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/56fe609ab67e48049a3a710181d4b649.json",
+      "bytes": 7256,
+      "sha256": "1c104e3b2df4f0f0d93ffadf6e1fe9ff94bc42adaa99307500fa4bbda660090b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/582c91fd7cb9455bba95cbb75267c659.json",
+      "bytes": 7264,
+      "sha256": "8b70f00827538445e3843a00bb6444987779e0603ba0a5b7c648285eeb9aea6f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/58316ae25c3f43ccb818871f27164f30.json",
+      "bytes": 7255,
+      "sha256": "aa4a3b8fca47956b44344e341e81f2dcedfbb45a079b8e60e81e35cc42237d59"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/592d2be042a345a5a3a7b74ffbc18225.json",
+      "bytes": 7267,
+      "sha256": "11130049d5a545545fa7a310a8c38edcd19a50770a9a7469874a17d00bf9fc5a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/5b500bc9a5f14fc08bd3c73bf370278c.json",
+      "bytes": 7268,
+      "sha256": "0b23b6c913ff5f81f50fc18b1b6afbf1dea77867bfe7453d97705d7b54833943"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/5b85e50da9084a41a88e83c4a556f981.json",
+      "bytes": 7275,
+      "sha256": "fe991e8b58b9a91545f90a435c44bd0b6b12d773053cad96a14559b048163f42"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/5d87191d02ef42b7920ce1e5af19e2f4.json",
+      "bytes": 7266,
+      "sha256": "aaefb682b9ad53612db01282eaa66ca8a46bf2e62cc3c4b89c3314d33bbe5635"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/5ed050eba57d4ad7996eb6a497aabd35.json",
+      "bytes": 7262,
+      "sha256": "9df45384e21c0d6664eceebd72d046ff0e4af18ab14ea83c701f9a69381e4a73"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/63ebab7694f5428d8bfc63f99bf80217.json",
+      "bytes": 7265,
+      "sha256": "150a17faac03d107f9cee0328fbf6269dd69179b0aa38cecd2b82eb6dfcf2482"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/643a27bbbe0b42c2b3cceffebcd60e42.json",
+      "bytes": 7261,
+      "sha256": "76943f99e0e717aad5ca240aa1311d08e76055beba292670dde45f3249877579"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/64701942af7b4b94ad8c64da693580e9.json",
+      "bytes": 7265,
+      "sha256": "5595025ea92aaf3583c18e8fec976e7c06c39d48309f98f1cb0c3da73ea0f555"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/64a333faa0ce44a0a03b736648c644f0.json",
+      "bytes": 7262,
+      "sha256": "8509f95ed4d06fe1d5158ac05962f07d5925ac064b688907c20272e5ecb76b16"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/652d0dd934d7402db0124be1206f4b9e.json",
+      "bytes": 7264,
+      "sha256": "76a8361ba6015e8beee03358b8ff9314a900e20eef8be68c3699a2bc34fb449d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/674aa72b228d43928246c008a32c8aa4.json",
+      "bytes": 7259,
+      "sha256": "bd1fc66d2723ffcc1bcdf353b2b2a7968f5c78ac156dbb0c8ca4f026cca6b9fa"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/683798dbc36d47b5870a8f5eff0f713d.json",
+      "bytes": 7263,
+      "sha256": "6884138788670a8a582bfd2a996bd69df938fd6e6eccb7be7d88c6eeb75fd9d4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/69c2f6b08b74413da6a2c8a60bbca82c.json",
+      "bytes": 7262,
+      "sha256": "3ce860afb7a95f659bedaddfcd1cfe7e18ba6c3b659a01cf8b90b3014da9a0b0"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/69e3d61aba034abca36b927533fabff4.json",
+      "bytes": 7266,
+      "sha256": "285fd1ce20e82200a378c763b121e11bd846b08d603bc64fb6d9f422abb66477"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/6bd0f1e5c0154ac48da86380d9259964.json",
+      "bytes": 7265,
+      "sha256": "e659df43f21e0d06be954989857cc22cf31160621985749a0277362e0e45b062"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/6beaa8e32a644a79b5605a714341dded.json",
+      "bytes": 7271,
+      "sha256": "bd379d1758cfc59011ac45aad4c431f6dd1f4b784abff6c4c5a346e4ce11147a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/6c9cb12aeae647f4a44c9be44daa8e54.json",
+      "bytes": 7256,
+      "sha256": "2da44a641d544a93191dd778bfd4625e040df01ce31475a0f05eaa2349248792"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/6d1d313a2a29444f93fa1ec1501e6141.json",
+      "bytes": 7261,
+      "sha256": "19706d12f16a7a6c40ca556f467c1e46f4bbee6499f63dc3c8e05b7f29d21208"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/6ed974cd5a3946d39697c24ee872f8e8.json",
+      "bytes": 7249,
+      "sha256": "2fe159e2c8551a7be7017d27c1a6a58512cfdce6950d7f60fd754fcc3a9ba00e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/6f195641065945a48f385330df05c9da.json",
+      "bytes": 7267,
+      "sha256": "f19710e96e250e4a30e7af0311f70de8eba4f211bfb7804e8194a4fe7fa626f6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/70fb446ad89c43178686f259890e07e3.json",
+      "bytes": 7269,
+      "sha256": "e4a57a282bcf69ea9f0db8f68375d023d659c6890dc19f27c9372838861a1fba"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/721c1a0020f048dd852227f06490d7c4.json",
+      "bytes": 7259,
+      "sha256": "702365e35a6d38a67921af860b4bce463d47e4f327b1d0beabb895eb5301cc59"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/7543694131394341897d731cedb224af.json",
+      "bytes": 7264,
+      "sha256": "3e56320d6257d1737d43cc3bbd0377db1d3c255114cd4a526931001376885931"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/776d1b1663a2418aa6d57fad51958867.json",
+      "bytes": 7268,
+      "sha256": "1ee67ca7642044f982300efd50ed1cc7ef9fe5e0dc85f98e71132c813c3ec6b2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/77cb51ea5f10498083f7e91cd08f9d6a.json",
+      "bytes": 7264,
+      "sha256": "d48285da213f4a277c6aad6691cf94f42b2659a5f298c4676b5a82f2d0e48c63"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/77d1b8435fcf4d90a3809d4b4ac9e533.json",
+      "bytes": 7264,
+      "sha256": "bd5d658ff9a44d360fabd2a6a52165e43a92134aa3267e8e667a993605b33b6d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/77e86bc4aa584ae8aa490bb9a8b4e5d4.json",
+      "bytes": 7267,
+      "sha256": "acec054bb3c5e51ef9f2b0807b0266fdf4a3846a4a2cf137fc4d0cfa7602fd7c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/798b2a257ab0438597f5e907398fa406.json",
+      "bytes": 7272,
+      "sha256": "5c5403911170f3ca120e45758847c3d741e9101a9c3a81fb7f5628e8e0a74ebd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/7a205aa336cc439fbc11fb261e051c3c.json",
+      "bytes": 7254,
+      "sha256": "9686559ed60a4aeecaca71e91f289c2d881a8c29fbfba770be3f3fd5821b53e4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/7c94cb3e57c742d38227421eccdc2ca1.json",
+      "bytes": 7270,
+      "sha256": "7b886084320604de10156eb4791258de1635412b2c1f14449af670264da3c881"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/7d119711d7954b499b8ef9b5456a0fe5.json",
+      "bytes": 7264,
+      "sha256": "f1eb5070942594fb9198e59243673bc8573ddc1a62824858547fc2164c1433e0"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/800fbe242b304773897c81d663695846.json",
+      "bytes": 7271,
+      "sha256": "0f43e8b209221a61402de8fff3053cda37a7c81fc1b095964ec808c4567f5828"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/802e1d5d75d24718b46fa084a3e01754.json",
+      "bytes": 7269,
+      "sha256": "52c5d7d23f3300ad1fdbb36dff856c4546094a4a87f96a7a67ae1d786e95c9f7"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/807b4f8f23e741ccb66ee5de3f911cb0.json",
+      "bytes": 7263,
+      "sha256": "0fda574163417b83e553a5c2289ba04dd6ca25fbcc5a565b84d45559137f81ef"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8431df62d5c3490587b2df13f370aa46.json",
+      "bytes": 7271,
+      "sha256": "f31e5b13a206b9ed56d47286c70289942c8a6922c5cb2a764be4061bd71117e4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/84cd6631eba04819889d3ee33b90ad69.json",
+      "bytes": 7268,
+      "sha256": "ffe148794fb8d9221d9089455256df4c1fd4a59f8dc1a61908acc701095a9cfb"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8500824779f54f3eaefa32e7170f09a1.json",
+      "bytes": 7260,
+      "sha256": "609149dabe7ac70820efd4ee8e757227c5f5e58c1299bc1b6f1d862dfc3101f3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/853628e5570d46fd8c978a7f751ff76e.json",
+      "bytes": 7261,
+      "sha256": "fcc80d8bd27766ce9d7dda8beb10edde43b6980491d89b332eb30dbe2565428e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/85b86911720548bf9058354fd2aae1eb.json",
+      "bytes": 7269,
+      "sha256": "504da91c50ddaeb05ff852bbb07d8cb2086d3fddc0ae34ad669763346f9457c0"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/86fa1a31fac448b7bf89e4cd832cfcc2.json",
+      "bytes": 7256,
+      "sha256": "87f8f259fdcab165a87768d34e6ae5bb5da0858a1615caafdb06ea17236df628"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/87e301a09f194b048fb151f444566bb7.json",
+      "bytes": 7260,
+      "sha256": "4fddd95383cc947c17e575b448453a4fde3068d6223f5df794549f88195d1085"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8c42762047dc465d9373a23fe003c280.json",
+      "bytes": 7264,
+      "sha256": "c1dab80b38a2fb77177b247aedb2e0995c892997e079851d38fa77ebc29db807"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8c427703731f4d8dbc2e484c151c82cb.json",
+      "bytes": 7262,
+      "sha256": "53549c664353a00bab5bf2c05b30b95320081e0661425e82fcb9e6553015e113"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8ce7ac7a4ed24e85ae79892ce80b2cbb.json",
+      "bytes": 7267,
+      "sha256": "60aea8355ac5907f26ff1f945b6734b90d75c261f45d151926fa84183805f160"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8e132e311cdb4155bae492d773ef0df2.json",
+      "bytes": 7269,
+      "sha256": "22110435f29cf974a4031f85f0f99e025f9ad5e177dc1a81e85b7dcb8cd1d2cd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/8f808ba2dd05492f8066390c72cc3c45.json",
+      "bytes": 7263,
+      "sha256": "639a85714c7e985b58ca0f6b0f9cfdd26689af133d8efe3d9c919e13ac9193f5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/90dec03fc60343d9bcf42000a7af2b91.json",
+      "bytes": 7263,
+      "sha256": "a8f2802b589228bd4a19034b6ffbbfb72921aa649f84648f113896fa91ad84ff"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/92174a6ab996481ca7decb6f062c119b.json",
+      "bytes": 7268,
+      "sha256": "a756fcea4ae4b7abc21f3bce7fb16362e3adbd1212e329fb944459b5c780af76"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/92ef1430124d4fcda94074bd5af009e2.json",
+      "bytes": 7264,
+      "sha256": "286682c796fd8c1acdcbddd2ead5b091f4df7369d18c317723ba15ef365bf52e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/940a0ba819a84c95b660a854d7c81bde.json",
+      "bytes": 7254,
+      "sha256": "68a2c1b305918736879c01f4d2fb68280c36039698b807007c792f0a676408bd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/948f7dcaacdb4851bf7493edd5992b32.json",
+      "bytes": 7256,
+      "sha256": "a41c7d5f9fa70f40676dcc738cf7d0570404030884126b66a9b8fc0fcad73eb4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/983570ea03da45d0ab5c0eb317e9e09b.json",
+      "bytes": 7254,
+      "sha256": "34ab72545d7ed40f0e50bcbcb1979d491f233521befab23af1d139b1abaec578"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/9b3219f238044f098bc0d825cbfef7c6.json",
+      "bytes": 7264,
+      "sha256": "c718b3dfa5aa698af4e32690bb73a6d9a894ff80675164448f87c5e134b428ae"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/9c2cc314715b4c2891cddca08ae8e90c.json",
+      "bytes": 7269,
+      "sha256": "b2a4d0149bdfdc48d22c56188065822d3ec8bc54d772afb3cf7a7ad7bef1c3c5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/9de750df5230471db177b090d50bca91.json",
+      "bytes": 7254,
+      "sha256": "6228429cd743133df3fad9fa6b96a2ded4a11641e47d5ad804f9c8073923b163"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/9eeb30d42a81473481a3836aaab476bc.json",
+      "bytes": 7264,
+      "sha256": "f3f7b41545815da510b2d0aa5be1fafca447cc4866e773a02b08d5d53bade130"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/9f6c3a6b40484ffe9a84851f93924ea5.json",
+      "bytes": 7265,
+      "sha256": "d8c7da5075d756ff9cfe9216a111b36bd60b8b038020844ae39507f677420c8d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/a0908cb8c2b34272be5894ddbef0b811.json",
+      "bytes": 7267,
+      "sha256": "08c284d32bd1e80d1edddf55fcf53784b981c18136818835b0b07d0d659b4e5f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/a15b1390bbcb40538934de87975eb1d6.json",
+      "bytes": 7274,
+      "sha256": "e8845e786257648c759cd28f2e9f067ef69d62774b5c95b566dbf70ef02a4d5b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/a16732dba5e346bbad37456a7a1e6f40.json",
+      "bytes": 7264,
+      "sha256": "277db35646500c1f83e6ea9fcb6a4b034464ad1b20756308becdb90cac927745"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/a19dbf421c1e46f49e630e28b46e1b05.json",
+      "bytes": 7264,
+      "sha256": "cba2836a8df109bbde7ee176a5e1dafca46d4b507690c3eb2b53566e98617089"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/a3414f08f41d4e84914625f9192b4587.json",
+      "bytes": 7255,
+      "sha256": "f207379fc092ba8a3b5128fbca75d3affc24f5fbca3b130d72cbd14ba8bd5b20"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/a88de0e8a0ab44f583f7c19819c22222.json",
+      "bytes": 7268,
+      "sha256": "2f333905ba1546c60c8e5fea80dc2aa7ee1485b97a5076ad47a4f0f73be72ffd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/aa2a095878c5489581d4d476bb42efa9.json",
+      "bytes": 7264,
+      "sha256": "a565b3a911859cac4bd68291a07ce6b7d6836c16fc6affa8638addf074db712a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/aa59af5d26884391be341e2867471e0b.json",
+      "bytes": 7263,
+      "sha256": "9209346c4e1a2d409160cb43596926b486efa4bff82785743b387319a1a5bc3b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/aaacc935dd2946a18a489d6c4c81a772.json",
+      "bytes": 7265,
+      "sha256": "d453f3048f8348fa6526e85426ecfa7a7d938453e58a1ff2564084d61fb4deef"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/aaed38f58c6d4ac3835a777f21dac922.json",
+      "bytes": 7264,
+      "sha256": "2a3788a162b5cf509163cf1d7ab9e9d0b47e5ef685f336531553cba07fbe114c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/af7c086ef761494ea50c7d4db73ab280.json",
+      "bytes": 7265,
+      "sha256": "17d41fd4f5de82943c11c721db1316ecc5faff5b2d4afbe78e1cf6998cef5977"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/afe69dc0989b4dd9be455bfb0c0e283b.json",
+      "bytes": 7259,
+      "sha256": "522394a44c1dab249c67725ff2429ab42e0b6e7278bd453da0e0022cba5da904"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b0525e930c7f4600b0289c43f4f7561d.json",
+      "bytes": 7263,
+      "sha256": "c210d98aa623f727be16c14242ddbfe080d8f98add48beea1f952d0261b73be7"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b0c30998d3654c7da1f1de0474bcf5fc.json",
+      "bytes": 7264,
+      "sha256": "c1b22598877e68fcd9e64b38449295b8d932ea899f2367778be99d5a088fc6c9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b0e625c982264659894ae1b8cb4a4639.json",
+      "bytes": 7257,
+      "sha256": "e3cd54cd82dd31875a3292525c9aaceffac00d86e30199b4149ec0b55a927580"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b384198e036247cdbcf177201b3abf99.json",
+      "bytes": 7256,
+      "sha256": "c6561e0acce27e90fae9311d3e82234361b116ce6357896433e217782989cbd9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b5317398e5d24aae9081ec07c5cc96a1.json",
+      "bytes": 7268,
+      "sha256": "7fbd17ec461a931d2a4789cd8d8065db57bdad80798329e33bef94f0811aee00"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b5948f3f7f9542d58893d6872c869487.json",
+      "bytes": 7266,
+      "sha256": "a7fa1c0d43a6118ab9c48896c1307f28d61051aced1aa242a45b2358b835acc6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b599dc2ef70f4beebcb6c50e9ad1d824.json",
+      "bytes": 7256,
+      "sha256": "4e16a8031a11a478cd88df0dfbe5a0a26a92ba7d87bea82491877f5412b0e60f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b5bfe39d5ec94f099beb4bb78430ddeb.json",
+      "bytes": 7265,
+      "sha256": "a544d36e736c7aa56c03fca159716d66c52bf71fbf338fe3142609250c2cc25b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b65adb4b4c1c49b3acc8c6dccb5cd538.json",
+      "bytes": 7263,
+      "sha256": "2e83b291f15fe03731e84f6d7be3397cedff32bce2c499b9f4dcae0b602b3413"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/b663305947924df8bd58d738e87e09a0.json",
+      "bytes": 7269,
+      "sha256": "67d26215ba3a4cedad2963496fbe68b3e1e9635ec568de5b48c125220ead0773"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/baa3e9dbded442bd885fc62baddeca18.json",
+      "bytes": 7257,
+      "sha256": "630c2d997215df4b9d7eaaf1b2874968d929ca33cad4d75963c68abe2c3f2f98"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/bae497b4188544efb95bfcfcfb0b87f2.json",
+      "bytes": 7270,
+      "sha256": "beda84875e833172d34efd2b7ab0a64f5a0627dc06809efdff3df97093abb04e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/bd5963434f44473282631956fe2fecda.json",
+      "bytes": 7271,
+      "sha256": "90d2b89af53c6338fe0c1c29fc3849b2cc78e4e7cd5c6a6326e26ce53eb59f06"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/bf7c07c2ba3749bd9d8dd32f81552a19.json",
+      "bytes": 7267,
+      "sha256": "59174d89c05b95ffda5899caba801c7f1debc1fe41d6634264ab575d56827736"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c050dd9ee8dc4f01b08187b2ba7e8331.json",
+      "bytes": 7258,
+      "sha256": "41a3c3247d61c57492d07310cba363ef15eb83792d65d60317a0431437af3af9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c0c9937b795844bc81c39fb093df7ad8.json",
+      "bytes": 7261,
+      "sha256": "e48e2534e0e75a3b323b577ac24e91022feed009d04dd438fb72bed380777c00"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c1170949ef144c0192621713b3af0b5b.json",
+      "bytes": 7253,
+      "sha256": "55fd75bbdadbe4176f71be71efe2a6a1b1e6f1cf1de342c7f43f0408747cfcd2"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c2556c31cf2b46d78710e025abaac9b3.json",
+      "bytes": 7256,
+      "sha256": "f0d6f283b5bc1c9c52a67a690bbbcc0905d752bdbe2e7c8b2be91382e99d24a8"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c2822e0b5bfa466fa8286886870852a5.json",
+      "bytes": 7264,
+      "sha256": "2c7e0b39bb1ba24182ed6aefb80bcb01d2ff76df33259ccf9c3252fda325c0b3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c91d119d7fa64350a4d49e1c6eebb273.json",
+      "bytes": 7263,
+      "sha256": "d1a472743ea80da8e725e6833fd858bf60c62f11db994903ef908278f447dfbd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c9b628a6122d4a20a3da57b4161a0cee.json",
+      "bytes": 7265,
+      "sha256": "42db9473706f646c2dfbdcedeab8d0689de64826d538d084aec6aad5dc330011"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/c9ff60ab1c9e4e7ea47ea6ee827966d7.json",
+      "bytes": 7277,
+      "sha256": "bdc752652b2b8c3e5d861132a8a9c9d267170dab42c6e382bf9590506fb0090c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/ca89a0a5e7f44eb7b0d2b08d590bd411.json",
+      "bytes": 7267,
+      "sha256": "a2befa2677a0bcc0411bfd684ad5ed1e4cc7931b4120e7f3507fdefd9f524c11"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/cb27391bc6be41ccb5c52c3faeb2c3cb.json",
+      "bytes": 7268,
+      "sha256": "340bad7aad7c9a6e8e98bbac5517a58ae3c1a150adafdcfcea4fa45a13a6816c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/cb6d1d53a5ed449b90e2fb2b648a57d2.json",
+      "bytes": 7254,
+      "sha256": "bed3f091bf4b08206c5e3446bf89a04bfa01c2f420b1e0b52eea9b49d265719f"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/cba2d25ef43642f490fad81e962860a7.json",
+      "bytes": 7261,
+      "sha256": "0ad5aad50677271d74bd247cfff2aaaa078550a871005cf9119b549104e6fc26"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/ce07937925be4842ab469c93be7ad108.json",
+      "bytes": 7252,
+      "sha256": "41a24272be617f8f034c484fe010e0fb58101a602c4201b77d702861bc4ee2f3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/cfb2bb2cb9b64030a1aef676facb560d.json",
+      "bytes": 7265,
+      "sha256": "5244f4f66480af856e5fab3ea59d8f9cae6815c30b5a67db08b68da1f90bbf08"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/cff2569e53664992ac3bb2798ea45be5.json",
+      "bytes": 7263,
+      "sha256": "560d4dab725950808b1e2f069da91beffc8dd60017f54458959edd991dfa21b4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d0df51b032ee4807a83f39b335437c8f.json",
+      "bytes": 7263,
+      "sha256": "a6b96eda3583ecb03dfee067c026503c363948e1251a719d0682e147e38737d3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d0e9d3e688e84646826953530e6a0064.json",
+      "bytes": 7260,
+      "sha256": "6c9592e0c576799c4d5c29410a9256d8af5eaceca654e9f3d6a22e9f220d48d7"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d156cdd6e7224c97b7d9457a03c6ad2f.json",
+      "bytes": 7264,
+      "sha256": "a392b693aa2dbf50f3ea611d1fb1d9e36e6bda26726aef97540a55559f441ec1"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d176e921221e410e8500ab719f2e30ba.json",
+      "bytes": 7257,
+      "sha256": "dae8383e37b9b2fc6f1aa93f75fad2e5d7fcd0eb9be7a640b053ed3787c6226e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d579d078c35c4660be01c272a54bba53.json",
+      "bytes": 7257,
+      "sha256": "5184ea8c027a9e267c08a728500711837692eed8218f6404aee07a47b27e657e"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d8a853c66af94d0e820b4cd3b8049bf6.json",
+      "bytes": 7256,
+      "sha256": "a6274d3e570f236146b30bf8bfecdf4a5184aa1bdbc055f0580cc525d62e0363"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/d9cbaee0bc2e466c805d8fc8630ab148.json",
+      "bytes": 7264,
+      "sha256": "f1b9d927a149cc41b1ed30c3b3800a01c072011a0e6be025fdab9056cad80106"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/dd8650b53a554ce0a7b47262b5739cf5.json",
+      "bytes": 7265,
+      "sha256": "82f5ad5a37c358ac98dda767a36878ab5681dbe89111d8b7dbfd9caddd1fc8bb"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/dde3ccae61a14f03a9abefa30f84b1a0.json",
+      "bytes": 7263,
+      "sha256": "55678c0b9e15aa5c9ec610bafa46ed1db18553a0465548a0d5b3bb78ae285a77"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/ddefad996b72407e8cb7d94a7ee5903d.json",
+      "bytes": 7257,
+      "sha256": "53c0649c5a50f0ffc601dd9254c401f474c060544f585d918786b6247ed12592"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/e1d99d351c264d25b56b155632499c98.json",
+      "bytes": 7262,
+      "sha256": "9724158e90490e7ed5f5540ff578c68766a4b7ef87c34887055158f1fbc0339a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/e44fa5950deb468f97a65944c2eded91.json",
+      "bytes": 7264,
+      "sha256": "a6f38fcf65eff7b9254d545a418003634ed7b4b6206430873046ea14eabacced"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/e5ab1e5eb2da45b3a68ddeabf697fc10.json",
+      "bytes": 7263,
+      "sha256": "e48b37167d6e189d8c34026e21bf0dbbe4683632a677c950eaba14ca665ea363"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/e9403eff042b47cfa0dd7f08a1bd6129.json",
+      "bytes": 7263,
+      "sha256": "16640c88931ae027f913308e89654ada1c99a4b6c378c072913f4f8f32e50de3"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/e9b250528dbb433486d13ee649d2ce83.json",
+      "bytes": 7248,
+      "sha256": "83420a931ad198936da015f8aba2fb50bb6b53dca4c4b3c0f442738f6e4713dd"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/eb8fb20d615e45b9984b188652a2de59.json",
+      "bytes": 7260,
+      "sha256": "0a6e03316163b836799fc024abf10add5c89d4da83a3bcbf36cb34b2e90af6e8"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/ec9bba8b2038455abd6fcdb3f4021e01.json",
+      "bytes": 7267,
+      "sha256": "7dea88a7a95a585384419c1c788d3b6f17b20e62320a894e0f2437f5757a4512"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/ee6bc3d31cf64772a8a396b4bf476a61.json",
+      "bytes": 7259,
+      "sha256": "1ad23671a6f372164954bbb2f49ba03dc258e684455bd7d0b9d4a80af987269b"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f127f4dcb2464f9abde6f8b6dfcc1668.json",
+      "bytes": 7261,
+      "sha256": "b4b762a38ad912ee9eab8715fad612b0455032c37eab29afab999543ac473b25"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f13374be76c74da2967e2ae278dc5c3e.json",
+      "bytes": 7259,
+      "sha256": "cb692d6e511ac9dc98810054f34cb4615ad9af638a07e923e0f1bb04db15b2c5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f1448d7a60fc4c0e8dd1caec03cae580.json",
+      "bytes": 7257,
+      "sha256": "2bc5dd7560ab43c120e6844801f4f0b2d853f27b5197590cb6ca9db98951c879"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f37db29781844f25beaffe5147c0cc9f.json",
+      "bytes": 7263,
+      "sha256": "ee9c7fcfe0b02613cebc5aa470c8f431e4d05578928bb423917873dadfb16994"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f487ba64bce94ac0811e23d25c287651.json",
+      "bytes": 7261,
+      "sha256": "335a35c85bb689c66d45dc5bbdef5e72d51cf88b864fb8a38419298a1594eea5"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f56bccd49f5a4051b2c2640e92fbc760.json",
+      "bytes": 7255,
+      "sha256": "9230094e2716f1d521176305cb60dfd52304c3775a7ffdf2bde2306b529229b4"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f6c91f2b0cc44d4298f6c266db92d969.json",
+      "bytes": 7253,
+      "sha256": "5918cbf4d774aa84c3e304b90ea1aaff1be900f63c1cbf969c1c73945471f67c"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f8a22de9f0d14ce295076d24845105b6.json",
+      "bytes": 7271,
+      "sha256": "7ec9cd5cd18a9b97dba864b64f10d4d398c3c802c94a61916ac7428b4a125438"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f8e1670e8af340ec930def380501d38d.json",
+      "bytes": 7265,
+      "sha256": "e5796cb582292c2a11904647241472b7ba1b8311377b06934d753c5fd666ec8a"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/f9a10e75ec35413cb1c238ea48a153dd.json",
+      "bytes": 7259,
+      "sha256": "263c4f1d2868301dffa2f7afb4a7079711d35767fb56c27262d3de20a8e422ce"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/fb383d622d0543728963bd99bddd05a5.json",
+      "bytes": 7258,
+      "sha256": "7e2bb8a02d68706076035a634585c358391e833ee497e3e02161fad1ffcc1a3d"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/fee97953dd0b40f089473f796f9a452e.json",
+      "bytes": 7271,
+      "sha256": "5f76a4af3aca8d694f7259cec3d188bb3bdaa7fbffdc5152cddf22d1c7a36bc6"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/model_checks/ffdd28e87a6743f191e6ce62c92b3e86.json",
+      "bytes": 7270,
+      "sha256": "6d02258c21febe18819bf27ba52df792c079e6898cf6a69aa94c05a967d6b242"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/observations.jsonl",
+      "bytes": 3360871,
+      "sha256": "6d6a7a7cacf8393f551fab52bf934f619ced1069345a51786a2bd5182d88acba"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/source_identities.jsonl",
+      "bytes": 154017,
+      "sha256": "958016cb6a836bcbc4478b033a36513a3ffe714f9f06fa5b29633e31da5379f9"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/optical/status.json",
+      "bytes": 78,
+      "sha256": "9e05a8deb5c09d16cc983c3c1b8951fd1763a8c196f92463b850c8c1aeb12d51"
+    },
+    {
+      "path": "datasets/diagnostics/fixed_gamma16_20261030_01/suite.json",
+      "bytes": 4147,
+      "sha256": "a8783e61dda1387255611d83d6e4692bae09638b61ee098b5d446c396f40d519"
+    }
+  ],
+  "orin_connected": false,
+  "orin_latest_counts_verified": false,
+  "acceptance_last_observed_attempted": 14,
+  "acceptance_planned": 30,
+  "return_last_observed_records": 55,
+  "return_last_observed_valid": 53,
+  "return_first40_last_observed_valid": 40,
+  "images_uploaded": false
+}

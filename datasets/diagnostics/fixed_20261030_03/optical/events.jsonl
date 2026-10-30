@@ -1,0 +1,205 @@
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_00", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "optical_02", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_02", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_02", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_02", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "control_reject", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "window_reject", "task_id": "optical_03", "reason": "Ball detection/epipolar quality failed"}
+{"kind": "session_abort", "task": {"id": "optical_03", "kind": "optical", "offset_m": [-0.015, 0.01, -0.02]}, "reason": "Measured ball left local camera workspace"}

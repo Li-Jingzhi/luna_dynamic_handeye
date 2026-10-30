@@ -1,0 +1,891 @@
+{
+  "schema": "luna_dynamic_sources_v1",
+  "date": "2026-10-23",
+  "files": [
+    {
+      "source": "LunaUdpTool/demo.cpp",
+      "destination": "reference/LunaUdpTool/demo.cpp",
+      "sha256": "fd83f03c923ebaf544f2e0628f18b3fe3c02cabf681c83b0eee8078f6faa185d",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/readme",
+      "destination": "reference/LunaUdpTool/readme",
+      "sha256": "e783c41615656dc23ce15f9aeccc8726823a38eec7d839b59fbb2d03e2c89696",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/mujoco_viewer.py",
+      "destination": "reference/LunaUdpTool/mujoco_viewer.py",
+      "sha256": "17aa8fd152e9a9b269d93003139367584f640011914975aab06ed8ffcfba4544",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/net_cln_udp.cpp",
+      "destination": "reference/LunaUdpTool/net_cln_udp.cpp",
+      "sha256": "e838cf63cea302944017b87a3014ca82fbcb86a591970a6cafad58b86bfcb60f",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/build.ps1",
+      "destination": "reference/LunaUdpTool/build.ps1",
+      "sha256": "f50211e648fe28e00173008fdf06ac30144709bb136dfb5b5015d249fee1663d",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/net_cln_udp.h",
+      "destination": "reference/LunaUdpTool/net_cln_udp.h",
+      "sha256": "c5a8ae58c8a470218aa70d90d4b0a651f552a29c6abac9b706468d3d44c495c2",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "destination": "reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J5_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J5_Link.STL",
+      "sha256": "6adb91d160a7e9b3adb06da3a7736e41c657a170b7ecd6e372d6358316ca4742",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R6_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R6_Link.STL",
+      "sha256": "bd8f028b32430d6aed2c76c1987457cf1ac6b1285d7c58e6bc5c9d59d8bd8c39",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J2_Link.STL",
+      "sha256": "5971b7c956ff06ef93685b11707a219afadb4c13dfb575af470eed1b28e5cea2",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L4_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L4_Link.STL",
+      "sha256": "8a03d423e0111a518e39a03b99163c17bb5ab2172bdb739b0a94c5ab3b0d078e",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J1_Link.STL",
+      "sha256": "d1fcc3d776957305ecd6e2745cf91657ccaaf9d2998a434bb9fda0b5fa18552d",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L5_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L5_Link.STL",
+      "sha256": "007de5726db1e687ffd56517f07ab0a3dfd0ceded2e1e792f44720b9a3bd45c5",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L3_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L3_Link.STL",
+      "sha256": "c6283bbf322eccebc2b4aaa60502735a27f2e7e808881b71166213591d88bab9",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L6_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L6_Link.STL",
+      "sha256": "0f981df1cbab3e64f3da91884aec76c7d9083dab5d130acf9b92cc3c9003ea58",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R2_Link.STL",
+      "sha256": "44e7fcc5e0e9dbdcaa301df6da3149d135ac8206d4d6b7d493f81b97484b2c7a",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L2_Link.STL",
+      "sha256": "dd4b131343427c66df3b5c902bdf9004acd9c9644eaaa41ffd3041aa4dff82c6",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Head_J2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Head_J2_Link.STL",
+      "sha256": "fa255f99574b6f7b7e920cd728dbf7081d2b1d74e64a7a4e12fd64ab7699109e",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Underpan_Base_link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Underpan_Base_link.STL",
+      "sha256": "24ccc9babf32c52b6d999521ec941d7b261f09da8a9d8f2a1fae7853ce79bad8",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L1_Link.STL",
+      "sha256": "574c3c9fc2eb2b8a88bdd1538874064bce19f2056a01f98a76c50941444d509d",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J3_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J3_Link.STL",
+      "sha256": "25914336d282224b84d8b1ab4ce2f04d0f15e499a81a14a17051c8b219e063f2",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R4_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R4_Link.STL",
+      "sha256": "ab24a5f220507b200ced7202732d9939d7d966ab23f9373bb7e202298f500712",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R7_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R7_Link.STL",
+      "sha256": "2bd9abb0d5e886a93ac276bfaa781a4c1d30b9939f9c570601e434dc8d5aedcf",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_L7_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_L7_Link.STL",
+      "sha256": "aec10724e0719f6dcd0faeebdc7728f4f39c8bafa0900887621e7b9cf0a46cd7",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R1_Link.STL",
+      "sha256": "412af8bed0cbd990a5146ac52708313573550513b5de21acd756a9f0c3ec70ab",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R5_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R5_Link.STL",
+      "sha256": "b084f3b305213716e349dfa880309eff6d90bf57d9b1b56452a8746e3e6e1b1e",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J4_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J4_Link.STL",
+      "sha256": "8898bbeffe7c4e439ff982e7974016406bafd4d6faf768dfe03cf25e556edbf6",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Arm_R3_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Arm_R3_Link.STL",
+      "sha256": "0ff2811c90355b418a7601b9e0ffb14f3b31683201c3df9d0c86b1067c8b1530",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J6_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Gento Luna_Leg_J6_Link.STL",
+      "sha256": "edd827af2cad27518b8adf6140c253cff19c6957cb5da83d1a9ff0991835cc18",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/meshes/Head_J1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/meshes/Head_J1_Link.STL",
+      "sha256": "ab6223b6925c3e6e40b774c571502eb22daa23bd283b8afb444c26fef6adafc7",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J5_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J5_Link.STL",
+      "sha256": "6adb91d160a7e9b3adb06da3a7736e41c657a170b7ecd6e372d6358316ca4742",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R6_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R6_Link.STL",
+      "sha256": "bd8f028b32430d6aed2c76c1987457cf1ac6b1285d7c58e6bc5c9d59d8bd8c39",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J2_Link.STL",
+      "sha256": "5971b7c956ff06ef93685b11707a219afadb4c13dfb575af470eed1b28e5cea2",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L4_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L4_Link.STL",
+      "sha256": "8a03d423e0111a518e39a03b99163c17bb5ab2172bdb739b0a94c5ab3b0d078e",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J1_Link.STL",
+      "sha256": "d1fcc3d776957305ecd6e2745cf91657ccaaf9d2998a434bb9fda0b5fa18552d",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L5_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L5_Link.STL",
+      "sha256": "007de5726db1e687ffd56517f07ab0a3dfd0ceded2e1e792f44720b9a3bd45c5",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L3_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L3_Link.STL",
+      "sha256": "c6283bbf322eccebc2b4aaa60502735a27f2e7e808881b71166213591d88bab9",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L6_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L6_Link.STL",
+      "sha256": "0f981df1cbab3e64f3da91884aec76c7d9083dab5d130acf9b92cc3c9003ea58",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R2_Link.STL",
+      "sha256": "44e7fcc5e0e9dbdcaa301df6da3149d135ac8206d4d6b7d493f81b97484b2c7a",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L2_Link.STL",
+      "sha256": "dd4b131343427c66df3b5c902bdf9004acd9c9644eaaa41ffd3041aa4dff82c6",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Head_J2_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Head_J2_Link.STL",
+      "sha256": "fa255f99574b6f7b7e920cd728dbf7081d2b1d74e64a7a4e12fd64ab7699109e",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Underpan_Base_link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Underpan_Base_link.STL",
+      "sha256": "24ccc9babf32c52b6d999521ec941d7b261f09da8a9d8f2a1fae7853ce79bad8",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L1_Link.STL",
+      "sha256": "574c3c9fc2eb2b8a88bdd1538874064bce19f2056a01f98a76c50941444d509d",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J3_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J3_Link.STL",
+      "sha256": "25914336d282224b84d8b1ab4ce2f04d0f15e499a81a14a17051c8b219e063f2",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R4_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R4_Link.STL",
+      "sha256": "ab24a5f220507b200ced7202732d9939d7d966ab23f9373bb7e202298f500712",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R7_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R7_Link.STL",
+      "sha256": "2bd9abb0d5e886a93ac276bfaa781a4c1d30b9939f9c570601e434dc8d5aedcf",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_L7_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_L7_Link.STL",
+      "sha256": "aec10724e0719f6dcd0faeebdc7728f4f39c8bafa0900887621e7b9cf0a46cd7",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R1_Link.STL",
+      "sha256": "412af8bed0cbd990a5146ac52708313573550513b5de21acd756a9f0c3ec70ab",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R5_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R5_Link.STL",
+      "sha256": "b084f3b305213716e349dfa880309eff6d90bf57d9b1b56452a8746e3e6e1b1e",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J4_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J4_Link.STL",
+      "sha256": "8898bbeffe7c4e439ff982e7974016406bafd4d6faf768dfe03cf25e556edbf6",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Arm_R3_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Arm_R3_Link.STL",
+      "sha256": "0ff2811c90355b418a7601b9e0ffb14f3b31683201c3df9d0c86b1067c8b1530",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J6_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Gento Luna_Leg_J6_Link.STL",
+      "sha256": "edd827af2cad27518b8adf6140c253cff19c6957cb5da83d1a9ff0991835cc18",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "LunaUdpTool/model/gento_luna/model/stl/Head_J1_Link.STL",
+      "destination": "reference/LunaUdpTool/model/gento_luna/model/stl/Head_J1_Link.STL",
+      "sha256": "ab6223b6925c3e6e40b774c571502eb22daa23bd283b8afb444c26fef6adafc7",
+      "role": "Luna MJCF and UDP source; reference only"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/registration.py",
+      "destination": "reference/marvin_methods/registration.py",
+      "sha256": "85ff8d9f540805bf3a8ed289407e082f186ef2d37b2b25723639ffc89a267d8f",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/pro_fit.py",
+      "destination": "reference/marvin_methods/pro_fit.py",
+      "sha256": "eb7ee69ac7d901538f681d97b67e8e6faafca31e92d13e83be6ada896dd4e8ff",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/compare_pro_calibration.py",
+      "destination": "reference/marvin_methods/compare_pro_calibration.py",
+      "sha256": "a45536c0267cd89728d3ac796d844ad442d61551f8bc4c93a577a39b9ec2fe0e",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/compare_dual_pf.py",
+      "destination": "reference/marvin_methods/compare_dual_pf.py",
+      "sha256": "7a11f37906efe04141171d15145429365b38ff393a8bc2510a30d1b304d23e33",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/refine_shared_camera.py",
+      "destination": "reference/marvin_methods/refine_shared_camera.py",
+      "sha256": "48eb145c1d2202e30ec8060603ed525911e3e4ce47bdac43fc3c75b22f572638",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/improve_shared_pf.py",
+      "destination": "reference/marvin_methods/improve_shared_pf.py",
+      "sha256": "3102222b390645fd3b5059442769f15cd2a1e7c88400dfdfd9dc9d2595ef7f63",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/continuous_head.py",
+      "destination": "reference/marvin_methods/continuous_head.py",
+      "sha256": "6074baafaa24a06ab7bf8713a228a1f10a15822909e54f6fd49ca7c275010682",
+      "role": "Marvin_pro algorithm reference, no machine parameters"
+    },
+    {
+      "source": "head_eye_pro/docs/八种标定方法机理与数据流.md",
+      "destination": "reference/marvin_methods/八种标定方法机理与数据流.md",
+      "sha256": "774454ee18f47b208cbb9f514f4143d0ae1da839e86875a80aeb7f2085580ed8",
+      "role": "Marvin method documentation; numerical results not Luna performance"
+    },
+    {
+      "source": "head_eye_pro/interactive_ball_calibration/registration.py",
+      "destination": "dynamic_handeye/registration.py",
+      "sha256": "85ff8d9f540805bf3a8ed289407e082f186ef2d37b2b25723639ffc89a267d8f",
+      "role": "Active device-independent rigid_fit and solve_joint"
+    },
+    {
+      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
+      "destination": "configs/camera/luna_raw_fisheye_stereo.json",
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+      "role": "Active Luna SH5 camera calibration",
+      "upstream_sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
+    },
+    {
+      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
+      "destination": "configs/camera/luna_rectified_stereo.json",
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+      "role": "Active Luna SH5 camera calibration",
+      "upstream_sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
+    },
+    {
+      "source": "head_2dof_capt/configs/luna_new.ini",
+      "destination": "configs/robot/luna_new.ini",
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+      "role": "Active Luna real-controller MDH, not Marvin"
+    },
+    {
+      "source": "head_2dof_capt/configs/yellow_measurement_v1.json",
+      "destination": "configs/camera/yellow_measurement_source.json",
+      "sha256": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f",
+      "role": "Original capture contract; unchanged provenance",
+      "upstream_sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
+    },
+    {
+      "source": "head_2dof_capt/data/ball_fixed_pf_rectified_1280x992_20261018.json",
+      "destination": "configs/robot/ball_offset.json",
+      "sha256": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+      "role": "Luna measured right flange sphere offset",
+      "upstream_sha256": "5acdae0581dbb1861a66f2a1fdf4094fa17fe9fc4305b5e57e31ceaebe3316da",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
+    },
+    {
+      "source": "head_2dof_capt/data/ball_taught_20261018_visible_v1.json",
+      "destination": "datasets/raw/ball_taught_20261018_visible_v1.json",
+      "sha256": "874acb8284401d13101de9798684c5d36b801de3dc538bc8b05cb4110eabd3ef",
+      "role": "Luna real capture and trajectory; unchanged"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/calibrate.py",
+      "destination": "acquisition/capt_head/calibrate.py",
+      "sha256": "6939cb30a261f89f43ec25396e9badba6f7955511646d64d76bbbb64ab3d9b7e",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/yellow.py",
+      "destination": "acquisition/capt_head/yellow.py",
+      "sha256": "43976a69490cc0a01ac1b5effa164e80ffef8458d8a1f0fafa50ca4b5319a58e",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/drag_capture.py",
+      "destination": "acquisition/capt_head/drag_capture.py",
+      "sha256": "297bd865c4530b15d88831fe155cdc0e9c6c25ec123e4f5a12327ef8a5cae062",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "4c267aa0fad2730b120b40d9fbf309576221038978a7932cd1266d5c078e63cb",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/records.py",
+      "destination": "acquisition/capt_head/records.py",
+      "sha256": "87b3c45f93b37ebe4ca9c4426384419aa32cea47e708f31c11de49c040238af6",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/__init__.py",
+      "destination": "acquisition/capt_head/__init__.py",
+      "sha256": "224a0de70a959599a6c2afb1b1c0a1d21d6e95d56e58a538ee3874f4ab4c3d01",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/four_ball_pose.py",
+      "destination": "acquisition/capt_head/four_ball_pose.py",
+      "sha256": "772d65474af9adcd4c8774fa0968bce357fc4c68d943eedf7af6b2fefa367083",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/evaluate.py",
+      "destination": "acquisition/capt_head/evaluate.py",
+      "sha256": "8e4400ea4a6d74b61012631dd90da50c28995f55fc92dce2f1245bde3396e1c6",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/live.py",
+      "destination": "acquisition/capt_head/live.py",
+      "sha256": "3594abf1bf2f2098199d781fa1aa752afa48336e489942f2f443676e96d68df3",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/query.py",
+      "destination": "acquisition/capt_head/query.py",
+      "sha256": "dad0a12ea2537395a823d06fabfdea63490e3232189e98fb8c71a8ff7d2e25ee",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/fit_fixed_head_points.py",
+      "destination": "acquisition/capt_head/fit_fixed_head_points.py",
+      "sha256": "b954cf10602344056c4f18a7f7cc9c6190ef822acb979354c871103cbdd99758",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/subpixel_ball.py",
+      "destination": "acquisition/capt_head/subpixel_ball.py",
+      "sha256": "74cccd4e0a7cd2584ac1e06c09f2ac9beecacf4d33e2cd34a2905d01cb385057",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "adf22fa9822dbabddc6f255eeb8df2d6db0d001a2aaa0e58a51eb04fc442cde7",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/camera_controls.py",
+      "destination": "acquisition/capt_head/camera_controls.py",
+      "sha256": "36f7dbc09a95b7de12407576295439f29df4c588f0de79a0159720cd8f18c88b",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "15d2869f658d5554b62b289bfe8594a0ea9e66fdc6a5d1cf02dd350c37e9f465",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/fixed_head_points.py",
+      "destination": "acquisition/capt_head/fixed_head_points.py",
+      "sha256": "3f466ce9a569c9d37d1184f454bb828982d5d7f1b56e020da11bd69f461d1959",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/measurement_contract.py",
+      "destination": "acquisition/capt_head/measurement_contract.py",
+      "sha256": "d7a9a92d77b2950937b1b57f6874a542b7a3bb8cdac7269a5b0c0b89239fba91",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "0d4bb2f6d2fdd64a458221584f14838165e9f9838710c7b5d9f9246918f89e36",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/geometry.py",
+      "destination": "acquisition/capt_head/geometry.py",
+      "sha256": "8b9a6c05deb3ab3697d8b407c96ec92ee60ca4c936ccdeb503f15df2bf1ca0eb",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/capt_head/cli.py",
+      "destination": "acquisition/capt_head/cli.py",
+      "sha256": "cbd37e3eb9fd62b7fd2ab4b474c3db7149558fe8c9beda6442695d20a261e7bf",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/gq_calibration/capture.py",
+      "destination": "acquisition/gq_calibration/capture.py",
+      "sha256": "92cf29d98bd7dadcda202348ff2fda736f102d14ddc38261b6f64b43dbaa09ec",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/gq_calibration/fit.py",
+      "destination": "acquisition/gq_calibration/fit.py",
+      "sha256": "8265efea56b50f4283433b10a7f071339805b4185e0750570a71acaa5a2e2fbf",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/gq_calibration/README.md",
+      "destination": "acquisition/gq_calibration/README.md",
+      "sha256": "0bf79ffb065611aa707fb608f9f8ba63fa54ed1e16ed1225370ff892659b2ebc",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_yellow_xyz_v2.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_yellow_xyz_v2.py",
+      "sha256": "0a74bdddfdde31aeb32f38bf2f254749cb9d383f23d2a1b801c17d0004558adf",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/run.sh",
+      "destination": "acquisition/interactive_ball_calibration/run.sh",
+      "sha256": "9df5ad12677896e2c6ee8fa28997da3ce43e1eb5a9df7f3c82bff5f05cc8557f",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/validate_three_sessions.py",
+      "destination": "acquisition/interactive_ball_calibration/validate_three_sessions.py",
+      "sha256": "fc4372e5b6aa8306e0dde06ea3b2b88cefe987d9107c00dc7fb4f591898781fb",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/gaussian_process.py",
+      "destination": "acquisition/interactive_ball_calibration/gaussian_process.py",
+      "sha256": "17e48a5d1471ee1ac6011cbbd525bdc51b5abbea2ea2bc9d8dc005ac67930c08",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/capture_point_head.py",
+      "destination": "acquisition/interactive_ball_calibration/capture_point_head.py",
+      "sha256": "39d8acb333be100c21dc2f2b0f19b09f38373c372d0e3390c9ebdeac7e00ae18",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/capture.py",
+      "destination": "acquisition/interactive_ball_calibration/capture.py",
+      "sha256": "0ca3e9d88b3a8c3f36a269e8eb6226b1efcc743571ce82e04674f5edad00ea12",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "cb01e52b277b813b25ded54fd49783aa152cc645ca1d6a0f4e7b7f6a8a316bb5",
+      "local_modification": "Fixed head target provenance and explicit direct approach mode"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_yellow_xyz_consistency.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_yellow_xyz_consistency.py",
+      "sha256": "5cfc64f93faecc4d9274c2a8399ce0c0f2e1cfd95251fa1c0a11ffdbe2d4bb4c",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/upgrade_sphere_centers.py",
+      "destination": "acquisition/interactive_ball_calibration/upgrade_sphere_centers.py",
+      "sha256": "fb3b9557a103e9aef945076efad2661b02271a9c0e68d78b1aa4b20cf350d7b7",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/capture_precision.py",
+      "destination": "acquisition/interactive_ball_calibration/capture_precision.py",
+      "sha256": "ec97e97e7bb5fb16d66178dffaf6a80494b65ed95b082512efe75f8886e60a83",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_continuous_projection.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_continuous_projection.py",
+      "sha256": "fa2c92ed92e7902930daf4c95c3b55cd7f8953df57671e2f705217d553be71ba",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/depth_compensation.py",
+      "destination": "acquisition/interactive_ball_calibration/depth_compensation.py",
+      "sha256": "6a740debebf5fd59362b1a923a72f8b29bf9df72064430966728ef6a6d005646",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_projection.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_projection.py",
+      "sha256": "d9de0da3b70a30b5d3bc043b7b9bd36bf8089c845c272fd0aa05a631956d802d",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_kinematic_correction.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_kinematic_correction.py",
+      "sha256": "f925030a3435fde4754f93a6f0bdff3cc5f654c63a956c3cdae130972cbbe66c",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/continuous_head.py",
+      "destination": "acquisition/interactive_ball_calibration/continuous_head.py",
+      "sha256": "6074baafaa24a06ab7bf8713a228a1f10a15822909e54f6fd49ca7c275010682",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/validate_pf_rt.py",
+      "destination": "acquisition/interactive_ball_calibration/validate_pf_rt.py",
+      "sha256": "8c40245e46e1f9eea49aefc47256445df3b2dca4554e1312305f0bde2a686415",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit.py",
+      "destination": "acquisition/interactive_ball_calibration/fit.py",
+      "sha256": "d690cfe68b6f23c71457a5416db2d30c279645fb491285ee69318c5b85cd7895",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_pose9d_consistency.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_pose9d_consistency.py",
+      "sha256": "a51aa69e64b87efb35685cea9820ac6e2f028768fdefbbcc19a54eb1342acaab",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_sphere_registration.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_sphere_registration.py",
+      "sha256": "f584f2816b81ae807c273e593764ff4d1851fd31c959ebbfcca2e8195c361a9f",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/geometry.py",
+      "destination": "acquisition/interactive_ball_calibration/geometry.py",
+      "sha256": "b9cf82e7f9bfaadeffb5ce67b826b6d470528b5a09c137db85f02ae366378b67",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/yellow_xyz_release.py",
+      "destination": "acquisition/interactive_ball_calibration/yellow_xyz_release.py",
+      "sha256": "f9625e197de7e303670efeb2761c36786c2a3981506e61b89edc7c0f43b41caa",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/README.md",
+      "destination": "acquisition/interactive_ball_calibration/README.md",
+      "sha256": "76369bf57ae1a2c783e66ab2b6b143eb274366d35ca3d5f2560d32938b00279b",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fixed_ball_model.py",
+      "destination": "acquisition/interactive_ball_calibration/fixed_ball_model.py",
+      "sha256": "cd002778a89115ba59a7e3df74d804aacb8238a3ca75758aa1694dda99861bbb",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/fit_fixed_view_compensation.py",
+      "destination": "acquisition/interactive_ball_calibration/fit_fixed_view_compensation.py",
+      "sha256": "e23a18144815c21abff1d8330778e8ff9b3c9deae65c9a137230f229706cae22",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/yellow_xyz_infer.py",
+      "destination": "acquisition/interactive_ball_calibration/yellow_xyz_infer.py",
+      "sha256": "2b2ba19a978978bfdb7eb31ea4ae164235d61f3974e8f813c80af7cecd501261",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/multi_head_compensation.py",
+      "destination": "acquisition/interactive_ball_calibration/multi_head_compensation.py",
+      "sha256": "19a4bc258804d8c890e3935bfb79096e217cc7ab4d8ae0d3f01303d7234d5fcd",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/tune_camera.py",
+      "destination": "acquisition/orin_rectified_stream/tune_camera.py",
+      "sha256": "26e706dff407d11b67a7ebda922941b9d84b8371b27419524a4ec2839123faed",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "6ad1cf142f762e922926d550ef6a648c16ffe6452419771d861403c0718a49e6",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/start.py",
+      "destination": "acquisition/orin_rectified_stream/start.py",
+      "sha256": "edf146aeaafe3cd47839392e4e414a3718d1a33e07bf0f057e98b91315d304dd",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "f77db779fc256d36f29762067979b160ebc2c2b4c0e2c76216086360d1146b57",
+      "local_modification": "Pro-style shared-clock pairing and sphere-corrected epipolar validation (2026-10-28)"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/viewer.py",
+      "destination": "acquisition/orin_rectified_stream/viewer.py",
+      "sha256": "49fb2adf9a4ac1c4a9fb1f7b1b6ef748f015e9ea594fcaf4f7423b62efcef66a",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "3d0f95be6fd6b1d01548e85dcc2e89744c71cc45f4c0d02b71fc3a6fed6a95e2",
+      "local_modification": "20261028 fixed-head collection progress overlay"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/manual_camera.py",
+      "destination": "acquisition/orin_rectified_stream/manual_camera.py",
+      "sha256": "bb3bbd2291f4fe62fd73ee12c4da5cc684df6442d6795ddd0f669bdbe2af1cf5",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/receive.sh",
+      "destination": "acquisition/orin_rectified_stream/receive.sh",
+      "sha256": "55a1601ed663b7748f38076c4a56594e22716192ba08150f71beec27d3e70230",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/sender.py",
+      "destination": "acquisition/orin_rectified_stream/sender.py",
+      "sha256": "37275deb86e4a88c56a616859b0a47f85b703ca6efe9065653206845a92b3aa2",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "ef19f87c593d40ea92975e778faf09185bff0d114c49f21fae2e3e8fdb0b4a7f",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/yellow_cuda.cu",
+      "destination": "acquisition/orin_rectified_stream/yellow_cuda.cu",
+      "sha256": "52090c300220ffc5c19d7d83f22fa48e6f703becf925783c3be39fcd53f60699",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/orin_rectified_stream/start.sh",
+      "destination": "acquisition/orin_rectified_stream/start.sh",
+      "sha256": "449bfbf398e405f77214cd69db03234682755e91c3b2ff8d979d91eeb98fb0ce",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/calibrate.py",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/calibrate.py",
+      "sha256": "010cde3a9a04b2728f056fdd93715a3a55d2c1bec084f2f44e816ab9860e5df7",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/capture_orin.py",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/capture_orin.py",
+      "sha256": "260e40adc780ea43c8318e9db4e1b8fdc060af42b3d11e9ea8838def9568f5d8",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/VERSION",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/VERSION",
+      "sha256": "59854984853104df5c353e2f681a15fc7924742f9a2e468c29af248dce45ce03",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/capture_and_download.sh",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/capture_and_download.sh",
+      "sha256": "19778a0dfa4dad094bb8aa39917f9666af8c387e8d900d372823f216d9e67e3e",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/rectify_preview.py",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/rectify_preview.py",
+      "sha256": "4748d71c763299b9767db343317acbe9c26086463b93ebf345edb19a2364bff9",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/example_capture_manifest.json",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/example_capture_manifest.json",
+      "sha256": "67d045daa255db20148ad9115dcf757682c3afea6f2297eeb3e3ca6a1c37a10d",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/README.md",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/README.md",
+      "sha256": "6c2d87671265826532ae65c096bc40363c0a7b62a7811d73b5a2f06293b22014",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/portable_stereo_fisheye_calibration/requirements.txt",
+      "destination": "acquisition/portable_stereo_fisheye_calibration/requirements.txt",
+      "sha256": "5710fae161ae4cb81ddfe5e2c2c2f34acaca02f6440f0ee4d1c98a30ca42710d",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/camera_calibration/fit_raw.py",
+      "destination": "acquisition/camera_calibration/fit_raw.py",
+      "sha256": "68aa747911ceabdf91c07705613c5963aa117c18bb8c98e1ed4c737103b25b1d",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/camera_calibration/fit.py",
+      "destination": "acquisition/camera_calibration/fit.py",
+      "sha256": "588f0a157b9917a4f99d407d652d23970cd170d8965396c07fe8fdc81e85e02b",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/camera_calibration/README.md",
+      "destination": "acquisition/camera_calibration/README.md",
+      "sha256": "318781f21bb1339963c3c97f2d663378ecd26db53dc65b028aee416a250d8880",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/configs/four_ball_orientation_v1.json",
+      "destination": "acquisition/configs/four_ball_orientation_v1.json",
+      "sha256": "112e96d4e0454d43f7c387282c16632faeff92492da495cde9645e4dcbd7d440",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/configs/luna_new.ini",
+      "destination": "acquisition/configs/luna_new.ini",
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/configs/yellow_measurement_v1.json",
+      "destination": "acquisition/configs/yellow_measurement_v1.json",
+      "sha256": "9b20e82955bff562c2173cd35aa83353fb93aed49b4124a607f1c18f63d61131",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
+      "local_modification": "20261028 fixed camera controls, readback verification and shaded/cluttered ball detection repair"
+    },
+    {
+      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
+      "destination": "acquisition/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
+      "sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
+    },
+    {
+      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/start_luna_stereo.sh",
+      "destination": "acquisition/configs/orin_6_6_7_100_20261014/start_luna_stereo.sh",
+      "sha256": "6aa6fa7a67510f9eb2a69c060ff079ebeaa934fd6b7d2db262caaddb91031d82",
+      "role": "Unchanged Luna acquisition source and its contracts"
+    },
+    {
+      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
+      "destination": "acquisition/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
+      "sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+      "local_modification": "20261028 current Luna V2.0 camera recalibration; obsolete camera data removed"
+    },
+    {
+      "source": "head_2dof_capt/configs/orin_6_6_7_100_20261014/README.md",
+      "destination": "acquisition/configs/orin_6_6_7_100_20261014/README.md",
+      "sha256": "67ea0a12e93f139f94fbb2e3db1ed0c3906a8c2811faed769b5f3d58c1366228",
+      "role": "Unchanged Luna acquisition source and its contracts",
+      "upstream_sha256": "6220e5d97563f08f3770a0972efd31c62c3d617774e9d0617829b49451e731ac",
+      "local_modification": "20261028 new camera migration and obsolete-data cleanup"
+    },
+    {
+      "source": "local",
+      "destination": "acquisition/orin_rectified_stream/capture_progress.py",
+      "sha256": "374ea9f8ef5081598c3ea758b10cdd60b36fbd6c06f299cef6cc8a1ac31d91a4",
+      "role": "Fixed-head capture progress overlay reader"
+    }
+  ],
+  "adapted_sources": [
+    {
+      "source": "head_2dof_capt/capt_head/geometry.py:robust_optimize",
+      "destination": "dynamic_handeye/optimizer.py",
+      "adaptation": "Function copied verbatim, imports/header isolated"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/continuous_head.py:fit_geometry",
+      "destination": "dynamic_handeye/calibration.py",
+      "adaptation": "Variable projection initialization, joint 12DoF Huber refinement and grouped validation"
+    },
+    {
+      "source": "head_2dof_capt/interactive_ball_calibration/geometry.py:flange_pose",
+      "destination": "dynamic_handeye/geometry.py:mdh_poses",
+      "adaptation": "Same MDH convention, batched head and arm FK"
+    }
+  ]
+}

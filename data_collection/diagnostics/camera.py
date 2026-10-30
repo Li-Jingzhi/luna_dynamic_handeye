@@ -1,5 +1,6 @@
 """SSH-localhost transport; no network connection during import or offline checks."""
 import io
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -44,19 +45,56 @@ def expected_assets():
         controls_sha256=digest(ROOT/'configs/camera/luna_v2_fixed_controls.json'))
 
 
+def enhance_images(images,blobs,gamma):
+    if not np.isfinite(gamma) or not 1<=gamma<=2:raise ValueError('Image gamma must be in [1,2]')
+    if gamma==1:return images,blobs
+    lut=np.rint(255*(np.arange(256)/255)**(1/gamma)).astype(np.uint8)
+    result=[cv2.LUT(image,lut) for image in images];saved=dict(blobs)
+    for i,eye in enumerate(('left','right')):
+        saved[f'{eye}_rectified_unenhanced.png']=blobs[f'{eye}_rectified.png']
+        ok,png=cv2.imencode('.png',result[i])
+        if not ok:raise OSError('Enhanced image encoding failed')
+        saved[f'{eye}_rectified.png']=png.tobytes()
+    return result,saved
+
+
 class Camera:
-    def __init__(self,host,user,port):self.client=connect(host,user);self.port=port;self.expected=expected_assets()
+    def __init__(self,host,user,port,image_gamma=1.,evidence_directory=None):
+        self.client=connect(host,user);self.port=port;self.expected=expected_assets();self.gamma=image_gamma;self.store=None
+        if evidence_directory is not None:
+            mount=ROOT/'datasets/orin_diagnostic_storage';directory=Path(evidence_directory).absolute()
+            if directory.is_relative_to(mount):
+                if not mount.is_mount():raise RuntimeError('Orin evidence mount unavailable')
+                self.store=str(directory.relative_to(mount))
     def close(self):self.client.close()
     def barrier(self):return json.loads(request(self.client,self.port,'/barrier'))
-    def capture(self,barrier):
-        body=request(self.client,self.port,f"/capture?after_ns={barrier['after_ns']}")
+    def capture(self,barrier,save=True):
+        from urllib.parse import urlencode
+        query=dict(after_ns=barrier['after_ns'],gamma=self.gamma,save=int(save))
+        if self.store:query['store']=self.store
+        body=request(self.client,self.port,'/capture?'+urlencode(query))
         with zipfile.ZipFile(io.BytesIO(body)) as z:
             metadata=json.loads(z.read('metadata.json'))
             if metadata['process_id']!=barrier['process_id']:raise ValueError('Camera restarted during capture')
             identity=validate_metadata(metadata,self.expected,barrier['after_ns'])
-            blobs={name:z.read(name) for name in ('left_input.png','right_input.png','left_rectified.png','right_rectified.png')}
+            blobs={name:z.read(name) for name in z.namelist() if name.endswith('.png')}
         images=[cv2.imdecode(np.frombuffer(blobs[f'{eye}_rectified.png'],np.uint8),cv2.IMREAD_COLOR) for eye in ('left','right')]
         if any(x is None or x.shape!=(992,1280,3) for x in images):raise ValueError('Wrong measurement images')
+        if 'image_processing' in metadata:
+            if metadata['image_processing']['gamma']!=self.gamma:raise ValueError('Camera image processing mismatch')
+            if metadata.get('stored_evidence'):
+                if metadata.get('evidence_session')!=self.store:raise ValueError('Remote image destination mismatch')
+                for item in metadata['stored_evidence'].values():
+                    path=Path(item['path'])
+                    if path.is_absolute() or '..' in path.parts or len(item['sha256'])!=64:raise ValueError('Invalid remote image evidence')
+                for eye in ('left','right'):
+                    name=f'{eye}_rectified.png'
+                    if hashlib.sha256(blobs[name]).hexdigest()!=metadata['stored_evidence'][name]['sha256']:
+                        raise ValueError('Detection input differs from stored image evidence')
+                blobs={}
+        else:images,blobs=enhance_images(images,blobs,self.gamma)
+        metadata['image_processing']=dict(gamma=self.gamma,formula='round(255*(pixel/255)**(1/gamma))',
+            detection_images='left_rectified.png,right_rectified.png',sensor_exposure_unchanged=True)
         return metadata,identity,blobs,images
 
 

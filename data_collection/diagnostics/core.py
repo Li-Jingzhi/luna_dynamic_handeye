@@ -28,6 +28,11 @@ def default_plan():
 
 
 def validate_plan(p):
+    skip=p.get('skip_task_ids',[])
+    if not isinstance(skip,list) or any(not isinstance(x,str) for x in skip) or len(skip)!=len(set(skip)):raise ValueError('Invalid prior task exclusions')
+    if type(p.get('continue_measurement_rejects',False)) is not bool:raise ValueError('Invalid measurement rejection policy')
+    gamma=p.get('image_gamma',1.)
+    if type(gamma) not in (int,float) or not np.isfinite(gamma) or not 1<=gamma<=2:raise ValueError('Invalid image_gamma')
     if p.get('schema')!='luna_auto_diagnostics_v1' or p.get('samples_per_window')!=50:
         raise ValueError('Expected diagnostic plan and exactly fifty frames')
     if p.get('ball_diameter_m')!=.04:raise ValueError('Current detector contract assumes a nominal40mm sphere')
@@ -51,6 +56,10 @@ def validate_plan(p):
 
 
 def tasks(plan,experiment):
+    return [task for task in all_tasks(plan,experiment) if task['id'] not in plan.get('skip_task_ids',[])]
+
+
+def all_tasks(plan,experiment):
     if experiment=='optical':return [dict(id=f'optical_{i:02}',kind='optical',offset_m=v) for i,v in enumerate(plan['optical_offsets_m'])]
     if experiment=='hold':return [dict(id=f'hold_{s:02}_{axis}_{sign:+}_a{amplitude:g}',kind='hold',site=s,axis=axis,sign=sign,amplitude_deg=amplitude,offset_m=v)
         for s,v in enumerate(plan['hold_offsets_m']) for amplitude in plan['hold_posture_deltas_deg'] for axis in plan['posture_axes_0based'] for sign in (-1,1)]
@@ -69,6 +78,13 @@ def servo_step(jac,error,q,posture,step_limit):
     if posture is not None:dq+=.35*null@(np.asarray(posture)-q)
     magnitude=float(np.max(abs(dq)))
     return dq*min(1.,step_limit/max(magnitude,1e-12)),null
+
+
+def planned_step_limit(plan):
+    # Leave room for feedback quantization/return tolerance while retaining the hard command bound.
+    step=plan['max_joint_step_deg']-2*plan['joint_target_tolerance_deg']
+    if step<=0:raise ValueError('Joint target tolerance leaves no planning step margin')
+    return step
 
 
 def guard_q(q,origin,limits,plan):

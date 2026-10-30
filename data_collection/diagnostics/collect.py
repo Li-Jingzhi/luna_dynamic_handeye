@@ -6,7 +6,7 @@ from pathlib import Path
 import time
 import uuid
 import numpy as np
-from .core import ROOT,digest,tasks,servo_step,guard_q,window_summary,validate_metadata
+from .core import ROOT,digest,tasks,servo_step,guard_q,window_summary,validate_metadata,planned_step_limit
 from dynamic_handeye.geometry import apply,torso_from_arm
 
 
@@ -17,6 +17,11 @@ def write_json(path,value):
 
 def append(path,row):
     with Path(path).open('a') as f:f.write(json.dumps(row,ensure_ascii=False,allow_nan=False)+'\n')
+
+
+def skippable_window_error(error):
+    return (isinstance(error,ValueError) and str(error)=='Corrected disparity jitter exceeds 0.1px') or (
+        isinstance(error,RuntimeError) and str(error).startswith('Only ') and str(error).endswith(' of 50 unique qualified frames; window preserved'))
 
 
 def development_joints(model):
@@ -34,6 +39,7 @@ class Collector:
     def __init__(self,assets,model,plan,robot,camera,directory):
         self.a=assets;self.model=model;self.p=plan;self.robot=robot;self.camera=camera;self.dir=Path(directory)
         self.seen=[set(),set()];self.process=None;self.origin_camera=None;self.control_id=0
+        self.previous_pixels=None;self.previous_center=None
         self.expected=dict(source_calibration_sha256=assets.hashes['raw'],stereo_model_sha256=assets.hashes['stereo'],
             controls_sha256=digest(self.dir/'assets/configs/camera/luna_v2_fixed_controls.json'))
         self.seen_file=self.dir/'source_identities.jsonl'
@@ -43,7 +49,9 @@ class Collector:
                 for eye in (0,1):self.seen[eye].add(tuple(value[eye]))
 
     def measure(self,barrier,save=True):
-        before=self.robot.sample();metadata,identity,blobs,images=self.camera.capture(barrier);after=self.robot.sample()
+        before=self.robot.sample()
+        metadata,identity,blobs,images=(self.camera.capture(barrier) if getattr(self.camera,'simulated',False) else self.camera.capture(barrier,save=save))
+        after=self.robot.sample()
         validate_metadata(metadata,self.expected,barrier['after_ns'])
         if self.process is None:self.process=metadata['process_id']
         if metadata['process_id']!=self.process:raise RuntimeError('Camera process restarted; stop and create a new camera session')
@@ -51,13 +59,18 @@ class Collector:
         if any(identities[i] in self.seen[i] for i in (0,1)):raise ValueError('A source eye frame was reused')
         for eye in (0,1):self.seen[eye].add(identities[eye])
         append(self.seen_file,identities)
-        uid=uuid.uuid4().hex;files={}
+        uid=metadata.get('evidence_id',uuid.uuid4().hex);files={}
         if save:
-            folder=self.dir/'images'/uid;folder.mkdir(parents=True,exist_ok=False)
-            for name,blob in blobs.items():
-                path=folder/name
-                with path.open('xb') as f:f.write(blob)
-                files[name]=dict(path=str(path.relative_to(self.dir)),sha256=digest(path))
+            if metadata.get('stored_evidence'):
+                files=metadata['stored_evidence']
+                required={f'{eye}_{kind}.png' for eye in ('left','right') for kind in ('input','rectified','rectified_unenhanced')}
+                if set(files)!=required:raise ValueError('Incomplete remote image evidence')
+            else:
+                folder=self.dir/'images'/uid;folder.mkdir(parents=True,exist_ok=False)
+                for name,blob in blobs.items():
+                    path=folder/name
+                    with path.open('xb') as f:f.write(blob)
+                    files[name]=dict(path=str(path.relative_to(self.dir)),sha256=digest(path))
             append(self.dir/'camera_evidence.jsonl',dict(id=uid,metadata=metadata,feedback=after,image_files=files))
         if np.max(abs(np.array(before['q7_deg'])-after['q7_deg']))>self.p['max_window_joint_span_deg']:
             raise RuntimeError('Arm moved while transferring camera evidence')
@@ -65,15 +78,20 @@ class Collector:
         else:
             from acquisition.capt_head.subpixel_ball import stereo_measure
             config=self.a.contract
-            measurement=stereo_measure(images,config,stereo=self.a.stereo)
+            measurement=stereo_measure(images,config,previous=self.previous_pixels,stereo=self.a.stereo)
         if measurement is None or measurement.get('quality')!='PASS':raise ValueError('Ball detection/epipolar quality failed')
         c=np.array(measurement['center_left_camera_m'],float)
         if not np.isfinite(c).all() or not .15<c[2]<.8:raise RuntimeError('Ball depth outside diagnostic local range')
+        if self.previous_center is not None and np.linalg.norm(c-self.previous_center)>.01:
+            raise ValueError('Ball detection jumped more than10mm between stationary feedback samples')
         for p in self.a.P:
             image=p@np.r_[c,1];uv=image[:2]/image[2]
             if not (30<uv[0]<1250 and 30<uv[1]<962):raise RuntimeError('Ball approached stereo field boundary')
         if self.origin_camera is not None and np.linalg.norm(c-self.origin_camera)>self.p['max_camera_excursion_m']:
             raise RuntimeError('Measured ball left local camera workspace')
+        self.previous_center=c.copy()
+        if not getattr(self.camera,'simulated',False):
+            self.previous_pixels=[np.array(measurement[eye]['center']) for eye in ('left','right')]
         return dict(id=uid,simulated=self.robot.simulated,metadata=metadata,measurement=measurement,
             feedback=after,feedback_before=before,image_files=files,request_feedback_note='Static before/after SDK reads; clocks are not hardware exposure-synchronized')
 
@@ -99,7 +117,7 @@ class Collector:
         previous=None;diverging=0
         for iteration in range(self.p['servo_max_iterations']):
             point=self.control();q=np.array(self.robot.sample()['q7_deg']);error=target-point;j=self.jacobian(q)
-            dq,null=servo_step(j,error,q,posture,self.p['max_joint_step_deg'])
+            dq,null=servo_step(j,error,q,posture,planned_step_limit(self.p))
             if np.linalg.norm(error)<=self.p['servo_tolerance_m'] and (posture is None or np.max(abs(null@(posture-q)))<.1):
                 return dict(iterations=iteration,actual_camera_m=point.tolist(),desired_camera_m=target.tolist(),error_mm=float(np.linalg.norm(error)*1000),q7_deg=q.tolist())
             if previous is not None and np.linalg.norm(error)>previous+.001:diverging+=1
@@ -112,7 +130,7 @@ class Collector:
     def joint_path(self,target):
         current=np.array(self.robot.sample()['q7_deg']);target=np.array(target,float);history=[current.tolist()]
         guard_q(target,self.robot.origin,self.robot.limits,self.p)
-        steps=max(1,int(np.ceil(np.max(abs(target-current))/self.p['max_joint_step_deg'])))
+        steps=max(1,int(np.ceil(np.max(abs(target-current))/planned_step_limit(self.p))))
         for goal in np.linspace(current,target,steps+1)[1:]:
             self.robot.move(goal);self.control();history.append(self.robot.sample()['q7_deg'])
         if np.max(abs(np.array(history[-1])-target))>self.p['joint_target_tolerance_deg']:raise RuntimeError('Return feedback tolerance failed')
@@ -165,7 +183,7 @@ def run_session(a,model_path,plan,experiment,directory,robot_factory,camera_fact
         write_json(manifest_path,manifest)
     if manifest['tasks']!=expected_tasks:raise ValueError('Resume task list differs')
     output=directory/'observations.jsonl';existing=[json.loads(x) for x in output.read_text().splitlines()] if output.exists() else []
-    done=[x['task']['id'] for x in existing if x.get('capture_valid')]
+    done=[x['task']['id'] for x in existing]
     if len(done)!=len(set(done)):raise ValueError('Duplicate completed task')
     if not set(done)<=set(t['id'] for t in expected_tasks):raise ValueError('Observation belongs to another task list')
     if len(done)==len(expected_tasks) and (directory/'completed.json').exists():
@@ -230,7 +248,15 @@ def run_session(a,model_path,plan,experiment,directory,robot_factory,camera_fact
                     index=expected_tasks.index(task);posture=robot.origin.copy();axis=plan['posture_axes_0based'][index%len(plan['posture_axes_0based'])]
                     posture[axis]+=(-1 if index%2 else 1)*plan['posture_delta_deg']
                 audit['servo']=collector.servo(goal,posture)
-            sample=collector.window(task)
+            try:sample=collector.window(task)
+            except (ValueError,RuntimeError) as error:
+                if not plan.get('continue_measurement_rejects',False) or not skippable_window_error(error):raise
+                append(output,dict(task=task,capture_valid=False,simulated=simulated,model_sha256=model_hash,
+                    rejection_reason=str(error),audit=audit,feedback=robot.sample(),image_evidence='frames.jsonl and camera_evidence.jsonl retain failed window'))
+                done.append(task['id']);manifest['checkpoint_q7_deg']=robot.sample()['q7_deg'];write_json(manifest_path,manifest)
+                append(directory/'events.jsonl',dict(kind='window_rejected_continue',task=task,reason=str(error)))
+                write_json(directory/'status.json',dict(complete=False,attempted=len(done),planned=len(expected_tasks),last_task=task['id']))
+                continue
             if experiment=='hold' and np.linalg.norm(np.array(sample['camera_xyz_m'])-goal)>plan['hold_tolerance_m']:
                 raise RuntimeError('Visual center did not remain at the declared site')
             if dev is not None:
@@ -255,6 +281,11 @@ def run_session(a,model_path,plan,experiment,directory,robot_factory,camera_fact
                 except Exception as error:cleanup_errors.append(name+': '+str(error))
         if cleanup_errors:complete=False;append(directory/'events.jsonl',dict(kind='cleanup_failure',errors=cleanup_errors))
         write_json(directory/'status.json',dict(complete=complete,simulated=simulated,saved=len(done),planned=len(expected_tasks)))
-        if complete:write_json(directory/'completed.json',dict(complete=True,simulated=simulated,observations=len(done),sha256=digest(output),model_sha256=model_hash))
+        if complete:
+            recorded=[json.loads(line) for line in output.read_text().splitlines() if line.strip()]
+            valid=sum(row.get('capture_valid') is True for row in recorded)
+            write_json(directory/'completed.json',dict(complete=True,simulated=simulated,observations=len(done),
+                valid_windows=valid,rejected_windows=len(done)-valid,all_windows_valid=valid==len(done),
+                sha256=digest(output),model_sha256=model_hash))
         if cleanup_errors:raise RuntimeError('Cleanup failed: '+'; '.join(cleanup_errors))
     return dict(complete=complete,simulated=simulated,observations=len(done),directory=str(directory))
