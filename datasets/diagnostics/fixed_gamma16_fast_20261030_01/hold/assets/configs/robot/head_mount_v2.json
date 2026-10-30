@@ -1,0 +1,52 @@
+{
+  "schema": "luna_v2_hybrid_head_mount_v1",
+  "robot_version": "luna_v2_0",
+  "status": "nominal_geometry_not_independently_measured",
+  "center_source": "MJCF Head_J1_Link pos relative to Leg_J6_Link; position only",
+  "yaw_zero_rotation_in_S": [
+    [
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      1,
+      0
+    ],
+    [
+      0,
+      0,
+      1
+    ]
+  ],
+  "axis_assumption": "S +X forward, +Y left, +Z up; yaw-zero frame aligned with S. Nominal axes require independent verification.",
+  "head_root_derivation": "T_S_Href = [yaw_zero_rotation_in_S, MJCF Head_J1_Link pos]; no MDH D translation",
+  "controller_chain": "luna_v2_hybrid",
+  "joint_order": [
+    "yaw",
+    "pitch"
+  ],
+  "encoder_zero_offsets_deg": [
+    0,
+    0
+  ],
+  "independently_verified": false,
+  "rotation_order": "Rz(yaw) @ Ry(-pitch)",
+  "feedback_indices": [
+    0,
+    1
+  ],
+  "limits_deg": [
+    [
+      -90,
+      90
+    ],
+    [
+      -25,
+      25
+    ]
+  ],
+  "source_document": "docs/Luna_头部混合运动学与动态手眼标定方案_20261026.md",
+  "excluded_controller_parameter": "R.H.L0.DH D=640 mm is provenance only and never enters this head chain"
+}

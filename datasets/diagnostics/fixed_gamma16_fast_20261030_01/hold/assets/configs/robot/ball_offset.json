@@ -1,0 +1,22 @@
+{
+  "schema": "luna_measured_flange_ball_offset_v1",
+  "flange_to_ball_center_m": [
+    0.0,
+    0.0,
+    0.101
+  ],
+  "measurement_method": "precision_instrument",
+  "derived_from": "data/ball_fixed_pf_rectified_20261016.json",
+  "mdh_sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+  "stereo_sha256": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+  "pixel_domain": "ideal_pinhole",
+  "image_size": [
+    1280,
+    992
+  ],
+  "sensor_ids": [
+    "head_left:csi://0",
+    "head_right:csi://1"
+  ],
+  "note": "Nominal 101mm offset retained for initialization only; new-session pF must be fitted, not treated as verified."
+}

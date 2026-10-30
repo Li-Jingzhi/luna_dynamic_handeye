@@ -1,0 +1,10 @@
+{
+  "complete": true,
+  "simulated": false,
+  "observations": 2,
+  "valid_windows": 1,
+  "rejected_windows": 1,
+  "all_windows_valid": false,
+  "sha256": "1306d878a92fa3c1ac4f3162b21c1daac449bfff097b4a9a6165c5d441594b16",
+  "model_sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b"
+}

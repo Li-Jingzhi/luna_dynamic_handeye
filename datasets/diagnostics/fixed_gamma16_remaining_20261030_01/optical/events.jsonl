@@ -1,0 +1,2 @@
+{"kind": "window_rejected_continue", "task": {"id": "optical_00", "kind": "optical", "offset_m": [-0.015, 0.01, 0.02]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}

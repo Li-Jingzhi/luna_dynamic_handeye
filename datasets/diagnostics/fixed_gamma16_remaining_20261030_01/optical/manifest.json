@@ -1,0 +1,353 @@
+{
+  "schema": "luna_auto_diagnostic_session_v1",
+  "experiment": "optical",
+  "plan": {
+    "schema": "luna_auto_diagnostics_v1",
+    "head_deg": [
+      0,
+      -25
+    ],
+    "samples_per_window": 50,
+    "control_samples": 3,
+    "window_timeout_s": 90.0,
+    "head_tolerance_deg": 0.02,
+    "max_joint_step_deg": 0.3,
+    "max_total_joint_excursion_deg": 12.0,
+    "joint_limit_margin_deg": 2.0,
+    "max_camera_excursion_m": 0.05,
+    "servo_tolerance_m": 0.0003,
+    "servo_max_iterations": 80,
+    "joint_target_tolerance_deg": 0.01,
+    "approach_deg": 1.5,
+    "settle_s": 0.7,
+    "max_window_joint_span_deg": 0.02,
+    "hold_tolerance_m": 0.0006,
+    "optical_offsets_m": [
+      [
+        -0.015,
+        0.01,
+        0.02
+      ],
+      [
+        0.015,
+        0.01,
+        0.02
+      ]
+    ],
+    "hold_offsets_m": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.015,
+        0,
+        0
+      ],
+      [
+        -0.015,
+        0.01,
+        0
+      ]
+    ],
+    "posture_axes_0based": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "posture_delta_deg": 4.0,
+    "hold_posture_deltas_deg": [
+      2.0,
+      4.0
+    ],
+    "return_repeats": 5,
+    "acceptance_offsets_m": [
+      [
+        -0.012,
+        -0.006,
+        -0.015
+      ],
+      [
+        0.008,
+        -0.006,
+        -0.015
+      ],
+      [
+        -0.012,
+        0.012,
+        -0.015
+      ],
+      [
+        0.008,
+        0.012,
+        -0.015
+      ],
+      [
+        -0.02,
+        0,
+        -0.015
+      ],
+      [
+        0.02,
+        0,
+        -0.015
+      ],
+      [
+        0,
+        -0.015,
+        -0.015
+      ],
+      [
+        0,
+        0.015,
+        -0.015
+      ],
+      [
+        -0.008,
+        0.002,
+        -0.015
+      ],
+      [
+        0.015,
+        0.005,
+        -0.015
+      ],
+      [
+        -0.012,
+        -0.006,
+        0.005
+      ],
+      [
+        0.008,
+        -0.006,
+        0.005
+      ],
+      [
+        -0.012,
+        0.012,
+        0.005
+      ],
+      [
+        0.008,
+        0.012,
+        0.005
+      ],
+      [
+        -0.02,
+        0,
+        0.005
+      ],
+      [
+        0.02,
+        0,
+        0.005
+      ],
+      [
+        0,
+        -0.015,
+        0.005
+      ],
+      [
+        0,
+        0.015,
+        0.005
+      ],
+      [
+        -0.008,
+        0.002,
+        0.005
+      ],
+      [
+        0.015,
+        0.005,
+        0.005
+      ],
+      [
+        -0.012,
+        -0.006,
+        0.025
+      ],
+      [
+        0.008,
+        -0.006,
+        0.025
+      ],
+      [
+        -0.012,
+        0.012,
+        0.025
+      ],
+      [
+        0.008,
+        0.012,
+        0.025
+      ],
+      [
+        -0.02,
+        0,
+        0.025
+      ],
+      [
+        0.02,
+        0,
+        0.025
+      ],
+      [
+        0,
+        -0.015,
+        0.025
+      ],
+      [
+        0,
+        0.015,
+        0.025
+      ],
+      [
+        -0.008,
+        0.002,
+        0.025
+      ],
+      [
+        0.015,
+        0.005,
+        0.025
+      ]
+    ],
+    "acceptance_min_joint_novelty_deg": 1.0,
+    "ball_diameter_m": 0.04,
+    "ball_diameter_independently_measured": false,
+    "note": "Only an existing yellow ball. Optical audit is consistency, not known-distance ground truth. Visual hold is not a mechanical pivot fixture. Remaining optical13/14 use exact prior origin; first13 valid windows remain in fixed_gamma16_20261030_01. Window quality failures recorded as rejected, never accepted.",
+    "image_gamma": 1.6,
+    "continue_measurement_rejects": true
+  },
+  "assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "model_sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b",
+  "simulated": false,
+  "tasks": [
+    {
+      "id": "optical_00",
+      "kind": "optical",
+      "offset_m": [
+        -0.015,
+        0.01,
+        0.02
+      ]
+    },
+    {
+      "id": "optical_01",
+      "kind": "optical",
+      "offset_m": [
+        0.015,
+        0.01,
+        0.02
+      ]
+    }
+  ],
+  "full_protocol": true,
+  "reference": "Original and separately calibrated FK are both retained; model never refitted by collection",
+  "independent_known_distance_reference": false,
+  "physical_fixed_center_fixture": false,
+  "collection_code_hashes": {
+    "data_collection/diagnostics/camera.py": "53617cfae7dedb437c4defbf63f5007c1d2177e05207e4147b5bd87de1fb427e",
+    "data_collection/diagnostics/robot.py": "8c29c25a32a600feedec44e8dc4692a9fdada719faaa2667cb1daf4e42e7e1db",
+    "data_collection/diagnostics/preview.py": "37163bf59c7651c2a7ff42700d2cfd271b87e91529f7ce3c39454d26dfc22c43",
+    "data_collection/diagnostics/collect.py": "8f8c7310d6f2665b457995c5f671163e82cc5b37fee81c2bdbd09ce469b53743",
+    "data_collection/diagnostics/__init__.py": "87e262532f9f18d5ad60dbaa3b1d299b1772722803afed163e5c42e39acdd2fd",
+    "data_collection/diagnostics/core.py": "968de9de381fa4f705c13b3e95eae8583beb57bb47eff29e2836655bb45d3fae",
+    "data_collection/diagnostics/simulation.py": "08bf6a45a9a8b429521059a973bef1b93c136b7361af3ba4787d64990a94515d",
+    "data_collection/diagnostics/cli.py": "c6619558f889eafbd8f1669299622a7c919f53183ae7a14027326c0dfccf091f",
+    "data_collection/diagnostics/camera_server.py": "709df21523de4a72d73187ef8324812b5f1c7897534471f010ae8f264f1e4ce8",
+    "data_collection/diagnostics/analyze.py": "567492a7f3e2aa0099428cf238efb6722d4481cfcfcdff2d03b1ca81a351beab"
+  },
+  "asset_files": {
+    "configs/camera/luna_raw_fisheye_stereo.json": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "configs/camera/luna_v2_fixed_controls.json": "ad4df3561adee1c08b544b61966d6f5c25eb3fd1e8005621f16e90109f444613",
+    "configs/camera/yellow_measurement_source.json": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f",
+    "configs/camera/luna_rectified_stereo.json": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "configs/robot/torso_mounts.json": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375",
+    "configs/robot/ball_offset.json": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "configs/robot/head_mount_v2.json": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "configs/robot/luna_new.ini": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "sources.json": "b9dd455991bd65273382f169881359dc4c85dc0dfe911f681dcdf5f636dab87d",
+    "reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "initial_feedback": {
+    "q7_deg": [
+      -0.184,
+      -50.324,
+      -8.652,
+      -85.012,
+      -2.048,
+      -2.332,
+      -17.432
+    ],
+    "head_deg": [
+      -0.0,
+      -25.001
+    ],
+    "body_deg": [
+      -0.0,
+      -0.0,
+      -2.25,
+      -0.0,
+      -0.003,
+      0.0
+    ],
+    "opposite_arm_deg": [
+      -0.201,
+      0.302,
+      0.006,
+      0.309,
+      -0.152,
+      0.955,
+      -1.71
+    ],
+    "sample_monotonic_ns": 21670137375855,
+    "read_span_ms": 0.163652,
+    "velocity_deg_s": [
+      0.039,
+      -0.004,
+      -0.026,
+      -0.027,
+      -0.037,
+      0.033,
+      -0.033
+    ]
+  },
+  "origin_camera_m": [
+    0.10172994845665209,
+    -0.06879493113143931,
+    0.3892227126461125
+  ],
+  "guard_origin_q7_deg": [
+    0.746,
+    -46.564,
+    -7.863,
+    -88.014,
+    -2.502,
+    -3.878,
+    -18.776
+  ],
+  "robot_identity": {
+    "robot_type": "GentoLuna",
+    "submodel": "V2.0FSK_M6SLC-615-B-V1.0",
+    "sdk_version": "00040701"
+  },
+  "checkpoint_q7_deg": [
+    -0.308,
+    -46.016,
+    -8.793,
+    -86.462,
+    -2.306,
+    -3.209,
+    -18.23
+  ]
+}

@@ -1,0 +1,51 @@
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_3_+1_00", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_5_+1_00", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_5_-1_01", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_5_+1_01", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_5_-1_03", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_5_-1_03", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_reject", "task_id": "return_00_6_+1_03", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "return_01_2_-1_01", "kind": "return", "site": 1, "axis": 2, "sign": -1, "repeat": 1, "offset_m": [0.015, 0, 0]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "return_01_2_+1_04", "kind": "return", "site": 1, "axis": 2, "sign": 1, "repeat": 4, "offset_m": [0.015, 0, 0]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "window_reject", "task_id": "return_01_3_+1_00", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "session_abort", "task": {"id": "return_01_3_+1_02", "kind": "return", "site": 1, "axis": 3, "sign": 1, "repeat": 2, "offset_m": [0.015, 0, 0]}, "reason": ""}

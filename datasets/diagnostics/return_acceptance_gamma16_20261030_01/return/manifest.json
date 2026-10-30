@@ -1,0 +1,1967 @@
+{
+  "schema": "luna_auto_diagnostic_session_v1",
+  "experiment": "return",
+  "plan": {
+    "schema": "luna_auto_diagnostics_v1",
+    "head_deg": [
+      0,
+      -25
+    ],
+    "samples_per_window": 50,
+    "control_samples": 3,
+    "window_timeout_s": 90.0,
+    "head_tolerance_deg": 0.02,
+    "max_joint_step_deg": 0.3,
+    "max_total_joint_excursion_deg": 12.0,
+    "joint_limit_margin_deg": 2.0,
+    "max_camera_excursion_m": 0.05,
+    "servo_tolerance_m": 0.0003,
+    "servo_max_iterations": 80,
+    "joint_target_tolerance_deg": 0.01,
+    "approach_deg": 1.5,
+    "settle_s": 0.7,
+    "max_window_joint_span_deg": 0.02,
+    "hold_tolerance_m": 0.0006,
+    "optical_offsets_m": [
+      [
+        -0.015,
+        0.01,
+        0.02
+      ],
+      [
+        0.015,
+        0.01,
+        0.02
+      ]
+    ],
+    "hold_offsets_m": [
+      [
+        0,
+        0,
+        0
+      ],
+      [
+        0.015,
+        0,
+        0
+      ],
+      [
+        -0.015,
+        0.01,
+        0
+      ]
+    ],
+    "posture_axes_0based": [
+      2,
+      3,
+      5,
+      6
+    ],
+    "posture_delta_deg": 4.0,
+    "hold_posture_deltas_deg": [
+      2.0,
+      4.0
+    ],
+    "return_repeats": 5,
+    "acceptance_offsets_m": [
+      [
+        -0.012,
+        -0.006,
+        -0.015
+      ],
+      [
+        0.008,
+        -0.006,
+        -0.015
+      ],
+      [
+        -0.012,
+        0.012,
+        -0.015
+      ],
+      [
+        0.008,
+        0.012,
+        -0.015
+      ],
+      [
+        -0.02,
+        0,
+        -0.015
+      ],
+      [
+        0.02,
+        0,
+        -0.015
+      ],
+      [
+        0,
+        -0.015,
+        -0.015
+      ],
+      [
+        0,
+        0.015,
+        -0.015
+      ],
+      [
+        -0.008,
+        0.002,
+        -0.015
+      ],
+      [
+        0.015,
+        0.005,
+        -0.015
+      ],
+      [
+        -0.012,
+        -0.006,
+        0.005
+      ],
+      [
+        0.008,
+        -0.006,
+        0.005
+      ],
+      [
+        -0.012,
+        0.012,
+        0.005
+      ],
+      [
+        0.008,
+        0.012,
+        0.005
+      ],
+      [
+        -0.02,
+        0,
+        0.005
+      ],
+      [
+        0.02,
+        0,
+        0.005
+      ],
+      [
+        0,
+        -0.015,
+        0.005
+      ],
+      [
+        0,
+        0.015,
+        0.005
+      ],
+      [
+        -0.008,
+        0.002,
+        0.005
+      ],
+      [
+        0.015,
+        0.005,
+        0.005
+      ],
+      [
+        -0.012,
+        -0.006,
+        0.025
+      ],
+      [
+        0.008,
+        -0.006,
+        0.025
+      ],
+      [
+        -0.012,
+        0.012,
+        0.025
+      ],
+      [
+        0.008,
+        0.012,
+        0.025
+      ],
+      [
+        -0.02,
+        0,
+        0.025
+      ],
+      [
+        0.02,
+        0,
+        0.025
+      ],
+      [
+        0,
+        -0.015,
+        0.025
+      ],
+      [
+        0,
+        0.015,
+        0.025
+      ],
+      [
+        -0.008,
+        0.002,
+        0.025
+      ],
+      [
+        0.015,
+        0.005,
+        0.025
+      ]
+    ],
+    "acceptance_min_joint_novelty_deg": 1.0,
+    "ball_diameter_m": 0.04,
+    "ball_diameter_independently_measured": false,
+    "note": "Only an existing yellow ball. Optical audit is consistency, not known-distance ground truth. Visual hold is not a mechanical pivot fixture. Remaining optical13/14 use exact prior origin; first13 valid windows remain in fixed_gamma16_20261030_01. Window quality failures recorded as rejected, never accepted. User explicitly skips remaining hold experiment; continue return120,acceptance30 and then static/head-only supplementary.",
+    "image_gamma": 1.6,
+    "continue_measurement_rejects": true,
+    "skip_task_ids": [
+      "optical_00",
+      "optical_01",
+      "hold_00_2_-1_a2",
+      "hold_00_2_+1_a2",
+      "hold_00_3_-1_a2",
+      "hold_00_3_+1_a2",
+      "hold_00_5_-1_a2",
+      "hold_00_5_+1_a2",
+      "hold_00_6_-1_a2",
+      "hold_00_6_+1_a2",
+      "hold_00_2_-1_a4",
+      "hold_00_2_+1_a4",
+      "hold_00_3_-1_a4",
+      "hold_00_3_+1_a4",
+      "hold_00_5_-1_a4",
+      "hold_00_5_+1_a4",
+      "hold_00_6_-1_a4",
+      "hold_00_6_+1_a4",
+      "hold_01_2_-1_a2",
+      "hold_01_2_+1_a2",
+      "hold_01_3_-1_a2",
+      "hold_01_3_+1_a2",
+      "hold_01_5_-1_a2",
+      "hold_01_5_+1_a2",
+      "hold_01_6_-1_a2",
+      "hold_01_6_+1_a2",
+      "hold_01_2_-1_a4",
+      "hold_01_2_+1_a4",
+      "hold_01_3_-1_a4",
+      "hold_01_3_+1_a4",
+      "hold_01_5_-1_a4",
+      "hold_01_5_+1_a4",
+      "hold_01_6_-1_a4",
+      "hold_01_6_+1_a4",
+      "hold_02_2_-1_a2",
+      "hold_02_2_+1_a2",
+      "hold_02_3_-1_a2",
+      "hold_02_3_+1_a2",
+      "hold_02_5_-1_a2",
+      "hold_02_5_+1_a2",
+      "hold_02_6_-1_a2",
+      "hold_02_6_+1_a2",
+      "hold_02_2_-1_a4",
+      "hold_02_2_+1_a4",
+      "hold_02_3_-1_a4",
+      "hold_02_3_+1_a4",
+      "hold_02_5_-1_a4",
+      "hold_02_5_+1_a4",
+      "hold_02_6_-1_a4",
+      "hold_02_6_+1_a4"
+    ]
+  },
+  "assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "model_sha256": "52b344409cf1853ad86ecf7cd93abac6338aaa62d59005e77da2941e947c3e0b",
+  "simulated": false,
+  "tasks": [
+    {
+      "id": "return_00_2_-1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_+1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_-1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_+1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_-1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_+1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_-1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_+1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_-1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_2_+1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_-1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_+1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_-1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_+1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_-1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_+1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_-1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_+1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_-1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_3_+1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_-1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_+1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_-1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_+1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_-1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_+1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_-1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_+1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_-1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_5_+1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_-1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_+1_00",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_-1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_+1_01",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_-1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_+1_02",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_-1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_+1_03",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_-1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_00_6_+1_04",
+      "kind": "return",
+      "site": 0,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_-1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_+1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_-1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_+1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_-1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_+1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_-1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_+1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_-1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_2_+1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_-1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_+1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_-1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_+1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_-1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_+1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_-1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_+1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_-1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_3_+1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_-1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_+1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_-1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_+1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_-1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_+1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_-1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_+1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_-1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_5_+1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_-1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_+1_00",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_-1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_+1_01",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_-1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_+1_02",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_-1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_+1_03",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_-1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_01_6_+1_04",
+      "kind": "return",
+      "site": 1,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        0.015,
+        0,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_-1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_+1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_-1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_+1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_-1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_+1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_-1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_+1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_-1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_2_+1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 2,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_-1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_+1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_-1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_+1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_-1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_+1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_-1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_+1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_-1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_3_+1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 3,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_-1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_+1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_-1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_+1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_-1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_+1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_-1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_+1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_-1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_5_+1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 5,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_-1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_+1_00",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 0,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_-1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_+1_01",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 1,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_-1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_+1_02",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 2,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_-1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_+1_03",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 3,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_-1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": -1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    },
+    {
+      "id": "return_02_6_+1_04",
+      "kind": "return",
+      "site": 2,
+      "axis": 6,
+      "sign": 1,
+      "repeat": 4,
+      "offset_m": [
+        -0.015,
+        0.01,
+        0
+      ]
+    }
+  ],
+  "full_protocol": true,
+  "reference": "Original and separately calibrated FK are both retained; model never refitted by collection",
+  "independent_known_distance_reference": false,
+  "physical_fixed_center_fixture": false,
+  "collection_code_hashes": {
+    "data_collection/diagnostics/camera.py": "f3c5553e8a2842e73004c1e1b1ea46cafb1ff210ce7eaeac5839d2136b58b985",
+    "data_collection/diagnostics/robot.py": "4bcb75e6c9c82d6ad11a2c508f5759a8ee0eb3acc26377985d57b433d010f552",
+    "data_collection/diagnostics/preview.py": "37163bf59c7651c2a7ff42700d2cfd271b87e91529f7ce3c39454d26dfc22c43",
+    "data_collection/diagnostics/collect.py": "a834ea2fe6b2afc1f233e779d6980ee34cda876a3fb40b6d14585419723bef21",
+    "data_collection/diagnostics/__init__.py": "87e262532f9f18d5ad60dbaa3b1d299b1772722803afed163e5c42e39acdd2fd",
+    "data_collection/diagnostics/core.py": "e9199c725864da6203dd8386e2942f0707a8ec714bb6ab7f7936bdc1bfd9f3ac",
+    "data_collection/diagnostics/simulation.py": "08bf6a45a9a8b429521059a973bef1b93c136b7361af3ba4787d64990a94515d",
+    "data_collection/diagnostics/cli.py": "635d3d3003e2a42b12084c06b1ff9bc4b117720e95dc9e2b4aa9484e80ff4758",
+    "data_collection/diagnostics/camera_server.py": "931eba80cada9bb3ae901eca52f6f96b0af5d20f2e2e9ebc5c5d7ebfe4dd4fa7",
+    "data_collection/diagnostics/analyze.py": "567492a7f3e2aa0099428cf238efb6722d4481cfcfcdff2d03b1ca81a351beab"
+  },
+  "asset_files": {
+    "configs/camera/luna_raw_fisheye_stereo.json": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "configs/camera/luna_v2_fixed_controls.json": "ad4df3561adee1c08b544b61966d6f5c25eb3fd1e8005621f16e90109f444613",
+    "configs/camera/yellow_measurement_source.json": "8a5b0a412961b89d5ab19843a238363fd75e2e3f2ba0e32000503848ca7de32f",
+    "configs/camera/luna_rectified_stereo.json": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "configs/robot/torso_mounts.json": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375",
+    "configs/robot/ball_offset.json": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "configs/robot/head_mount_v2.json": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "configs/robot/luna_new.ini": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "sources.json": "b9dd455991bd65273382f169881359dc4c85dc0dfe911f681dcdf5f636dab87d",
+    "reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "initial_feedback": {
+    "q7_deg": [
+      0.564,
+      -44.696,
+      -8.015,
+      -87.194,
+      -3.506,
+      -7.024,
+      -19.948
+    ],
+    "head_deg": [
+      -0.0,
+      -25.001
+    ],
+    "body_deg": [
+      -0.0,
+      -0.0,
+      -2.25,
+      -0.0,
+      -0.003,
+      0.0
+    ],
+    "opposite_arm_deg": [
+      -0.201,
+      0.302,
+      0.006,
+      0.309,
+      -0.152,
+      0.955,
+      -1.71
+    ],
+    "sample_monotonic_ns": 24590137065180,
+    "read_span_ms": 0.185756,
+    "velocity_deg_s": [
+      -0.022,
+      0.002,
+      -0.021,
+      -0.028,
+      0.021,
+      -0.056,
+      0.027
+    ]
+  },
+  "origin_camera_m": [
+    0.10172994845665209,
+    -0.06879493113143931,
+    0.3892227126461125
+  ],
+  "guard_origin_q7_deg": [
+    0.746,
+    -46.564,
+    -7.863,
+    -88.014,
+    -2.502,
+    -3.878,
+    -18.776
+  ],
+  "robot_identity": {
+    "robot_type": "GentoLuna",
+    "submodel": "V2.0FSK_M6SLC-615-B-V1.0",
+    "sdk_version": "00040701"
+  },
+  "anchors": {
+    "0": [
+      0.754,
+      -46.567,
+      -7.856,
+      -87.994,
+      -2.516,
+      -3.924,
+      -18.793
+    ],
+    "1": [
+      0.677,
+      -44.347,
+      -7.909,
+      -88.766,
+      -2.647,
+      -4.38,
+      -19.213
+    ]
+  },
+  "checkpoint_q7_deg": [
+    0.677,
+    -44.347,
+    -7.909,
+    -87.766,
+    -2.647,
+    -4.38,
+    -19.213
+  ]
+}

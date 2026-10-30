@@ -1,0 +1,27 @@
+{
+  "mode": "fixed",
+  "eyes": [
+    {
+      "exposure_ns": 5000000,
+      "analog_gain": 1.0,
+      "digital_gain": 1.0,
+      "wbmode": 0,
+      "tnr_mode": 1,
+      "ee_mode": 1,
+      "saturation": 1.0,
+      "tnr_strength": 0.5,
+      "ee_strength": 0.5
+    },
+    {
+      "exposure_ns": 5000000,
+      "analog_gain": 1.0,
+      "digital_gain": 1.0,
+      "wbmode": 0,
+      "tnr_mode": 1,
+      "ee_mode": 1,
+      "saturation": 1.0,
+      "tnr_strength": 0.5,
+      "ee_strength": 0.5
+    }
+  ]
+}

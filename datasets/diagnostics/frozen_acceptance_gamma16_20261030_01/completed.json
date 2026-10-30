@@ -1,0 +1,27 @@
+{
+  "complete": true,
+  "simulated": false,
+  "experiments": {
+    "optical": {
+      "complete": true,
+      "observations": 0,
+      "note": "Previously captured tasks excluded by plan"
+    },
+    "hold": {
+      "complete": true,
+      "observations": 0,
+      "note": "Previously captured tasks excluded by plan"
+    },
+    "return": {
+      "complete": true,
+      "observations": 0,
+      "note": "Previously captured tasks excluded by plan"
+    },
+    "acceptance": {
+      "complete": true,
+      "simulated": false,
+      "observations": 30,
+      "directory": "datasets/orin_diagnostic_storage/frozen_acceptance_gamma16_20261030_01/acceptance"
+    }
+  }
+}

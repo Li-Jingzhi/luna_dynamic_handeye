@@ -1,5 +1,5 @@
 {
-  "checked_at": "2026-10-30T10:27:14.197177+00:00",
+  "checked_at": "2026-10-30T10:29:54.138181+00:00",
   "local_metadata_files": 338,
   "local_metadata_bytes": 15168839,
   "files": [
@@ -1694,12 +1694,17 @@
       "sha256": "a8783e61dda1387255611d83d6e4692bae09638b61ee098b5d446c396f40d519"
     }
   ],
-  "orin_connected": false,
-  "orin_latest_counts_verified": false,
-  "acceptance_last_observed_attempted": 14,
+  "orin_connected": true,
+  "orin_latest_counts_verified": true,
+  "acceptance_last_observed_attempted": 30,
   "acceptance_planned": 30,
   "return_last_observed_records": 55,
   "return_last_observed_valid": 53,
   "return_first40_last_observed_valid": 40,
-  "images_uploaded": false
+  "images_uploaded": false,
+  "acceptance_valid": 20,
+  "acceptance_rejected": 10,
+  "acceptance_capture_complete": true,
+  "orin_metadata_files": 2098,
+  "orin_metadata_bytes": 123943078
 }

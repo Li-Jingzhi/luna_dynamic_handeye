@@ -1,0 +1,12 @@
+{
+  "requested_windows": 40,
+  "subset_records": 40,
+  "subset_valid": 40,
+  "subset_invalid": 0,
+  "source_records": 55,
+  "source_valid": 53,
+  "source_sha256": "5e69cb21f88e51c297a099a0d4463a0dc0b7611e794d207072697614afd2ae7a",
+  "subset_sha256": "71c2963f4463ab3cfa8500fce043411d1102d2df22e2fba48f560f3e6e634076",
+  "reason": "User requested stop at40; initial status showed52, final stopped source contains55. All source records retained, first40 exported without deletion.",
+  "full_original120_plan_complete": false
+}

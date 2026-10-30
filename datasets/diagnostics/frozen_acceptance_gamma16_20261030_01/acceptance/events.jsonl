@@ -1,0 +1,46 @@
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_10", "kind": "acceptance", "offset_m": [-0.012, -0.006, 0.005]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_12", "kind": "acceptance", "offset_m": [-0.012, 0.012, 0.005]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_13", "kind": "acceptance", "offset_m": [0.008, 0.012, 0.005]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Waiting for fixed controls and paired frames\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_18", "kind": "acceptance", "offset_m": [-0.008, 0.002, 0.005]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_21", "kind": "acceptance", "offset_m": [0.008, -0.006, 0.025]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_22", "kind": "acceptance", "offset_m": [-0.012, 0.012, 0.025]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_24", "kind": "acceptance", "offset_m": [-0.02, 0, 0.025]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_25", "kind": "acceptance", "offset_m": [0.02, 0, 0.025]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "control_reject", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_28", "kind": "acceptance", "offset_m": [-0.008, 0.002, 0.025]}, "reason": "Corrected disparity jitter exceeds 0.1px"}
+{"kind": "window_reject", "task_id": "acceptance_29", "reason": "{\"error\": \"Frame outside stationary/freshness window\"}"}
+{"kind": "window_rejected_continue", "task": {"id": "acceptance_29", "kind": "acceptance", "offset_m": [0.015, 0.005, 0.025]}, "reason": "Corrected disparity jitter exceeds 0.1px"}

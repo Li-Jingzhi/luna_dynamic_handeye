@@ -1,0 +1,87 @@
+{
+  "schema": "luna_rectified_stereo_v1",
+  "source_calibration": "luna_raw_fisheye_stereo.json",
+  "source_calibration_sha256": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+  "pixel_domain": "ideal_pinhole",
+  "image_size": [
+    1280,
+    992
+  ],
+  "sensor_ids": [
+    "head_left:csi://0",
+    "head_right:csi://1"
+  ],
+  "valid_pairs": 57,
+  "approved": false,
+  "left_K": [
+    [
+      400.4580219150072,
+      0.0,
+      669.0368583177731
+    ],
+    [
+      0.0,
+      400.4580219150072,
+      487.72239243928504
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "left_D": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "right_K": [
+    [
+      400.4580219150072,
+      0.0,
+      669.0368583177731
+    ],
+    [
+      0.0,
+      400.4580219150072,
+      487.72239243928504
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "right_D": [
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "right_from_left_R": [
+    [
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "right_from_left_T_m": [
+    -0.06047672137666818,
+    0.0,
+    0.0
+  ],
+  "stereo_rms_px": 0.1023253003112228,
+  "epipolar_p95_px": 0.15461320307912274,
+  "metrics_pixel_scale": "1280x992"
+}
