@@ -1,0 +1,824 @@
+{
+  "assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "sources": [
+    {
+      "batch": "A",
+      "path": "datasets/raw/luna_v2_transferred_marvin360_fixed25_20261028.jsonl",
+      "sha256": "76ad4de8cb1749c98619402cf0eaae20cb334a30816639da1bf4ec2a6f2a361f",
+      "valid": 353,
+      "rejected": {
+        "Disparity jitter 0.248 px exceeds contract": 1,
+        "Disparity jitter 0.171 px exceeds contract": 1,
+        "Only 0 fresh camera frames; need 50": 3,
+        "Disparity jitter 0.101 px exceeds contract": 1,
+        "Disparity jitter 0.108 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "A",
+      "path": "datasets/raw/luna_v2_transferred_marvin360_fixed20_20261028.jsonl",
+      "sha256": "645e072d7216415651a735fb43af6c11a33fc8cea086338c2d84ebe1bd5655cb",
+      "valid": 347,
+      "rejected": {
+        "Disparity jitter 0.248 px exceeds contract": 1,
+        "Disparity jitter 0.855 px exceeds contract": 1,
+        "Only 37 fresh camera frames; need 50": 1,
+        "Only 2 fresh camera frames; need 50": 1,
+        "Only 0 fresh camera frames; need 50": 7,
+        "Disparity jitter 0.115 px exceeds contract": 1,
+        "Disparity jitter 0.112 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "A",
+      "path": "datasets/raw/luna_v2_transferred_marvin360_yaw10_pitchm20_20261028.jsonl",
+      "sha256": "2b67677348c74e7d85582b7ea2550d5d26156d8dc6a2bbebf71327cf5579e35b",
+      "valid": 292,
+      "rejected": {
+        "Disparity jitter 0.163 px exceeds contract": 1,
+        "Only 24 fresh camera frames; need 50": 1,
+        "Only 1 fresh camera frames; need 50": 1,
+        "Only 2 fresh camera frames; need 50": 1,
+        "Only 0 fresh camera frames; need 50": 20,
+        "Only 7 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.130 px exceeds contract": 1,
+        "Disparity jitter 0.105 px exceeds contract": 2,
+        "Disparity jitter 0.118 px exceeds contract": 1,
+        "Disparity jitter 0.126 px exceeds contract": 2,
+        "Disparity jitter 0.103 px exceeds contract": 2,
+        "Disparity jitter 0.117 px exceeds contract": 1,
+        "Disparity jitter 0.106 px exceeds contract": 2,
+        "Disparity jitter 0.100 px exceeds contract": 1,
+        "Disparity jitter 0.107 px exceeds contract": 2,
+        "Disparity jitter 0.114 px exceeds contract": 1,
+        "Disparity jitter 0.125 px exceeds contract": 1,
+        "Disparity jitter 0.115 px exceeds contract": 1,
+        "Disparity jitter 0.128 px exceeds contract": 1,
+        "Disparity jitter 0.133 px exceeds contract": 1,
+        "Disparity jitter 0.129 px exceeds contract": 1,
+        "Disparity jitter 0.121 px exceeds contract": 1,
+        "Disparity jitter 0.109 px exceeds contract": 1,
+        "Disparity jitter 0.108 px exceeds contract": 1,
+        "Disparity jitter 0.209 px exceeds contract": 1,
+        "Disparity jitter 0.361 px exceeds contract": 1,
+        "Disparity jitter 0.266 px exceeds contract": 1,
+        "Disparity jitter 0.275 px exceeds contract": 1,
+        "Disparity jitter 0.261 px exceeds contract": 1,
+        "Disparity jitter 0.153 px exceeds contract": 1,
+        "Disparity jitter 0.160 px exceeds contract": 1,
+        "Disparity jitter 0.101 px exceeds contract": 2,
+        "Disparity jitter 0.177 px exceeds contract": 1,
+        "Disparity jitter 0.154 px exceeds contract": 1,
+        "Disparity jitter 0.324 px exceeds contract": 1,
+        "Disparity jitter 0.254 px exceeds contract": 1,
+        "Disparity jitter 0.293 px exceeds contract": 1,
+        "Disparity jitter 0.322 px exceeds contract": 1,
+        "Disparity jitter 0.462 px exceeds contract": 1,
+        "Disparity jitter 0.281 px exceeds contract": 1,
+        "Disparity jitter 0.232 px exceeds contract": 1,
+        "Disparity jitter 0.219 px exceeds contract": 1,
+        "Disparity jitter 0.234 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "A",
+      "path": "datasets/raw/luna_v2_transferred_marvin360_yaw10_pitchm25_20261028.jsonl",
+      "sha256": "43bd3cd68a9d492a777ac85863106122298ccf7666cac646b087fcece5b1abc3",
+      "valid": 262,
+      "rejected": {
+        "Disparity jitter 0.120 px exceeds contract": 1,
+        "Disparity jitter 0.349 px exceeds contract": 1,
+        "Disparity jitter 0.545 px exceeds contract": 1,
+        "Disparity jitter 0.661 px exceeds contract": 1,
+        "Disparity jitter 0.396 px exceeds contract": 1,
+        "Disparity jitter 0.282 px exceeds contract": 1,
+        "Disparity jitter 0.224 px exceeds contract": 1,
+        "Disparity jitter 0.262 px exceeds contract": 1,
+        "Disparity jitter 0.677 px exceeds contract": 1,
+        "Disparity jitter 0.419 px exceeds contract": 2,
+        "Disparity jitter 0.131 px exceeds contract": 2,
+        "Disparity jitter 0.119 px exceeds contract": 2,
+        "Only 44 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.209 px exceeds contract": 1,
+        "Disparity jitter 0.133 px exceeds contract": 1,
+        "Disparity jitter 0.507 px exceeds contract": 1,
+        "Disparity jitter 0.338 px exceeds contract": 1,
+        "Disparity jitter 0.497 px exceeds contract": 1,
+        "Disparity jitter 0.604 px exceeds contract": 1,
+        "Disparity jitter 0.106 px exceeds contract": 3,
+        "Disparity jitter 0.515 px exceeds contract": 1,
+        "Only 0 fresh camera frames; need 50": 12,
+        "Only 6 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.303 px exceeds contract": 2,
+        "Disparity jitter 0.380 px exceeds contract": 1,
+        "Disparity jitter 0.148 px exceeds contract": 1,
+        "Disparity jitter 0.126 px exceeds contract": 3,
+        "Disparity jitter 0.125 px exceeds contract": 3,
+        "Disparity jitter 0.122 px exceeds contract": 2,
+        "Disparity jitter 0.116 px exceeds contract": 1,
+        "Disparity jitter 0.153 px exceeds contract": 1,
+        "Disparity jitter 0.114 px exceeds contract": 1,
+        "Disparity jitter 0.228 px exceeds contract": 1,
+        "Disparity jitter 0.231 px exceeds contract": 1,
+        "Disparity jitter 0.172 px exceeds contract": 1,
+        "Disparity jitter 0.156 px exceeds contract": 1,
+        "Disparity jitter 0.117 px exceeds contract": 3,
+        "Disparity jitter 0.151 px exceeds contract": 1,
+        "Disparity jitter 0.189 px exceeds contract": 1,
+        "Disparity jitter 0.143 px exceeds contract": 1,
+        "Disparity jitter 0.123 px exceeds contract": 1,
+        "Disparity jitter 0.104 px exceeds contract": 2,
+        "Disparity jitter 0.130 px exceeds contract": 2,
+        "Disparity jitter 0.105 px exceeds contract": 1,
+        "Disparity jitter 0.132 px exceeds contract": 1,
+        "Disparity jitter 0.115 px exceeds contract": 1,
+        "Disparity jitter 0.139 px exceeds contract": 1,
+        "Disparity jitter 0.152 px exceeds contract": 1,
+        "Disparity jitter 0.146 px exceeds contract": 1,
+        "Disparity jitter 0.102 px exceeds contract": 2,
+        "Disparity jitter 0.165 px exceeds contract": 1,
+        "Disparity jitter 0.191 px exceeds contract": 1,
+        "Disparity jitter 0.257 px exceeds contract": 1,
+        "Disparity jitter 0.489 px exceeds contract": 1,
+        "Disparity jitter 0.232 px exceeds contract": 1,
+        "Disparity jitter 0.352 px exceeds contract": 1,
+        "Disparity jitter 0.182 px exceeds contract": 1,
+        "Disparity jitter 0.213 px exceeds contract": 1,
+        "Disparity jitter 0.187 px exceeds contract": 1,
+        "Disparity jitter 0.415 px exceeds contract": 1,
+        "Disparity jitter 0.312 px exceeds contract": 1,
+        "Disparity jitter 0.333 px exceeds contract": 1,
+        "Disparity jitter 0.361 px exceeds contract": 1,
+        "Disparity jitter 0.485 px exceeds contract": 1,
+        "Disparity jitter 0.363 px exceeds contract": 1,
+        "Disparity jitter 0.373 px exceeds contract": 1,
+        "Disparity jitter 0.280 px exceeds contract": 1,
+        "Disparity jitter 0.304 px exceeds contract": 1,
+        "Disparity jitter 0.387 px exceeds contract": 1,
+        "Disparity jitter 0.331 px exceeds contract": 1,
+        "Disparity jitter 0.159 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "B",
+      "path": "datasets/raw/luna_v2_validationB_yaw0_pitchm25_20261029.jsonl",
+      "sha256": "2d83b7ba427a351624601a75ef0594bd914e4104b2b618c8eefc17d59d549c15",
+      "valid": 103,
+      "rejected": {
+        "Disparity jitter 0.116 px exceeds contract": 1,
+        "Disparity jitter 0.406 px exceeds contract": 1,
+        "Disparity jitter 0.677 px exceeds contract": 1,
+        "Disparity jitter 0.200 px exceeds contract": 1,
+        "Disparity jitter 0.671 px exceeds contract": 1,
+        "Disparity jitter 0.281 px exceeds contract": 1,
+        "Disparity jitter 0.157 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "B",
+      "path": "datasets/raw/luna_v2_validationB_yaw0_pitchm20_20261029.jsonl",
+      "sha256": "ad94be068c8ee768e2fb454016fbf3efda063dc2e1e0bf6071fd5be196c5fa70",
+      "valid": 108,
+      "rejected": {
+        "Disparity jitter 0.147 px exceeds contract": 1,
+        "Disparity jitter 0.219 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "B",
+      "path": "datasets/raw/luna_v2_validationB_yaw10_pitchm25_20261029.jsonl",
+      "sha256": "cf5cca6b5bf608356d84badf13ca03e2d447c4131971674c5eb21ff674a0bb05",
+      "valid": 92,
+      "rejected": {
+        "Only 0 fresh camera frames; need 50": 15,
+        "Disparity jitter 0.115 px exceeds contract": 1,
+        "Disparity jitter 0.112 px exceeds contract": 1,
+        "Disparity jitter 0.121 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "B",
+      "path": "datasets/raw/luna_v2_validationB_yaw10_pitchm20_20261029.jsonl",
+      "sha256": "60408c2c07fb01dedd45d00080f61e2dadaf90b355d9be6d6aff7d3fd98c4ddd",
+      "valid": 104,
+      "rejected": {
+        "Only 0 fresh camera frames; need 50": 4,
+        "Disparity jitter 0.166 px exceeds contract": 1,
+        "Disparity jitter 0.198 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "C",
+      "path": "datasets/new_capture_20261029/shared_fast_grid_20261029/head_00.jsonl",
+      "sha256": "f646d27a12c53eb40d4c159e93b4637e82a67e8e59d6eead2392c90c0e674e30",
+      "valid": 159,
+      "rejected": {
+        "Disparity jitter 0.118 px exceeds contract": 1,
+        "Only 0 fresh camera frames; need 50": 31,
+        "Disparity jitter 0.104 px exceeds contract": 1,
+        "Disparity jitter 0.115 px exceeds contract": 1,
+        "Disparity jitter 0.417 px exceeds contract": 1,
+        "Disparity jitter 0.119 px exceeds contract": 1,
+        "Disparity jitter 0.102 px exceeds contract": 1,
+        "Disparity jitter 0.144 px exceeds contract": 2,
+        "Disparity jitter 0.143 px exceeds contract": 1,
+        "Disparity jitter 0.105 px exceeds contract": 1,
+        "Disparity jitter 0.151 px exceeds contract": 1,
+        "Disparity jitter 0.110 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "C",
+      "path": "datasets/new_capture_20261029/shared_fast_grid_20261029/head_01.jsonl",
+      "sha256": "d5f8ffb940c9cb6bc553264d79a95ead4c88c3ee3740e71e8bec102188241156",
+      "valid": 130,
+      "rejected": {
+        "Only 0 fresh camera frames; need 50": 58,
+        "Disparity jitter 0.188 px exceeds contract": 1,
+        "Disparity jitter 0.116 px exceeds contract": 2,
+        "Only 24 fresh camera frames; need 50": 1,
+        "Only 39 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.108 px exceeds contract": 1,
+        "Only 1 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.196 px exceeds contract": 1,
+        "Disparity jitter 0.319 px exceeds contract": 1,
+        "Disparity jitter 0.105 px exceeds contract": 2,
+        "Only 30 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.103 px exceeds contract": 1,
+        "Disparity jitter 0.112 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "C",
+      "path": "datasets/new_capture_20261029/shared_fast_grid_20261029/head_02.jsonl",
+      "sha256": "27215ab528562bcf6a9c3a009bd2b7792c097f089ff342ab248a7b1bfa6276ed",
+      "valid": 150,
+      "rejected": {
+        "Disparity jitter 0.111 px exceeds contract": 2,
+        "Disparity jitter 0.113 px exceeds contract": 2,
+        "Disparity jitter 0.137 px exceeds contract": 1,
+        "Disparity jitter 0.114 px exceeds contract": 1,
+        "Disparity jitter 0.185 px exceeds contract": 1,
+        "Disparity jitter 0.151 px exceeds contract": 1,
+        "Disparity jitter 0.135 px exceeds contract": 2,
+        "Disparity jitter 0.118 px exceeds contract": 1,
+        "Disparity jitter 0.117 px exceeds contract": 1,
+        "Disparity jitter 0.188 px exceeds contract": 1,
+        "Only 0 fresh camera frames; need 50": 21,
+        "Disparity jitter 0.107 px exceeds contract": 1,
+        "Disparity jitter 0.161 px exceeds contract": 1,
+        "Disparity jitter 0.205 px exceeds contract": 1,
+        "Disparity jitter 0.132 px exceeds contract": 2,
+        "Disparity jitter 0.229 px exceeds contract": 1,
+        "Disparity jitter 0.126 px exceeds contract": 1,
+        "Disparity jitter 0.146 px exceeds contract": 1,
+        "Disparity jitter 0.176 px exceeds contract": 1,
+        "Disparity jitter 0.233 px exceeds contract": 1,
+        "Disparity jitter 0.144 px exceeds contract": 1,
+        "Disparity jitter 0.121 px exceeds contract": 1,
+        "Disparity jitter 0.102 px exceeds contract": 1,
+        "Disparity jitter 0.164 px exceeds contract": 1,
+        "Disparity jitter 0.134 px exceeds contract": 1,
+        "Disparity jitter 0.169 px exceeds contract": 1,
+        "Disparity jitter 0.131 px exceeds contract": 1,
+        "Disparity jitter 0.173 px exceeds contract": 1
+      }
+    },
+    {
+      "batch": "C",
+      "path": "datasets/new_capture_20261029/shared_fast_grid_20261029/head_03.jsonl",
+      "sha256": "a1aa33c93c4f1d55d96f45e431df7c70412128eedbf1b2928580c951d8ba95de",
+      "valid": 147,
+      "rejected": {
+        "Disparity jitter 0.177 px exceeds contract": 1,
+        "Disparity jitter 0.307 px exceeds contract": 1,
+        "Disparity jitter 0.131 px exceeds contract": 3,
+        "Disparity jitter 0.203 px exceeds contract": 1,
+        "Disparity jitter 0.159 px exceeds contract": 1,
+        "Disparity jitter 0.112 px exceeds contract": 1,
+        "Disparity jitter 0.157 px exceeds contract": 1,
+        "Disparity jitter 0.175 px exceeds contract": 1,
+        "Disparity jitter 0.124 px exceeds contract": 2,
+        "Disparity jitter 0.140 px exceeds contract": 2,
+        "Disparity jitter 0.141 px exceeds contract": 1,
+        "Disparity jitter 0.102 px exceeds contract": 2,
+        "Only 2 fresh camera frames; need 50": 1,
+        "Only 0 fresh camera frames; need 50": 13,
+        "Disparity jitter 0.208 px exceeds contract": 1,
+        "Only 10 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.365 px exceeds contract": 1,
+        "Only 14 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.121 px exceeds contract": 1,
+        "Disparity jitter 0.153 px exceeds contract": 1,
+        "Only 21 fresh camera frames; need 50": 1,
+        "Disparity jitter 0.110 px exceeds contract": 1,
+        "Disparity jitter 0.105 px exceeds contract": 1,
+        "Disparity jitter 0.130 px exceeds contract": 1,
+        "Disparity jitter 0.209 px exceeds contract": 1,
+        "Disparity jitter 0.109 px exceeds contract": 1,
+        "Disparity jitter 0.122 px exceeds contract": 1,
+        "Disparity jitter 0.143 px exceeds contract": 1,
+        "Disparity jitter 0.147 px exceeds contract": 1,
+        "Disparity jitter 0.107 px exceeds contract": 1,
+        "Disparity jitter 0.167 px exceeds contract": 1,
+        "Disparity jitter 0.277 px exceeds contract": 1,
+        "Disparity jitter 0.114 px exceeds contract": 1,
+        "Disparity jitter 0.162 px exceeds contract": 1,
+        "Disparity jitter 0.132 px exceeds contract": 1,
+        "Disparity jitter 0.204 px exceeds contract": 1,
+        "Disparity jitter 0.181 px exceeds contract": 1,
+        "Disparity jitter 0.133 px exceeds contract": 1
+      }
+    }
+  ],
+  "spec": "joint inverse affine/Gaussian, length60mm/ridge3, fixed pF and original FK",
+  "note": "Fixed-head per-batch fits, 5 trajectory blocks with 2-neighbor purge. Different coverage from Pro; development diagnostics.",
+  "groups": [
+    {
+      "batch": "A",
+      "head": "0,-20",
+      "n": 347,
+      "training": {
+        "samples": 347,
+        "mean_mm": 1.9412613840958735,
+        "rms_mm": 2.3753278044535984,
+        "p95_mm": 4.7370632312373795,
+        "max_mm": 6.765724124466946,
+        "axis_bias_mm": [
+          5.576071145004965e-15,
+          9.144142375731117e-15,
+          1.0981289524837067e-14
+        ],
+        "axis_rms_mm": [
+          0.9576318791417298,
+          2.0346385797471087,
+          0.7650942507080448
+        ]
+      },
+      "blocked_cv": {
+        "samples": 347,
+        "mean_mm": 3.8222518413670223,
+        "rms_mm": 4.687667811406479,
+        "p95_mm": 10.139077531339401,
+        "max_mm": 12.604956711452319,
+        "axis_bias_mm": [
+          -0.07600273160188313,
+          0.2512498649816412,
+          -0.12146677449618665
+        ],
+        "axis_rms_mm": [
+          1.605828299646645,
+          4.17766371074257,
+          1.3937972959132154
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "A",
+      "head": "0,-25",
+      "n": 353,
+      "training": {
+        "samples": 353,
+        "mean_mm": 1.9114841015863469,
+        "rms_mm": 2.3425934928792467,
+        "p95_mm": 4.663966288785454,
+        "max_mm": 6.735561921986057,
+        "axis_bias_mm": [
+          -1.01599559737935e-14,
+          -6.543082097535909e-15,
+          3.853574683150763e-14
+        ],
+        "axis_rms_mm": [
+          0.9461737774830874,
+          2.0015344781147575,
+          0.7657409409202688
+        ]
+      },
+      "blocked_cv": {
+        "samples": 353,
+        "mean_mm": 3.8277071318129137,
+        "rms_mm": 4.672509360026302,
+        "p95_mm": 9.886126668784268,
+        "max_mm": 12.634302671778718,
+        "axis_bias_mm": [
+          -0.06634295735264002,
+          0.3090732014075703,
+          -0.146042746009297
+        ],
+        "axis_rms_mm": [
+          1.5670504160179235,
+          4.155388883420234,
+          1.4523911114913235
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "A",
+      "head": "10,-20",
+      "n": 292,
+      "training": {
+        "samples": 292,
+        "mean_mm": 2.0631711552357648,
+        "rms_mm": 2.503102291041341,
+        "p95_mm": 5.040359216906279,
+        "max_mm": 6.878147384862641,
+        "axis_bias_mm": [
+          1.7482210504200237e-14,
+          -2.7192859836024382e-15,
+          1.8536161950864942e-14
+        ],
+        "axis_rms_mm": [
+          1.009859665343398,
+          2.1430395984554926,
+          0.8081372502122703
+        ]
+      },
+      "blocked_cv": {
+        "samples": 292,
+        "mean_mm": 3.588330097551358,
+        "rms_mm": 4.381381880589891,
+        "p95_mm": 9.120550477435605,
+        "max_mm": 12.967146436286306,
+        "axis_bias_mm": [
+          0.061182846212469034,
+          -0.046250587199811656,
+          0.004252550226927361
+        ],
+        "axis_rms_mm": [
+          1.606707825404364,
+          3.8797888218592975,
+          1.2498943335824226
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "A",
+      "head": "10,-25",
+      "n": 262,
+      "training": {
+        "samples": 262,
+        "mean_mm": 2.168977302965612,
+        "rms_mm": 2.598234375349747,
+        "p95_mm": 5.231708037510466,
+        "max_mm": 6.696626612727205,
+        "axis_bias_mm": [
+          3.4611838416558317e-15,
+          7.856311021584123e-15,
+          6.533365875446818e-15
+        ],
+        "axis_rms_mm": [
+          1.0404057597932381,
+          2.2173180044847904,
+          0.8671093306070067
+        ]
+      },
+      "blocked_cv": {
+        "samples": 262,
+        "mean_mm": 3.883075615214663,
+        "rms_mm": 4.694899885068554,
+        "p95_mm": 10.017022205601867,
+        "max_mm": 13.294985409457519,
+        "axis_bias_mm": [
+          -0.024549356848720835,
+          0.08526801801861006,
+          -0.06307903797904037
+        ],
+        "axis_rms_mm": [
+          1.68557142571786,
+          4.130899972966726,
+          1.461711090798614
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "B",
+      "head": "0,-20",
+      "n": 108,
+      "training": {
+        "samples": 108,
+        "mean_mm": 0.4783893326489829,
+        "rms_mm": 0.5503746211414351,
+        "p95_mm": 0.9819363954488635,
+        "max_mm": 1.5970631098873143,
+        "axis_bias_mm": [
+          -7.709059728026827e-14,
+          3.1219882646172226e-15,
+          -2.7204576040444577e-14
+        ],
+        "axis_rms_mm": [
+          0.31466577464868406,
+          0.3401355793500368,
+          0.29699404290580744
+        ]
+      },
+      "blocked_cv": {
+        "samples": 108,
+        "mean_mm": 1.734188116362522,
+        "rms_mm": 1.8402986939327322,
+        "p95_mm": 2.6725917467462232,
+        "max_mm": 4.264527465337808,
+        "axis_bias_mm": [
+          -0.0474482152110725,
+          0.17216074413779248,
+          0.04933322679613784
+        ],
+        "axis_rms_mm": [
+          0.969889657835673,
+          1.0343216583155723,
+          1.1731121181086
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "B",
+      "head": "0,-25",
+      "n": 103,
+      "training": {
+        "samples": 103,
+        "mean_mm": 0.471134030958954,
+        "rms_mm": 0.5439419933157892,
+        "p95_mm": 0.985154424852563,
+        "max_mm": 1.6228806578698995,
+        "axis_bias_mm": [
+          5.380809066921147e-15,
+          -6.736790197968183e-16,
+          2.8589859713745293e-14
+        ],
+        "axis_rms_mm": [
+          0.30349212613214477,
+          0.3364673357147095,
+          0.30092383332861733
+        ]
+      },
+      "blocked_cv": {
+        "samples": 103,
+        "mean_mm": 1.8768392626446326,
+        "rms_mm": 1.9816003618795908,
+        "p95_mm": 2.7113332002008073,
+        "max_mm": 4.348861691788483,
+        "axis_bias_mm": [
+          -0.07281792094072886,
+          0.20055006921013585,
+          0.06682653151163931
+        ],
+        "axis_rms_mm": [
+          1.0023679636463623,
+          1.0905684153264268,
+          1.31630505246663
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "B",
+      "head": "10,-20",
+      "n": 104,
+      "training": {
+        "samples": 104,
+        "mean_mm": 0.47807984915370655,
+        "rms_mm": 0.5575384587901163,
+        "p95_mm": 1.0398272507878492,
+        "max_mm": 1.6115756295926345,
+        "axis_bias_mm": [
+          -4.816659891450679e-15,
+          7.69683462264171e-16,
+          -3.4139358007223564e-14
+        ],
+        "axis_rms_mm": [
+          0.3231557289146186,
+          0.34299373638983827,
+          0.2979510105655925
+        ]
+      },
+      "blocked_cv": {
+        "samples": 104,
+        "mean_mm": 1.6066963692083323,
+        "rms_mm": 1.7473403229003268,
+        "p95_mm": 2.6543602329200136,
+        "max_mm": 4.419448724551511,
+        "axis_bias_mm": [
+          -0.006264899867189255,
+          0.07947522067392189,
+          0.021498742842959866
+        ],
+        "axis_rms_mm": [
+          0.9608751944860544,
+          1.0621747435110414,
+          1.0008505777098093
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "B",
+      "head": "10,-25",
+      "n": 92,
+      "training": {
+        "samples": 92,
+        "mean_mm": 0.5126348469863852,
+        "rms_mm": 0.5872268225648094,
+        "p95_mm": 0.9681327828478016,
+        "max_mm": 1.6946633398019595,
+        "axis_bias_mm": [
+          -5.459401047178487e-15,
+          -5.916764662757763e-15,
+          -2.1765198339281873e-14
+        ],
+        "axis_rms_mm": [
+          0.3421974480581893,
+          0.3559601077812539,
+          0.31785004223750396
+        ]
+      },
+      "blocked_cv": {
+        "samples": 92,
+        "mean_mm": 1.6016699269536103,
+        "rms_mm": 1.7463657362201732,
+        "p95_mm": 2.6740477328775847,
+        "max_mm": 4.52899460251829,
+        "axis_bias_mm": [
+          -0.05420110296296259,
+          0.08712631103986758,
+          0.033696616462824264
+        ],
+        "axis_rms_mm": [
+          0.9179479642938007,
+          1.1021069403011041,
+          0.9962555453460891
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "C",
+      "head": "-10,-20",
+      "n": 147,
+      "training": {
+        "samples": 147,
+        "mean_mm": 2.0020881981098335,
+        "rms_mm": 2.444017351813683,
+        "p95_mm": 4.501649842206741,
+        "max_mm": 8.568793800361366,
+        "axis_bias_mm": [
+          -3.968707448843723e-14,
+          8.904441809748704e-15,
+          -5.120318379420892e-14
+        ],
+        "axis_rms_mm": [
+          0.7521691422576086,
+          1.8213884477973608,
+          1.4456854843402633
+        ]
+      },
+      "blocked_cv": {
+        "samples": 147,
+        "mean_mm": 2.551793387729629,
+        "rms_mm": 3.0824596896462375,
+        "p95_mm": 5.613231009275088,
+        "max_mm": 10.477679349176277,
+        "axis_bias_mm": [
+          0.04406165978038522,
+          -0.031482001148671356,
+          0.08697627778380002
+        ],
+        "axis_rms_mm": [
+          1.0359220579940729,
+          2.2112827470861207,
+          1.8811304687592951
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "C",
+      "head": "-10,-25",
+      "n": 150,
+      "training": {
+        "samples": 150,
+        "mean_mm": 2.0529641489697057,
+        "rms_mm": 2.4951403210416854,
+        "p95_mm": 4.464890048971193,
+        "max_mm": 8.168796799593169,
+        "axis_bias_mm": [
+          2.4407142973359442e-14,
+          1.7393494052460786e-16,
+          8.11054926922831e-14
+        ],
+        "axis_rms_mm": [
+          0.7700249262007162,
+          1.8288014318650163,
+          1.5127035920913436
+        ]
+      },
+      "blocked_cv": {
+        "samples": 150,
+        "mean_mm": 2.62456185684557,
+        "rms_mm": 3.160368194293784,
+        "p95_mm": 5.6649636679897455,
+        "max_mm": 10.460649013526185,
+        "axis_bias_mm": [
+          0.05462826962878065,
+          -0.02525541335275921,
+          0.10078232506023904
+        ],
+        "axis_rms_mm": [
+          1.0290619281625595,
+          2.2214087492787162,
+          1.9985749523443137
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "C",
+      "head": "0,-25",
+      "n": 159,
+      "training": {
+        "samples": 159,
+        "mean_mm": 2.169104257608725,
+        "rms_mm": 2.5865010518188134,
+        "p95_mm": 4.675915594837383,
+        "max_mm": 7.377451709711833,
+        "axis_bias_mm": [
+          -8.44774983718553e-14,
+          -6.382036757908133e-16,
+          -4.971564739201959e-15
+        ],
+        "axis_rms_mm": [
+          0.7886704450436288,
+          1.9104646085167876,
+          1.555027845338889
+        ]
+      },
+      "blocked_cv": {
+        "samples": 159,
+        "mean_mm": 2.7266989394779757,
+        "rms_mm": 3.278475476933621,
+        "p95_mm": 5.733619311231023,
+        "max_mm": 10.382922774195714,
+        "axis_bias_mm": [
+          0.05397553709137099,
+          -0.021025515597083204,
+          0.07804563772944212
+        ],
+        "axis_rms_mm": [
+          1.0499009001779596,
+          2.284101798140229,
+          2.1045162219363425
+        ]
+      },
+      "within_pro_scale_bounds": true
+    },
+    {
+      "batch": "C",
+      "head": "10,-25",
+      "n": 130,
+      "training": {
+        "samples": 130,
+        "mean_mm": 2.2406079687549694,
+        "rms_mm": 2.6389231260392987,
+        "p95_mm": 4.6810657304987915,
+        "max_mm": 7.275345346807809,
+        "axis_bias_mm": [
+          3.0327876961914274e-14,
+          3.850765860026793e-15,
+          -1.595988298784225e-14
+        ],
+        "axis_rms_mm": [
+          0.8556134705677064,
+          1.8440327396772542,
+          1.6826717175749135
+        ]
+      },
+      "blocked_cv": {
+        "samples": 130,
+        "mean_mm": 2.9248311490336105,
+        "rms_mm": 3.501549638212623,
+        "p95_mm": 6.233438973998783,
+        "max_mm": 10.310038315080932,
+        "axis_bias_mm": [
+          0.06919917139121248,
+          -0.04031449210465584,
+          0.16384492218661567
+        ],
+        "axis_rms_mm": [
+          1.2043568140491472,
+          2.25557303177499,
+          2.3922300958832796
+        ]
+      },
+      "within_pro_scale_bounds": true
+    }
+  ]
+}

@@ -14,3 +14,6 @@ reports/**/live_preview/
 
 # Preview diagnostic logs continue to change while collection is paused.
 **/viewer.log
+
+# Automatic diagnostic sessions contain many lossless images; keep local.
+datasets/diagnostics/

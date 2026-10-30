@@ -1,0 +1,1353 @@
+{
+  "files": [
+    {
+      "path": "configs/robot/luna_new.ini",
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586"
+    },
+    {
+      "path": "/media/ljz/LJZ/Robots/MDH参数/robot.ini",
+      "sha256": "12b0d18dbbb6127d3c8fe0384f7b927f7f6d456abe37346f1ea2b34fce99c2ec"
+    }
+  ],
+  "mdh_equal": true,
+  "mdh_sections": [
+    {
+      "section": "R.A0.FLANGE",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "87",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "87",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L0.DH",
+      "current": {
+        "a": "0",
+        "alpha": "0",
+        "d": "158.6",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "0",
+        "d": "158.6",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L1.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L2.DH",
+      "current": {
+        "a": "0",
+        "alpha": "-90",
+        "d": "264",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "-90",
+        "d": "264",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L3.DH",
+      "current": {
+        "a": "18",
+        "alpha": "90",
+        "d": "0",
+        "theta": "180"
+      },
+      "supplied": {
+        "a": "18",
+        "alpha": "90",
+        "d": "0",
+        "theta": "180"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L4.DH",
+      "current": {
+        "a": "18",
+        "alpha": "90",
+        "d": "264",
+        "theta": "180"
+      },
+      "supplied": {
+        "a": "18",
+        "alpha": "90",
+        "d": "264",
+        "theta": "180"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L5.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A0.L6.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.FLANGE",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "87",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "87",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L0.DH",
+      "current": {
+        "a": "0",
+        "alpha": "0",
+        "d": "158.6",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "0",
+        "d": "158.6",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L1.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L2.DH",
+      "current": {
+        "a": "0",
+        "alpha": "-90",
+        "d": "264",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "-90",
+        "d": "264",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L3.DH",
+      "current": {
+        "a": "18",
+        "alpha": "90",
+        "d": "0",
+        "theta": "180"
+      },
+      "supplied": {
+        "a": "18",
+        "alpha": "90",
+        "d": "0",
+        "theta": "180"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L4.DH",
+      "current": {
+        "a": "18",
+        "alpha": "90",
+        "d": "264",
+        "theta": "180"
+      },
+      "supplied": {
+        "a": "18",
+        "alpha": "90",
+        "d": "264",
+        "theta": "180"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L5.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.A1.L6.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.FLANGE",
+      "current": {
+        "a": "0",
+        "alpha": "0",
+        "d": "391.5",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "0",
+        "d": "391.5",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.L0.DH",
+      "current": {
+        "a": "0",
+        "alpha": "0",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "0",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.L1.DH",
+      "current": {
+        "a": "165",
+        "alpha": "-90",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "165",
+        "alpha": "-90",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.L2.DH",
+      "current": {
+        "a": "300",
+        "alpha": "0",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "300",
+        "alpha": "0",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.L3.DH",
+      "current": {
+        "a": "300",
+        "alpha": "0",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "300",
+        "alpha": "0",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.L4.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "90"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.B.L5.DH",
+      "current": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "90",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.H.L0.DH",
+      "current": {
+        "a": "0",
+        "alpha": "0",
+        "d": "640",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "0",
+        "d": "640",
+        "theta": "0"
+      },
+      "equal": true
+    },
+    {
+      "section": "R.H.L1.DH",
+      "current": {
+        "a": "0",
+        "alpha": "-90",
+        "d": "0",
+        "theta": "0"
+      },
+      "supplied": {
+        "a": "0",
+        "alpha": "-90",
+        "d": "0",
+        "theta": "0"
+      },
+      "equal": true
+    }
+  ],
+  "all_differences": [
+    {
+      "section": "R.A0.L0.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L0.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.012813"
+    },
+    {
+      "section": "R.A0.L0.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.015841"
+    },
+    {
+      "section": "R.A0.L0.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.A0.L0.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.012813",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L0.DYNAMIC",
+      "key": "mry",
+      "current": "-0.015841",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L0.DYNAMIC",
+      "key": "mrz",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L1.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L1.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.008412"
+    },
+    {
+      "section": "R.A0.L1.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.120467"
+    },
+    {
+      "section": "R.A0.L1.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.016026"
+    },
+    {
+      "section": "R.A0.L1.DYNAMIC",
+      "key": "mrx",
+      "current": "0.008412",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L1.DYNAMIC",
+      "key": "mry",
+      "current": "0.120467",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L1.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.016026",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L2.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L2.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.007241"
+    },
+    {
+      "section": "R.A0.L2.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.015338"
+    },
+    {
+      "section": "R.A0.L2.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.160322"
+    },
+    {
+      "section": "R.A0.L2.DYNAMIC",
+      "key": "mrx",
+      "current": "0.007241",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L2.DYNAMIC",
+      "key": "mry",
+      "current": "-0.015338",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L2.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.160322",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L3.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L3.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.011881"
+    },
+    {
+      "section": "R.A0.L3.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.149299"
+    },
+    {
+      "section": "R.A0.L3.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.009603"
+    },
+    {
+      "section": "R.A0.L3.DYNAMIC",
+      "key": "mrx",
+      "current": "0.011881",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L3.DYNAMIC",
+      "key": "mry",
+      "current": "-0.149299",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L3.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.009603",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L4.BASIC",
+      "key": "velmax",
+      "current": "300",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L4.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.000871"
+    },
+    {
+      "section": "R.A0.L4.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.005633"
+    },
+    {
+      "section": "R.A0.L4.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.177813"
+    },
+    {
+      "section": "R.A0.L4.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.000871",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L4.DYNAMIC",
+      "key": "mry",
+      "current": "0.005633",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L4.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.177813",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L5.BASIC",
+      "key": "velmax",
+      "current": "300",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L5.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.000606"
+    },
+    {
+      "section": "R.A0.L5.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.014885"
+    },
+    {
+      "section": "R.A0.L5.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.003519"
+    },
+    {
+      "section": "R.A0.L5.DYNAMIC",
+      "key": "mrx",
+      "current": "0.000606",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L5.DYNAMIC",
+      "key": "mry",
+      "current": "-0.014885",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L5.DYNAMIC",
+      "key": "mrz",
+      "current": "0.003519",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L6.BASIC",
+      "key": "velmax",
+      "current": "300",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A0.L6.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.001443"
+    },
+    {
+      "section": "R.A0.L6.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.072153"
+    },
+    {
+      "section": "R.A0.L6.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.038606"
+    },
+    {
+      "section": "R.A0.L6.DYNAMIC",
+      "key": "mrx",
+      "current": "0.001443",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L6.DYNAMIC",
+      "key": "mry",
+      "current": "-0.072153",
+      "supplied": null
+    },
+    {
+      "section": "R.A0.L6.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.038606",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L0.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L0.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.012813"
+    },
+    {
+      "section": "R.A1.L0.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.015841"
+    },
+    {
+      "section": "R.A1.L0.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.A1.L0.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.012813",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L0.DYNAMIC",
+      "key": "mry",
+      "current": "-0.015841",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L0.DYNAMIC",
+      "key": "mrz",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L1.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L1.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.008412"
+    },
+    {
+      "section": "R.A1.L1.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.120467"
+    },
+    {
+      "section": "R.A1.L1.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.016026"
+    },
+    {
+      "section": "R.A1.L1.DYNAMIC",
+      "key": "mrx",
+      "current": "0.008412",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L1.DYNAMIC",
+      "key": "mry",
+      "current": "0.120467",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L1.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.016026",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L2.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L2.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.007241"
+    },
+    {
+      "section": "R.A1.L2.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.015338"
+    },
+    {
+      "section": "R.A1.L2.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.160322"
+    },
+    {
+      "section": "R.A1.L2.DYNAMIC",
+      "key": "mrx",
+      "current": "0.007241",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L2.DYNAMIC",
+      "key": "mry",
+      "current": "-0.015338",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L2.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.160322",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L3.BASIC",
+      "key": "velmax",
+      "current": "260",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L3.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.011881"
+    },
+    {
+      "section": "R.A1.L3.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.149299"
+    },
+    {
+      "section": "R.A1.L3.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.009603"
+    },
+    {
+      "section": "R.A1.L3.DYNAMIC",
+      "key": "mrx",
+      "current": "0.011881",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L3.DYNAMIC",
+      "key": "mry",
+      "current": "-0.149299",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L3.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.009603",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L4.BASIC",
+      "key": "velmax",
+      "current": "400",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L4.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.000871"
+    },
+    {
+      "section": "R.A1.L4.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.005633"
+    },
+    {
+      "section": "R.A1.L4.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.177813"
+    },
+    {
+      "section": "R.A1.L4.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.000871",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L4.DYNAMIC",
+      "key": "mry",
+      "current": "0.005633",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L4.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.177813",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L5.BASIC",
+      "key": "velmax",
+      "current": "400",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L5.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.000606"
+    },
+    {
+      "section": "R.A1.L5.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.014885"
+    },
+    {
+      "section": "R.A1.L5.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.003519"
+    },
+    {
+      "section": "R.A1.L5.DYNAMIC",
+      "key": "mrx",
+      "current": "0.000606",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L5.DYNAMIC",
+      "key": "mry",
+      "current": "-0.014885",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L5.DYNAMIC",
+      "key": "mrz",
+      "current": "0.003519",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L6.BASIC",
+      "key": "velmax",
+      "current": "400",
+      "supplied": "180"
+    },
+    {
+      "section": "R.A1.L6.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.001443"
+    },
+    {
+      "section": "R.A1.L6.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.072153"
+    },
+    {
+      "section": "R.A1.L6.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "-0.038606"
+    },
+    {
+      "section": "R.A1.L6.DYNAMIC",
+      "key": "mrx",
+      "current": "0.001443",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L6.DYNAMIC",
+      "key": "mry",
+      "current": "-0.072153",
+      "supplied": null
+    },
+    {
+      "section": "R.A1.L6.DYNAMIC",
+      "key": "mrz",
+      "current": "-0.038606",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L0.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.00379877"
+    },
+    {
+      "section": "R.B.L0.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.2642553"
+    },
+    {
+      "section": "R.B.L0.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.00090574"
+    },
+    {
+      "section": "R.B.L0.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.00379877",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L0.DYNAMIC",
+      "key": "mry",
+      "current": "0.2642553",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L0.DYNAMIC",
+      "key": "mrz",
+      "current": "0.00090574",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L1.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.01655678"
+    },
+    {
+      "section": "R.B.L1.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.43563427"
+    },
+    {
+      "section": "R.B.L1.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.00769157"
+    },
+    {
+      "section": "R.B.L1.DYNAMIC",
+      "key": "mrx",
+      "current": "0.01655678",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L1.DYNAMIC",
+      "key": "mry",
+      "current": "0.43563427",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L1.DYNAMIC",
+      "key": "mrz",
+      "current": "0.00769157",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L2.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.01559709"
+    },
+    {
+      "section": "R.B.L2.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.38889022"
+    },
+    {
+      "section": "R.B.L2.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.00071069"
+    },
+    {
+      "section": "R.B.L2.DYNAMIC",
+      "key": "mrx",
+      "current": "0.01559709",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L2.DYNAMIC",
+      "key": "mry",
+      "current": "0.38889022",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L2.DYNAMIC",
+      "key": "mrz",
+      "current": "0.00071069",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L3.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.0127922"
+    },
+    {
+      "section": "R.B.L3.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.02450785"
+    },
+    {
+      "section": "R.B.L3.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.01095912"
+    },
+    {
+      "section": "R.B.L3.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.0127922",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L3.DYNAMIC",
+      "key": "mry",
+      "current": "-0.02450785",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L3.DYNAMIC",
+      "key": "mrz",
+      "current": "0.01095912",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L4.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "-0.0049075"
+    },
+    {
+      "section": "R.B.L4.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.23993123"
+    },
+    {
+      "section": "R.B.L4.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.02217314"
+    },
+    {
+      "section": "R.B.L4.DYNAMIC",
+      "key": "mrx",
+      "current": "-0.0049075",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L4.DYNAMIC",
+      "key": "mry",
+      "current": "0.23993123",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L4.DYNAMIC",
+      "key": "mrz",
+      "current": "0.02217314",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L5.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.00298423"
+    },
+    {
+      "section": "R.B.L5.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0.04037628"
+    },
+    {
+      "section": "R.B.L5.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.46882276"
+    },
+    {
+      "section": "R.B.L5.DYNAMIC",
+      "key": "mrx",
+      "current": "0.00298423",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L5.DYNAMIC",
+      "key": "mry",
+      "current": "0.04037628",
+      "supplied": null
+    },
+    {
+      "section": "R.B.L5.DYNAMIC",
+      "key": "mrz",
+      "current": "0.46882276",
+      "supplied": null
+    },
+    {
+      "section": "R.H.L0.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.H.L0.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.H.L0.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.H.L0.DYNAMIC",
+      "key": "mrx",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.H.L0.DYNAMIC",
+      "key": "mry",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.H.L0.DYNAMIC",
+      "key": "mrz",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.H.L1.DYNAMIC",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.H.L1.DYNAMIC",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.H.L1.DYNAMIC",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0"
+    },
+    {
+      "section": "R.H.L1.DYNAMIC",
+      "key": "mrx",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.H.L1.DYNAMIC",
+      "key": "mry",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.H.L1.DYNAMIC",
+      "key": "mrz",
+      "current": "0",
+      "supplied": null
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "mcpx",
+      "current": null,
+      "supplied": "0.06832"
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "mcpy",
+      "current": null,
+      "supplied": "-0.0000363"
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "mcpz",
+      "current": null,
+      "supplied": "0.0622235"
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "mrx",
+      "current": "0.06832",
+      "supplied": null
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "mry",
+      "current": "-0.0000363",
+      "supplied": null
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "mrz",
+      "current": "0.0622235",
+      "supplied": null
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "safezonexmax",
+      "current": "240",
+      "supplied": "230"
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "safezonexmin",
+      "current": "-240",
+      "supplied": "-230"
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "safezoneymax",
+      "current": "180",
+      "supplied": "215"
+    },
+    {
+      "section": "R.V.MECH",
+      "key": "safezoneymin",
+      "current": "-180",
+      "supplied": "-215"
+    }
+  ]
+}

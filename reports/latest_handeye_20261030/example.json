@@ -1,0 +1,28 @@
+{
+  "model": "reports/latest_handeye_20261030/model.json",
+  "pixels": [
+    796.984164052486,
+    605.2666373303944,
+    746.7779201285618,
+    605.3636777305901
+  ],
+  "head": [
+    -0.0,
+    -25.001
+  ],
+  "diagnostic": true,
+  "result": {
+    "xyz_m": [
+      0.4875153289821519,
+      -0.12345451479885126,
+      0.16109705087641343
+    ],
+    "frame_id": "S_MODEL",
+    "diagnostic": true,
+    "independently_verified": false,
+    "candidate": "relative:forward_l60_r3",
+    "head_inside_calibrated_hull": true,
+    "nearest_training_position_mm": 0.0,
+    "position_inside_support": true
+  }
+}

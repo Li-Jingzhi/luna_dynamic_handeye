@@ -1,0 +1,170 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mujoco model="Gento Luna_URDF">
+  <compiler angle="radian" meshdir="meshes/" />
+  <asset>
+    <mesh name="Underpan_Base_link" content_type="model/stl" file="Underpan_Base_link.STL" />
+    <mesh name="Gento Luna_Leg_J1_Link" content_type="model/stl" file="Gento Luna_Leg_J1_Link.STL" />
+    <mesh name="Gento Luna_Leg_J2_Link" content_type="model/stl" file="Gento Luna_Leg_J2_Link.STL" />
+    <mesh name="Gento Luna_Leg_J3_Link" content_type="model/stl" file="Gento Luna_Leg_J3_Link.STL" />
+    <mesh name="Gento Luna_Leg_J4_Link" content_type="model/stl" file="Gento Luna_Leg_J4_Link.STL" />
+    <mesh name="Gento Luna_Leg_J5_Link" content_type="model/stl" file="Gento Luna_Leg_J5_Link.STL" />
+    <mesh name="Gento Luna_Leg_J6_Link" content_type="model/stl" file="Gento Luna_Leg_J6_Link.STL" />
+    <mesh name="Arm_R1_Link" content_type="model/stl" file="Arm_R1_Link.STL" />
+    <mesh name="Arm_R2_Link" content_type="model/stl" file="Arm_R2_Link.STL" />
+    <mesh name="Arm_R3_Link" content_type="model/stl" file="Arm_R3_Link.STL" />
+    <mesh name="Arm_R4_Link" content_type="model/stl" file="Arm_R4_Link.STL" />
+    <mesh name="Arm_R5_Link" content_type="model/stl" file="Arm_R5_Link.STL" />
+    <mesh name="Arm_R6_Link" content_type="model/stl" file="Arm_R6_Link.STL" />
+    <mesh name="Arm_R7_Link" content_type="model/stl" file="Arm_R7_Link.STL" />
+    <mesh name="Arm_L1_Link" content_type="model/stl" file="Arm_L1_Link.STL" />
+    <mesh name="Arm_L2_Link" content_type="model/stl" file="Arm_L2_Link.STL" />
+    <mesh name="Arm_L3_Link" content_type="model/stl" file="Arm_L3_Link.STL" />
+    <mesh name="Arm_L4_Link" content_type="model/stl" file="Arm_L4_Link.STL" />
+    <mesh name="Arm_L5_Link" content_type="model/stl" file="Arm_L5_Link.STL" />
+    <mesh name="Arm_L6_Link" content_type="model/stl" file="Arm_L6_Link.STL" />
+    <mesh name="Arm_L7_Link" content_type="model/stl" file="Arm_L7_Link.STL" />
+    <mesh name="Head_J1_Link" content_type="model/stl" file="Head_J1_Link.STL" />
+    <mesh name="Head_J2_Link" content_type="model/stl" file="Head_J2_Link.STL" />
+  </asset>
+  <worldbody>
+    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Underpan_Base_link" />
+    <geom type="mesh" rgba="1 0 0 1" mesh="Underpan_Base_link" contype="0" conaffinity="0" />
+    <body name="Gento Luna_Leg_J1_Link" pos="0 0 0.1" quat="0.499998 0.5 0.500002 0.5">
+      <inertial pos="-0.00305605 0.118796 0.00090574" quat="0.702449 0.711578 -0.0138067 -0.00562895" mass="6.04186" diaginertia="0.0501725 0.046065 0.0191557" />
+      <joint name="Gento Luna_Leg_J1_Joint" pos="0 0 0" axis="0 0 1" range="-0.191986 0.191986" actuatorfrcrange="-217 217" />
+      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Gento Luna_Leg_J1_Link" />
+      <geom type="mesh" rgba="0 1 0 1" mesh="Gento Luna_Leg_J1_Link" />
+      <body name="Gento Luna_Leg_J2_Link" pos="0 0.165 0" quat="0.707105 0 -0.707108 0">
+        <inertial pos="0.00164163 0.204806 0.00707016" quat="0.721809 0.691991 0.00892172 -0.00785121" mass="7.22131" diaginertia="0.136259 0.134381 0.0260726" />
+        <joint name="Gento Luna_Leg_J2_Joint" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-217 217" />
+        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Gento Luna_Leg_J2_Link" />
+        <geom type="mesh" rgba="0 0 1 1" mesh="Gento Luna_Leg_J2_Link" />
+        <body name="Gento Luna_Leg_J3_Link" pos="0 0.3 0">
+          <inertial pos="-0.00357006 0.145736 -0.00024996" quat="0.707266 0.706918 0.00473185 0.00443217" mass="4.67122" diaginertia="0.0982253 0.0882848 0.0305314" />
+          <joint name="Gento Luna_Leg_J3_Joint" pos="0 0 0" axis="0 0 1" range="-2.44346 1.0472" actuatorfrcrange="-217 217" />
+          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Gento Luna_Leg_J3_Link" />
+          <geom type="mesh" rgba="1 0 0 1" mesh="Gento Luna_Leg_J3_Link" />
+          <body name="Gento Luna_Leg_J4_Link" pos="0 0.3 0">
+            <inertial pos="-0.0369066 -7.427e-05 0.0101986" quat="0.470941 0.527882 0.527316 0.470631" mass="5.90046" diaginertia="0.0299755 0.0291456 0.0100734" />
+            <joint name="Gento Luna_Leg_J4_Joint" pos="0 0 0" axis="0 0 1" range="-0.959931 1.91986" actuatorfrcrange="-108 108" />
+            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Gento Luna_Leg_J4_Link" />
+            <geom type="mesh" rgba="0 1 0 1" mesh="Gento Luna_Leg_J4_Link" />
+            <body name="Gento Luna_Leg_J5_Link" quat="0.707105 0 0.707108 0">
+              <inertial pos="-0.00154757 0.127669 -0.015651" quat="0.92749 0.373709 0.00372639 -0.00945883" mass="3.76178" diaginertia="0.0342898 0.0242016 0.016757" />
+              <joint name="Gento Luna_Leg_J5_Joint" pos="0 0 0" axis="0 0 1" range="-0.523599 0.523599" actuatorfrcrange="-108 108" />
+              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Gento Luna_Leg_J5_Link" />
+              <geom type="mesh" rgba="0 0 1 1" mesh="Gento Luna_Leg_J5_Link" />
+              <body name="Gento Luna_Leg_J6_Link" quat="0.499998 -0.5 -0.5 -0.500002">
+                <inertial pos="-0.00252318 0.00023889 0.35352" quat="0.998037 -0.00453668 -0.0608973 0.0139144" mass="7.69392" diaginertia="0.0983986 0.0846714 0.066306" />
+                <joint name="Gento Luna_Leg_J6_Joint" pos="0 0 0" axis="0 0 1" range="-2.96706 2.96706" actuatorfrcrange="-108 108" />
+                <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Gento Luna_Leg_J6_Link" />
+                <geom type="mesh" rgba="1 0 0 1" mesh="Gento Luna_Leg_J6_Link" />
+                <body name="Arm_R1_Link" pos="0 -0.2146 0.3915" quat="0.707105 0.707108 0 0">
+                  <inertial pos="-0.00033175 -0.00426687 -0.0352247" quat="0.707016 -0.0332395 0.0291514 0.705814" mass="1.53755" diaginertia="0.00396603 0.00366922 0.00129692" />
+                  <joint name="Arm_R1_Joint" pos="0 0 0" axis="0 0 1" range="-3.0194 3.0194" actuatorfrcrange="-35 35" />
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Arm_R1_Link" />
+                  <geom type="mesh" rgba="0 1 0 1" mesh="Arm_R1_Link" />
+                  <body name="Arm_R2_Link" quat="0.707105 0.707108 0 0">
+                    <inertial pos="-0.00016285 0.049837 -0.00833367" quat="0.762019 0.647137 -0.0136522 0.0187985" mass="1.54062" diaginertia="0.00598994 0.00574871 0.00172672" />
+                    <joint name="Arm_R2_Joint" pos="0 0 0" axis="0 0 1" range="-2.0595 2.0595" actuatorfrcrange="-35 35" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Arm_R2_Link" />
+                    <geom type="mesh" rgba="0 0 1 1" mesh="Arm_R2_Link" />
+                    <body name="Arm_R3_Link" pos="0 0.264 0" quat="0.707105 -0.707108 0 0">
+                      <inertial pos="0.0082949 -0.00411162 -0.0491662" quat="0.568467 -0.0851338 -0.0185818 0.818078" mass="1.36174" diaginertia="0.00503571 0.00473272 0.00108246" />
+                      <joint name="Arm_R3_Joint" pos="0 0 0" axis="0 0 1" range="-3.0194 3.0194" actuatorfrcrange="-18 18" />
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Arm_R3_Link" />
+                      <geom type="mesh" rgba="1 0 0 1" mesh="Arm_R3_Link" />
+                      <body name="Arm_R4_Link" pos="0.018 0 0" quat="-2.59734e-06 2.59735e-06 0.707108 -0.707105">
+                        <inertial pos="0.00852387 -0.0385707 -0.00801541" quat="0.641968 0.721242 -0.243569 0.0914443" mass="1.03429" diaginertia="0.00317706 0.00286575 0.00106402" />
+                        <joint name="Arm_R4_Joint" pos="0 0 0" axis="0 0 1" range="-2.5307 0.7854" actuatorfrcrange="-18 18" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Arm_R4_Link" />
+                        <geom type="mesh" rgba="0 1 0 1" mesh="Arm_R4_Link" />
+                        <body name="Arm_R5_Link" pos="0.018 -0.264 0" quat="-2.59734e-06 2.59735e-06 -0.707108 0.707105">
+                          <inertial pos="0.0005008 -0.00223923 -0.0925342" quat="0.999554 -0.013683 -0.00275626 -0.0264122" mass="1.00048" diaginertia="0.00217121 0.00195154 0.000841346" />
+                          <joint name="Arm_R5_Joint" pos="0 0 0" axis="0 0 1" range="-3.0194 3.0194" actuatorfrcrange="-5.5 5.5" />
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Arm_R5_Link" />
+                          <geom type="mesh" rgba="0 0 1 1" mesh="Arm_R5_Link" />
+                          <body name="Arm_R6_Link" quat="0.499998 0.5 -0.5 0.500002">
+                            <inertial pos="-0.00018634 0.00023824 0.0005829" quat="0.7835 0.62073 -0.00130056 -0.0286611" mass="0.390623" diaginertia="0.000199495 0.000186483 0.000170752" />
+                            <joint name="Arm_R6_Joint" pos="0 0 0" axis="0 0 1" range="-1.0472 1.0472" actuatorfrcrange="-5.5 5.5" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Arm_R6_Link" />
+                            <geom type="mesh" rgba="1 0 0 1" mesh="Arm_R6_Link" />
+                            <body name="Arm_R7_Link" quat="0.499998 0.5 -0.5 0.500002">
+                              <inertial pos="-0.00052431 -0.0397623 0.00727342" quat="0.823568 0.566787 -0.00719216 0.0209064" mass="0.37939" diaginertia="0.000703263 0.000637091 0.000254706" />
+                              <joint name="Arm_R7_Joint" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-5.5 5.5" />
+                              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Arm_R7_Link" />
+                              <geom type="mesh" rgba="0 1 0 1" mesh="Arm_R7_Link" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+                <body name="Arm_L1_Link" pos="0 0.2146 0.3915" quat="0.707105 -0.707108 0 0">
+                  <inertial pos="-0.00033175 -0.00426687 -0.0352247" quat="0.707016 -0.0332395 0.0291514 0.705814" mass="1.53755" diaginertia="0.00396603 0.00366922 0.00129692" />
+                  <joint name="Arm_L1_Joint" pos="0 0 0" axis="0 0 1" range="-3.0194 3.0194" actuatorfrcrange="-35 35" />
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Arm_L1_Link" />
+                  <geom type="mesh" rgba="0 1 0 1" mesh="Arm_L1_Link" />
+                  <body name="Arm_L2_Link" quat="-2.59734e-06 2.59735e-06 -0.707108 0.707105">
+                    <inertial pos="-0.00016285 0.049837 -0.00833367" quat="0.762019 0.647137 -0.0136522 0.0187985" mass="1.54062" diaginertia="0.00598994 0.00574871 0.00172672" />
+                    <joint name="Arm_L2_Joint" pos="0 0 0" axis="0 0 1" range="-2.0595 2.0595" actuatorfrcrange="-35 35" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Arm_L2_Link" />
+                    <geom type="mesh" rgba="0 0 1 1" mesh="Arm_L2_Link" />
+                    <body name="Arm_L3_Link" pos="0 -0.264 0" quat="-2.59734e-06 2.59735e-06 0.707108 -0.707105">
+                      <inertial pos="0.0082949 -0.00411162 -0.0491662" quat="0.568467 -0.0851338 -0.0185818 0.818078" mass="1.36174" diaginertia="0.00503571 0.00473272 0.00108246" />
+                      <joint name="Arm_L3_Joint" pos="0 0 0" axis="0 0 1" range="-3.0194 3.0194" actuatorfrcrange="-18 18" />
+                      <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Arm_L3_Link" />
+                      <geom type="mesh" rgba="1 0 0 1" mesh="Arm_L3_Link" />
+                      <body name="Arm_L4_Link" pos="0.018 0 0" quat="-2.59734e-06 2.59735e-06 -0.707108 0.707105">
+                        <inertial pos="0.00852387 -0.0385707 -0.00801541" quat="0.641968 0.721242 -0.243569 0.0914443" mass="1.03429" diaginertia="0.00317706 0.00286575 0.00106402" />
+                        <joint name="Arm_L4_Joint" pos="0 0 0" axis="0 0 1" range="-2.5307 0.7854" actuatorfrcrange="-18 18" />
+                        <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Arm_L4_Link" />
+                        <geom type="mesh" rgba="0 1 0 1" mesh="Arm_L4_Link" />
+                        <body name="Arm_L5_Link" pos="0.018 -0.264 0" quat="-2.59734e-06 2.59735e-06 0.707108 -0.707105">
+                          <inertial pos="-0.0005008 0.00223923 -0.0925342" quat="0.999554 0.013683 0.00275626 -0.0264122" mass="1.00048" diaginertia="0.00217121 0.00195154 0.000841346" />
+                          <joint name="Arm_L5_Joint" pos="0 0 0" axis="0 0 1" range="-3.0194 3.0194" actuatorfrcrange="-5.5 5.5" />
+                          <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Arm_L5_Link" />
+                          <geom type="mesh" rgba="0 0 1 1" mesh="Arm_L5_Link" />
+                          <body name="Arm_L6_Link" quat="0.499998 0.5 -0.5 0.500002">
+                            <inertial pos="0.00018634 0.00023824 -0.0005829" quat="0.62073 0.7835 0.0286611 0.00130056" mass="0.390623" diaginertia="0.000199495 0.000186483 0.000170752" />
+                            <joint name="Arm_L6_Joint" pos="0 0 0" axis="0 0 1" range="-1.0472 1.0472" actuatorfrcrange="-5.5 5.5" />
+                            <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="1 0 0 1" mesh="Arm_L6_Link" />
+                            <geom type="mesh" rgba="1 0 0 1" mesh="Arm_L6_Link" />
+                            <body name="Arm_L7_Link" quat="0.499998 0.5 -0.5 0.500002">
+                              <inertial pos="-0.00052431 -0.0397623 0.00727342" quat="0.823568 0.566787 -0.00719216 0.0209064" mass="0.37939" diaginertia="0.000703263 0.000637091 0.000254706" />
+                              <joint name="Arm_L7_Joint" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-5.5 5.5" />
+                              <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Arm_L7_Link" />
+                              <geom type="mesh" rgba="0 1 0 1" mesh="Arm_L7_Link" />
+                            </body>
+                          </body>
+                        </body>
+                      </body>
+                    </body>
+                  </body>
+                </body>
+                <body name="Head_J1_Link" pos="-0.013496 0 0.49898" quat="0.707105 0.707108 0 0">
+                  <inertial pos="0 0.017441 -0.00430266" quat="0.761782 0.647833 -2.61381e-05 8.26732e-05" mass="1.1" diaginertia="0.00175163 0.00171143 0.00116494" />
+                  <joint name="Head_J1_joint" pos="0 0 0" axis="0 0 1" range="-0.523596 0.523596" actuatorfrcrange="-18 18" />
+                  <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 1 0 1" mesh="Head_J1_Link" />
+                  <geom type="mesh" rgba="0 1 0 1" mesh="Head_J1_Link" />
+                  <body name="Head_J2_Link" quat="0.707105 -0.707108 0 0">
+                    <inertial pos="0.0523313 0.00010773 0.157327" quat="0.68196 -0.195049 -0.196068 0.677085" mass="2.2" diaginertia="0.00961269 0.0083767 0.00591261" />
+                    <joint name="Head_J2_Joint" pos="0 0 0" axis="0 0 1" range="-1.5708 1.5708" actuatorfrcrange="-18 18" />
+                    <geom type="mesh" contype="0" conaffinity="0" group="1" density="0" rgba="0 0 1 1" mesh="Head_J2_Link" />
+                    <geom type="mesh" rgba="0 0 1 1" mesh="Head_J2_Link" />
+                  </body>
+                </body>
+              </body>
+            </body>
+          </body>
+        </body>
+      </body>
+    </body>
+  </worldbody>
+  <contact>
+    <exclude body1="Gento Luna_Leg_J3_Link" body2="Gento Luna_Leg_J5_Link" />
+    <exclude body1="Arm_R5_Link" body2="Arm_R7_Link" />
+    <exclude body1="Arm_L5_Link" body2="Arm_L7_Link" />
+  </contact>
+</mujoco>

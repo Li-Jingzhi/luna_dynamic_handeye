@@ -1,0 +1,33 @@
+{
+  "pixels": [
+    796.984164052486,
+    605.2666373303944,
+    746.7779201285618,
+    605.3636777305901
+  ],
+  "head": [
+    -0.0,
+    -25.001
+  ],
+  "result": {
+    "xyz_m": [
+      0.48459614691428227,
+      -0.12014055999335439,
+      0.17432764916986074
+    ],
+    "frame_id": "S_MODEL",
+    "diagnostic": true,
+    "independently_verified": false,
+    "reference": "FK(q + effective_joint_offsets_deg) * fixed pF; original controller FK differs",
+    "effective_reference_offsets_deg": [
+      0.0,
+      0.20110133701043936,
+      0.6771267017548576,
+      -1.4252019733146921,
+      0.0801819975083659,
+      -0.7015257315147805,
+      -0.9045763540307336
+    ],
+    "nearest_training_position_mm": 5.551115123125783e-14
+  }
+}

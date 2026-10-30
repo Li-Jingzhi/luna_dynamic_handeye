@@ -1,0 +1,34 @@
+{
+  "schema": "luna_diagnostic_fk_reference_v1",
+  "approved": false,
+  "reference_version": "fixed_0m25_software_fk_20261030",
+  "original_assets": {
+    "mdh": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+    "raw": "d0a550594981b670000e48bcb7be840e22de6962cdae28da51bf103fe36b271b",
+    "stereo": "80ef9ce268b8339b512bc14771d5b8b9bb6ca2c64f1f81ed3b20b613dc735eb2",
+    "ball": "a919db236a5aa13848944c4aece907879f7a73c40d37691bf07e8a0dfd7b4255",
+    "mjcf": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076"
+  },
+  "fixed_geometry_hashes": {
+    "head_mount_v2": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+    "torso_mounts": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375"
+  },
+  "q_input": "Original controller fb_pos in degrees; hardware encoder reference unchanged",
+  "formula": "T_S_M @ FK_MDH(q_feedback + effective_joint_offsets_deg) @ pF",
+  "effective_joint_offsets_deg": [
+    0.0,
+    0.20110133701043936,
+    0.6771267017548576,
+    -1.4252019733146921,
+    0.0801819975083659,
+    -0.7015257315147805,
+    -0.9045763540307336
+  ],
+  "pf_m": [
+    0.0,
+    0.0,
+    0.101
+  ],
+  "hardware_encoder_reference_changed": false,
+  "note": "Separately versioned software hypothesis; do not write these angles as encoder reset values."
+}

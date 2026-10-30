@@ -1,0 +1,55 @@
+{
+  "date": "2026-10-30",
+  "hardware_connected": false,
+  "validation_scope": "Offline protocol and evidence only; not physical accuracy or camera/SDK/GPU validation",
+  "unit_tests": {
+    "total": 70,
+    "passed": 64,
+    "skipped_existing": 6
+  },
+  "simulation": {
+    "complete": true,
+    "source": "full 213-task synthetic suite",
+    "windows": 213,
+    "accepted_stereo_pairs": 10650,
+    "experiments": {
+      "optical": {
+        "planned": 15,
+        "valid": 15,
+        "simulated": true,
+        "model_refitted": false
+      },
+      "hold": {
+        "planned": 48,
+        "valid": 48,
+        "simulated": true,
+        "model_refitted": false
+      },
+      "return": {
+        "planned": 120,
+        "valid": 120,
+        "simulated": true,
+        "model_refitted": false
+      },
+      "acceptance": {
+        "planned": 30,
+        "valid": 30,
+        "simulated": true,
+        "model_refitted": false
+      }
+    },
+    "calibrated_fk_consistency_passed": false,
+    "original_fk_consistency_passed": false
+  },
+  "code_sha256": {
+    "data_collection/diagnostics/__init__.py": "87e262532f9f18d5ad60dbaa3b1d299b1772722803afed163e5c42e39acdd2fd",
+    "data_collection/diagnostics/analyze.py": "567492a7f3e2aa0099428cf238efb6722d4481cfcfcdff2d03b1ca81a351beab",
+    "data_collection/diagnostics/camera.py": "a4e735fd201701df3f803dd1ee0d22551cf87b500a3d493885d6c212cf2d2e49",
+    "data_collection/diagnostics/camera_server.py": "709df21523de4a72d73187ef8324812b5f1c7897534471f010ae8f264f1e4ce8",
+    "data_collection/diagnostics/cli.py": "9895704716dd9f4179b7264f0924a9314a2b5ea5b803dea886f5859019d1f94a",
+    "data_collection/diagnostics/collect.py": "7e8d6ef8bde64f44cc0e80c08630ce4f38e7fc91d2f7d20cf155ad7f7c87d3c2",
+    "data_collection/diagnostics/core.py": "07279cfbac440573393828da6b36dbc6cee50934fb121096f7abe095ffe5b4b9",
+    "data_collection/diagnostics/robot.py": "8c29c25a32a600feedec44e8dc4692a9fdada719faaa2667cb1daf4e42e7e1db",
+    "data_collection/diagnostics/simulation.py": "08bf6a45a9a8b429521059a973bef1b93c136b7361af3ba4787d64990a94515d"
+  }
+}

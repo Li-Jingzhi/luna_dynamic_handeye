@@ -1,0 +1,145 @@
+{
+  "source_repository": "https://github.com/Li-Jingzhi/luna_dynamic_handeye",
+  "source_commit": "fdcca2ac73004bf5977bc7a3daed9f41d39ce5f8",
+  "date": "2026-10-30",
+  "method": "git show commit:path; original bytes preserved",
+  "files": [
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/README.md",
+      "sha256": "6220e5d97563f08f3770a0972efd31c62c3d617774e9d0617829b49451e731ac",
+      "bytes": 2534,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/luna_raw_fisheye_stereo.json",
+      "sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+      "bytes": 3844,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/luna_rectified_stereo.json",
+      "sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+      "bytes": 873,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/luna_stereo_raw.yaml",
+      "sha256": "c4e20fd19431758e365b724a6e4a128b1613860b4b9aec9f1cbc448711da1516",
+      "bytes": 2849,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/luna_stereo_undistorted.yaml",
+      "sha256": "279e942c20148acf0cd1902bf100de24757f73f24d912a6d8c48b69615698149",
+      "bytes": 2849,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/sh5.yaml",
+      "sha256": "736b14441f5e0097841762d2637223acf4d32881c7ee71f11b348e183739aba6",
+      "bytes": 753,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "acquisition/configs/orin_6_6_7_100_20261014/start_luna_stereo.sh",
+      "sha256": "6aa6fa7a67510f9eb2a69c060ff079ebeaa934fd6b7d2db262caaddb91031d82",
+      "bytes": 826,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/camera/luna_raw_fisheye_stereo.json",
+      "sha256": "d865ad6cca6d1dce9d9a49c870499c115a3f46a059ccde6d80b98e5454a144ea",
+      "bytes": 3844,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/camera/luna_rectified_stereo.json",
+      "sha256": "b6af45b2866223ac450a53468dbe4df366ccc18e8b199054aa0e13314e9b4be9",
+      "bytes": 873,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/camera/yellow_measurement_source.json",
+      "sha256": "ae79236b963eb07140d02b73249bbb0be5dbc43ffb0792a28b2f961d9ecbe4e1",
+      "bytes": 1231,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/robot/README.md",
+      "sha256": "a8445d27fa5f26267253d4748e860374ef8d77f5b37fe84a76228d26a3010590",
+      "bytes": 2221,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/robot/ball_offset.json",
+      "sha256": "5acdae0581dbb1861a66f2a1fdf4094fa17fe9fc4305b5e57e31ceaebe3316da",
+      "bytes": 550,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/robot/head_mount_v2.json",
+      "sha256": "1dbcb3775c519a4942c6e35448f36e178c8f1f74adcf04f657aa83406413da9c",
+      "bytes": 1164,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/robot/luna_new.ini",
+      "sha256": "6b6911b7f618effd732477b7ddfdec81a9ad40e9423f516d5404809a597e4586",
+      "bytes": 18703,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "configs/robot/torso_mounts.json",
+      "sha256": "aa8539512c6f44029389e3a7d6010c2668beca1183ca3771055992eb380fe375",
+      "bytes": 6360,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "datasets/processed/point_head_20261018.json",
+      "sha256": "02dc83a2d2fd50d08c064190d818d179c0bac0cc7203a6a9f98515cdc0f93175",
+      "bytes": 1046265,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "datasets/raw/ball_auto_20261018_visible_v1.jsonl",
+      "sha256": "f9145361c5d8213d401d3ffe41d04b6c67d1eda4a9387f7402d1851caf53449d",
+      "bytes": 859570,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "datasets/raw/ball_point_head_20261018_v1.completed.json",
+      "sha256": "582ebed1ccd502d474ca39c2521440df0abd1eebdce478c9f1f8b98ffe225d3c",
+      "bytes": 3070,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "datasets/raw/ball_point_head_20261018_v1.jsonl",
+      "sha256": "0f93631ffb10484c71a4178a97af792e607f94e3a7a55ed2d29caef3f8270ac5",
+      "bytes": 2551330,
+      "matches_deletion_manifest": true
+    },
+    {
+      "path": "datasets/raw/ball_taught_20261018_visible_v1.json",
+      "sha256": "874acb8284401d13101de9798684c5d36b801de3dc538bc8b05cb4110eabd3ef",
+      "bytes": 109927,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "sources.json",
+      "sha256": "1ff750e9951312641f4d1c304b6c04870814936eb2b1fe111911f359ee496b26",
+      "bytes": 46148,
+      "matches_deletion_manifest": null
+    },
+    {
+      "path": "reference/LunaUdpTool/model/gento_luna/gento_luna_contact_filtered.xml",
+      "sha256": "a9eba9e5e872ed64175f292f6415fe0f12bd3e41adb90a19b0df28368863a076",
+      "bytes": 16500,
+      "matches_deletion_manifest": null
+    }
+  ],
+  "machine_provenance": {
+    "basis": "User confirmation 2026-10-30",
+    "identity": "Another same-model Luna V2.0, distinct from current robot",
+    "serial_number": null
+  }
+}
